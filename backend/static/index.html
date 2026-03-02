@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTime CQ — Soccer Monitor</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>RealTime CQ</h1>
+        <div id="connection-status" class="status disconnected">Disconnected</div>
+    </header>
+
+    <main class="grid">
+        <!-- Heart Rate Chart -->
+        <section class="card card-hr">
+            <h2>Heart Rate <span id="hr-value" class="live-value">--</span> bpm</h2>
+            <div class="chart-wrap"><canvas id="hr-chart"></canvas></div>
+        </section>
+
+        <!-- Fatigue Gauge -->
+        <section class="card card-fatigue">
+            <h2>Fatigue</h2>
+            <canvas id="fatigue-gauge" width="220" height="140"></canvas>
+            <div id="fatigue-value" class="gauge-label">--%</div>
+        </section>
+
+        <!-- Speed -->
+        <section class="card card-speed">
+            <h2>Speed</h2>
+            <div id="speed-value" class="big-number">--</div>
+            <div class="unit">km/h</div>
+        </section>
+
+        <!-- HRV Chart -->
+        <section class="card card-hrv">
+            <h2>HRV (RMSSD) <span id="hrv-value" class="live-value">--</span> ms</h2>
+            <div class="chart-wrap"><canvas id="hrv-chart"></canvas></div>
+        </section>
+
+        <!-- GPS Map -->
+        <section class="card card-map">
+            <h2>GPS Track</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Stat Cards -->
+        <section class="card card-stats">
+            <h2>Stats</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-label">Distance</div>
+                    <div id="stat-distance" class="stat-value">--</div>
+                    <div class="stat-unit">km</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Calories</div>
+                    <div id="stat-calories" class="stat-value">--</div>
+                    <div class="stat-unit">kcal</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Cadence</div>
+                    <div id="stat-cadence" class="stat-value">--</div>
+                    <div class="stat-unit">spm</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Elapsed</div>
+                    <div id="stat-elapsed" class="stat-value">--</div>
+                    <div class="stat-unit"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

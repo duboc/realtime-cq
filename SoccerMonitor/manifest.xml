@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="4">
+    <iq:application id="be1de9f2-c3c9-421f-b688-9c62890cec50"
+                    type="watch-app"
+                    name="@Strings.AppName"
+                    entry="SoccerMonitorApp"
+                    launcherIcon="@Drawables.LauncherIcon"
+                    minSdkVersion="3.2.0">
+
+        <iq:products>
+            <iq:product id="fenix7"/>
+            <iq:product id="fenix7s"/>
+            <iq:product id="fenix7x"/>
+            <iq:product id="fr965"/>
+            <iq:product id="fr955"/>
+            <iq:product id="fr265"/>
+            <iq:product id="venu3"/>
+            <iq:product id="venu3s"/>
+            <iq:product id="epix2pro47mm"/>
+        </iq:products>
+
+        <iq:permissions>
+            <iq:uses-permission id="Sensor"/>
+            <iq:uses-permission id="SensorHistory"/>
+            <iq:uses-permission id="Positioning"/>
+            <iq:uses-permission id="Communications"/>
+            <iq:uses-permission id="Fit"/>
+            <iq:uses-permission id="UserProfile"/>
+        </iq:permissions>
+
+        <iq:languages>
+            <iq:language>eng</iq:language>
+            <iq:language>por</iq:language>
+        </iq:languages>
+    </iq:application>
+</iq:manifest>

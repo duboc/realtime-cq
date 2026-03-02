@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background: #111;
+    border-bottom: 1px solid #222;
+    height: 44px;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4fc3f7;
+}
+
+.status {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status.connected {
+    background: #1b5e20;
+    color: #66bb6a;
+}
+
+.status.disconnected {
+    background: #4a1515;
+    color: #ef5350;
+}
+
+/* ── Grid: fill viewport below header ── */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    padding: 8px;
+    height: calc(100vh - 44px);
+    min-height: 0;
+}
+
+.card {
+    background: #161616;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.card h2 {
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* ── Chart container: fills remaining card space ── */
+.chart-wrap {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+
+.chart-wrap canvas {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* ── Card placement ── */
+.card-hr {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.card-hrv {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.card-fatigue {
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-speed {
+    grid-column: 3;
+    grid-row: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-map {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card-stats {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* ── Map: fill card ── */
+#map {
+    flex: 1;
+    min-height: 0;
+    border-radius: 4px;
+}
+
+.live-value {
+    color: #4fc3f7;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.big-number {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+}
+
+.unit {
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+.gauge-label {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -6px;
+}
+
+#fatigue-gauge {
+    flex-shrink: 0;
+}
+
+/* ── Stats grid ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    flex: 1;
+    min-height: 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background: #1a1a1a;
+    border-radius: 6px;
+}
+
+.stat-label {
+    font-size: 0.65rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.stat-unit {
+    font-size: 0.65rem;
+    color: #555;
+}
+
+/* ── Leaflet dark tiles ── */
+.leaflet-tile {
+    filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    html, body { overflow: auto; }
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px 250px;
+        height: auto;
+    }
+    .card-hr  { grid-column: 1 / -1; grid-row: 1; }
+    .card-hrv { grid-column: 1 / -1; grid-row: 2; }
+    .card-map { grid-column: 1 / -1; grid-row: auto; }
+    .card-fatigue, .card-speed, .card-stats { grid-column: auto; grid-row: auto; }
+}

@@ -26,7 +26,7 @@ _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_m
     }
     [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc"; @line = 11; @symbol_functiondef = [onUpdate,11,13,21]; @symbol_param<0> = [dc,11,22,24]; ]
     function onUpdate(dc) {
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start:
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 12 8 ]
         %tmp.1 = lgetv %dc;
         symbol [ dc %tmp.1 12 8 10 ];
@@ -48,7 +48,7 @@ _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_m
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 15 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
         %app.1 = local;
         symbol [ app %app.1 15 12 15 ];
         symbol [ Application %tmp.9 15 18 29 ];
@@ -59,7 +59,7 @@ _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_m
         lputv %app.1 %tmp.11;
         symbol [ app %app.1 15 12 15 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 16 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
         %collector.2 = local;
         symbol [ collector %collector.2 16 12 21 ];
         %tmp.12 = lgetv %app.1;
@@ -69,633 +69,297 @@ _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_m
         lputv %collector.2 %tmp.13;
         symbol [ collector %collector.2 16 12 21 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 17 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %fatigue.3 = local;
-        symbol [ fatigue %fatigue.3 17 12 19 ];
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
+        %transmitter.3 = local;
+        symbol [ transmitter %transmitter.3 17 12 23 ];
         %tmp.14 = lgetv %app.1;
-        symbol [ app %tmp.14 17 22 25 ];
-        symbol [ fatigueEngine %tmp.15 17 26 39 ];
-        %tmp.15 = getv %tmp.14 :fatigueEngine;
-        lputv %fatigue.3 %tmp.15;
-        symbol [ fatigue %fatigue.3 17 12 19 ];
+        symbol [ app %tmp.14 17 26 29 ];
+        symbol [ dataTransmitter %tmp.15 17 30 45 ];
+        %tmp.15 = getv %tmp.14 :dataTransmitter;
+        lputv %transmitter.3 %tmp.15;
+        symbol [ transmitter %transmitter.3 17 12 23 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 19 8 ]
 _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_stmt:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_12_19_44_begin:
         %tmp.16 = lgetv %collector.2;
         symbol [ collector %tmp.16 19 12 21 ];
         %tmp.17 = null;
         %tmp.18 = eq %tmp.16 %tmp.17;
-        bt %tmp.18 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_true;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_33_19_44_false:
-        %tmp.19 = lgetv %fatigue.3;
-        symbol [ fatigue %tmp.19 19 33 40 ];
-        %tmp.20 = null;
-        %tmp.21 = eq %tmp.19 %tmp.20;
-        push %tmp.21;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_33_19_44_end:
-        %tmp.22 = phi [%tmp.18 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_12_19_44_begin] [%tmp.21 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_33_19_44_false] [%tmp.22 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_33_19_44_end];
-        bf %tmp.22 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_end;
+        bf %tmp.18 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_end;
 _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_true:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_50_24_8_start:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_31_24_8_start:
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 20 12 ]
-        %tmp.23 = lgetv %dc;
-        symbol [ dc %tmp.23 20 12 14 ];
-        symbol [ setColor %tmp.24 20 15 23 ];
-        %tmp.24 = getv function %tmp.23 :setColor;
-        symbol [ Graphics %tmp.25 20 24 32 ];
-        %tmp.25 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.26 20 33 44 ];
-        %tmp.26 = getv %tmp.25 :COLOR_WHITE;
-        symbol [ Graphics %tmp.27 20 46 54 ];
-        %tmp.27 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.28 20 55 72 ];
-        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
-        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 20 12 14 ];
+        symbol [ setColor %tmp.20 20 15 23 ];
+        %tmp.20 = getv function %tmp.19 :setColor;
+        symbol [ Graphics %tmp.21 20 24 32 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.22 20 33 44 ];
+        %tmp.22 = getv %tmp.21 :COLOR_WHITE;
+        symbol [ Graphics %tmp.23 20 46 54 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.24 20 55 72 ];
+        %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.24);
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 21 12 ]
-        %tmp.29 = lgetv %dc;
-        symbol [ dc %tmp.29 21 12 14 ];
-        symbol [ drawText %tmp.30 21 15 23 ];
-        %tmp.30 = getv function %tmp.29 :drawText;
-        %tmp.31 = lgetv %dc;
-        symbol [ dc %tmp.31 21 24 26 ];
-        symbol [ getWidth %tmp.32 21 27 35 ];
-        %tmp.32 = getv function %tmp.31 :getWidth;
-        %tmp.33 = invoke %tmp.31 %tmp.32();
-        %tmp.34 = 2;
-        %tmp.35 = div %tmp.33 %tmp.34;
-        %tmp.36 = lgetv %dc;
-        symbol [ dc %tmp.36 21 41 43 ];
-        symbol [ getHeight %tmp.37 21 44 53 ];
-        %tmp.37 = getv function %tmp.36 :getHeight;
-        %tmp.38 = invoke %tmp.36 %tmp.37();
-        %tmp.39 = 2;
-        %tmp.40 = div %tmp.38 %tmp.39;
-        symbol [ Graphics %tmp.41 21 59 67 ];
-        %tmp.41 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.42 21 68 79 ];
-        %tmp.42 = getv %tmp.41 :FONT_MEDIUM;
-        %tmp.43 = "Starting...";
-        symbol [ Graphics %tmp.44 22 31 39 ];
-        %tmp.44 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.45 22 40 59 ];
-        %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.29 %tmp.30(%tmp.35, %tmp.40, %tmp.42, %tmp.43, %tmp.45);
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 21 12 14 ];
+        symbol [ drawText %tmp.26 21 15 23 ];
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.27 = lgetv %dc;
+        symbol [ dc %tmp.27 21 24 26 ];
+        symbol [ getWidth %tmp.28 21 27 35 ];
+        %tmp.28 = getv function %tmp.27 :getWidth;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        %tmp.30 = 2;
+        %tmp.31 = div %tmp.29 %tmp.30;
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 21 41 43 ];
+        symbol [ getHeight %tmp.33 21 44 53 ];
+        %tmp.33 = getv function %tmp.32 :getHeight;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = 2;
+        %tmp.36 = div %tmp.34 %tmp.35;
+        symbol [ Graphics %tmp.37 21 59 67 ];
+        %tmp.37 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.38 21 68 79 ];
+        %tmp.38 = getv %tmp.37 :FONT_MEDIUM;
+        %tmp.39 = "Starting...";
+        symbol [ Graphics %tmp.40 22 31 39 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 22 40 59 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.25 %tmp.26(%tmp.31, %tmp.36, %tmp.38, %tmp.39, %tmp.41);
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 23 12 ]
         ret ?;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_50_24_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_31_24_8_stop:
         goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_end;
 _Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_19_8_24_8_if_end:
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 26 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
         %cx.4 = local;
         symbol [ cx %cx.4 26 12 14 ];
-        %tmp.46 = lgetv %dc;
-        symbol [ dc %tmp.46 26 17 19 ];
-        symbol [ getWidth %tmp.47 26 20 28 ];
-        %tmp.47 = getv function %tmp.46 :getWidth;
-        %tmp.48 = invoke %tmp.46 %tmp.47();
-        %tmp.49 = 2;
-        %tmp.50 = div %tmp.48 %tmp.49;
-        lputv %cx.4 %tmp.50;
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 26 17 19 ];
+        symbol [ getWidth %tmp.43 26 20 28 ];
+        %tmp.43 = getv function %tmp.42 :getWidth;
+        %tmp.44 = invoke %tmp.42 %tmp.43();
+        %tmp.45 = 2;
+        %tmp.46 = div %tmp.44 %tmp.45;
+        lputv %cx.4 %tmp.46;
         symbol [ cx %cx.4 26 12 14 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 27 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
         %cy.5 = local;
         symbol [ cy %cy.5 27 12 14 ];
-        %tmp.51 = lgetv %dc;
-        symbol [ dc %tmp.51 27 17 19 ];
-        symbol [ getHeight %tmp.52 27 20 29 ];
-        %tmp.52 = getv function %tmp.51 :getHeight;
-        %tmp.53 = invoke %tmp.51 %tmp.52();
-        %tmp.54 = 2;
-        %tmp.55 = div %tmp.53 %tmp.54;
-        lputv %cy.5 %tmp.55;
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 27 17 19 ];
+        symbol [ getHeight %tmp.48 27 20 29 ];
+        %tmp.48 = getv function %tmp.47 :getHeight;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        %tmp.50 = 2;
+        %tmp.51 = div %tmp.49 %tmp.50;
+        lputv %cy.5 %tmp.51;
         symbol [ cy %cy.5 27 12 14 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 30 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %fatigueScore.6 = local;
-        symbol [ fatigueScore %fatigueScore.6 30 12 24 ];
-        %tmp.56 = lgetv %fatigue.3;
-        symbol [ fatigue %tmp.56 30 27 34 ];
-        symbol [ getFatigueScore %tmp.57 30 35 50 ];
-        %tmp.57 = getv function %tmp.56 :getFatigueScore;
-        %tmp.58 = invoke %tmp.56 %tmp.57();
-        lputv %fatigueScore.6 %tmp.58;
-        symbol [ fatigueScore %fatigueScore.6 30 12 24 ];
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop" ]
+        %isConnected.6 = local;
+        symbol [ isConnected %isConnected.6 30 12 23 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_27_30_62_begin:
+        %tmp.52 = lgetv %transmitter.3;
+        symbol [ transmitter %tmp.52 30 27 38 ];
+        %tmp.53 = null;
+        %tmp.54 = ne %tmp.52 %tmp.53;
+        %tmp.55 = dup %tmp.54;
+        bf %tmp.55 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_50_30_62_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_50_30_62_true:
+        %tmp.56 = lgetv %transmitter.3;
+        symbol [ transmitter %tmp.56 30 50 61 ];
+        %tmp.57 = as %tmp.56 { (!Null) };
+        symbol [ connected %tmp.58 30 62 71 ];
+        %tmp.58 = getv %tmp.57 :connected;
+        %tmp.59 = and %tmp.54 %tmp.58;
+        push %tmp.59;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_50_30_62_end:
+        %tmp.60 = phi [%tmp.55 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_27_30_62_begin] [%tmp.59 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_50_30_62_true] [%tmp.60 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_30_50_30_62_end];
+        lputv %isConnected.6 %tmp.60;
+        symbol [ isConnected %isConnected.6 30 12 23 ];
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 31 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %zoneColor.7 = local;
-        symbol [ zoneColor %zoneColor.7 31 12 21 ];
-        %tmp.59 = self;
-        symbol [ getZoneColor %tmp.60 31 24 36 ];
-        %tmp.60 = getv function %tmp.59 :getZoneColor;
-        %tmp.61 = lgetv %fatigueScore.6;
-        symbol [ fatigueScore %tmp.61 31 37 49 ];
-        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
-        lputv %zoneColor.7 %tmp.62;
-        symbol [ zoneColor %zoneColor.7 31 12 21 ];
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 32 8 ]
-        %tmp.63 = lgetv %dc;
-        symbol [ dc %tmp.63 32 8 10 ];
-        symbol [ setColor %tmp.64 32 11 19 ];
-        %tmp.64 = getv function %tmp.63 :setColor;
-        %tmp.65 = lgetv %zoneColor.7;
-        symbol [ zoneColor %tmp.65 32 20 29 ];
-        %tmp.66 = lgetv %zoneColor.7;
-        symbol [ zoneColor %tmp.66 32 31 40 ];
-        invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 33 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_stmt:
+        %tmp.61 = lgetv %isConnected.6;
+        symbol [ isConnected %tmp.61 31 12 23 ];
+        bf %tmp.61 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_else_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_25_36_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 32 12 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 32 12 14 ];
+        symbol [ setColor %tmp.63 32 15 23 ];
+        %tmp.63 = getv function %tmp.62 :setColor;
+        %tmp.64 = 0x00CC00;
+        symbol [ Graphics %tmp.65 32 34 42 ];
+        %tmp.65 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.66 32 43 60 ];
+        %tmp.66 = getv %tmp.65 :COLOR_TRANSPARENT;
+        invoke %tmp.62 %tmp.63(%tmp.64, %tmp.66);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 33 12 ]
         %tmp.67 = lgetv %dc;
-        symbol [ dc %tmp.67 33 8 10 ];
-        symbol [ fillRectangle %tmp.68 33 11 24 ];
-        %tmp.68 = getv function %tmp.67 :fillRectangle;
-        %tmp.69 = 0;
-        %tmp.70 = 0;
-        %tmp.71 = lgetv %dc;
-        symbol [ dc %tmp.71 33 31 33 ];
-        symbol [ getWidth %tmp.72 33 34 42 ];
-        %tmp.72 = getv function %tmp.71 :getWidth;
-        %tmp.73 = invoke %tmp.71 %tmp.72();
-        %tmp.74 = 30;
-        invoke %tmp.67 %tmp.68(%tmp.69, %tmp.70, %tmp.73, %tmp.74);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 35 8 ]
-        %tmp.75 = lgetv %dc;
-        symbol [ dc %tmp.75 35 8 10 ];
-        symbol [ setColor %tmp.76 35 11 19 ];
-        %tmp.76 = getv function %tmp.75 :setColor;
-        symbol [ Graphics %tmp.77 35 20 28 ];
-        %tmp.77 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.78 35 29 40 ];
-        %tmp.78 = getv %tmp.77 :COLOR_WHITE;
-        symbol [ Graphics %tmp.79 35 42 50 ];
-        %tmp.79 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.80 35 51 68 ];
-        %tmp.80 = getv %tmp.79 :COLOR_TRANSPARENT;
-        invoke %tmp.75 %tmp.76(%tmp.78, %tmp.80);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 36 8 ]
-        %tmp.81 = lgetv %dc;
-        symbol [ dc %tmp.81 36 8 10 ];
-        symbol [ drawText %tmp.82 36 11 19 ];
-        %tmp.82 = getv function %tmp.81 :drawText;
-        %tmp.83 = lgetv %cx.4;
-        symbol [ cx %tmp.83 36 20 22 ];
-        %tmp.84 = 2;
-        symbol [ Graphics %tmp.85 36 27 35 ];
-        %tmp.85 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.86 36 36 46 ];
-        %tmp.86 = getv %tmp.85 :FONT_XTINY;
-        %tmp.87 = lgetv %fatigue.3;
-        symbol [ fatigue %tmp.87 37 12 19 ];
-        symbol [ getFatigueZone %tmp.88 37 20 34 ];
-        %tmp.88 = getv function %tmp.87 :getFatigueZone;
-        %tmp.89 = invoke %tmp.87 %tmp.88();
-        %tmp.90 = " ";
-        %tmp.91 = add %tmp.89 %tmp.90;
-        %tmp.92 = lgetv %fatigueScore.6;
-        symbol [ fatigueScore %tmp.92 37 45 57 ];
-        %tmp.93 = add %tmp.91 %tmp.92;
-        %tmp.94 = "%";
-        %tmp.95 = add %tmp.93 %tmp.94;
-        symbol [ Graphics %tmp.96 38 12 20 ];
-        %tmp.96 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.97 38 21 40 ];
-        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.81 %tmp.82(%tmp.83, %tmp.84, %tmp.86, %tmp.95, %tmp.97);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 41 8 ]
-        %tmp.98 = lgetv %dc;
-        symbol [ dc %tmp.98 41 8 10 ];
-        symbol [ setColor %tmp.99 41 11 19 ];
-        %tmp.99 = getv function %tmp.98 :setColor;
-        symbol [ Graphics %tmp.100 41 20 28 ];
-        %tmp.100 = getm $.Toybox.Graphics;
-        symbol [ COLOR_RED %tmp.101 41 29 38 ];
-        %tmp.101 = getv %tmp.100 :COLOR_RED;
-        symbol [ Graphics %tmp.102 41 40 48 ];
-        %tmp.102 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.103 41 49 66 ];
-        %tmp.103 = getv %tmp.102 :COLOR_TRANSPARENT;
-        invoke %tmp.98 %tmp.99(%tmp.101, %tmp.103);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 42 8 ]
-        %tmp.104 = lgetv %dc;
-        symbol [ dc %tmp.104 42 8 10 ];
-        symbol [ drawText %tmp.105 42 11 19 ];
-        %tmp.105 = getv function %tmp.104 :drawText;
-        %tmp.106 = lgetv %cx.4;
-        symbol [ cx %tmp.106 42 20 22 ];
-        %tmp.107 = lgetv %cy.5;
-        symbol [ cy %tmp.107 42 24 26 ];
-        %tmp.108 = 45;
-        %tmp.109 = sub %tmp.107 %tmp.108;
-        symbol [ Graphics %tmp.110 42 33 41 ];
+        symbol [ dc %tmp.67 33 12 14 ];
+        symbol [ fillCircle %tmp.68 33 15 25 ];
+        %tmp.68 = getv function %tmp.67 :fillCircle;
+        %tmp.69 = lgetv %cx.4;
+        symbol [ cx %tmp.69 33 26 28 ];
+        %tmp.70 = 48;
+        %tmp.71 = sub %tmp.69 %tmp.70;
+        %tmp.72 = 32;
+        %tmp.73 = 6;
+        invoke %tmp.67 %tmp.68(%tmp.71, %tmp.72, %tmp.73);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 34 12 ]
+        %tmp.74 = lgetv %dc;
+        symbol [ dc %tmp.74 34 12 14 ];
+        symbol [ drawText %tmp.75 34 15 23 ];
+        %tmp.75 = getv function %tmp.74 :drawText;
+        %tmp.76 = lgetv %cx.4;
+        symbol [ cx %tmp.76 34 24 26 ];
+        %tmp.77 = 4;
+        %tmp.78 = add %tmp.76 %tmp.77;
+        %tmp.79 = 22;
+        symbol [ Graphics %tmp.80 34 36 44 ];
+        %tmp.80 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.81 34 45 55 ];
+        %tmp.81 = getv %tmp.80 :FONT_SMALL;
+        %tmp.82 = "Connected";
+        symbol [ Graphics %tmp.83 35 29 37 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.84 35 38 57 ];
+        %tmp.84 = getv %tmp.83 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.74 %tmp.75(%tmp.78, %tmp.79, %tmp.81, %tmp.82, %tmp.84);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_25_36_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_else_false:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_36_15_41_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 37 12 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 37 12 14 ];
+        symbol [ setColor %tmp.86 37 15 23 ];
+        %tmp.86 = getv function %tmp.85 :setColor;
+        %tmp.87 = 0xFF0000;
+        symbol [ Graphics %tmp.88 37 34 42 ];
+        %tmp.88 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.89 37 43 60 ];
+        %tmp.89 = getv %tmp.88 :COLOR_TRANSPARENT;
+        invoke %tmp.85 %tmp.86(%tmp.87, %tmp.89);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 38 12 ]
+        %tmp.90 = lgetv %dc;
+        symbol [ dc %tmp.90 38 12 14 ];
+        symbol [ fillCircle %tmp.91 38 15 25 ];
+        %tmp.91 = getv function %tmp.90 :fillCircle;
+        %tmp.92 = lgetv %cx.4;
+        symbol [ cx %tmp.92 38 26 28 ];
+        %tmp.93 = 38;
+        %tmp.94 = sub %tmp.92 %tmp.93;
+        %tmp.95 = 32;
+        %tmp.96 = 6;
+        invoke %tmp.90 %tmp.91(%tmp.94, %tmp.95, %tmp.96);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 39 12 ]
+        %tmp.97 = lgetv %dc;
+        symbol [ dc %tmp.97 39 12 14 ];
+        symbol [ drawText %tmp.98 39 15 23 ];
+        %tmp.98 = getv function %tmp.97 :drawText;
+        %tmp.99 = lgetv %cx.4;
+        symbol [ cx %tmp.99 39 24 26 ];
+        %tmp.100 = 8;
+        %tmp.101 = add %tmp.99 %tmp.100;
+        %tmp.102 = 22;
+        symbol [ Graphics %tmp.103 39 36 44 ];
+        %tmp.103 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.104 39 45 55 ];
+        %tmp.104 = getv %tmp.103 :FONT_SMALL;
+        %tmp.105 = "No Link";
+        symbol [ Graphics %tmp.106 40 27 35 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.107 40 36 55 ];
+        %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.97 %tmp.98(%tmp.101, %tmp.102, %tmp.104, %tmp.105, %tmp.107);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_36_15_41_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_31_8_41_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 44 8 ]
+        %tmp.108 = lgetv %dc;
+        symbol [ dc %tmp.108 44 8 10 ];
+        symbol [ setColor %tmp.109 44 11 19 ];
+        %tmp.109 = getv function %tmp.108 :setColor;
+        symbol [ Graphics %tmp.110 44 20 28 ];
         %tmp.110 = getm $.Toybox.Graphics;
-        symbol [ FONT_NUMBER_HOT %tmp.111 42 42 57 ];
-        %tmp.111 = getv %tmp.110 :FONT_NUMBER_HOT;
-        %tmp.112 = lgetv %collector.2;
-        symbol [ collector %tmp.112 43 12 21 ];
-        symbol [ heartRate %tmp.113 43 22 31 ];
-        %tmp.113 = getv %tmp.112 :heartRate;
-        symbol [ toString %tmp.114 43 32 40 ];
-        %tmp.114 = getv function %tmp.113 :toString;
-        %tmp.115 = invoke %tmp.113 %tmp.114();
-        symbol [ Graphics %tmp.116 44 12 20 ];
-        %tmp.116 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.117 44 21 40 ];
-        %tmp.117 = getv %tmp.116 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.104 %tmp.105(%tmp.106, %tmp.109, %tmp.111, %tmp.115, %tmp.117);
+        symbol [ COLOR_RED %tmp.111 44 29 38 ];
+        %tmp.111 = getv %tmp.110 :COLOR_RED;
+        symbol [ Graphics %tmp.112 44 40 48 ];
+        %tmp.112 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.113 44 49 66 ];
+        %tmp.113 = getv %tmp.112 :COLOR_TRANSPARENT;
+        invoke %tmp.108 %tmp.109(%tmp.111, %tmp.113);
 [ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 45 8 ]
-        %tmp.118 = lgetv %dc;
-        symbol [ dc %tmp.118 45 8 10 ];
-        symbol [ setColor %tmp.119 45 11 19 ];
-        %tmp.119 = getv function %tmp.118 :setColor;
-        symbol [ Graphics %tmp.120 45 20 28 ];
+        %tmp.114 = lgetv %dc;
+        symbol [ dc %tmp.114 45 8 10 ];
+        symbol [ drawText %tmp.115 45 11 19 ];
+        %tmp.115 = getv function %tmp.114 :drawText;
+        %tmp.116 = lgetv %cx.4;
+        symbol [ cx %tmp.116 45 20 22 ];
+        %tmp.117 = lgetv %cy.5;
+        symbol [ cy %tmp.117 45 24 26 ];
+        %tmp.118 = 30;
+        %tmp.119 = sub %tmp.117 %tmp.118;
+        symbol [ Graphics %tmp.120 45 33 41 ];
         %tmp.120 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.121 45 29 42 ];
-        %tmp.121 = getv %tmp.120 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.122 45 44 52 ];
-        %tmp.122 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.123 45 53 70 ];
-        %tmp.123 = getv %tmp.122 :COLOR_TRANSPARENT;
-        invoke %tmp.118 %tmp.119(%tmp.121, %tmp.123);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 46 8 ]
-        %tmp.124 = lgetv %dc;
-        symbol [ dc %tmp.124 46 8 10 ];
-        symbol [ drawText %tmp.125 46 11 19 ];
-        %tmp.125 = getv function %tmp.124 :drawText;
-        %tmp.126 = lgetv %cx.4;
-        symbol [ cx %tmp.126 46 20 22 ];
-        %tmp.127 = lgetv %cy.5;
-        symbol [ cy %tmp.127 46 24 26 ];
-        %tmp.128 = 5;
-        %tmp.129 = sub %tmp.127 %tmp.128;
-        symbol [ Graphics %tmp.130 46 32 40 ];
+        symbol [ FONT_NUMBER_HOT %tmp.121 45 42 57 ];
+        %tmp.121 = getv %tmp.120 :FONT_NUMBER_HOT;
+        %tmp.122 = lgetv %collector.2;
+        symbol [ collector %tmp.122 46 12 21 ];
+        symbol [ heartRate %tmp.123 46 22 31 ];
+        %tmp.123 = getv %tmp.122 :heartRate;
+        symbol [ toString %tmp.124 46 32 40 ];
+        %tmp.124 = getv function %tmp.123 :toString;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        symbol [ Graphics %tmp.126 47 12 20 ];
+        %tmp.126 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.127 47 21 40 ];
+        %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.114 %tmp.115(%tmp.116, %tmp.119, %tmp.121, %tmp.125, %tmp.127);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 48 8 ]
+        %tmp.128 = lgetv %dc;
+        symbol [ dc %tmp.128 48 8 10 ];
+        symbol [ setColor %tmp.129 48 11 19 ];
+        %tmp.129 = getv function %tmp.128 :setColor;
+        symbol [ Graphics %tmp.130 48 20 28 ];
         %tmp.130 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.131 46 41 51 ];
-        %tmp.131 = getv %tmp.130 :FONT_XTINY;
-        %tmp.132 = "BPM";
-        symbol [ Graphics %tmp.133 47 12 20 ];
-        %tmp.133 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.134 47 21 40 ];
-        %tmp.134 = getv %tmp.133 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.124 %tmp.125(%tmp.126, %tmp.129, %tmp.131, %tmp.132, %tmp.134);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 50 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %speedKmh.8 = local;
-        symbol [ speedKmh %speedKmh.8 50 12 20 ];
-        %tmp.135 = lgetv %collector.2;
-        symbol [ collector %tmp.135 50 24 33 ];
-        symbol [ speed %tmp.136 50 34 39 ];
-        %tmp.136 = getv %tmp.135 :speed;
-        %tmp.137 = 3.6;
-        %tmp.138 = mul %tmp.136 %tmp.137;
-        lputv %speedKmh.8 %tmp.138;
-        symbol [ speedKmh %speedKmh.8 50 12 20 ];
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 51 8 ]
-        %tmp.139 = lgetv %dc;
-        symbol [ dc %tmp.139 51 8 10 ];
-        symbol [ setColor %tmp.140 51 11 19 ];
-        %tmp.140 = getv function %tmp.139 :setColor;
-        symbol [ Graphics %tmp.141 51 20 28 ];
-        %tmp.141 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.142 51 29 40 ];
-        %tmp.142 = getv %tmp.141 :COLOR_WHITE;
-        symbol [ Graphics %tmp.143 51 42 50 ];
+        symbol [ COLOR_LT_GRAY %tmp.131 48 29 42 ];
+        %tmp.131 = getv %tmp.130 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.132 48 44 52 ];
+        %tmp.132 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.133 48 53 70 ];
+        %tmp.133 = getv %tmp.132 :COLOR_TRANSPARENT;
+        invoke %tmp.128 %tmp.129(%tmp.131, %tmp.133);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 49 8 ]
+        %tmp.134 = lgetv %dc;
+        symbol [ dc %tmp.134 49 8 10 ];
+        symbol [ drawText %tmp.135 49 11 19 ];
+        %tmp.135 = getv function %tmp.134 :drawText;
+        %tmp.136 = lgetv %cx.4;
+        symbol [ cx %tmp.136 49 20 22 ];
+        %tmp.137 = lgetv %cy.5;
+        symbol [ cy %tmp.137 49 24 26 ];
+        %tmp.138 = 30;
+        %tmp.139 = add %tmp.137 %tmp.138;
+        symbol [ Graphics %tmp.140 49 33 41 ];
+        %tmp.140 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.141 49 42 53 ];
+        %tmp.141 = getv %tmp.140 :FONT_MEDIUM;
+        %tmp.142 = "BPM";
+        symbol [ Graphics %tmp.143 50 12 20 ];
         %tmp.143 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.144 51 51 68 ];
-        %tmp.144 = getv %tmp.143 :COLOR_TRANSPARENT;
-        invoke %tmp.139 %tmp.140(%tmp.142, %tmp.144);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 52 8 ]
-        %tmp.145 = lgetv %dc;
-        symbol [ dc %tmp.145 52 8 10 ];
-        symbol [ drawText %tmp.146 52 11 19 ];
-        %tmp.146 = getv function %tmp.145 :drawText;
-        %tmp.147 = lgetv %cx.4;
-        symbol [ cx %tmp.147 52 20 22 ];
-        %tmp.148 = 50;
-        %tmp.149 = sub %tmp.147 %tmp.148;
-        %tmp.150 = lgetv %cy.5;
-        symbol [ cy %tmp.150 52 29 31 ];
-        %tmp.151 = 20;
-        %tmp.152 = add %tmp.150 %tmp.151;
-        symbol [ Graphics %tmp.153 52 38 46 ];
-        %tmp.153 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.154 52 47 57 ];
-        %tmp.154 = getv %tmp.153 :FONT_SMALL;
-        %tmp.155 = lgetv %speedKmh.8;
-        symbol [ speedKmh %tmp.155 53 12 20 ];
-        symbol [ format %tmp.156 53 21 27 ];
-        %tmp.156 = getv function %tmp.155 :format;
-        %tmp.157 = "%.1f";
-        %tmp.158 = invoke %tmp.155 %tmp.156(%tmp.157);
-        symbol [ Graphics %tmp.159 54 12 20 ];
-        %tmp.159 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.160 54 21 40 ];
-        %tmp.160 = getv %tmp.159 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.145 %tmp.146(%tmp.149, %tmp.152, %tmp.154, %tmp.158, %tmp.160);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 55 8 ]
-        %tmp.161 = lgetv %dc;
-        symbol [ dc %tmp.161 55 8 10 ];
-        symbol [ setColor %tmp.162 55 11 19 ];
-        %tmp.162 = getv function %tmp.161 :setColor;
-        symbol [ Graphics %tmp.163 55 20 28 ];
-        %tmp.163 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.164 55 29 42 ];
-        %tmp.164 = getv %tmp.163 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.165 55 44 52 ];
-        %tmp.165 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.166 55 53 70 ];
-        %tmp.166 = getv %tmp.165 :COLOR_TRANSPARENT;
-        invoke %tmp.161 %tmp.162(%tmp.164, %tmp.166);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 56 8 ]
-        %tmp.167 = lgetv %dc;
-        symbol [ dc %tmp.167 56 8 10 ];
-        symbol [ drawText %tmp.168 56 11 19 ];
-        %tmp.168 = getv function %tmp.167 :drawText;
-        %tmp.169 = lgetv %cx.4;
-        symbol [ cx %tmp.169 56 20 22 ];
-        %tmp.170 = 50;
-        %tmp.171 = sub %tmp.169 %tmp.170;
-        %tmp.172 = lgetv %cy.5;
-        symbol [ cy %tmp.172 56 29 31 ];
-        %tmp.173 = 42;
-        %tmp.174 = add %tmp.172 %tmp.173;
-        symbol [ Graphics %tmp.175 56 38 46 ];
-        %tmp.175 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.176 56 47 57 ];
-        %tmp.176 = getv %tmp.175 :FONT_XTINY;
-        %tmp.177 = "km/h";
-        symbol [ Graphics %tmp.178 57 12 20 ];
-        %tmp.178 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.179 57 21 40 ];
-        %tmp.179 = getv %tmp.178 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.167 %tmp.168(%tmp.171, %tmp.174, %tmp.176, %tmp.177, %tmp.179);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 60 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %distKm.9 = local;
-        symbol [ distKm %distKm.9 60 12 18 ];
-        %tmp.180 = lgetv %collector.2;
-        symbol [ collector %tmp.180 60 21 30 ];
-        symbol [ distance %tmp.181 60 31 39 ];
-        %tmp.181 = getv %tmp.180 :distance;
-        %tmp.182 = 1000.0;
-        %tmp.183 = div %tmp.181 %tmp.182;
-        lputv %distKm.9 %tmp.183;
-        symbol [ distKm %distKm.9 60 12 18 ];
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 61 8 ]
-        %tmp.184 = lgetv %dc;
-        symbol [ dc %tmp.184 61 8 10 ];
-        symbol [ setColor %tmp.185 61 11 19 ];
-        %tmp.185 = getv function %tmp.184 :setColor;
-        symbol [ Graphics %tmp.186 61 20 28 ];
-        %tmp.186 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.187 61 29 40 ];
-        %tmp.187 = getv %tmp.186 :COLOR_WHITE;
-        symbol [ Graphics %tmp.188 61 42 50 ];
-        %tmp.188 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.189 61 51 68 ];
-        %tmp.189 = getv %tmp.188 :COLOR_TRANSPARENT;
-        invoke %tmp.184 %tmp.185(%tmp.187, %tmp.189);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 62 8 ]
-        %tmp.190 = lgetv %dc;
-        symbol [ dc %tmp.190 62 8 10 ];
-        symbol [ drawText %tmp.191 62 11 19 ];
-        %tmp.191 = getv function %tmp.190 :drawText;
-        %tmp.192 = lgetv %cx.4;
-        symbol [ cx %tmp.192 62 20 22 ];
-        %tmp.193 = 50;
-        %tmp.194 = add %tmp.192 %tmp.193;
-        %tmp.195 = lgetv %cy.5;
-        symbol [ cy %tmp.195 62 29 31 ];
-        %tmp.196 = 20;
-        %tmp.197 = add %tmp.195 %tmp.196;
-        symbol [ Graphics %tmp.198 62 38 46 ];
-        %tmp.198 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.199 62 47 57 ];
-        %tmp.199 = getv %tmp.198 :FONT_SMALL;
-        %tmp.200 = lgetv %distKm.9;
-        symbol [ distKm %tmp.200 63 12 18 ];
-        symbol [ format %tmp.201 63 19 25 ];
-        %tmp.201 = getv function %tmp.200 :format;
-        %tmp.202 = "%.2f";
-        %tmp.203 = invoke %tmp.200 %tmp.201(%tmp.202);
-        symbol [ Graphics %tmp.204 64 12 20 ];
-        %tmp.204 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.205 64 21 40 ];
-        %tmp.205 = getv %tmp.204 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.190 %tmp.191(%tmp.194, %tmp.197, %tmp.199, %tmp.203, %tmp.205);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 65 8 ]
-        %tmp.206 = lgetv %dc;
-        symbol [ dc %tmp.206 65 8 10 ];
-        symbol [ setColor %tmp.207 65 11 19 ];
-        %tmp.207 = getv function %tmp.206 :setColor;
-        symbol [ Graphics %tmp.208 65 20 28 ];
-        %tmp.208 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.209 65 29 42 ];
-        %tmp.209 = getv %tmp.208 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.210 65 44 52 ];
-        %tmp.210 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.211 65 53 70 ];
-        %tmp.211 = getv %tmp.210 :COLOR_TRANSPARENT;
-        invoke %tmp.206 %tmp.207(%tmp.209, %tmp.211);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 66 8 ]
-        %tmp.212 = lgetv %dc;
-        symbol [ dc %tmp.212 66 8 10 ];
-        symbol [ drawText %tmp.213 66 11 19 ];
-        %tmp.213 = getv function %tmp.212 :drawText;
-        %tmp.214 = lgetv %cx.4;
-        symbol [ cx %tmp.214 66 20 22 ];
-        %tmp.215 = 50;
-        %tmp.216 = add %tmp.214 %tmp.215;
-        %tmp.217 = lgetv %cy.5;
-        symbol [ cy %tmp.217 66 29 31 ];
-        %tmp.218 = 42;
-        %tmp.219 = add %tmp.217 %tmp.218;
-        symbol [ Graphics %tmp.220 66 38 46 ];
-        %tmp.220 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.221 66 47 57 ];
-        %tmp.221 = getv %tmp.220 :FONT_XTINY;
-        %tmp.222 = "km";
-        symbol [ Graphics %tmp.223 67 12 20 ];
-        %tmp.223 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.224 67 21 40 ];
-        %tmp.224 = getv %tmp.223 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.212 %tmp.213(%tmp.216, %tmp.219, %tmp.221, %tmp.222, %tmp.224);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 70 8 ]
-        %tmp.225 = lgetv %dc;
-        symbol [ dc %tmp.225 70 8 10 ];
-        symbol [ setColor %tmp.226 70 11 19 ];
-        %tmp.226 = getv function %tmp.225 :setColor;
-        symbol [ Graphics %tmp.227 70 20 28 ];
-        %tmp.227 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLUE %tmp.228 70 29 39 ];
-        %tmp.228 = getv %tmp.227 :COLOR_BLUE;
-        symbol [ Graphics %tmp.229 70 41 49 ];
-        %tmp.229 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.230 70 50 67 ];
-        %tmp.230 = getv %tmp.229 :COLOR_TRANSPARENT;
-        invoke %tmp.225 %tmp.226(%tmp.228, %tmp.230);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 71 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %minsLeft.10 = local;
-        symbol [ minsLeft %minsLeft.10 71 12 20 ];
-        %tmp.231 = lgetv %fatigue.3;
-        symbol [ fatigue %tmp.231 71 23 30 ];
-        symbol [ getEstimatedMinutesLeft %tmp.232 71 31 54 ];
-        %tmp.232 = getv function %tmp.231 :getEstimatedMinutesLeft;
-        %tmp.233 = invoke %tmp.231 %tmp.232();
-        lputv %minsLeft.10 %tmp.233;
-        symbol [ minsLeft %minsLeft.10 71 12 20 ];
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 72 8 ]
-        %tmp.234 = lgetv %dc;
-        symbol [ dc %tmp.234 72 8 10 ];
-        symbol [ drawText %tmp.235 72 11 19 ];
-        %tmp.235 = getv function %tmp.234 :drawText;
-        %tmp.236 = lgetv %cx.4;
-        symbol [ cx %tmp.236 72 20 22 ];
-        %tmp.237 = lgetv %cy.5;
-        symbol [ cy %tmp.237 72 24 26 ];
-        %tmp.238 = 60;
-        %tmp.239 = add %tmp.237 %tmp.238;
-        symbol [ Graphics %tmp.240 72 33 41 ];
-        %tmp.240 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.241 72 42 52 ];
-        %tmp.241 = getv %tmp.240 :FONT_SMALL;
-        %tmp.242 = "~";
-        %tmp.243 = lgetv %minsLeft.10;
-        symbol [ minsLeft %tmp.243 73 18 26 ];
-        %tmp.244 = add %tmp.242 %tmp.243;
-        %tmp.245 = " min left";
-        %tmp.246 = add %tmp.244 %tmp.245;
-        symbol [ Graphics %tmp.247 74 12 20 ];
-        %tmp.247 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.248 74 21 40 ];
-        %tmp.248 = getv %tmp.247 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.234 %tmp.235(%tmp.236, %tmp.239, %tmp.241, %tmp.246, %tmp.248);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 77 8 ]
-        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop" ]
-        %rmssd.11 = local;
-        symbol [ rmssd %rmssd.11 77 12 17 ];
-        %tmp.249 = lgetv %collector.2;
-        symbol [ collector %tmp.249 77 20 29 ];
-        symbol [ hrvCalculator %tmp.250 77 30 43 ];
-        %tmp.250 = getv %tmp.249 :hrvCalculator;
-        symbol [ getRMSSD %tmp.251 77 44 52 ];
-        %tmp.251 = getv function %tmp.250 :getRMSSD;
-        %tmp.252 = invoke %tmp.250 %tmp.251();
-        lputv %rmssd.11 %tmp.252;
-        symbol [ rmssd %rmssd.11 77 12 17 ];
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 78 8 ]
-        %tmp.253 = lgetv %dc;
-        symbol [ dc %tmp.253 78 8 10 ];
-        symbol [ setColor %tmp.254 78 11 19 ];
-        %tmp.254 = getv function %tmp.253 :setColor;
-        symbol [ Graphics %tmp.255 78 20 28 ];
-        %tmp.255 = getm $.Toybox.Graphics;
-        symbol [ COLOR_LT_GRAY %tmp.256 78 29 42 ];
-        %tmp.256 = getv %tmp.255 :COLOR_LT_GRAY;
-        symbol [ Graphics %tmp.257 78 44 52 ];
-        %tmp.257 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.258 78 53 70 ];
-        %tmp.258 = getv %tmp.257 :COLOR_TRANSPARENT;
-        invoke %tmp.253 %tmp.254(%tmp.256, %tmp.258);
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 79 8 ]
-        %tmp.259 = lgetv %dc;
-        symbol [ dc %tmp.259 79 8 10 ];
-        symbol [ drawText %tmp.260 79 11 19 ];
-        %tmp.260 = getv function %tmp.259 :drawText;
-        %tmp.261 = lgetv %cx.4;
-        symbol [ cx %tmp.261 79 20 22 ];
-        %tmp.262 = lgetv %cy.5;
-        symbol [ cy %tmp.262 79 24 26 ];
-        %tmp.263 = 82;
-        %tmp.264 = add %tmp.262 %tmp.263;
-        symbol [ Graphics %tmp.265 79 33 41 ];
-        %tmp.265 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.266 79 42 52 ];
-        %tmp.266 = getv %tmp.265 :FONT_XTINY;
-        %tmp.267 = "HRV:";
-        %tmp.268 = lgetv %rmssd.11;
-        symbol [ rmssd %tmp.268 80 21 26 ];
-        symbol [ format %tmp.269 80 27 33 ];
-        %tmp.269 = getv function %tmp.268 :format;
-        %tmp.270 = "%.0f";
-        %tmp.271 = invoke %tmp.268 %tmp.269(%tmp.270);
-        %tmp.272 = add %tmp.267 %tmp.271;
-        %tmp.273 = "ms";
-        %tmp.274 = add %tmp.272 %tmp.273;
-        symbol [ Graphics %tmp.275 81 12 20 ];
-        %tmp.275 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.276 81 21 40 ];
-        %tmp.276 = getv %tmp.275 :TEXT_JUSTIFY_CENTER;
-        invoke %tmp.259 %tmp.260(%tmp.261, %tmp.264, %tmp.266, %tmp.274, %tmp.276);
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_82_4_stop:
-    }
-    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc"; @line = 84; @symbol_functiondef = [getZoneColor,84,13,25]; @symbol_param<0> = [fatigue,84,26,33]; ]
-    function getZoneColor(fatigue) {
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_84_35_90_4_start:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 85 8 ]
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_8_85_45_if_stmt:
-        %tmp.1 = lgetv %fatigue;
-        symbol [ fatigue %tmp.1 85 12 19 ];
-        %tmp.2 = 30;
-        %tmp.3 = lt %tmp.1 %tmp.2;
-        bf %tmp.3 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_8_85_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_8_85_45_if_true:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_26_85_45_start:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 85 28 ]
-        %tmp.4 = 0x00AA00;
-        ret %tmp.4;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_26_85_45_stop:
-        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_8_85_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_85_8_85_45_if_end:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 86 8 ]
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_8_86_45_if_stmt:
-        %tmp.5 = lgetv %fatigue;
-        symbol [ fatigue %tmp.5 86 12 19 ];
-        %tmp.6 = 55;
-        %tmp.7 = lt %tmp.5 %tmp.6;
-        bf %tmp.7 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_8_86_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_8_86_45_if_true:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_26_86_45_start:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 86 28 ]
-        %tmp.8 = 0xAAAA00;
-        ret %tmp.8;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_26_86_45_stop:
-        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_8_86_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_86_8_86_45_if_end:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 87 8 ]
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_8_87_45_if_stmt:
-        %tmp.9 = lgetv %fatigue;
-        symbol [ fatigue %tmp.9 87 12 19 ];
-        %tmp.10 = 75;
-        %tmp.11 = lt %tmp.9 %tmp.10;
-        bf %tmp.11 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_8_87_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_8_87_45_if_true:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_26_87_45_start:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 87 28 ]
-        %tmp.12 = 0xFF8800;
-        ret %tmp.12;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_26_87_45_stop:
-        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_8_87_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_87_8_87_45_if_end:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 88 8 ]
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_8_88_45_if_stmt:
-        %tmp.13 = lgetv %fatigue;
-        symbol [ fatigue %tmp.13 88 12 19 ];
-        %tmp.14 = 90;
-        %tmp.15 = lt %tmp.13 %tmp.14;
-        bf %tmp.15 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_8_88_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_8_88_45_if_true:
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_26_88_45_start:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 88 28 ]
-        %tmp.16 = 0xFF0000;
-        ret %tmp.16;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_26_88_45_stop:
-        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_8_88_45_if_end;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_88_8_88_45_if_end:
-[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" 89 8 ]
-        %tmp.17 = 0xFF00FF;
-        ret %tmp.17;
-_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_84_35_90_4_stop:
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.144 50 21 40 ];
+        %tmp.144 = getv %tmp.143 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.134 %tmp.135(%tmp.136, %tmp.139, %tmp.141, %tmp.142, %tmp.144);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SoccerMonitorView_mc_11_26_51_4_stop:
     }
 }
 [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc"; @line = 1; ]

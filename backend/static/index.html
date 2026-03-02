@@ -12,13 +12,24 @@
 <body>
     <header>
         <h1>RealTime CQ</h1>
-        <div id="connection-status" class="status disconnected">Disconnected</div>
+        <div class="header-right">
+            <div id="connection-status" class="status disconnected">
+                <span class="status-dot"></span> Disconnected
+            </div>
+            <div id="elapsed-time" class="elapsed">0:00 ET</div>
+        </div>
     </header>
 
     <main class="grid">
-        <!-- Heart Rate Chart -->
+        <!-- Row 1 -->
+
+        <!-- Heart Rate -->
         <section class="card card-hr">
-            <h2>Heart Rate <span id="hr-value" class="live-value">--</span> bpm</h2>
+            <h2>Heart Rate</h2>
+            <div class="metric-hero">
+                <span id="hr-value" class="hero-value">--</span>
+                <span class="hero-unit">bpm</span>
+            </div>
             <div class="chart-wrap"><canvas id="hr-chart"></canvas></div>
         </section>
 
@@ -29,17 +40,18 @@
             <div id="fatigue-value" class="gauge-label">--%</div>
         </section>
 
-        <!-- Speed -->
+        <!-- Speed (sensor + GPS) -->
         <section class="card card-speed">
             <h2>Speed</h2>
-            <div id="speed-value" class="big-number">--</div>
-            <div class="unit">km/h</div>
-        </section>
-
-        <!-- HRV Chart -->
-        <section class="card card-hrv">
-            <h2>HRV (RMSSD) <span id="hrv-value" class="live-value">--</span> ms</h2>
-            <div class="chart-wrap"><canvas id="hrv-chart"></canvas></div>
+            <div class="metric-hero">
+                <span id="speed-value" class="hero-value">--</span>
+                <span class="hero-unit">km/h</span>
+            </div>
+            <div class="speed-secondary">
+                <span class="speed-label">GPS</span>
+                <span id="gps-speed-value" class="speed-gps">--</span>
+                <span class="speed-label">km/h</span>
+            </div>
         </section>
 
         <!-- GPS Map -->
@@ -48,7 +60,79 @@
             <div id="map"></div>
         </section>
 
-        <!-- Stat Cards -->
+        <!-- Row 2 -->
+
+        <!-- HRV -->
+        <section class="card card-hrv">
+            <h2>HRV (RMSSD)</h2>
+            <div class="metric-hero">
+                <span id="hrv-value" class="hero-value">--</span>
+                <span class="hero-unit">ms</span>
+            </div>
+            <div class="chart-wrap"><canvas id="hrv-chart"></canvas></div>
+        </section>
+
+        <!-- HR Zones -->
+        <section class="card card-zones">
+            <h2>HR Zones</h2>
+            <div id="current-zone" class="zone-current">
+                <span id="zone-label" class="zone-name">--</span>
+                <span id="zone-range" class="zone-range"></span>
+            </div>
+            <div id="zone-bars" class="zone-bars">
+                <div class="zone-row" data-zone="5">
+                    <span class="zone-id z5">Z5</span>
+                    <div class="zone-bar-track"><div class="zone-bar-fill z5-fill"></div></div>
+                    <span class="zone-time" id="zone-time-5">0:00</span>
+                </div>
+                <div class="zone-row" data-zone="4">
+                    <span class="zone-id z4">Z4</span>
+                    <div class="zone-bar-track"><div class="zone-bar-fill z4-fill"></div></div>
+                    <span class="zone-time" id="zone-time-4">0:00</span>
+                </div>
+                <div class="zone-row" data-zone="3">
+                    <span class="zone-id z3">Z3</span>
+                    <div class="zone-bar-track"><div class="zone-bar-fill z3-fill"></div></div>
+                    <span class="zone-time" id="zone-time-3">0:00</span>
+                </div>
+                <div class="zone-row" data-zone="2">
+                    <span class="zone-id z2">Z2</span>
+                    <div class="zone-bar-track"><div class="zone-bar-fill z2-fill"></div></div>
+                    <span class="zone-time" id="zone-time-2">0:00</span>
+                </div>
+                <div class="zone-row" data-zone="1">
+                    <span class="zone-id z1">Z1</span>
+                    <div class="zone-bar-track"><div class="zone-bar-fill z1-fill"></div></div>
+                    <span class="zone-time" id="zone-time-1">0:00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accelerometer -->
+        <section class="card card-accel">
+            <h2>Accelerometer</h2>
+            <canvas id="accel-canvas"></canvas>
+            <div class="accel-values">
+                <div class="accel-axis">
+                    <span class="accel-label ax-color">X</span>
+                    <span id="accel-x" class="accel-val">--</span>
+                </div>
+                <div class="accel-axis">
+                    <span class="accel-label ay-color">Y</span>
+                    <span id="accel-y" class="accel-val">--</span>
+                </div>
+                <div class="accel-axis">
+                    <span class="accel-label az-color">Z</span>
+                    <span id="accel-z" class="accel-val">--</span>
+                </div>
+                <div class="accel-axis">
+                    <span class="accel-label mag-color">|G|</span>
+                    <span id="accel-mag" class="accel-val">--</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
         <section class="card card-stats">
             <h2>Stats</h2>
             <div class="stats-grid">
@@ -68,9 +152,29 @@
                     <div class="stat-unit">spm</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-label">Elapsed</div>
-                    <div id="stat-elapsed" class="stat-value">--</div>
-                    <div class="stat-unit"></div>
+                    <div class="stat-label">Altitude</div>
+                    <div id="stat-altitude" class="stat-value">--</div>
+                    <div class="stat-unit">m</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">HR Index</div>
+                    <div id="stat-hri" class="stat-value">--</div>
+                    <div class="stat-unit">bpm</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Max HR</div>
+                    <div id="stat-mhr" class="stat-value">--</div>
+                    <div class="stat-unit">bpm</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Rest HR</div>
+                    <div id="stat-rhr" class="stat-value">--</div>
+                    <div class="stat-unit">bpm</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Device TS</div>
+                    <div id="stat-ts" class="stat-value">--</div>
+                    <div class="stat-unit">ms</div>
                 </div>
             </div>
         </section>

@@ -12,7 +12,7 @@
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="4" lineNum="6" parent="globals/HRVCalculator" pc="268435528" symbol="&lt;init&gt;"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="5" lineNum="3" parent="globals/SoccerMonitorDelegate" pc="268435538" symbol="&lt;init&gt;"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="6" lineNum="7" parent="globals/Rez" pc="268435550" symbol="&lt;init&gt;"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="7" lineNum="46" parent="globals/CommListener" pc="268435570" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="7" lineNum="51" parent="globals/CommListener" pc="268435570" symbol="&lt;init&gt;"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="8" lineNum="5" parent="globals/SoccerMonitorView" pc="268435582" symbol="&lt;init&gt;"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="33" parent="globals/FatigueEngine" pc="268435594" symbol="update"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="34" parent="globals/FatigueEngine" pc="268435597" symbol="update"/>
@@ -271,75 +271,53 @@
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="36" lineNum="6" parent="globals/SoccerMonitorDelegate" pc="268439446" symbol="initialize"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="37" lineNum="10" parent="globals/SoccerMonitorDelegate" pc="268439459" symbol="onSelect"/>
         <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="37" lineNum="12" parent="globals/SoccerMonitorDelegate" pc="268439461" symbol="onSelect"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="53" parent="globals/CommListener" pc="268439463" symbol="onError"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="55" parent="globals/CommListener" pc="268439465" symbol="onError"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="47" parent="globals/CommListener" pc="268439484" symbol="initialize"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="48" parent="globals/CommListener" pc="268439486" symbol="initialize"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="84" parent="globals/SoccerMonitorView" pc="268439499" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="85" parent="globals/SoccerMonitorView" pc="268439501" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="85" parent="globals/SoccerMonitorView" pc="268439509" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="86" parent="globals/SoccerMonitorView" pc="268439517" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="86" parent="globals/SoccerMonitorView" pc="268439525" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="87" parent="globals/SoccerMonitorView" pc="268439534" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="87" parent="globals/SoccerMonitorView" pc="268439542" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="88" parent="globals/SoccerMonitorView" pc="268439551" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="88" parent="globals/SoccerMonitorView" pc="268439559" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="89" parent="globals/SoccerMonitorView" pc="268439568" symbol="getZoneColor"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="7" parent="globals/SoccerMonitorView" pc="268439574" symbol="initialize"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="8" parent="globals/SoccerMonitorView" pc="268439576" symbol="initialize"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="11" parent="globals/SoccerMonitorView" pc="268439589" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="12" parent="globals/SoccerMonitorView" pc="268439592" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="13" parent="globals/SoccerMonitorView" pc="268439604" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="15" parent="globals/SoccerMonitorView" pc="268439612" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="16" parent="globals/SoccerMonitorView" pc="268439624" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="17" parent="globals/SoccerMonitorView" pc="268439632" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="19" parent="globals/SoccerMonitorView" pc="268439640" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="20" parent="globals/SoccerMonitorView" pc="268439652" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="21" parent="globals/SoccerMonitorView" pc="268439669" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="23" parent="globals/SoccerMonitorView" pc="268439708" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="26" parent="globals/SoccerMonitorView" pc="268439712" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="27" parent="globals/SoccerMonitorView" pc="268439724" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="30" parent="globals/SoccerMonitorView" pc="268439736" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="31" parent="globals/SoccerMonitorView" pc="268439745" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="32" parent="globals/SoccerMonitorView" pc="268439757" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="33" parent="globals/SoccerMonitorView" pc="268439771" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="35" parent="globals/SoccerMonitorView" pc="268439792" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="36" parent="globals/SoccerMonitorView" pc="268439809" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="41" parent="globals/SoccerMonitorView" pc="268439848" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="42" parent="globals/SoccerMonitorView" pc="268439865" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="45" parent="globals/SoccerMonitorView" pc="268439898" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="46" parent="globals/SoccerMonitorView" pc="268439915" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="50" parent="globals/SoccerMonitorView" pc="268439940" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="51" parent="globals/SoccerMonitorView" pc="268439954" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="52" parent="globals/SoccerMonitorView" pc="268439971" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="55" parent="globals/SoccerMonitorView" pc="268440009" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="56" parent="globals/SoccerMonitorView" pc="268440026" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="60" parent="globals/SoccerMonitorView" pc="268440054" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="61" parent="globals/SoccerMonitorView" pc="268440068" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="62" parent="globals/SoccerMonitorView" pc="268440085" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="65" parent="globals/SoccerMonitorView" pc="268440123" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="66" parent="globals/SoccerMonitorView" pc="268440140" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="70" parent="globals/SoccerMonitorView" pc="268440168" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="71" parent="globals/SoccerMonitorView" pc="268440184" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="72" parent="globals/SoccerMonitorView" pc="268440193" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="77" parent="globals/SoccerMonitorView" pc="268440228" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="78" parent="globals/SoccerMonitorView" pc="268440242" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="79" parent="globals/SoccerMonitorView" pc="268440259" symbol="onUpdate"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="32" parent="globals/DataTransmitter" pc="268440306" symbol="onCloudResponse"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="33" parent="globals/DataTransmitter" pc="268440308" symbol="onCloudResponse"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="35" parent="globals/DataTransmitter" pc="268440323" symbol="onCloudResponse"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="15" parent="globals/DataTransmitter" pc="268440348" symbol="sendToCloud"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="16" parent="globals/DataTransmitter" pc="268440351" symbol="sendToCloud"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="24" parent="globals/DataTransmitter" pc="268440384" symbol="sendToCloud"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="48" lineNum="10" parent="globals/DataTransmitter" pc="268440420" symbol="send"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="48" lineNum="11" parent="globals/DataTransmitter" pc="268440422" symbol="send"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="13" parent="globals/Rez/Layouts" pc="268440434" symbol="MainLayout"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="14" parent="globals/Rez/Layouts" pc="268440445" symbol="MainLayout"/>
-        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="16" parent="globals/Rez/Layouts" pc="268440562" symbol="MainLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="58" parent="globals/CommListener" pc="268439463" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="60" parent="globals/CommListener" pc="268439465" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="52" parent="globals/CommListener" pc="268439484" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="53" parent="globals/CommListener" pc="268439486" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="7" parent="globals/SoccerMonitorView" pc="268439499" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="8" parent="globals/SoccerMonitorView" pc="268439501" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="11" parent="globals/SoccerMonitorView" pc="268439514" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="12" parent="globals/SoccerMonitorView" pc="268439517" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="13" parent="globals/SoccerMonitorView" pc="268439529" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="15" parent="globals/SoccerMonitorView" pc="268439537" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="16" parent="globals/SoccerMonitorView" pc="268439549" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="17" parent="globals/SoccerMonitorView" pc="268439557" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="19" parent="globals/SoccerMonitorView" pc="268439565" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="20" parent="globals/SoccerMonitorView" pc="268439571" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="21" parent="globals/SoccerMonitorView" pc="268439588" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="23" parent="globals/SoccerMonitorView" pc="268439627" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="26" parent="globals/SoccerMonitorView" pc="268439631" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="27" parent="globals/SoccerMonitorView" pc="268439643" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="30" parent="globals/SoccerMonitorView" pc="268439655" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="31" parent="globals/SoccerMonitorView" pc="268439673" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="32" parent="globals/SoccerMonitorView" pc="268439678" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="33" parent="globals/SoccerMonitorView" pc="268439694" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="34" parent="globals/SoccerMonitorView" pc="268439713" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="37" parent="globals/SoccerMonitorView" pc="268439742" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="38" parent="globals/SoccerMonitorView" pc="268439759" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="39" parent="globals/SoccerMonitorView" pc="268439778" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="44" parent="globals/SoccerMonitorView" pc="268439804" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="45" parent="globals/SoccerMonitorView" pc="268439821" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="48" parent="globals/SoccerMonitorView" pc="268439854" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="49" parent="globals/SoccerMonitorView" pc="268439871" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="43" lineNum="35" parent="globals/DataTransmitter" pc="268439898" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="43" lineNum="36" parent="globals/DataTransmitter" pc="268439900" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="43" lineNum="37" parent="globals/DataTransmitter" pc="268439909" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="43" lineNum="38" parent="globals/DataTransmitter" pc="268439917" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="43" lineNum="42" parent="globals/DataTransmitter" pc="268439947" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="45" lineNum="18" parent="globals/DataTransmitter" pc="268439956" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="45" lineNum="19" parent="globals/DataTransmitter" pc="268439959" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="45" lineNum="27" parent="globals/DataTransmitter" pc="268439992" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="47" lineNum="13" parent="globals/DataTransmitter" pc="268440028" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="47" lineNum="14" parent="globals/DataTransmitter" pc="268440030" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="48" lineNum="13" parent="globals/Rez/Layouts" pc="268440042" symbol="MainLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="48" lineNum="14" parent="globals/Rez/Layouts" pc="268440053" symbol="MainLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="48" lineNum="16" parent="globals/Rez/Layouts" pc="268440170" symbol="MainLayout"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry field="true" id="64" symbol="cloudUrl"/>
+        <entry field="true" id="63" symbol="cloudUrl"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry field="true" id="8389149" symbol="restingHeartRate"/>
         <entry id="8388638" module="true" symbol="ActivityRecording"/>
@@ -421,6 +399,7 @@
         <entry id="58" method="true" symbol="getRMSSD"/>
         <entry id="8389619" method="true" symbol="onSelect"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="64" symbol="connected"/>
         <entry field="true" id="15" symbol="baselineHR"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry field="true" id="32" symbol="maxHR"/>
@@ -429,7 +408,6 @@
         <entry id="6" object="true" symbol="CommListener"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8388643" module="true" symbol="Sensor"/>
-        <entry id="63" method="true" symbol="getZoneColor"/>
         <entry field="true" id="21" symbol="baselineSpeedSum"/>
         <entry id="27" method="true" symbol="getHRPercent"/>
         <entry field="true" id="61" symbol="rrWindow"/>
@@ -542,26 +520,20 @@
         <entry endPc="268439358" name="prev" stackId="5" startPc="268439260"/>
         <entry endPc="268439358" name="absDiff" stackId="6" startPc="268439260"/>
         <entry endPc="268439443" name="app" stackId="1" startPc="268439402"/>
-        <entry arg="true" endPc="268439573" name="fatigue" stackId="1" startPc="268439499"/>
-        <entry arg="true" endPc="268440305" name="dc" stackId="1" startPc="268439589"/>
-        <entry endPc="268440304" name="app" stackId="2" startPc="268439592"/>
-        <entry endPc="268440304" name="collector" stackId="3" startPc="268439592"/>
-        <entry endPc="268440304" name="fatigue" stackId="4" startPc="268439592"/>
-        <entry endPc="268440304" name="cx" stackId="5" startPc="268439592"/>
-        <entry endPc="268440304" name="cy" stackId="6" startPc="268439592"/>
-        <entry endPc="268440304" name="fatigueScore" stackId="7" startPc="268439592"/>
-        <entry endPc="268440304" name="zoneColor" stackId="8" startPc="268439592"/>
-        <entry endPc="268440304" name="speedKmh" stackId="9" startPc="268439592"/>
-        <entry endPc="268440304" name="distKm" stackId="10" startPc="268439592"/>
-        <entry endPc="268440304" name="minsLeft" stackId="11" startPc="268439592"/>
-        <entry endPc="268440304" name="rmssd" stackId="12" startPc="268439592"/>
-        <entry arg="true" endPc="268440347" name="responseCode" stackId="1" startPc="268440306"/>
-        <entry arg="true" endPc="268440347" name="data" stackId="2" startPc="268440306"/>
-        <entry arg="true" endPc="268440419" name="payload" stackId="1" startPc="268440348"/>
-        <entry endPc="268440418" name="options" stackId="2" startPc="268440351"/>
-        <entry arg="true" endPc="268440433" name="payload" stackId="1" startPc="268440420"/>
-        <entry arg="true" endPc="268440571" name="dc" stackId="1" startPc="268440434"/>
-        <entry endPc="268440571" name="rez_cmp_local_text_StatusLabel" stackId="2" startPc="268440445"/>
+        <entry arg="true" endPc="268439897" name="dc" stackId="1" startPc="268439514"/>
+        <entry endPc="268439896" name="app" stackId="2" startPc="268439517"/>
+        <entry endPc="268439896" name="collector" stackId="3" startPc="268439517"/>
+        <entry endPc="268439896" name="transmitter" stackId="4" startPc="268439517"/>
+        <entry endPc="268439896" name="cx" stackId="5" startPc="268439517"/>
+        <entry endPc="268439896" name="cy" stackId="6" startPc="268439517"/>
+        <entry endPc="268439896" name="isConnected" stackId="7" startPc="268439517"/>
+        <entry arg="true" endPc="268439955" name="responseCode" stackId="1" startPc="268439898"/>
+        <entry arg="true" endPc="268439955" name="data" stackId="2" startPc="268439898"/>
+        <entry arg="true" endPc="268440027" name="payload" stackId="1" startPc="268439956"/>
+        <entry endPc="268440026" name="options" stackId="2" startPc="268439959"/>
+        <entry arg="true" endPc="268440041" name="payload" stackId="1" startPc="268440028"/>
+        <entry arg="true" endPc="268440179" name="dc" stackId="1" startPc="268440042"/>
+        <entry endPc="268440179" name="rez_cmp_local_text_StatusLabel" stackId="2" startPc="268440053"/>
     </localVars>
     <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4260-00"/>
     <annotations>
@@ -578,7 +550,7 @@
         <dataEntry label="globals/Rez" offset="993" parentId="globals" symbolId="Rez" type="module"/>
         <dataEntry label="globals/CommListener" offset="1046" parentId="globals" symbolId="CommListener" type="class"/>
         <dataEntry label="globals/SoccerMonitorView" offset="1108" parentId="globals" symbolId="SoccerMonitorView" type="class"/>
-        <dataEntry label="globals/DataTransmitter" offset="1170" parentId="globals" symbolId="DataTransmitter" type="class"/>
+        <dataEntry label="globals/DataTransmitter" offset="1161" parentId="globals" symbolId="DataTransmitter" type="class"/>
         <dataEntry label="globals/Rez/Drawables" offset="1259" parentId="Rez" symbolId="Drawables" type="module"/>
         <dataEntry label="globals/Rez/Layouts" offset="1294" parentId="Rez" symbolId="Layouts" type="module"/>
         <dataEntry label="globals/Rez/Strings" offset="1329" parentId="Rez" symbolId="Strings" type="module"/>
@@ -729,18 +701,14 @@
         <functionEntry accessMode="public" endPc="268439498" name="initialize" parent="CommListener" startPc="268439484">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439573" name="getZoneColor" parent="SoccerMonitorView" startPc="268439499">
-            <param id="fatigue"/>
+        <functionEntry accessMode="public" endPc="268439513" name="initialize" parent="SoccerMonitorView" startPc="268439499">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268439588" name="initialize" parent="SoccerMonitorView" startPc="268439574">
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" endPc="268440305" name="onUpdate" parent="SoccerMonitorView" startPc="268439589">
+        <functionEntry accessMode="public" endPc="268439897" name="onUpdate" parent="SoccerMonitorView" startPc="268439514">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440347" name="onCloudResponse" parent="DataTransmitter" startPc="268440306">
+        <functionEntry accessMode="public" endPc="268439955" name="onCloudResponse" parent="DataTransmitter" startPc="268439898">
             <param id="responseCode"/>
             <param id="data"/>
             <documentation/>
@@ -748,18 +716,18 @@
         <functionEntry accessMode="public" name="stop" parent="DataTransmitter">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440419" name="sendToCloud" parent="DataTransmitter" startPc="268440348">
+        <functionEntry accessMode="public" endPc="268440027" name="sendToCloud" parent="DataTransmitter" startPc="268439956">
             <param id="payload"/>
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="DataTransmitter">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440433" name="send" parent="DataTransmitter" startPc="268440420">
+        <functionEntry accessMode="public" endPc="268440041" name="send" parent="DataTransmitter" startPc="268440028">
             <param id="payload"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268440571" name="MainLayout" parent="Layouts" startPc="268440434">
+        <functionEntry accessMode="public" endPc="268440179" name="MainLayout" parent="Layouts" startPc="268440042">
             <param id="dc"/>
             <documentation/>
         </functionEntry>

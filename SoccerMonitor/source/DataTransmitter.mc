@@ -6,6 +6,9 @@ class DataTransmitter {
     // Cloud endpoint URL — replace with your Cloud Run URL
     var cloudUrl = "CLOUD_URL_PLACEHOLDER";
 
+    // Connection status — true after a successful 200 response
+    var connected = false;
+
     // Send data to cloud via HTTP
     function send(payload) {
         sendToCloud(payload);
@@ -30,11 +33,13 @@ class DataTransmitter {
     }
 
     function onCloudResponse(responseCode as Toybox.Lang.Number, data as Toybox.Lang.Dictionary or Toybox.Lang.String or Null) as Void {
-        if (responseCode == 200 && data != null) {
-            // Could receive fatigue predictions back from cloud
-            if (data.hasKey("fatigue_prediction")) {
+        if (responseCode == 200) {
+            connected = true;
+            if (data != null && data.hasKey("fatigue_prediction")) {
                 // Update UI with cloud-enhanced prediction
             }
+        } else {
+            connected = false;
         }
     }
 

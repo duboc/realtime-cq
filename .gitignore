@@ -8,8 +8,7 @@ __pycache__/
 .venv/
 
 # Connect IQ build artifacts
-SoccerMonitor/bin/
-SoccerMonitor/*.prg
+
 SoccerMonitor/*.prg.debug.xml
 SoccerMonitor/gen/
 SoccerMonitor/mir/

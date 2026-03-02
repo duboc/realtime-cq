@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="1" lineNum="9" parent="globals/FatigueEngine" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="1" lineNum="10" parent="globals/FatigueEngine" pc="268435469" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="1" lineNum="11" parent="globals/FatigueEngine" pc="268435478" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="2" lineNum="28" parent="globals/SensorCollector" pc="268435488" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="2" lineNum="31" parent="globals/SensorCollector" pc="268435497" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="2" lineNum="32" parent="globals/SensorCollector" pc="268435506" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="3" lineNum="4" parent="globals/SoccerMonitorApp" pc="268435516" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="4" lineNum="6" parent="globals/HRVCalculator" pc="268435528" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="5" lineNum="3" parent="globals/SoccerMonitorDelegate" pc="268435538" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="6" lineNum="7" parent="globals/Rez" pc="268435550" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="7" lineNum="46" parent="globals/CommListener" pc="268435570" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="8" lineNum="5" parent="globals/SoccerMonitorView" pc="268435582" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="33" parent="globals/FatigueEngine" pc="268435594" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="34" parent="globals/FatigueEngine" pc="268435597" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="35" parent="globals/FatigueEngine" pc="268435605" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="36" parent="globals/FatigueEngine" pc="268435638" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="39" parent="globals/FatigueEngine" pc="268435652" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="40" parent="globals/FatigueEngine" pc="268435668" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="41" parent="globals/FatigueEngine" pc="268435684" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="42" parent="globals/FatigueEngine" pc="268435700" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="42" parent="globals/FatigueEngine" pc="268435717" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="43" parent="globals/FatigueEngine" pc="268435743" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="43" parent="globals/FatigueEngine" pc="268435760" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="44" parent="globals/FatigueEngine" pc="268435786" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="44" parent="globals/FatigueEngine" pc="268435803" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="47" parent="globals/FatigueEngine" pc="268435829" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="48" parent="globals/FatigueEngine" pc="268435842" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="51" parent="globals/FatigueEngine" pc="268435855" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="52" parent="globals/FatigueEngine" pc="268435876" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="53" parent="globals/FatigueEngine" pc="268435891" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="54" parent="globals/FatigueEngine" pc="268435906" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="55" parent="globals/FatigueEngine" pc="268435921" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="56" parent="globals/FatigueEngine" pc="268435936" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="57" parent="globals/FatigueEngine" pc="268435948" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="58" parent="globals/FatigueEngine" pc="268435966" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="59" parent="globals/FatigueEngine" pc="268435984" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="60" parent="globals/FatigueEngine" pc="268436002" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="65" parent="globals/FatigueEngine" pc="268436016" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="66" parent="globals/FatigueEngine" pc="268436028" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="67" parent="globals/FatigueEngine" pc="268436039" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="71" parent="globals/FatigueEngine" pc="268436057" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="72" parent="globals/FatigueEngine" pc="268436068" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="9" lineNum="76" parent="globals/FatigueEngine" pc="268436086" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="168" parent="globals/FatigueEngine" pc="268436108" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="170" parent="globals/FatigueEngine" pc="268436111" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="171" parent="globals/FatigueEngine" pc="268436139" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="174" parent="globals/FatigueEngine" pc="268436145" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="175" parent="globals/FatigueEngine" pc="268436164" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="175" parent="globals/FatigueEngine" pc="268436172" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="176" parent="globals/FatigueEngine" pc="268436178" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="177" parent="globals/FatigueEngine" pc="268436188" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="177" parent="globals/FatigueEngine" pc="268436195" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="178" parent="globals/FatigueEngine" pc="268436201" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="179" parent="globals/FatigueEngine" pc="268436217" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="179" parent="globals/FatigueEngine" pc="268436225" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="10" lineNum="180" parent="globals/FatigueEngine" pc="268436231" symbol="getEstimatedMinutesLeft"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="11" lineNum="79" parent="globals/FatigueEngine" pc="268436239" symbol="getHRPercent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="11" lineNum="80" parent="globals/FatigueEngine" pc="268436241" symbol="getHRPercent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="11" lineNum="80" parent="globals/FatigueEngine" pc="268436255" symbol="getHRPercent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="11" lineNum="82" parent="globals/FatigueEngine" pc="268436260" symbol="getHRPercent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="12" lineNum="156" parent="globals/FatigueEngine" pc="268436293" symbol="getFatigueScore"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="12" lineNum="157" parent="globals/FatigueEngine" pc="268436295" symbol="getFatigueScore"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="85" parent="globals/FatigueEngine" pc="268436307" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="86" parent="globals/FatigueEngine" pc="268436310" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="90" parent="globals/FatigueEngine" pc="268436313" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="91" parent="globals/FatigueEngine" pc="268436325" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="92" parent="globals/FatigueEngine" pc="268436333" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="93" parent="globals/FatigueEngine" pc="268436346" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="94" parent="globals/FatigueEngine" pc="268436354" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="95" parent="globals/FatigueEngine" pc="268436367" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="96" parent="globals/FatigueEngine" pc="268436375" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="97" parent="globals/FatigueEngine" pc="268436388" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="98" parent="globals/FatigueEngine" pc="268436396" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="100" parent="globals/FatigueEngine" pc="268436409" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="105" parent="globals/FatigueEngine" pc="268436422" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="106" parent="globals/FatigueEngine" pc="268436447" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="107" parent="globals/FatigueEngine" pc="268436464" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="108" parent="globals/FatigueEngine" pc="268436486" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="109" parent="globals/FatigueEngine" pc="268436493" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="110" parent="globals/FatigueEngine" pc="268436512" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="110" parent="globals/FatigueEngine" pc="268436520" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="116" parent="globals/FatigueEngine" pc="268436536" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="117" parent="globals/FatigueEngine" pc="268436561" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="118" parent="globals/FatigueEngine" pc="268436583" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="119" parent="globals/FatigueEngine" pc="268436590" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="125" parent="globals/FatigueEngine" pc="268436615" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="126" parent="globals/FatigueEngine" pc="268436650" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="127" parent="globals/FatigueEngine" pc="268436667" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="128" parent="globals/FatigueEngine" pc="268436689" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="129" parent="globals/FatigueEngine" pc="268436696" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="135" parent="globals/FatigueEngine" pc="268436721" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="136" parent="globals/FatigueEngine" pc="268436734" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="139" parent="globals/FatigueEngine" pc="268436753" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="139" parent="globals/FatigueEngine" pc="268436760" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="140" parent="globals/FatigueEngine" pc="268436766" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="140" parent="globals/FatigueEngine" pc="268436774" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="13" lineNum="142" parent="globals/FatigueEngine" pc="268436784" symbol="calculateFatigue"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="145" parent="globals/FatigueEngine" pc="268436787" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="146" parent="globals/FatigueEngine" pc="268436790" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="146" parent="globals/FatigueEngine" pc="268436802" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="147" parent="globals/FatigueEngine" pc="268436807" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="148" parent="globals/FatigueEngine" pc="268436811" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="148" parent="globals/FatigueEngine" pc="268436824" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="149" parent="globals/FatigueEngine" pc="268436836" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="150" parent="globals/FatigueEngine" pc="268436839" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="151" parent="globals/FatigueEngine" pc="268436864" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="14" lineNum="153" parent="globals/FatigueEngine" pc="268436884" symbol="avgLast"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="160" parent="globals/FatigueEngine" pc="268436890" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="161" parent="globals/FatigueEngine" pc="268436892" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="161" parent="globals/FatigueEngine" pc="268436903" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="162" parent="globals/FatigueEngine" pc="268436912" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="162" parent="globals/FatigueEngine" pc="268436923" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="163" parent="globals/FatigueEngine" pc="268436932" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="163" parent="globals/FatigueEngine" pc="268436943" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="164" parent="globals/FatigueEngine" pc="268436952" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="164" parent="globals/FatigueEngine" pc="268436963" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" id="15" lineNum="165" parent="globals/FatigueEngine" pc="268436972" symbol="getFatigueZone"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="205" parent="globals/SensorCollector" pc="268436978" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="206" parent="globals/SensorCollector" pc="268436981" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="207" parent="globals/SensorCollector" pc="268436991" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="208" parent="globals/SensorCollector" pc="268437005" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="209" parent="globals/SensorCollector" pc="268437016" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="211" parent="globals/SensorCollector" pc="268437031" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="17" lineNum="212" parent="globals/SensorCollector" pc="268437041" symbol="onPosition"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="18" lineNum="217" parent="globals/SensorCollector" pc="268437058" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="18" lineNum="218" parent="globals/SensorCollector" pc="268437061" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="18" lineNum="219" parent="globals/SensorCollector" pc="268437073" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="18" lineNum="220" parent="globals/SensorCollector" pc="268437081" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="19" lineNum="223" parent="globals/SensorCollector" pc="268437099" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="19" lineNum="224" parent="globals/SensorCollector" pc="268437102" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="19" lineNum="225" parent="globals/SensorCollector" pc="268437114" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="131" parent="globals/SensorCollector" pc="268437353" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="132" parent="globals/SensorCollector" pc="268437356" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="133" parent="globals/SensorCollector" pc="268437366" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="135" parent="globals/SensorCollector" pc="268437382" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="136" parent="globals/SensorCollector" pc="268437392" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="138" parent="globals/SensorCollector" pc="268437408" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="139" parent="globals/SensorCollector" pc="268437418" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="141" parent="globals/SensorCollector" pc="268437434" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="142" parent="globals/SensorCollector" pc="268437444" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="144" parent="globals/SensorCollector" pc="268437460" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="145" parent="globals/SensorCollector" pc="268437482" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="146" parent="globals/SensorCollector" pc="268437498" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="147" parent="globals/SensorCollector" pc="268437515" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="151" parent="globals/SensorCollector" pc="268437535" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="152" parent="globals/SensorCollector" pc="268437547" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="153" parent="globals/SensorCollector" pc="268437553" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="154" parent="globals/SensorCollector" pc="268437564" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="156" parent="globals/SensorCollector" pc="268437581" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="157" parent="globals/SensorCollector" pc="268437592" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="159" parent="globals/SensorCollector" pc="268437609" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="160" parent="globals/SensorCollector" pc="268437620" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="165" parent="globals/SensorCollector" pc="268437640" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="166" parent="globals/SensorCollector" pc="268437652" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="20" lineNum="169" parent="globals/SensorCollector" pc="268437668" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="173" parent="globals/SensorCollector" pc="268437680" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="175" parent="globals/SensorCollector" pc="268437683" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="176" parent="globals/SensorCollector" pc="268437705" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="178" parent="globals/SensorCollector" pc="268437714" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="186" parent="globals/SensorCollector" pc="268437765" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="187" parent="globals/SensorCollector" pc="268437787" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="188" parent="globals/SensorCollector" pc="268437796" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="189" parent="globals/SensorCollector" pc="268437818" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="190" parent="globals/SensorCollector" pc="268437832" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="195" parent="globals/SensorCollector" pc="268437857" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="21" lineNum="196" parent="globals/SensorCollector" pc="268437879" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="49" parent="globals/SensorCollector" pc="268437949" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="50" parent="globals/SensorCollector" pc="268437952" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="51" parent="globals/SensorCollector" pc="268437964" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="53" parent="globals/SensorCollector" pc="268437970" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="54" parent="globals/SensorCollector" pc="268437985" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="55" parent="globals/SensorCollector" pc="268438004" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="58" parent="globals/SensorCollector" pc="268438028" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="22" lineNum="59" parent="globals/SensorCollector" pc="268438050" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="64" parent="globals/SensorCollector" pc="268438071" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="66" parent="globals/SensorCollector" pc="268438074" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="67" parent="globals/SensorCollector" pc="268438092" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="71" parent="globals/SensorCollector" pc="268438118" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="83" parent="globals/SensorCollector" pc="268438177" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="85" parent="globals/SensorCollector" pc="268438192" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="89" parent="globals/SensorCollector" pc="268438226" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="92" parent="globals/SensorCollector" pc="268438242" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="96" parent="globals/SensorCollector" pc="268438273" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="99" parent="globals/SensorCollector" pc="268438301" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="100" parent="globals/SensorCollector" pc="268438316" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="105" parent="globals/SensorCollector" pc="268438365" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="109" parent="globals/SensorCollector" pc="268438380" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="23" lineNum="110" parent="globals/SensorCollector" pc="268438409" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="113" parent="globals/SensorCollector" pc="268438441" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="114" parent="globals/SensorCollector" pc="268438443" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="115" parent="globals/SensorCollector" pc="268438457" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="116" parent="globals/SensorCollector" pc="268438472" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="118" parent="globals/SensorCollector" pc="268438486" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="120" parent="globals/SensorCollector" pc="268438502" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="121" parent="globals/SensorCollector" pc="268438511" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="122" parent="globals/SensorCollector" pc="268438523" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="125" parent="globals/SensorCollector" pc="268438538" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="24" lineNum="126" parent="globals/SensorCollector" pc="268438547" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="25" lineNum="44" parent="globals/SensorCollector" pc="268438563" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="25" lineNum="45" parent="globals/SensorCollector" pc="268438565" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" id="25" lineNum="46" parent="globals/SensorCollector" pc="268438590" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="26" lineNum="14" parent="globals/SoccerMonitorApp" pc="268438598" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="26" lineNum="15" parent="globals/SoccerMonitorApp" pc="268438600" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="26" lineNum="16" parent="globals/SoccerMonitorApp" pc="268438625" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="26" lineNum="17" parent="globals/SoccerMonitorApp" pc="268438650" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="26" lineNum="19" parent="globals/SoccerMonitorApp" pc="268438675" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="27" lineNum="27" parent="globals/SoccerMonitorApp" pc="268438688" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="27" lineNum="28" parent="globals/SoccerMonitorApp" pc="268438691" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="27" lineNum="29" parent="globals/SoccerMonitorApp" pc="268438711" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="27" lineNum="30" parent="globals/SoccerMonitorApp" pc="268438731" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="28" lineNum="10" parent="globals/SoccerMonitorApp" pc="268438746" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="28" lineNum="11" parent="globals/SoccerMonitorApp" pc="268438748" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="29" lineNum="22" parent="globals/SoccerMonitorApp" pc="268438761" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="29" lineNum="23" parent="globals/SoccerMonitorApp" pc="268438763" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorApp.mc" id="29" lineNum="24" parent="globals/SoccerMonitorApp" pc="268438775" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="53" parent="globals/HRVCalculator" pc="268438788" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="54" parent="globals/HRVCalculator" pc="268438791" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="55" parent="globals/HRVCalculator" pc="268438808" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="58" parent="globals/HRVCalculator" pc="268438813" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="59" parent="globals/HRVCalculator" pc="268438816" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="60" parent="globals/HRVCalculator" pc="268438836" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="62" parent="globals/HRVCalculator" pc="268438859" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="64" parent="globals/HRVCalculator" pc="268438875" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="65" parent="globals/HRVCalculator" pc="268438878" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="66" parent="globals/HRVCalculator" pc="268438898" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="67" parent="globals/HRVCalculator" pc="268438911" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="30" lineNum="70" parent="globals/HRVCalculator" pc="268438931" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="74" parent="globals/HRVCalculator" pc="268438958" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="75" parent="globals/HRVCalculator" pc="268438961" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="76" parent="globals/HRVCalculator" pc="268438978" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="79" parent="globals/HRVCalculator" pc="268438983" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="80" parent="globals/HRVCalculator" pc="268438987" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="81" parent="globals/HRVCalculator" pc="268439004" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="83" parent="globals/HRVCalculator" pc="268439020" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="84" parent="globals/HRVCalculator" pc="268439023" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="85" parent="globals/HRVCalculator" pc="268439056" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="87" parent="globals/HRVCalculator" pc="268439079" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="88" parent="globals/HRVCalculator" pc="268439086" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="89" parent="globals/HRVCalculator" pc="268439093" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="31" lineNum="91" parent="globals/HRVCalculator" pc="268439111" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="32" lineNum="12" parent="globals/HRVCalculator" pc="268439113" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="32" lineNum="13" parent="globals/HRVCalculator" pc="268439116" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="32" lineNum="14" parent="globals/HRVCalculator" pc="268439132" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="32" lineNum="17" parent="globals/HRVCalculator" pc="268439161" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="32" lineNum="18" parent="globals/HRVCalculator" pc="268439181" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="25" parent="globals/HRVCalculator" pc="268439208" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="26" parent="globals/HRVCalculator" pc="268439211" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="27" parent="globals/HRVCalculator" pc="268439228" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="30" parent="globals/HRVCalculator" pc="268439233" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="31" parent="globals/HRVCalculator" pc="268439236" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="33" parent="globals/HRVCalculator" pc="268439239" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="34" parent="globals/HRVCalculator" pc="268439260" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="36" parent="globals/HRVCalculator" pc="268439282" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="37" parent="globals/HRVCalculator" pc="268439295" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="38" parent="globals/HRVCalculator" pc="268439313" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="39" parent="globals/HRVCalculator" pc="268439339" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="40" parent="globals/HRVCalculator" pc="268439349" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="44" parent="globals/HRVCalculator" pc="268439369" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="45" parent="globals/HRVCalculator" pc="268439376" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" id="34" lineNum="48" parent="globals/HRVCalculator" pc="268439381" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="35" lineNum="16" parent="globals/SoccerMonitorDelegate" pc="268439399" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="35" lineNum="17" parent="globals/SoccerMonitorDelegate" pc="268439402" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="35" lineNum="18" parent="globals/SoccerMonitorDelegate" pc="268439414" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="35" lineNum="19" parent="globals/SoccerMonitorDelegate" pc="268439427" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="35" lineNum="20" parent="globals/SoccerMonitorDelegate" pc="268439442" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="36" lineNum="5" parent="globals/SoccerMonitorDelegate" pc="268439444" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="36" lineNum="6" parent="globals/SoccerMonitorDelegate" pc="268439446" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="37" lineNum="10" parent="globals/SoccerMonitorDelegate" pc="268439459" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorDelegate.mc" id="37" lineNum="12" parent="globals/SoccerMonitorDelegate" pc="268439461" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="53" parent="globals/CommListener" pc="268439463" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="38" lineNum="55" parent="globals/CommListener" pc="268439465" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="47" parent="globals/CommListener" pc="268439484" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="40" lineNum="48" parent="globals/CommListener" pc="268439486" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="84" parent="globals/SoccerMonitorView" pc="268439499" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="85" parent="globals/SoccerMonitorView" pc="268439501" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="85" parent="globals/SoccerMonitorView" pc="268439509" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="86" parent="globals/SoccerMonitorView" pc="268439517" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="86" parent="globals/SoccerMonitorView" pc="268439525" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="87" parent="globals/SoccerMonitorView" pc="268439534" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="87" parent="globals/SoccerMonitorView" pc="268439542" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="88" parent="globals/SoccerMonitorView" pc="268439551" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="88" parent="globals/SoccerMonitorView" pc="268439559" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="41" lineNum="89" parent="globals/SoccerMonitorView" pc="268439568" symbol="getZoneColor"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="7" parent="globals/SoccerMonitorView" pc="268439574" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="42" lineNum="8" parent="globals/SoccerMonitorView" pc="268439576" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="11" parent="globals/SoccerMonitorView" pc="268439589" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="12" parent="globals/SoccerMonitorView" pc="268439592" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="13" parent="globals/SoccerMonitorView" pc="268439604" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="15" parent="globals/SoccerMonitorView" pc="268439612" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="16" parent="globals/SoccerMonitorView" pc="268439624" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="17" parent="globals/SoccerMonitorView" pc="268439632" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="19" parent="globals/SoccerMonitorView" pc="268439640" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="20" parent="globals/SoccerMonitorView" pc="268439652" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="21" parent="globals/SoccerMonitorView" pc="268439669" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="23" parent="globals/SoccerMonitorView" pc="268439708" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="26" parent="globals/SoccerMonitorView" pc="268439712" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="27" parent="globals/SoccerMonitorView" pc="268439724" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="30" parent="globals/SoccerMonitorView" pc="268439736" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="31" parent="globals/SoccerMonitorView" pc="268439745" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="32" parent="globals/SoccerMonitorView" pc="268439757" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="33" parent="globals/SoccerMonitorView" pc="268439771" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="35" parent="globals/SoccerMonitorView" pc="268439792" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="36" parent="globals/SoccerMonitorView" pc="268439809" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="41" parent="globals/SoccerMonitorView" pc="268439848" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="42" parent="globals/SoccerMonitorView" pc="268439865" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="45" parent="globals/SoccerMonitorView" pc="268439898" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="46" parent="globals/SoccerMonitorView" pc="268439915" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="50" parent="globals/SoccerMonitorView" pc="268439940" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="51" parent="globals/SoccerMonitorView" pc="268439954" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="52" parent="globals/SoccerMonitorView" pc="268439971" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="55" parent="globals/SoccerMonitorView" pc="268440009" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="56" parent="globals/SoccerMonitorView" pc="268440026" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="60" parent="globals/SoccerMonitorView" pc="268440054" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="61" parent="globals/SoccerMonitorView" pc="268440068" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="62" parent="globals/SoccerMonitorView" pc="268440085" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="65" parent="globals/SoccerMonitorView" pc="268440123" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="66" parent="globals/SoccerMonitorView" pc="268440140" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="70" parent="globals/SoccerMonitorView" pc="268440168" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="71" parent="globals/SoccerMonitorView" pc="268440184" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="72" parent="globals/SoccerMonitorView" pc="268440193" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="77" parent="globals/SoccerMonitorView" pc="268440228" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="78" parent="globals/SoccerMonitorView" pc="268440242" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SoccerMonitorView.mc" id="43" lineNum="79" parent="globals/SoccerMonitorView" pc="268440259" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="32" parent="globals/DataTransmitter" pc="268440306" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="33" parent="globals/DataTransmitter" pc="268440308" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="44" lineNum="35" parent="globals/DataTransmitter" pc="268440323" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="15" parent="globals/DataTransmitter" pc="268440348" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="16" parent="globals/DataTransmitter" pc="268440351" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="46" lineNum="24" parent="globals/DataTransmitter" pc="268440384" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="48" lineNum="10" parent="globals/DataTransmitter" pc="268440420" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc" id="48" lineNum="11" parent="globals/DataTransmitter" pc="268440422" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="13" parent="globals/Rez/Layouts" pc="268440434" symbol="MainLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="14" parent="globals/Rez/Layouts" pc="268440445" symbol="MainLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" id="49" lineNum="16" parent="globals/Rez/Layouts" pc="268440562" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="64" symbol="cloudUrl"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="8389149" symbol="restingHeartRate"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="69" method="true" symbol="MainLayout"/>
+        <entry field="true" id="17" symbol="baselineHRV"/>
+        <entry id="10" object="true" symbol="SensorCollector"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry field="true" id="8388737" symbol="calories"/>
+        <entry id="26" method="true" symbol="getFatigueZone"/>
+        <entry field="true" id="23" symbol="fatigueScore"/>
+        <entry field="true" id="53" symbol="dataTransmitter"/>
+        <entry field="true" id="8389605" symbol="accel"/>
+        <entry id="11" object="true" symbol="SoccerMonitorApp"/>
+        <entry id="48" method="true" symbol="onPosition"/>
+        <entry field="true" id="60" symbol="maxWindowSize"/>
+        <entry id="8388647" module="true" symbol="UserProfile"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="70" symbol="AppName"/>
+        <entry field="true" id="8388963" symbol="altitude"/>
+        <entry id="12" object="true" symbol="SoccerMonitorDelegate"/>
+        <entry id="8" object="true" symbol="FatigueEngine"/>
+        <entry id="5" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry field="true" id="8390653" symbol="heartRateData"/>
+        <entry id="56" method="true" symbol="addIntervals"/>
+        <entry field="true" id="18" symbol="baselineHRVSum"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="37" symbol="accelBuffer"/>
+        <entry id="8390075" method="true" symbol="unregisterSensorDataListener"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="47" method="true" symbol="onHighFreqData"/>
+        <entry id="65" method="true" symbol="onCloudResponse"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="7" object="true" symbol="DataTransmitter"/>
+        <entry field="true" id="8388959" symbol="cadence"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry field="true" id="30" symbol="hrvHistory"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="8389314" symbol="latitude"/>
+        <entry id="8389348" symbol="font"/>
+        <entry field="true" id="29" symbol="hrHistory"/>
+        <entry id="59" method="true" symbol="getSDNN"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="33" symbol="restingHR"/>
+        <entry field="true" id="42" symbol="gpsSpeed"/>
+        <entry field="true" id="43" symbol="gyroBuffer"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="24" method="true" symbol="getEstimatedMinutesLeft"/>
+        <entry field="true" id="8390134" symbol="sampleRate"/>
+        <entry field="true" id="36" symbol="sprintThreshold"/>
+        <entry id="8391852" symbol="gyroscope"/>
+        <entry id="8390648" symbol="accelerometer"/>
+        <entry field="true" id="8390655" symbol="heartBeatIntervals"/>
+        <entry field="true" id="8388911" symbol="distance"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="8388877" method="true" symbol="createSession"/>
+        <entry id="67" method="true" symbol="sendToCloud"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="13" object="true" symbol="SoccerMonitorView"/>
+        <entry id="8388828" method="true" symbol="onError"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="8388699" method="true" symbol="stop"/>
+        <entry field="true" id="8390077" symbol="accelerometerData"/>
+        <entry field="true" id="44" symbol="hrvCalculator"/>
+        <entry field="true" id="19" symbol="baselineSamples"/>
+        <entry field="true" id="8390438" symbol="enabled"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="41" method="true" symbol="buildPayload"/>
+        <entry field="true" id="34" symbol="speedHistory"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry field="true" id="8389315" symbol="longitude"/>
+        <entry field="true" id="40" symbol="accelZ"/>
+        <entry field="true" id="39" symbol="accelY"/>
+        <entry field="true" id="38" symbol="accelX"/>
+        <entry id="58" method="true" symbol="getRMSSD"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="15" symbol="baselineHR"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="32" symbol="maxHR"/>
+        <entry field="true" id="8391848" symbol="gyroscopeData"/>
+        <entry field="true" id="68" symbol="LauncherIcon"/>
+        <entry id="6" object="true" symbol="CommListener"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry id="63" method="true" symbol="getZoneColor"/>
+        <entry field="true" id="21" symbol="baselineSpeedSum"/>
+        <entry id="27" method="true" symbol="getHRPercent"/>
+        <entry field="true" id="61" symbol="rrWindow"/>
+        <entry field="true" id="16" symbol="baselineHRSum"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="51" method="true" symbol="transmitData"/>
+        <entry field="true" id="8388958" symbol="speed"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry field="true" id="54" symbol="fatigueEngine"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="52" symbol="transmitTimer"/>
+        <entry field="true" id="28" symbol="highIntensitySeconds"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry id="14" method="true" symbol="avgLast"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="8389808" symbol="period"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="20" symbol="baselineSpeed"/>
+        <entry field="true" id="35" symbol="sprintCount"/>
+        <entry id="25" method="true" symbol="getFatigueScore"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="8388732" symbol="elapsedTime"/>
+        <entry id="8390074" method="true" symbol="registerSensorDataListener"/>
+        <entry id="8388829" method="true" symbol="onComplete"/>
+        <entry field="true" id="31" symbol="isBaselineSet"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="22" method="true" symbol="calculateFatigue"/>
+        <entry id="62" module="true" symbol="Layouts"/>
+        <entry id="8388698" method="true" symbol="start"/>
+        <entry field="true" id="45" symbol="lastRRIntervals"/>
+        <entry id="57" method="true" symbol="getLatestHRIndex"/>
+        <entry field="true" id="55" symbol="sensorCollector"/>
+        <entry id="8388642" module="true" symbol="Position"/>
+        <entry id="66" method="true" symbol="send"/>
+        <entry id="9" object="true" symbol="HRVCalculator"/>
+        <entry id="8390514" method="true" symbol="update"/>
+        <entry field="true" id="50" symbol="session"/>
+        <entry id="49" method="true" symbol="onSensorEvent"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="8390080" symbol="z"/>
+        <entry field="true" id="8390079" symbol="y"/>
+        <entry field="true" id="8390078" symbol="x"/>
+        <entry id="46" method="true" symbol="loadUserProfile"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436107" name="collector" stackId="1" startPc="268435594"/>
+        <entry endPc="268436106" name="hr" stackId="2" startPc="268435597"/>
+        <entry endPc="268436106" name="spd" stackId="3" startPc="268435597"/>
+        <entry endPc="268436106" name="rmssd" stackId="4" startPc="268435597"/>
+        <entry endPc="268436106" name="hrPercent" stackId="5" startPc="268435597"/>
+        <entry endPc="268436238" name="minutesElapsed" stackId="1" startPc="268436111"/>
+        <entry endPc="268436238" name="fatigueRate" stackId="2" startPc="268436111"/>
+        <entry endPc="268436238" name="remaining" stackId="3" startPc="268436111"/>
+        <entry arg="true" endPc="268436292" name="hr" stackId="1" startPc="268436239"/>
+        <entry arg="true" endPc="268436786" name="hr" stackId="1" startPc="268436307"/>
+        <entry arg="true" endPc="268436786" name="speed" stackId="2" startPc="268436307"/>
+        <entry arg="true" endPc="268436786" name="rmssd" stackId="3" startPc="268436307"/>
+        <entry endPc="268436786" name="score" stackId="4" startPc="268436310"/>
+        <entry endPc="268436786" name="hrPct" stackId="5" startPc="268436310"/>
+        <entry endPc="268436532" name="recentHR" stackId="6" startPc="268436447"/>
+        <entry endPc="268436532" name="drift" stackId="7" startPc="268436447"/>
+        <entry endPc="268436611" name="hrvDecline" stackId="8" startPc="268436561"/>
+        <entry endPc="268436717" name="recentSpeed" stackId="9" startPc="268436650"/>
+        <entry endPc="268436717" name="speedDecay" stackId="10" startPc="268436650"/>
+        <entry endPc="268436786" name="hiMinutes" stackId="11" startPc="268436310"/>
+        <entry arg="true" endPc="268436889" name="buffer" stackId="1" startPc="268436787"/>
+        <entry arg="true" endPc="268436889" name="n" stackId="2" startPc="268436787"/>
+        <entry endPc="268436889" name="count" stackId="3" startPc="268436790"/>
+        <entry endPc="268436889" name="sum" stackId="4" startPc="268436790"/>
+        <entry endPc="268436883" name="i" stackId="5" startPc="268436864"/>
+        <entry arg="true" endPc="268437057" name="info" stackId="1" startPc="268436978"/>
+        <entry endPc="268437027" name="coords" stackId="2" startPc="268436991"/>
+        <entry endPc="268437097" name="app" stackId="1" startPc="268437061"/>
+        <entry endPc="268437097" name="payload" stackId="2" startPc="268437061"/>
+        <entry endPc="268437352" name="app" stackId="1" startPc="268437102"/>
+        <entry arg="true" endPc="268437679" name="sensorInfo" stackId="1" startPc="268437353"/>
+        <entry endPc="268437678" name="actInfo" stackId="2" startPc="268437356"/>
+        <entry endPc="268437678" name="app" stackId="3" startPc="268437356"/>
+        <entry arg="true" endPc="268437948" name="sensorData" stackId="1" startPc="268437680"/>
+        <entry endPc="268437761" name="accelData" stackId="2" startPc="268437705"/>
+        <entry endPc="268437853" name="hrData" stackId="3" startPc="268437787"/>
+        <entry endPc="268438069" name="profile" stackId="1" startPc="268437952"/>
+        <entry endPc="268438066" name="hrZones" stackId="2" startPc="268437970"/>
+        <entry endPc="268438439" name="options" stackId="1" startPc="268438074"/>
+        <entry endPc="268438236" name="e" stackId="2" startPc="268438226"/>
+        <entry arg="true" endPc="268438687" name="state" stackId="1" startPc="268438598"/>
+        <entry endPc="268438745" name="view" stackId="1" startPc="268438691"/>
+        <entry endPc="268438745" name="delegate" stackId="2" startPc="268438691"/>
+        <entry arg="true" endPc="268438787" name="state" stackId="1" startPc="268438761"/>
+        <entry endPc="268438957" name="sum" stackId="1" startPc="268438791"/>
+        <entry endPc="268438858" name="i" stackId="2" startPc="268438836"/>
+        <entry endPc="268438957" name="mean" stackId="3" startPc="268438791"/>
+        <entry endPc="268438957" name="sumSqDev" stackId="4" startPc="268438791"/>
+        <entry endPc="268438930" name="i" stackId="5" startPc="268438898"/>
+        <entry endPc="268438920" name="dev" stackId="6" startPc="268438898"/>
+        <entry endPc="268439112" name="count" stackId="1" startPc="268438961"/>
+        <entry endPc="268439112" name="sum" stackId="2" startPc="268438961"/>
+        <entry endPc="268439078" name="i" stackId="3" startPc="268439056"/>
+        <entry endPc="268439112" name="avgRR" stackId="4" startPc="268438961"/>
+        <entry arg="true" endPc="268439207" name="intervals" stackId="1" startPc="268439113"/>
+        <entry endPc="268439160" name="i" stackId="2" startPc="268439132"/>
+        <entry endPc="268439398" name="sumSquaredDiff" stackId="1" startPc="268439211"/>
+        <entry endPc="268439398" name="count" stackId="2" startPc="268439211"/>
+        <entry endPc="268439368" name="i" stackId="3" startPc="268439260"/>
+        <entry endPc="268439358" name="diff" stackId="4" startPc="268439260"/>
+        <entry endPc="268439358" name="prev" stackId="5" startPc="268439260"/>
+        <entry endPc="268439358" name="absDiff" stackId="6" startPc="268439260"/>
+        <entry endPc="268439443" name="app" stackId="1" startPc="268439402"/>
+        <entry arg="true" endPc="268439573" name="fatigue" stackId="1" startPc="268439499"/>
+        <entry arg="true" endPc="268440305" name="dc" stackId="1" startPc="268439589"/>
+        <entry endPc="268440304" name="app" stackId="2" startPc="268439592"/>
+        <entry endPc="268440304" name="collector" stackId="3" startPc="268439592"/>
+        <entry endPc="268440304" name="fatigue" stackId="4" startPc="268439592"/>
+        <entry endPc="268440304" name="cx" stackId="5" startPc="268439592"/>
+        <entry endPc="268440304" name="cy" stackId="6" startPc="268439592"/>
+        <entry endPc="268440304" name="fatigueScore" stackId="7" startPc="268439592"/>
+        <entry endPc="268440304" name="zoneColor" stackId="8" startPc="268439592"/>
+        <entry endPc="268440304" name="speedKmh" stackId="9" startPc="268439592"/>
+        <entry endPc="268440304" name="distKm" stackId="10" startPc="268439592"/>
+        <entry endPc="268440304" name="minsLeft" stackId="11" startPc="268439592"/>
+        <entry endPc="268440304" name="rmssd" stackId="12" startPc="268439592"/>
+        <entry arg="true" endPc="268440347" name="responseCode" stackId="1" startPc="268440306"/>
+        <entry arg="true" endPc="268440347" name="data" stackId="2" startPc="268440306"/>
+        <entry arg="true" endPc="268440419" name="payload" stackId="1" startPc="268440348"/>
+        <entry endPc="268440418" name="options" stackId="2" startPc="268440351"/>
+        <entry arg="true" endPc="268440433" name="payload" stackId="1" startPc="268440420"/>
+        <entry arg="true" endPc="268440571" name="dc" stackId="1" startPc="268440434"/>
+        <entry endPc="268440571" name="rez_cmp_local_text_StatusLabel" stackId="2" startPc="268440445"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4260-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="58" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/FatigueEngine" offset="170" parentId="globals" symbolId="FatigueEngine" type="class"/>
+        <dataEntry label="globals/SensorCollector" offset="430" parentId="globals" symbolId="SensorCollector" type="class"/>
+        <dataEntry label="globals/SoccerMonitorApp" offset="735" parentId="globals" symbolId="SoccerMonitorApp" type="class"/>
+        <dataEntry label="globals/HRVCalculator" offset="833" parentId="globals" symbolId="HRVCalculator" type="class"/>
+        <dataEntry label="globals/SoccerMonitorDelegate" offset="931" parentId="globals" symbolId="SoccerMonitorDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="993" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/CommListener" offset="1046" parentId="globals" symbolId="CommListener" type="class"/>
+        <dataEntry label="globals/SoccerMonitorView" offset="1108" parentId="globals" symbolId="SoccerMonitorView" type="class"/>
+        <dataEntry label="globals/DataTransmitter" offset="1170" parentId="globals" symbolId="DataTransmitter" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1259" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="1294" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1329" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435487" name="&lt;init&gt;" parent="FatigueEngine" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435515" name="&lt;init&gt;" parent="SensorCollector" startPc="268435488">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435527" name="&lt;init&gt;" parent="SoccerMonitorApp" startPc="268435516">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435537" name="&lt;init&gt;" parent="HRVCalculator" startPc="268435528">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435549" name="&lt;init&gt;" parent="SoccerMonitorDelegate" startPc="268435538">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435569" name="&lt;init&gt;" parent="Rez" startPc="268435550">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435581" name="&lt;init&gt;" parent="CommListener" startPc="268435570">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435593" name="&lt;init&gt;" parent="SoccerMonitorView" startPc="268435582">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436107" name="update" parent="FatigueEngine" startPc="268435594">
+            <param id="collector"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436238" name="getEstimatedMinutesLeft" parent="FatigueEngine" startPc="268436108">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436292" name="getHRPercent" parent="FatigueEngine" startPc="268436239">
+            <param id="hr"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436306" name="getFatigueScore" parent="FatigueEngine" startPc="268436293">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436786" name="calculateFatigue" parent="FatigueEngine" startPc="268436307">
+            <param id="hr"/>
+            <param id="speed"/>
+            <param id="rmssd"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436889" name="avgLast" parent="FatigueEngine" startPc="268436787">
+            <param id="buffer"/>
+            <param id="n"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436977" name="getFatigueZone" parent="FatigueEngine" startPc="268436890">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="FatigueEngine">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437057" name="onPosition" parent="SensorCollector" startPc="268436978">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437098" name="transmitData" parent="SensorCollector" startPc="268437058">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437352" name="buildPayload" parent="SensorCollector" startPc="268437099">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437679" name="onSensorEvent" parent="SensorCollector" startPc="268437353">
+            <param id="sensorInfo"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437948" name="onHighFreqData" parent="SensorCollector" startPc="268437680">
+            <param id="sensorData"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438070" name="loadUserProfile" parent="SensorCollector" startPc="268437949">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438440" name="start" parent="SensorCollector" startPc="268438071">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438562" name="stop" parent="SensorCollector" startPc="268438441">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438597" name="initialize" parent="SensorCollector" startPc="268438563">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438687" name="onStart" parent="SoccerMonitorApp" startPc="268438598">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438745" name="getInitialView" parent="SoccerMonitorApp" startPc="268438688">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438760" name="initialize" parent="SoccerMonitorApp" startPc="268438746">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438787" name="onStop" parent="SoccerMonitorApp" startPc="268438761">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438957" name="getSDNN" parent="HRVCalculator" startPc="268438788">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439112" name="getLatestHRIndex" parent="HRVCalculator" startPc="268438958">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439207" name="addIntervals" parent="HRVCalculator" startPc="268439113">
+            <param id="intervals"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="HRVCalculator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439398" name="getRMSSD" parent="HRVCalculator" startPc="268439208">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439443" name="onBack" parent="SoccerMonitorDelegate" startPc="268439399">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439458" name="initialize" parent="SoccerMonitorDelegate" startPc="268439444">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439462" name="onSelect" parent="SoccerMonitorDelegate" startPc="268439459">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439483" name="onError" parent="CommListener" startPc="268439463">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onComplete" parent="CommListener">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439498" name="initialize" parent="CommListener" startPc="268439484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439573" name="getZoneColor" parent="SoccerMonitorView" startPc="268439499">
+            <param id="fatigue"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439588" name="initialize" parent="SoccerMonitorView" startPc="268439574">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440305" name="onUpdate" parent="SoccerMonitorView" startPc="268439589">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440347" name="onCloudResponse" parent="DataTransmitter" startPc="268440306">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="stop" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440419" name="sendToCloud" parent="DataTransmitter" startPc="268440348">
+            <param id="payload"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440433" name="send" parent="DataTransmitter" startPc="268440420">
+            <param id="payload"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440571" name="MainLayout" parent="Layouts" startPc="268440434">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

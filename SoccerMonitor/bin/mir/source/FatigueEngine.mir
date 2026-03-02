@@ -1,0 +1,1172 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Math,1,13,17]; ]
+using Toybox.Math;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 3; @symbol_classdef = [FatigueEngine,3,6,19]; ]
+class FatigueEngine {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 3; ]
+    <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 9 8 ]
+        %tmp.1 = newa 0;
+        putv self :hrHistory %tmp.1;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 10 8 ]
+        %tmp.2 = newa 0;
+        putv self :speedHistory %tmp.2;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 11 8 ]
+        %tmp.3 = newa 0;
+        putv self :hrvHistory %tmp.3;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 6; @position = 8; @symbol_vardef = [fatigueScore,6,8,20]; ]
+    var fatigueScore = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 9; @position = 8; @symbol_vardef = [hrHistory,9,8,17]; ]
+    var hrHistory;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 10; @position = 8; @symbol_vardef = [speedHistory,10,8,20]; ]
+    var speedHistory;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 11; @position = 8; @symbol_vardef = [hrvHistory,11,8,18]; ]
+    var hrvHistory;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 12; @position = 8; @symbol_vardef = [sprintCount,12,8,19]; ]
+    var sprintCount = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 13; @position = 8; @symbol_vardef = [highIntensitySeconds,13,8,28]; ]
+    var highIntensitySeconds = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 16; @position = 8; @symbol_vardef = [maxHR,16,8,13]; ]
+    var maxHR = 190;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 17; @position = 8; @symbol_vardef = [restingHR,17,8,17]; ]
+    var restingHR = 60;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 18; @position = 8; @symbol_vardef = [sprintThreshold,18,8,23]; ]
+    var sprintThreshold = 5.5;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 21; @position = 8; @symbol_vardef = [baselineHR,21,8,18]; ]
+    var baselineHR = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 22; @position = 8; @symbol_vardef = [baselineHRV,22,8,19]; ]
+    var baselineHRV = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 23; @position = 8; @symbol_vardef = [baselineSpeed,23,8,21]; ]
+    var baselineSpeed = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 24; @position = 8; @symbol_vardef = [isBaselineSet,24,8,21]; ]
+    var isBaselineSet = false;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 25; @position = 8; @symbol_vardef = [baselineSamples,25,8,23]; ]
+    var baselineSamples = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 26; @position = 8; @symbol_vardef = [baselineHRSum,26,8,21]; ]
+    var baselineHRSum = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 27; @position = 8; @symbol_vardef = [baselineHRVSum,27,8,22]; ]
+    var baselineHRVSum = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 28; @position = 8; @symbol_vardef = [baselineSpeedSum,28,8,24]; ]
+    var baselineSpeedSum = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 30; @symbol_functiondef = [initialize,30,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 33; @symbol_functiondef = [update,33,13,19]; @symbol_param<0> = [collector,33,20,29]; ]
+    function update(collector) {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 34 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_stop" ]
+        %hr.1 = local;
+        symbol [ hr %hr.1 34 12 14 ];
+        %tmp.1 = lgetv %collector;
+        symbol [ collector %tmp.1 34 17 26 ];
+        symbol [ heartRate %tmp.2 34 27 36 ];
+        %tmp.2 = getv %tmp.1 :heartRate;
+        lputv %hr.1 %tmp.2;
+        symbol [ hr %hr.1 34 12 14 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 35 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_stop" ]
+        %spd.2 = local;
+        symbol [ spd %spd.2 35 12 15 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_begin:
+        %tmp.3 = lgetv %collector;
+        symbol [ collector %tmp.3 35 18 27 ];
+        symbol [ speed %tmp.4 35 28 33 ];
+        %tmp.4 = getv %tmp.3 :speed;
+        %tmp.5 = lgetv %collector;
+        symbol [ collector %tmp.5 35 36 45 ];
+        symbol [ gpsSpeed %tmp.6 35 46 54 ];
+        %tmp.6 = getv %tmp.5 :gpsSpeed;
+        %tmp.7 = gt %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_else_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_true:
+        %tmp.8 = lgetv %collector;
+        symbol [ collector %tmp.8 35 57 66 ];
+        symbol [ speed %tmp.9 35 67 72 ];
+        %tmp.9 = getv %tmp.8 :speed;
+        push %tmp.9;
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_else_false:
+        %tmp.10 = lgetv %collector;
+        symbol [ collector %tmp.10 35 75 84 ];
+        symbol [ gpsSpeed %tmp.11 35 85 93 ];
+        %tmp.11 = getv %tmp.10 :gpsSpeed;
+        push %tmp.11;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_end:
+        %tmp.12 = phi [%tmp.7 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_begin] [%tmp.9 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_true] [%tmp.11 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_else_false] [%tmp.12 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_35_18_35_85_end];
+        lputv %spd.2 %tmp.12;
+        symbol [ spd %spd.2 35 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 36 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_stop" ]
+        %rmssd.3 = local;
+        symbol [ rmssd %rmssd.3 36 12 17 ];
+        %tmp.13 = lgetv %collector;
+        symbol [ collector %tmp.13 36 20 29 ];
+        symbol [ hrvCalculator %tmp.14 36 30 43 ];
+        %tmp.14 = getv %tmp.13 :hrvCalculator;
+        symbol [ getRMSSD %tmp.15 36 44 52 ];
+        %tmp.15 = getv function %tmp.14 :getRMSSD;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        lputv %rmssd.3 %tmp.16;
+        symbol [ rmssd %rmssd.3 36 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 39 8 ]
+        symbol [ hrHistory %tmp.18 39 8 17 ];
+        %tmp.18 = getv ? :hrHistory;
+        symbol [ add %tmp.19 39 18 21 ];
+        %tmp.19 = getv function %tmp.18 :add;
+        %tmp.20 = lgetv %hr.1;
+        symbol [ hr %tmp.20 39 22 24 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 40 8 ]
+        symbol [ speedHistory %tmp.22 40 8 20 ];
+        %tmp.22 = getv ? :speedHistory;
+        symbol [ add %tmp.23 40 21 24 ];
+        %tmp.23 = getv function %tmp.22 :add;
+        %tmp.24 = lgetv %spd.2;
+        symbol [ spd %tmp.24 40 25 28 ];
+        invoke %tmp.22 %tmp.23(%tmp.24);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 41 8 ]
+        symbol [ hrvHistory %tmp.26 41 8 18 ];
+        %tmp.26 = getv ? :hrvHistory;
+        symbol [ add %tmp.27 41 19 22 ];
+        %tmp.27 = getv function %tmp.26 :add;
+        %tmp.28 = lgetv %rmssd.3;
+        symbol [ rmssd %tmp.28 41 23 28 ];
+        invoke %tmp.26 %tmp.27(%tmp.28);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 42 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_8_42_75_if_stmt:
+        symbol [ hrHistory %tmp.30 42 12 21 ];
+        %tmp.30 = getv ? :hrHistory;
+        symbol [ size %tmp.31 42 22 26 ];
+        %tmp.31 = getv function %tmp.30 :size;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = 90;
+        %tmp.34 = gt %tmp.32 %tmp.33;
+        bf %tmp.34 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_8_42_75_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_8_42_75_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_35_42_75_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 42 37 ]
+        symbol [ hrHistory %tmp.36 42 49 58 ];
+        %tmp.36 = getv ? :hrHistory;
+        symbol [ slice %tmp.37 42 59 64 ];
+        %tmp.37 = getv function %tmp.36 :slice;
+        %tmp.38 = 1;
+        %tmp.39 = null;
+        %tmp.40 = invoke %tmp.36 %tmp.37(%tmp.38, %tmp.39);
+        symbol [ hrHistory ? 42 37 46 ];
+        putv self :hrHistory %tmp.40;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_35_42_75_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_8_42_75_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_42_8_42_75_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 43 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_8_43_84_if_stmt:
+        symbol [ speedHistory %tmp.42 43 12 24 ];
+        %tmp.42 = getv ? :speedHistory;
+        symbol [ size %tmp.43 43 25 29 ];
+        %tmp.43 = getv function %tmp.42 :size;
+        %tmp.44 = invoke %tmp.42 %tmp.43();
+        %tmp.45 = 90;
+        %tmp.46 = gt %tmp.44 %tmp.45;
+        bf %tmp.46 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_8_43_84_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_8_43_84_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_38_43_84_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 43 40 ]
+        symbol [ speedHistory %tmp.48 43 55 67 ];
+        %tmp.48 = getv ? :speedHistory;
+        symbol [ slice %tmp.49 43 68 73 ];
+        %tmp.49 = getv function %tmp.48 :slice;
+        %tmp.50 = 1;
+        %tmp.51 = null;
+        %tmp.52 = invoke %tmp.48 %tmp.49(%tmp.50, %tmp.51);
+        symbol [ speedHistory ? 43 40 52 ];
+        putv self :speedHistory %tmp.52;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_38_43_84_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_8_43_84_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_43_8_43_84_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 44 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_8_44_78_if_stmt:
+        symbol [ hrvHistory %tmp.54 44 12 22 ];
+        %tmp.54 = getv ? :hrvHistory;
+        symbol [ size %tmp.55 44 23 27 ];
+        %tmp.55 = getv function %tmp.54 :size;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        %tmp.57 = 90;
+        %tmp.58 = gt %tmp.56 %tmp.57;
+        bf %tmp.58 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_8_44_78_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_8_44_78_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_36_44_78_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 44 38 ]
+        symbol [ hrvHistory %tmp.60 44 51 61 ];
+        %tmp.60 = getv ? :hrvHistory;
+        symbol [ slice %tmp.61 44 62 67 ];
+        %tmp.61 = getv function %tmp.60 :slice;
+        %tmp.62 = 1;
+        %tmp.63 = null;
+        %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63);
+        symbol [ hrvHistory ? 44 38 48 ];
+        putv self :hrvHistory %tmp.64;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_36_44_78_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_8_44_78_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_44_8_44_78_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 47 8 ]
+        %tmp.65 = lgetv %collector;
+        symbol [ collector %tmp.65 47 16 25 ];
+        symbol [ maxHR %tmp.66 47 26 31 ];
+        %tmp.66 = getv %tmp.65 :maxHR;
+        symbol [ maxHR ? 47 8 13 ];
+        putv self :maxHR %tmp.66;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 48 8 ]
+        %tmp.67 = lgetv %collector;
+        symbol [ collector %tmp.67 48 20 29 ];
+        symbol [ restingHR %tmp.68 48 30 39 ];
+        %tmp.68 = getv %tmp.67 :restingHR;
+        symbol [ restingHR ? 48 8 17 ];
+        putv self :restingHR %tmp.68;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 51 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_12_51_48_begin:
+        symbol [ isBaselineSet %tmp.70 51 13 26 ];
+        %tmp.70 = getv ? :isBaselineSet;
+        %tmp.71 = not %tmp.70;
+        bf %tmp.71 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_30_51_48_true:
+        symbol [ baselineSamples %tmp.73 51 30 45 ];
+        %tmp.73 = getv ? :baselineSamples;
+        %tmp.74 = 300;
+        %tmp.75 = lt %tmp.73 %tmp.74;
+        push %tmp.75;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_30_51_48_end:
+        %tmp.76 = phi [%tmp.71 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_12_51_48_begin] [%tmp.75 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_30_51_48_true] [%tmp.76 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_30_51_48_end];
+        bf %tmp.76 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_53_62_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 52 12 ]
+        symbol [ baselineHRSum %tmp.77 52 12 25 ];
+        %tmp.77 = getv self :baselineHRSum;
+        %tmp.78 = lgetv %hr.1;
+        symbol [ hr %tmp.78 52 29 31 ];
+        %tmp.79 = add %tmp.77 %tmp.78;
+        symbol [ baselineHRSum ? 52 12 25 ];
+        putv self :baselineHRSum dup %tmp.79;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 53 12 ]
+        symbol [ baselineHRVSum %tmp.80 53 12 26 ];
+        %tmp.80 = getv self :baselineHRVSum;
+        %tmp.81 = lgetv %rmssd.3;
+        symbol [ rmssd %tmp.81 53 30 35 ];
+        %tmp.82 = add %tmp.80 %tmp.81;
+        symbol [ baselineHRVSum ? 53 12 26 ];
+        putv self :baselineHRVSum dup %tmp.82;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 54 12 ]
+        symbol [ baselineSpeedSum %tmp.83 54 12 28 ];
+        %tmp.83 = getv self :baselineSpeedSum;
+        %tmp.84 = lgetv %spd.2;
+        symbol [ spd %tmp.84 54 32 35 ];
+        %tmp.85 = add %tmp.83 %tmp.84;
+        symbol [ baselineSpeedSum ? 54 12 28 ];
+        putv self :baselineSpeedSum dup %tmp.85;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 55 12 ]
+        symbol [ baselineSamples %tmp.88 55 12 27 ];
+        %tmp.88 = getv ? :baselineSamples;
+        %tmp.89 = add %tmp.88 1;
+        symbol [ baselineSamples ? 55 12 27 ];
+        putv self :baselineSamples dup %tmp.89;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 56 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_12_61_12_if_stmt:
+        symbol [ baselineSamples %tmp.91 56 16 31 ];
+        %tmp.91 = getv ? :baselineSamples;
+        %tmp.92 = 300;
+        %tmp.93 = gte %tmp.91 %tmp.92;
+        bf %tmp.93 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_12_61_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_12_61_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_40_61_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 57 16 ]
+        symbol [ baselineHRSum %tmp.95 57 29 42 ];
+        %tmp.95 = getv ? :baselineHRSum;
+        symbol [ baselineSamples %tmp.97 57 45 60 ];
+        %tmp.97 = getv ? :baselineSamples;
+        %tmp.98 = div %tmp.95 %tmp.97;
+        symbol [ baselineHR ? 57 16 26 ];
+        putv self :baselineHR %tmp.98;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 58 16 ]
+        symbol [ baselineHRVSum %tmp.100 58 30 44 ];
+        %tmp.100 = getv ? :baselineHRVSum;
+        symbol [ baselineSamples %tmp.102 58 47 62 ];
+        %tmp.102 = getv ? :baselineSamples;
+        %tmp.103 = div %tmp.100 %tmp.102;
+        symbol [ baselineHRV ? 58 16 27 ];
+        putv self :baselineHRV %tmp.103;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 59 16 ]
+        symbol [ baselineSpeedSum %tmp.105 59 32 48 ];
+        %tmp.105 = getv ? :baselineSpeedSum;
+        symbol [ baselineSamples %tmp.107 59 51 66 ];
+        %tmp.107 = getv ? :baselineSamples;
+        %tmp.108 = div %tmp.105 %tmp.107;
+        symbol [ baselineSpeed ? 59 16 29 ];
+        putv self :baselineSpeed %tmp.108;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 60 16 ]
+        %tmp.109 = true;
+        symbol [ isBaselineSet ? 60 16 29 ];
+        putv self :isBaselineSet %tmp.109;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_40_61_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_12_61_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_56_12_61_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_53_62_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_51_8_62_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 65 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_stop" ]
+        %hrPercent.4 = local;
+        symbol [ hrPercent %hrPercent.4 65 12 21 ];
+        %tmp.110 = self;
+        symbol [ getHRPercent %tmp.111 65 24 36 ];
+        %tmp.111 = getv function %tmp.110 :getHRPercent;
+        %tmp.112 = lgetv %hr.1;
+        symbol [ hr %tmp.112 65 37 39 ];
+        %tmp.113 = invoke %tmp.110 %tmp.111(%tmp.112);
+        lputv %hrPercent.4 %tmp.113;
+        symbol [ hrPercent %hrPercent.4 65 12 21 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 66 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_8_68_8_if_stmt:
+        %tmp.114 = lgetv %hrPercent.4;
+        symbol [ hrPercent %tmp.114 66 12 21 ];
+        %tmp.115 = 85.0;
+        %tmp.116 = gt %tmp.114 %tmp.115;
+        bf %tmp.116 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_8_68_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_8_68_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_30_68_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 67 12 ]
+        symbol [ highIntensitySeconds %tmp.119 67 12 32 ];
+        %tmp.119 = getv ? :highIntensitySeconds;
+        %tmp.120 = add %tmp.119 1;
+        symbol [ highIntensitySeconds ? 67 12 32 ];
+        putv self :highIntensitySeconds dup %tmp.120;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_30_68_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_8_68_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_66_8_68_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 71 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_8_73_8_if_stmt:
+        %tmp.121 = lgetv %spd.2;
+        symbol [ spd %tmp.121 71 12 15 ];
+        symbol [ sprintThreshold %tmp.123 71 18 33 ];
+        %tmp.123 = getv ? :sprintThreshold;
+        %tmp.124 = gt %tmp.121 %tmp.123;
+        bf %tmp.124 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_8_73_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_8_73_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_35_73_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 72 12 ]
+        symbol [ sprintCount %tmp.127 72 12 23 ];
+        %tmp.127 = getv ? :sprintCount;
+        %tmp.128 = add %tmp.127 1;
+        symbol [ sprintCount ? 72 12 23 ];
+        putv self :sprintCount dup %tmp.128;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_35_73_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_8_73_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_71_8_73_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 76 8 ]
+        %tmp.129 = self;
+        symbol [ calculateFatigue %tmp.130 76 23 39 ];
+        %tmp.130 = getv function %tmp.129 :calculateFatigue;
+        %tmp.131 = lgetv %hr.1;
+        symbol [ hr %tmp.131 76 40 42 ];
+        %tmp.132 = lgetv %spd.2;
+        symbol [ spd %tmp.132 76 44 47 ];
+        %tmp.133 = lgetv %rmssd.3;
+        symbol [ rmssd %tmp.133 76 49 54 ];
+        %tmp.134 = invoke %tmp.129 %tmp.130(%tmp.131, %tmp.132, %tmp.133);
+        symbol [ fatigueScore ? 76 8 20 ];
+        putv self :fatigueScore %tmp.134;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_33_31_77_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 79; @symbol_functiondef = [getHRPercent,79,13,25]; @symbol_param<0> = [hr,79,26,28]; ]
+    function getHRPercent(hr) {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_79_30_83_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 80 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_8_80_46_if_stmt:
+        symbol [ maxHR %tmp.2 80 12 17 ];
+        %tmp.2 = getv ? :maxHR;
+        symbol [ restingHR %tmp.4 80 21 30 ];
+        %tmp.4 = getv ? :restingHR;
+        %tmp.5 = lte %tmp.2 %tmp.4;
+        bf %tmp.5 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_8_80_46_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_8_80_46_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_32_80_46_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 80 34 ]
+        %tmp.6 = 0.0;
+        ret %tmp.6;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_32_80_46_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_8_80_46_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_80_8_80_46_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 82 8 ]
+        %tmp.7 = lgetv %hr;
+        symbol [ hr %tmp.7 82 17 19 ];
+        symbol [ restingHR %tmp.9 82 22 31 ];
+        %tmp.9 = getv ? :restingHR;
+        %tmp.10 = sub %tmp.7 %tmp.9;
+        symbol [ toFloat %tmp.11 82 33 40 ];
+        %tmp.11 = getv function %tmp.10 :toFloat;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        symbol [ maxHR %tmp.14 82 46 51 ];
+        %tmp.14 = getv ? :maxHR;
+        symbol [ restingHR %tmp.16 82 54 63 ];
+        %tmp.16 = getv ? :restingHR;
+        %tmp.17 = sub %tmp.14 %tmp.16;
+        %tmp.18 = div %tmp.12 %tmp.17;
+        %tmp.19 = 100.0;
+        %tmp.20 = mul %tmp.18 %tmp.19;
+        ret %tmp.20;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_79_30_83_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 85; @symbol_functiondef = [calculateFatigue,85,13,29]; @symbol_param<0> = [hr,85,30,32]; @symbol_param<1> = [speed,85,34,39]; @symbol_param<2> = [rmssd,85,41,46]; ]
+    function calculateFatigue(hr, speed, rmssd) {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 86 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_stop" ]
+        %score.1 = local;
+        symbol [ score %score.1 86 12 17 ];
+        %tmp.1 = 0.0;
+        lputv %score.1 %tmp.1;
+        symbol [ score %score.1 86 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 90 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_stop" ]
+        %hrPct.2 = local;
+        symbol [ hrPct %hrPct.2 90 12 17 ];
+        %tmp.2 = self;
+        symbol [ getHRPercent %tmp.3 90 20 32 ];
+        %tmp.3 = getv function %tmp.2 :getHRPercent;
+        %tmp.4 = lgetv %hr;
+        symbol [ hr %tmp.4 90 33 35 ];
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %hrPct.2 %tmp.5;
+        symbol [ hrPct %hrPct.2 90 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 91 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_stmt:
+        %tmp.6 = lgetv %hrPct.2;
+        symbol [ hrPct %tmp.6 91 12 17 ];
+        %tmp.7 = 90;
+        %tmp.8 = gt %tmp.6 %tmp.7;
+        bf %tmp.8 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_24_93_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 92 12 ]
+        %tmp.9 = lgetv %score.1;
+        symbol [ score %tmp.9 92 12 17 ];
+        %tmp.10 = 30.0;
+        %tmp.11 = add %tmp.9 %tmp.10;
+        lputv %score.1 %tmp.11;
+        symbol [ score %score.1 92 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_24_93_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 93 15 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_stmt:
+        %tmp.12 = lgetv %hrPct.2;
+        symbol [ hrPct %tmp.12 93 19 24 ];
+        %tmp.13 = 85;
+        %tmp.14 = gt %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_31_95_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 94 12 ]
+        %tmp.15 = lgetv %score.1;
+        symbol [ score %tmp.15 94 12 17 ];
+        %tmp.16 = 25.0;
+        %tmp.17 = add %tmp.15 %tmp.16;
+        lputv %score.1 %tmp.17;
+        symbol [ score %score.1 94 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_31_95_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 95 15 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_stmt:
+        %tmp.18 = lgetv %hrPct.2;
+        symbol [ hrPct %tmp.18 95 19 24 ];
+        %tmp.19 = 80;
+        %tmp.20 = gt %tmp.18 %tmp.19;
+        bf %tmp.20 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_31_97_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 96 12 ]
+        %tmp.21 = lgetv %score.1;
+        symbol [ score %tmp.21 96 12 17 ];
+        %tmp.22 = 18.0;
+        %tmp.23 = add %tmp.21 %tmp.22;
+        lputv %score.1 %tmp.23;
+        symbol [ score %score.1 96 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_31_97_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 97 15 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_stmt:
+        %tmp.24 = lgetv %hrPct.2;
+        symbol [ hrPct %tmp.24 97 19 24 ];
+        %tmp.25 = 70;
+        %tmp.26 = gt %tmp.24 %tmp.25;
+        bf %tmp.26 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_else_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_31_99_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 98 12 ]
+        %tmp.27 = lgetv %score.1;
+        symbol [ score %tmp.27 98 12 17 ];
+        %tmp.28 = 10.0;
+        %tmp.29 = add %tmp.27 %tmp.28;
+        lputv %score.1 %tmp.29;
+        symbol [ score %score.1 98 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_31_99_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_else_false:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_99_15_101_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 100 12 ]
+        %tmp.30 = lgetv %score.1;
+        symbol [ score %tmp.30 100 12 17 ];
+        %tmp.31 = lgetv %hrPct.2;
+        symbol [ hrPct %tmp.31 100 21 26 ];
+        %tmp.32 = 0.1;
+        %tmp.33 = mul %tmp.31 %tmp.32;
+        %tmp.34 = add %tmp.30 %tmp.33;
+        lputv %score.1 %tmp.34;
+        symbol [ score %score.1 100 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_99_15_101_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_97_15_101_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_95_15_101_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_93_15_101_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_91_8_101_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 105 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_12_105_48_begin:
+        symbol [ isBaselineSet %tmp.36 105 12 25 ];
+        %tmp.36 = getv ? :isBaselineSet;
+        bf %tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_29_105_48_true:
+        symbol [ hrHistory %tmp.38 105 29 38 ];
+        %tmp.38 = getv ? :hrHistory;
+        symbol [ size %tmp.39 105 39 43 ];
+        %tmp.39 = getv function %tmp.38 :size;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        %tmp.41 = 30;
+        %tmp.42 = gt %tmp.40 %tmp.41;
+        push %tmp.42;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_29_105_48_end:
+        %tmp.43 = phi [%tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_12_105_48_begin] [%tmp.42 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_29_105_48_true] [%tmp.43 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_29_105_48_end];
+        bf %tmp.43 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 106 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_stop" ]
+        %recentHR.3 = local;
+        symbol [ recentHR %recentHR.3 106 16 24 ];
+        %tmp.44 = self;
+        symbol [ avgLast %tmp.45 106 27 34 ];
+        %tmp.45 = getv function %tmp.44 :avgLast;
+        symbol [ hrHistory %tmp.47 106 35 44 ];
+        %tmp.47 = getv ? :hrHistory;
+        %tmp.48 = 30;
+        %tmp.49 = invoke %tmp.44 %tmp.45(%tmp.47, %tmp.48);
+        lputv %recentHR.3 %tmp.49;
+        symbol [ recentHR %recentHR.3 106 16 24 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 107 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_stop" ]
+        %drift.4 = local;
+        symbol [ drift %drift.4 107 16 21 ];
+        %tmp.50 = lgetv %recentHR.3;
+        symbol [ recentHR %tmp.50 107 26 34 ];
+        symbol [ baselineHR %tmp.52 107 37 47 ];
+        %tmp.52 = getv ? :baselineHR;
+        %tmp.53 = sub %tmp.50 %tmp.52;
+        symbol [ baselineHR %tmp.55 107 51 61 ];
+        %tmp.55 = getv ? :baselineHR;
+        %tmp.56 = div %tmp.53 %tmp.55;
+        %tmp.57 = 100.0;
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        lputv %drift.4 %tmp.58;
+        symbol [ drift %drift.4 107 16 21 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 108 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_12_111_12_if_stmt:
+        %tmp.59 = lgetv %drift.4;
+        symbol [ drift %tmp.59 108 16 21 ];
+        %tmp.60 = 0;
+        %tmp.61 = gt %tmp.59 %tmp.60;
+        bf %tmp.61 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_12_111_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_12_111_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_27_111_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 109 16 ]
+        %tmp.62 = lgetv %score.1;
+        symbol [ score %tmp.62 109 16 21 ];
+        %tmp.63 = lgetv %drift.4;
+        symbol [ drift %tmp.63 109 26 31 ];
+        %tmp.64 = 2.5;
+        %tmp.65 = mul %tmp.63 %tmp.64;
+        symbol [ toFloat %tmp.66 109 39 46 ];
+        %tmp.66 = getv function %tmp.65 :toFloat;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = add %tmp.62 %tmp.67;
+        lputv %score.1 %tmp.68;
+        symbol [ score %score.1 109 16 21 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 110 16 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_16_110_48_if_stmt:
+        %tmp.69 = lgetv %score.1;
+        symbol [ score %tmp.69 110 20 25 ];
+        %tmp.70 = 55;
+        %tmp.71 = gt %tmp.69 %tmp.70;
+        bf %tmp.71 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_16_110_48_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_16_110_48_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_32_110_48_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 110 34 ]
+        %tmp.72 = 55.0;
+        lputv %score.1 %tmp.72;
+        symbol [ score %score.1 110 34 39 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_32_110_48_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_16_110_48_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_110_16_110_48_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_27_111_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_12_111_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_108_12_111_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_52_112_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_105_8_112_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 116 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_12_116_56_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_12_116_43_begin:
+        symbol [ isBaselineSet %tmp.74 116 12 25 ];
+        %tmp.74 = getv ? :isBaselineSet;
+        bf %tmp.74 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_29_116_43_true:
+        symbol [ baselineHRV %tmp.76 116 29 40 ];
+        %tmp.76 = getv ? :baselineHRV;
+        %tmp.77 = 0;
+        %tmp.78 = gt %tmp.76 %tmp.77;
+        push %tmp.78;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_29_116_43_end:
+        %tmp.79 = phi [%tmp.74 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_12_116_43_begin] [%tmp.78 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_29_116_43_true] [%tmp.79 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_29_116_43_end];
+        bf %tmp.79 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_48_116_56_true:
+        %tmp.80 = lgetv %rmssd;
+        symbol [ rmssd %tmp.80 116 48 53 ];
+        %tmp.81 = 0;
+        %tmp.82 = gt %tmp.80 %tmp.81;
+        push %tmp.82;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_48_116_56_end:
+        %tmp.83 = phi [%tmp.79 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_12_116_56_begin] [%tmp.82 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_48_116_56_true] [%tmp.83 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_48_116_56_end];
+        bf %tmp.83 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_59_121_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 117 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_59_121_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_59_121_8_stop" ]
+        %hrvDecline.5 = local;
+        symbol [ hrvDecline %hrvDecline.5 117 16 26 ];
+        symbol [ baselineHRV %tmp.85 117 31 42 ];
+        %tmp.85 = getv ? :baselineHRV;
+        %tmp.86 = lgetv %rmssd;
+        symbol [ rmssd %tmp.86 117 45 50 ];
+        %tmp.87 = sub %tmp.85 %tmp.86;
+        symbol [ baselineHRV %tmp.89 117 54 65 ];
+        %tmp.89 = getv ? :baselineHRV;
+        %tmp.90 = div %tmp.87 %tmp.89;
+        %tmp.91 = 100.0;
+        %tmp.92 = mul %tmp.90 %tmp.91;
+        lputv %hrvDecline.5 %tmp.92;
+        symbol [ hrvDecline %hrvDecline.5 117 16 26 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 118 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_12_120_12_if_stmt:
+        %tmp.93 = lgetv %hrvDecline.5;
+        symbol [ hrvDecline %tmp.93 118 16 26 ];
+        %tmp.94 = 0;
+        %tmp.95 = gt %tmp.93 %tmp.94;
+        bf %tmp.95 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_12_120_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_12_120_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_32_120_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 119 16 ]
+        %tmp.96 = lgetv %score.1;
+        symbol [ score %tmp.96 119 16 21 ];
+        %tmp.97 = lgetv %hrvDecline.5;
+        symbol [ hrvDecline %tmp.97 119 26 36 ];
+        %tmp.98 = 0.4;
+        %tmp.99 = mul %tmp.97 %tmp.98;
+        symbol [ toFloat %tmp.100 119 44 51 ];
+        %tmp.100 = getv function %tmp.99 :toFloat;
+        %tmp.101 = invoke %tmp.99 %tmp.100();
+        %tmp.102 = add %tmp.96 %tmp.101;
+        lputv %score.1 %tmp.102;
+        symbol [ score %score.1 119 16 21 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_32_120_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_12_120_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_118_12_120_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_59_121_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_116_8_121_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 125 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_12_125_72_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_12_125_45_begin:
+        symbol [ isBaselineSet %tmp.104 125 12 25 ];
+        %tmp.104 = getv ? :isBaselineSet;
+        bf %tmp.104 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_29_125_45_true:
+        symbol [ baselineSpeed %tmp.106 125 29 42 ];
+        %tmp.106 = getv ? :baselineSpeed;
+        %tmp.107 = 0;
+        %tmp.108 = gt %tmp.106 %tmp.107;
+        push %tmp.108;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_29_125_45_end:
+        %tmp.109 = phi [%tmp.104 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_12_125_45_begin] [%tmp.108 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_29_125_45_true] [%tmp.109 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_29_125_45_end];
+        bf %tmp.109 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_50_125_72_true:
+        symbol [ speedHistory %tmp.111 125 50 62 ];
+        %tmp.111 = getv ? :speedHistory;
+        symbol [ size %tmp.112 125 63 67 ];
+        %tmp.112 = getv function %tmp.111 :size;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
+        %tmp.114 = 30;
+        %tmp.115 = gt %tmp.113 %tmp.114;
+        push %tmp.115;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_50_125_72_end:
+        %tmp.116 = phi [%tmp.109 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_12_125_72_begin] [%tmp.115 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_50_125_72_true] [%tmp.116 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_50_125_72_end];
+        bf %tmp.116 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 126 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_stop" ]
+        %recentSpeed.6 = local;
+        symbol [ recentSpeed %recentSpeed.6 126 16 27 ];
+        %tmp.117 = self;
+        symbol [ avgLast %tmp.118 126 30 37 ];
+        %tmp.118 = getv function %tmp.117 :avgLast;
+        symbol [ speedHistory %tmp.120 126 38 50 ];
+        %tmp.120 = getv ? :speedHistory;
+        %tmp.121 = 30;
+        %tmp.122 = invoke %tmp.117 %tmp.118(%tmp.120, %tmp.121);
+        lputv %recentSpeed.6 %tmp.122;
+        symbol [ recentSpeed %recentSpeed.6 126 16 27 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 127 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_stop" ]
+        %speedDecay.7 = local;
+        symbol [ speedDecay %speedDecay.7 127 16 26 ];
+        symbol [ baselineSpeed %tmp.124 127 31 44 ];
+        %tmp.124 = getv ? :baselineSpeed;
+        %tmp.125 = lgetv %recentSpeed.6;
+        symbol [ recentSpeed %tmp.125 127 47 58 ];
+        %tmp.126 = sub %tmp.124 %tmp.125;
+        symbol [ baselineSpeed %tmp.128 127 62 75 ];
+        %tmp.128 = getv ? :baselineSpeed;
+        %tmp.129 = div %tmp.126 %tmp.128;
+        %tmp.130 = 100.0;
+        %tmp.131 = mul %tmp.129 %tmp.130;
+        lputv %speedDecay.7 %tmp.131;
+        symbol [ speedDecay %speedDecay.7 127 16 26 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 128 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_12_130_12_if_stmt:
+        %tmp.132 = lgetv %speedDecay.7;
+        symbol [ speedDecay %tmp.132 128 16 26 ];
+        %tmp.133 = 0;
+        %tmp.134 = gt %tmp.132 %tmp.133;
+        bf %tmp.134 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_12_130_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_12_130_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_32_130_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 129 16 ]
+        %tmp.135 = lgetv %score.1;
+        symbol [ score %tmp.135 129 16 21 ];
+        %tmp.136 = lgetv %speedDecay.7;
+        symbol [ speedDecay %tmp.136 129 26 36 ];
+        %tmp.137 = 0.3;
+        %tmp.138 = mul %tmp.136 %tmp.137;
+        symbol [ toFloat %tmp.139 129 44 51 ];
+        %tmp.139 = getv function %tmp.138 :toFloat;
+        %tmp.140 = invoke %tmp.138 %tmp.139();
+        %tmp.141 = add %tmp.135 %tmp.140;
+        lputv %score.1 %tmp.141;
+        symbol [ score %score.1 129 16 21 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_32_130_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_12_130_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_128_12_130_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_76_131_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_125_8_131_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 135 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_stop" ]
+        %hiMinutes.8 = local;
+        symbol [ hiMinutes %hiMinutes.8 135 12 21 ];
+        symbol [ highIntensitySeconds %tmp.143 135 24 44 ];
+        %tmp.143 = getv ? :highIntensitySeconds;
+        %tmp.144 = 60.0;
+        %tmp.145 = div %tmp.143 %tmp.144;
+        lputv %hiMinutes.8 %tmp.145;
+        symbol [ hiMinutes %hiMinutes.8 135 12 21 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 136 8 ]
+        %tmp.146 = lgetv %score.1;
+        symbol [ score %tmp.146 136 8 13 ];
+        %tmp.147 = lgetv %hiMinutes.8;
+        symbol [ hiMinutes %tmp.147 136 18 27 ];
+        %tmp.148 = 0.5;
+        %tmp.149 = mul %tmp.147 %tmp.148;
+        symbol [ toFloat %tmp.150 136 35 42 ];
+        %tmp.150 = getv function %tmp.149 :toFloat;
+        %tmp.151 = invoke %tmp.149 %tmp.150();
+        %tmp.152 = add %tmp.146 %tmp.151;
+        lputv %score.1 %tmp.152;
+        symbol [ score %score.1 136 8 13 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 139 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_8_139_38_if_stmt:
+        %tmp.153 = lgetv %score.1;
+        symbol [ score %tmp.153 139 12 17 ];
+        %tmp.154 = 0;
+        %tmp.155 = lt %tmp.153 %tmp.154;
+        bf %tmp.155 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_8_139_38_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_8_139_38_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_23_139_38_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 139 25 ]
+        %tmp.156 = 0.0;
+        lputv %score.1 %tmp.156;
+        symbol [ score %score.1 139 25 30 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_23_139_38_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_8_139_38_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_139_8_139_38_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 140 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_8_140_42_if_stmt:
+        %tmp.157 = lgetv %score.1;
+        symbol [ score %tmp.157 140 12 17 ];
+        %tmp.158 = 100;
+        %tmp.159 = gt %tmp.157 %tmp.158;
+        bf %tmp.159 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_8_140_42_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_8_140_42_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_25_140_42_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 140 27 ]
+        %tmp.160 = 100.0;
+        lputv %score.1 %tmp.160;
+        symbol [ score %score.1 140 27 32 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_25_140_42_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_8_140_42_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_140_8_140_42_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 142 8 ]
+        %tmp.161 = lgetv %score.1;
+        symbol [ score %tmp.161 142 15 20 ];
+        ret %tmp.161;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_85_48_143_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 145; @symbol_functiondef = [avgLast,145,13,20]; @symbol_param<0> = [buffer,145,21,27]; @symbol_param<1> = [n,145,29,30]; ]
+    function avgLast(buffer, n) {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 146 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_8_146_46_if_stmt:
+        %tmp.1 = lgetv %buffer;
+        symbol [ buffer %tmp.1 146 12 18 ];
+        symbol [ size %tmp.2 146 19 23 ];
+        %tmp.2 = getv function %tmp.1 :size;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 0;
+        %tmp.5 = eq %tmp.3 %tmp.4;
+        bf %tmp.5 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_8_146_46_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_8_146_46_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_32_146_46_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 146 34 ]
+        %tmp.6 = 0.0;
+        ret %tmp.6;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_32_146_46_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_8_146_46_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_146_8_146_46_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 147 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_stop" ]
+        %count.1 = local;
+        symbol [ count %count.1 147 12 17 ];
+        %tmp.7 = lgetv %n;
+        symbol [ n %tmp.7 147 20 21 ];
+        lputv %count.1 %tmp.7;
+        symbol [ count %count.1 147 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 148 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_8_148_60_if_stmt:
+        %tmp.8 = lgetv %buffer;
+        symbol [ buffer %tmp.8 148 12 18 ];
+        symbol [ size %tmp.9 148 19 23 ];
+        %tmp.9 = getv function %tmp.8 :size;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = lgetv %count.1;
+        symbol [ count %tmp.11 148 28 33 ];
+        %tmp.12 = lt %tmp.10 %tmp.11;
+        bf %tmp.12 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_8_148_60_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_8_148_60_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_35_148_60_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 148 37 ]
+        %tmp.13 = lgetv %buffer;
+        symbol [ buffer %tmp.13 148 45 51 ];
+        symbol [ size %tmp.14 148 52 56 ];
+        %tmp.14 = getv function %tmp.13 :size;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %count.1 %tmp.15;
+        symbol [ count %count.1 148 37 42 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_35_148_60_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_8_148_60_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_148_8_148_60_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 149 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_stop" ]
+        %sum.2 = local;
+        symbol [ sum %sum.2 149 12 15 ];
+        %tmp.16 = 0.0;
+        lputv %sum.2 %tmp.16;
+        symbol [ sum %sum.2 149 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 150 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 150 17 18 ];
+        %tmp.17 = lgetv %buffer;
+        symbol [ buffer %tmp.17 150 21 27 ];
+        symbol [ size %tmp.18 150 28 32 ];
+        %tmp.18 = getv function %tmp.17 :size;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = lgetv %count.1;
+        symbol [ count %tmp.20 150 37 42 ];
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        lputv %i.3 %tmp.21;
+        symbol [ i %i.3 150 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_test:
+        %tmp.22 = lgetv %i.3;
+        symbol [ i %tmp.22 150 44 45 ];
+        %tmp.23 = lgetv %buffer;
+        symbol [ buffer %tmp.23 150 48 54 ];
+        symbol [ size %tmp.24 150 55 59 ];
+        %tmp.24 = getv function %tmp.23 :size;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        %tmp.26 = lt %tmp.22 %tmp.25;
+        bf %tmp.26 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_68_152_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 151 12 ]
+        %tmp.27 = lgetv %sum.2;
+        symbol [ sum %tmp.27 151 12 15 ];
+        %tmp.28 = lgetv %buffer;
+        symbol [ buffer %tmp.28 151 19 25 ];
+        %tmp.29 = lgetv %i.3;
+        symbol [ i %tmp.29 151 26 27 ];
+        %tmp.30 = agetv %tmp.28 %tmp.29;
+        %tmp.31 = add %tmp.27 %tmp.30;
+        lputv %sum.2 %tmp.31;
+        symbol [ sum %sum.2 151 12 15 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_68_152_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 150 ]
+        %tmp.34 = lgetv %i.3;
+        symbol [ i %tmp.34 150 63 64 ];
+        %tmp.35 = add %tmp.34 1;
+        lputv %i.3 %tmp.35;
+        symbol [ i %i.3 150 63 64 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_150_8_152_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 153 8 ]
+        %tmp.36 = lgetv %sum.2;
+        symbol [ sum %tmp.36 153 15 18 ];
+        %tmp.37 = lgetv %count.1;
+        symbol [ count %tmp.37 153 21 26 ];
+        %tmp.38 = div %tmp.36 %tmp.37;
+        ret %tmp.38;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_145_32_154_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 156; @symbol_functiondef = [getFatigueScore,156,13,28]; ]
+    function getFatigueScore() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_156_31_158_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 157 8 ]
+        symbol [ fatigueScore %tmp.2 157 15 27 ];
+        %tmp.2 = getv ? :fatigueScore;
+        symbol [ toNumber %tmp.3 157 28 36 ];
+        %tmp.3 = getv function %tmp.2 :toNumber;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        ret %tmp.4;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_156_31_158_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 160; @symbol_functiondef = [getFatigueZone,160,13,27]; ]
+    function getFatigueZone() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_160_30_166_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 161 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_8_161_49_if_stmt:
+        symbol [ fatigueScore %tmp.2 161 12 24 ];
+        %tmp.2 = getv ? :fatigueScore;
+        %tmp.3 = 30;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_8_161_49_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_8_161_49_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_31_161_49_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 161 33 ]
+        %tmp.5 = "FRESH";
+        ret %tmp.5;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_31_161_49_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_8_161_49_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_161_8_161_49_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 162 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_8_162_52_if_stmt:
+        symbol [ fatigueScore %tmp.7 162 12 24 ];
+        %tmp.7 = getv ? :fatigueScore;
+        %tmp.8 = 55;
+        %tmp.9 = lt %tmp.7 %tmp.8;
+        bf %tmp.9 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_8_162_52_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_8_162_52_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_31_162_52_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 162 33 ]
+        %tmp.10 = "MODERATE";
+        ret %tmp.10;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_31_162_52_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_8_162_52_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_162_8_162_52_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 163 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_8_163_49_if_stmt:
+        symbol [ fatigueScore %tmp.12 163 12 24 ];
+        %tmp.12 = getv ? :fatigueScore;
+        %tmp.13 = 75;
+        %tmp.14 = lt %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_8_163_49_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_8_163_49_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_31_163_49_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 163 33 ]
+        %tmp.15 = "TIRED";
+        ret %tmp.15;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_31_163_49_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_8_163_49_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_163_8_163_49_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 164 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_8_164_53_if_stmt:
+        symbol [ fatigueScore %tmp.17 164 12 24 ];
+        %tmp.17 = getv ? :fatigueScore;
+        %tmp.18 = 90;
+        %tmp.19 = lt %tmp.17 %tmp.18;
+        bf %tmp.19 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_8_164_53_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_8_164_53_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_31_164_53_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 164 33 ]
+        %tmp.20 = "EXHAUSTED";
+        ret %tmp.20;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_31_164_53_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_8_164_53_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_164_8_164_53_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 165 8 ]
+        %tmp.21 = "CRITICAL";
+        ret %tmp.21;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_160_30_166_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 168; @symbol_functiondef = [getEstimatedMinutesLeft,168,13,36]; ]
+    function getEstimatedMinutesLeft() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 170 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_12_170_52_begin:
+        symbol [ fatigueScore %tmp.2 170 12 24 ];
+        %tmp.2 = getv ? :fatigueScore;
+        %tmp.3 = 10;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bt %tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_true;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_33_170_52_false:
+        symbol [ hrHistory %tmp.6 170 33 42 ];
+        %tmp.6 = getv ? :hrHistory;
+        symbol [ size %tmp.7 170 43 47 ];
+        %tmp.7 = getv function %tmp.6 :size;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 60;
+        %tmp.10 = lt %tmp.8 %tmp.9;
+        push %tmp.10;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_33_170_52_end:
+        %tmp.11 = phi [%tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_12_170_52_begin] [%tmp.10 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_33_170_52_false] [%tmp.11 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_33_170_52_end];
+        bf %tmp.11 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_56_172_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 171 12 ]
+        %tmp.12 = 90;
+        ret %tmp.12;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_56_172_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_170_8_172_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 174 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_stop" ]
+        %minutesElapsed.1 = local;
+        symbol [ minutesElapsed %minutesElapsed.1 174 12 26 ];
+        symbol [ hrHistory %tmp.14 174 29 38 ];
+        %tmp.14 = getv ? :hrHistory;
+        symbol [ size %tmp.15 174 39 43 ];
+        %tmp.15 = getv function %tmp.14 :size;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = 60.0;
+        %tmp.18 = div %tmp.16 %tmp.17;
+        lputv %minutesElapsed.1 %tmp.18;
+        symbol [ minutesElapsed %minutesElapsed.1 174 12 26 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 175 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_8_175_45_if_stmt:
+        %tmp.19 = lgetv %minutesElapsed.1;
+        symbol [ minutesElapsed %tmp.19 175 12 26 ];
+        %tmp.20 = 1;
+        %tmp.21 = lt %tmp.19 %tmp.20;
+        bf %tmp.21 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_8_175_45_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_8_175_45_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_32_175_45_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 175 34 ]
+        %tmp.22 = 90;
+        ret %tmp.22;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_32_175_45_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_8_175_45_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_175_8_175_45_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 176 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_stop" ]
+        %fatigueRate.2 = local;
+        symbol [ fatigueRate %fatigueRate.2 176 12 23 ];
+        symbol [ fatigueScore %tmp.24 176 26 38 ];
+        %tmp.24 = getv ? :fatigueScore;
+        %tmp.25 = lgetv %minutesElapsed.1;
+        symbol [ minutesElapsed %tmp.25 176 41 55 ];
+        %tmp.26 = div %tmp.24 %tmp.25;
+        lputv %fatigueRate.2 %tmp.26;
+        symbol [ fatigueRate %fatigueRate.2 176 12 23 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 177 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_8_177_43_if_stmt:
+        %tmp.27 = lgetv %fatigueRate.2;
+        symbol [ fatigueRate %tmp.27 177 12 23 ];
+        %tmp.28 = 0;
+        %tmp.29 = lte %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_8_177_43_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_8_177_43_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_30_177_43_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 177 32 ]
+        %tmp.30 = 90;
+        ret %tmp.30;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_30_177_43_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_8_177_43_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_177_8_177_43_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 178 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_stop" ]
+        %remaining.3 = local;
+        symbol [ remaining %remaining.3 178 12 21 ];
+        %tmp.31 = 100.0;
+        symbol [ fatigueScore %tmp.33 178 33 45 ];
+        %tmp.33 = getv ? :fatigueScore;
+        %tmp.34 = sub %tmp.31 %tmp.33;
+        %tmp.35 = lgetv %fatigueRate.2;
+        symbol [ fatigueRate %tmp.35 178 49 60 ];
+        %tmp.36 = div %tmp.34 %tmp.35;
+        lputv %remaining.3 %tmp.36;
+        symbol [ remaining %remaining.3 178 12 21 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 179 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_8_179_41_if_stmt:
+        %tmp.37 = lgetv %remaining.3;
+        symbol [ remaining %tmp.37 179 12 21 ];
+        %tmp.38 = 90;
+        %tmp.39 = gt %tmp.37 %tmp.38;
+        bf %tmp.39 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_8_179_41_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_8_179_41_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_28_179_41_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 179 30 ]
+        %tmp.40 = 90;
+        ret %tmp.40;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_28_179_41_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_8_179_41_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_179_8_179_41_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc" 180 8 ]
+        %tmp.41 = lgetv %remaining.3;
+        symbol [ remaining %tmp.41 180 15 24 ];
+        symbol [ toNumber %tmp.42 180 25 33 ];
+        %tmp.42 = getv function %tmp.41 :toNumber;
+        %tmp.43 = invoke %tmp.41 %tmp.42();
+        ret %tmp.43;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_FatigueEngine_mc_168_39_181_4_stop:
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/FatigueEngine.mc"; @line = 1; ]
+<init> {
+}

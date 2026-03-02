@@ -1,0 +1,1232 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Sensor,1,13,19]; ]
+using Toybox.Sensor;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Position,2,13,21]; ]
+using Toybox.Position;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Timer,3,13,18]; ]
+using Toybox.Timer;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Activity,4,13,21]; ]
+using Toybox.Activity;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [ActivityRecording,5,13,30]; ]
+using Toybox.ActivityRecording;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [System,6,13,19]; ]
+using Toybox.System;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [UserProfile,7,13,24]; ]
+using Toybox.UserProfile;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 9; @symbol_classdef = [SensorCollector,9,6,21]; ]
+class SensorCollector {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 9; ]
+    <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 28 8 ]
+        %tmp.1 = newa 0;
+        putv self :lastRRIntervals %tmp.1;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 31 8 ]
+        %tmp.2 = newa 0;
+        putv self :accelBuffer %tmp.2;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 32 8 ]
+        %tmp.3 = newa 0;
+        putv self :gyroBuffer %tmp.3;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 12; @position = 8; @symbol_vardef = [heartRate,12,8,17]; ]
+    var heartRate = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 13; @position = 8; @symbol_vardef = [speed,13,8,13]; ]
+    var speed = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 14; @position = 8; @symbol_vardef = [cadence,14,8,15]; ]
+    var cadence = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 15; @position = 8; @symbol_vardef = [altitude,15,8,16]; ]
+    var altitude = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 16; @position = 8; @symbol_vardef = [accelX,16,8,14]; ]
+    var accelX = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 17; @position = 8; @symbol_vardef = [accelY,17,8,14]; ]
+    var accelY = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 18; @position = 8; @symbol_vardef = [accelZ,18,8,14]; ]
+    var accelZ = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 19; @position = 8; @symbol_vardef = [latitude,19,8,16]; ]
+    var latitude = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 20; @position = 8; @symbol_vardef = [longitude,20,8,17]; ]
+    var longitude = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 21; @position = 8; @symbol_vardef = [gpsSpeed,21,8,16]; ]
+    var gpsSpeed = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 22; @position = 8; @symbol_vardef = [distance,22,8,16]; ]
+    var distance = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 23; @position = 8; @symbol_vardef = [calories,23,8,16]; ]
+    var calories = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 24; @position = 8; @symbol_vardef = [elapsedTime,24,8,19]; ]
+    var elapsedTime = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 27; @position = 8; @symbol_vardef = [hrvCalculator,27,8,21]; ]
+    var hrvCalculator;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 28; @position = 8; @symbol_vardef = [lastRRIntervals,28,8,23]; ]
+    var lastRRIntervals;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 31; @position = 8; @symbol_vardef = [accelBuffer,31,8,19]; ]
+    var accelBuffer;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 32; @position = 8; @symbol_vardef = [gyroBuffer,32,8,18]; ]
+    var gyroBuffer;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 35; @position = 8; @symbol_vardef = [maxHR,35,8,13]; ]
+    var maxHR = 190;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 36; @position = 8; @symbol_vardef = [restingHR,36,8,17]; ]
+    var restingHR = 60;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 39; @position = 8; @symbol_vardef = [session,39,8,15]; ]
+    var session = null;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 42; @position = 8; @symbol_vardef = [transmitTimer,42,8,21]; ]
+    var transmitTimer;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 44; @symbol_functiondef = [initialize,44,13,23]; ]
+    function initialize() as Void {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_44_26_47_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 45 8 ]
+        symbol [ HRVCalculator %tmp.4 45 28 41 ];
+        %tmp.4 = getv ? :HRVCalculator;
+        %tmp.1 = newc %tmp.4 ();
+        symbol [ hrvCalculator ? 45 8 21 ];
+        putv self :hrvCalculator %tmp.1;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 46 8 ]
+        %tmp.5 = self;
+        symbol [ loadUserProfile %tmp.6 46 8 23 ];
+        %tmp.6 = getv function %tmp.5 :loadUserProfile;
+        invoke %tmp.5 %tmp.6();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_44_26_47_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 49; @symbol_functiondef = [loadUserProfile,49,13,28]; ]
+    function loadUserProfile() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_49_31_62_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 50 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_49_31_62_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_49_31_62_4_stop" ]
+        %profile.1 = local;
+        symbol [ profile %profile.1 50 12 19 ];
+        symbol [ UserProfile %tmp.1 50 22 33 ];
+        %tmp.1 = getm $.Toybox.UserProfile;
+        symbol [ getProfile %tmp.2 50 34 44 ];
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %profile.1 %tmp.3;
+        symbol [ profile %profile.1 50 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 51 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_8_61_8_if_stmt:
+        %tmp.4 = lgetv %profile.1;
+        symbol [ profile %tmp.4 51 12 19 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_8_61_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_8_61_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_29_61_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 53 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_29_61_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_29_61_8_stop" ]
+        %hrZones.2 = local;
+        symbol [ hrZones %hrZones.2 53 16 23 ];
+        symbol [ UserProfile %tmp.7 53 26 37 ];
+        %tmp.7 = getm $.Toybox.UserProfile;
+        symbol [ getHeartRateZones %tmp.8 53 38 55 ];
+        %tmp.8 = getv function %tmp.7 :getHeartRateZones;
+        symbol [ UserProfile %tmp.9 53 56 67 ];
+        %tmp.9 = getm $.Toybox.UserProfile;
+        symbol [ HR_ZONE_SPORT_GENERIC %tmp.10 53 68 89 ];
+        %tmp.10 = getv %tmp.9 :HR_ZONE_SPORT_GENERIC;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        lputv %hrZones.2 %tmp.11;
+        symbol [ hrZones %hrZones.2 53 16 23 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 54 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_16_54_52_begin:
+        %tmp.12 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.12 54 16 23 ];
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_35_54_52_true:
+        %tmp.15 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.15 54 35 42 ];
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ size %tmp.17 54 43 47 ];
+        %tmp.17 = getv function %tmp.16 :size;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = 0;
+        %tmp.20 = gt %tmp.18 %tmp.19;
+        push %tmp.20;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_35_54_52_end:
+        %tmp.21 = phi [%tmp.14 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_16_54_52_begin] [%tmp.20 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_35_54_52_true] [%tmp.21 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_35_54_52_end];
+        bf %tmp.21 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_55_56_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 55 16 ]
+        %tmp.22 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.22 55 24 31 ];
+        %tmp.23 = as %tmp.22 { (!Null) };
+        %tmp.24 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.24 55 32 39 ];
+        %tmp.25 = as %tmp.24 { (!Null) };
+        symbol [ size %tmp.26 55 40 44 ];
+        %tmp.26 = getv function %tmp.25 :size;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = 1;
+        %tmp.29 = sub %tmp.27 %tmp.28;
+        %tmp.30 = agetv %tmp.23 %tmp.29;
+        symbol [ maxHR ? 55 16 21 ];
+        putv self :maxHR %tmp.30;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_55_56_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_54_12_56_12_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 58 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_16_58_77_begin:
+        %tmp.31 = lgetv %profile.1;
+        symbol [ profile %tmp.31 58 16 23 ];
+        %tmp.32 = as %tmp.31 { (!Null) };
+        %tmp.34 = const :restingHeartRate;
+        symbol [ restingHeartRate %tmp.34 58 29 45 const ];
+        %tmp.35 = canhazplz %tmp.32 %tmp.34;
+        bf %tmp.35 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_49_58_77_true:
+        %tmp.36 = lgetv %profile.1;
+        symbol [ profile %tmp.36 58 49 56 ];
+        %tmp.37 = as %tmp.36 { (interface { var restingHeartRate; }) && (!Null) };
+        symbol [ restingHeartRate %tmp.38 58 57 73 ];
+        %tmp.38 = getv %tmp.37 :restingHeartRate;
+        %tmp.39 = null;
+        %tmp.40 = ne %tmp.38 %tmp.39;
+        push %tmp.40;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_49_58_77_end:
+        %tmp.41 = phi [%tmp.35 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_16_58_77_begin] [%tmp.40 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_49_58_77_true] [%tmp.41 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_49_58_77_end];
+        bf %tmp.41 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_83_60_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 59 16 ]
+        %tmp.42 = lgetv %profile.1;
+        symbol [ profile %tmp.42 59 28 35 ];
+        %tmp.43 = as %tmp.42 { (interface { var restingHeartRate; }) && (!Null) };
+        symbol [ restingHeartRate %tmp.44 59 36 52 ];
+        %tmp.44 = getv %tmp.43 :restingHeartRate;
+        symbol [ restingHR ? 59 16 25 ];
+        putv self :restingHR %tmp.44;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_83_60_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_58_12_60_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_29_61_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_8_61_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_51_8_61_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_49_31_62_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 64; @symbol_functiondef = [start,64,13,18]; ]
+    function start() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_64_21_111_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 66 8 ]
+        symbol [ Sensor %tmp.1 66 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ setEnabledSensors %tmp.2 66 15 32 ];
+        %tmp.2 = getv function %tmp.1 :setEnabledSensors;
+        %tmp.3 = newa 1;
+        symbol [ Sensor %tmp.4 66 34 40 ];
+        %tmp.4 = getm $.Toybox.Sensor;
+        symbol [ SENSOR_HEARTRATE %tmp.5 66 41 57 ];
+        %tmp.5 = getv %tmp.4 :SENSOR_HEARTRATE;
+        %tmp.6 = dup %tmp.3;
+        %tmp.7 = aputv %tmp.6 0 %tmp.5;
+        invoke %tmp.1 %tmp.2(%tmp.7);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 67 8 ]
+        symbol [ Sensor %tmp.8 67 8 14 ];
+        %tmp.8 = getm $.Toybox.Sensor;
+        symbol [ enableSensorEvents %tmp.9 67 15 33 ];
+        %tmp.9 = getv function %tmp.8 :enableSensorEvents;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 67 34 40 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :onSensorEvent;
+        symbol [ onSensorEvent %tmp.13 67 42 55 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        invoke %tmp.8 %tmp.9(%tmp.14);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 71 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_64_21_111_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_64_21_111_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 71 12 19 ];
+        %tmp.15 = newd 3;
+        %tmp.17 = const :period;
+        symbol [ period %tmp.17 72 13 19 const ];
+        %tmp.18 = 1;
+        %tmp.19 = dup %tmp.15;
+        %tmp.20 = aputv %tmp.19 %tmp.17 %tmp.18;
+        %tmp.22 = const :accelerometer;
+        symbol [ accelerometer %tmp.22 73 13 26 const ];
+        %tmp.23 = newd 2;
+        %tmp.25 = const :enabled;
+        symbol [ enabled %tmp.25 74 17 24 const ];
+        %tmp.26 = true;
+        %tmp.27 = dup %tmp.23;
+        %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+        %tmp.30 = const :sampleRate;
+        symbol [ sampleRate %tmp.30 75 17 27 const ];
+        %tmp.31 = 25;
+        %tmp.32 = dup %tmp.28;
+        %tmp.33 = aputv %tmp.32 %tmp.30 %tmp.31;
+        %tmp.34 = dup %tmp.20;
+        %tmp.35 = aputv %tmp.34 %tmp.22 %tmp.33;
+        %tmp.37 = const :heartBeatIntervals;
+        symbol [ heartBeatIntervals %tmp.37 77 13 31 const ];
+        %tmp.38 = newd 1;
+        %tmp.40 = const :enabled;
+        symbol [ enabled %tmp.40 78 17 24 const ];
+        %tmp.41 = true;
+        %tmp.42 = dup %tmp.38;
+        %tmp.43 = aputv %tmp.42 %tmp.40 %tmp.41;
+        %tmp.44 = dup %tmp.35;
+        %tmp.45 = aputv %tmp.44 %tmp.37 %tmp.43;
+        lputv %options.1 %tmp.45;
+        symbol [ options %options.1 71 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 83 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_8_93_8_if_stmt:
+        symbol [ Sensor %tmp.46 83 12 18 ];
+        %tmp.46 = getm $.Toybox.Sensor;
+        %tmp.48 = const :registerSensorDataListener;
+        symbol [ registerSensorDataListener %tmp.48 83 24 50 const ];
+        %tmp.49 = canhazplz %tmp.46 %tmp.48;
+        bf %tmp.49 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_8_93_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_8_93_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_52_93_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 84 12 ]
+        try @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_beginTry @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_endTry @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_catch @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_beginTry:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_16_89_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 85 16 ]
+        %tmp.50 = lgetv %options.1;
+        symbol [ options %tmp.50 85 16 23 ];
+        %tmp.51 = newd 2;
+        %tmp.53 = const :enabled;
+        symbol [ enabled %tmp.53 86 21 28 const ];
+        %tmp.54 = true;
+        %tmp.55 = dup %tmp.51;
+        %tmp.56 = aputv %tmp.55 %tmp.53 %tmp.54;
+        %tmp.58 = const :sampleRate;
+        symbol [ sampleRate %tmp.58 87 21 31 const ];
+        %tmp.59 = 25;
+        %tmp.60 = dup %tmp.56;
+        %tmp.61 = aputv %tmp.60 %tmp.58 %tmp.59;
+        %tmp.63 = const :gyroscope;
+        symbol [ gyroscope %tmp.63 85 25 34 const ];
+        aputv %tmp.50 %tmp.63 %tmp.61;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_16_89_12_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_endTry:
+        jsr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally;
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_catch:
+        %tmp.64 = exception;
+        push %tmp.64;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 89 14 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_catch" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_89_14_91_12_end" ]
+        %e.2 = local;
+        symbol [ e %e.2 89 21 22 ];
+        %tmp.65 = dup %tmp.64;
+        lputv %e.2 %tmp.65;
+        symbol [ e %e.2 89 21 22 ];
+        jsr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally;
+        pop;
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_89_14_91_12_end:
+        try @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_catch @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_89_14_91_12_end @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_89_14_91_12_end @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally;
+        jsr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally;
+        throw %tmp.64;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_finally:
+        jsrret;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_84_12_91_12_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 92 12 ]
+        symbol [ Sensor %tmp.66 92 12 18 ];
+        %tmp.66 = getm $.Toybox.Sensor;
+        symbol [ registerSensorDataListener %tmp.67 92 19 45 ];
+        %tmp.67 = getv function %tmp.66 :registerSensorDataListener;
+        %tmp.68 = self;
+        symbol [ method %tmp.69 92 46 52 ];
+        %tmp.69 = getv function %tmp.68 :method;
+        %tmp.71 = const :onHighFreqData;
+        symbol [ onHighFreqData %tmp.71 92 54 68 const ];
+        %tmp.72 = invoke %tmp.68 %tmp.69(%tmp.71);
+        %tmp.73 = lgetv %options.1;
+        symbol [ options %tmp.73 92 71 78 ];
+        invoke %tmp.66 %tmp.67(%tmp.72, %tmp.73);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_52_93_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_8_93_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_83_8_93_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 96 8 ]
+        symbol [ Position %tmp.74 96 8 16 ];
+        %tmp.74 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.75 96 17 37 ];
+        %tmp.75 = getv function %tmp.74 :enableLocationEvents;
+        symbol [ Position %tmp.76 96 38 46 ];
+        %tmp.76 = getm $.Toybox.Position;
+        symbol [ LOCATION_CONTINUOUS %tmp.77 96 47 66 ];
+        %tmp.77 = getv %tmp.76 :LOCATION_CONTINUOUS;
+        %tmp.78 = self;
+        symbol [ method %tmp.79 96 68 74 ];
+        %tmp.79 = getv function %tmp.78 :method;
+        %tmp.81 = const :onPosition;
+        symbol [ onPosition %tmp.81 96 76 86 const ];
+        %tmp.82 = invoke %tmp.78 %tmp.79(%tmp.81);
+        invoke %tmp.74 %tmp.75(%tmp.77, %tmp.82);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 99 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_8_106_8_if_stmt:
+        symbol [ ActivityRecording %tmp.83 99 12 29 ];
+        %tmp.83 = getm $.Toybox.ActivityRecording;
+        %tmp.85 = const :createSession;
+        symbol [ createSession %tmp.85 99 35 48 const ];
+        %tmp.86 = canhazplz %tmp.83 %tmp.85;
+        bf %tmp.86 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_8_106_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_8_106_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_50_106_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 100 12 ]
+        symbol [ ActivityRecording %tmp.87 100 22 39 ];
+        %tmp.87 = getm $.Toybox.ActivityRecording;
+        symbol [ createSession %tmp.88 100 40 53 ];
+        %tmp.88 = getv function %tmp.87 :createSession;
+        %tmp.89 = newd 3;
+        %tmp.91 = const :name;
+        symbol [ name %tmp.91 101 17 21 const ];
+        %tmp.92 = "Soccer Match";
+        %tmp.93 = dup %tmp.89;
+        %tmp.94 = aputv %tmp.93 %tmp.91 %tmp.92;
+        %tmp.96 = const :sport;
+        symbol [ sport %tmp.96 102 17 22 const ];
+        symbol [ Activity %tmp.97 102 26 34 ];
+        %tmp.97 = getm $.Toybox.Activity;
+        symbol [ SPORT_GENERIC %tmp.98 102 35 48 ];
+        %tmp.98 = getv %tmp.97 :SPORT_GENERIC;
+        %tmp.99 = dup %tmp.94;
+        %tmp.100 = aputv %tmp.99 %tmp.96 %tmp.98;
+        %tmp.102 = const :subSport;
+        symbol [ subSport %tmp.102 103 17 25 const ];
+        symbol [ Activity %tmp.103 103 29 37 ];
+        %tmp.103 = getm $.Toybox.Activity;
+        symbol [ SUB_SPORT_GENERIC %tmp.104 103 38 55 ];
+        %tmp.104 = getv %tmp.103 :SUB_SPORT_GENERIC;
+        %tmp.105 = dup %tmp.100;
+        %tmp.106 = aputv %tmp.105 %tmp.102 %tmp.104;
+        %tmp.107 = invoke %tmp.87 %tmp.88(%tmp.106);
+        symbol [ session ? 100 12 19 ];
+        putv self :session %tmp.107;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 105 12 ]
+        symbol [ session %tmp.109 105 12 19 ];
+        %tmp.109 = getv ? :session;
+        symbol [ start %tmp.110 105 20 25 ];
+        %tmp.110 = getv function %tmp.109 :start;
+        invoke %tmp.109 %tmp.110();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_50_106_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_8_106_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_99_8_106_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 109 8 ]
+        symbol [ Timer %tmp.113 109 28 33 ];
+        %tmp.113 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.114 109 34 39 ];
+        %tmp.114 = getv function ? %tmp.113 :Timer;
+        %tmp.111 = newc %tmp.114 ();
+        symbol [ transmitTimer ? 109 8 21 ];
+        putv self :transmitTimer %tmp.111;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 110 8 ]
+        symbol [ transmitTimer %tmp.116 110 8 21 ];
+        %tmp.116 = getv ? :transmitTimer;
+        symbol [ start %tmp.117 110 22 27 ];
+        %tmp.117 = getv function %tmp.116 :start;
+        %tmp.118 = self;
+        symbol [ method %tmp.119 110 28 34 ];
+        %tmp.119 = getv function %tmp.118 :method;
+        %tmp.121 = const :transmitData;
+        symbol [ transmitData %tmp.121 110 36 48 const ];
+        %tmp.122 = invoke %tmp.118 %tmp.119(%tmp.121);
+        %tmp.123 = 3000;
+        %tmp.124 = true;
+        invoke %tmp.116 %tmp.117(%tmp.122, %tmp.123, %tmp.124);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_64_21_111_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 113; @symbol_functiondef = [stop,113,13,17]; ]
+    function stop() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_113_20_128_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 114 8 ]
+        symbol [ Sensor %tmp.1 114 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ enableSensorEvents %tmp.2 114 15 33 ];
+        %tmp.2 = getv function %tmp.1 :enableSensorEvents;
+        %tmp.3 = null;
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 115 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_8_117_8_if_stmt:
+        symbol [ Sensor %tmp.4 115 12 18 ];
+        %tmp.4 = getm $.Toybox.Sensor;
+        %tmp.6 = const :unregisterSensorDataListener;
+        symbol [ unregisterSensorDataListener %tmp.6 115 24 52 const ];
+        %tmp.7 = canhazplz %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_8_117_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_8_117_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_54_117_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 116 12 ]
+        symbol [ Sensor %tmp.8 116 12 18 ];
+        %tmp.8 = getm $.Toybox.Sensor;
+        symbol [ unregisterSensorDataListener %tmp.9 116 19 47 ];
+        %tmp.9 = getv function %tmp.8 :unregisterSensorDataListener;
+        invoke %tmp.8 %tmp.9();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_54_117_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_8_117_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_115_8_117_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 118 8 ]
+        symbol [ Position %tmp.10 118 8 16 ];
+        %tmp.10 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.11 118 17 37 ];
+        %tmp.11 = getv function %tmp.10 :enableLocationEvents;
+        symbol [ Position %tmp.12 118 38 46 ];
+        %tmp.12 = getm $.Toybox.Position;
+        symbol [ LOCATION_DISABLE %tmp.13 118 47 63 ];
+        %tmp.13 = getv %tmp.12 :LOCATION_DISABLE;
+        %tmp.14 = null;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.14);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 120 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_8_123_8_if_stmt:
+        symbol [ session %tmp.16 120 12 19 ];
+        %tmp.16 = getv ? :session;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_8_123_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_8_123_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_29_123_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 121 12 ]
+        symbol [ session %tmp.20 121 12 19 ];
+        %tmp.20 = getv ? :session;
+        %tmp.21 = as %tmp.20 { (!Null) };
+        symbol [ stop %tmp.22 121 20 24 ];
+        %tmp.22 = getv function %tmp.21 :stop;
+        invoke %tmp.21 %tmp.22();
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 122 12 ]
+        symbol [ session %tmp.24 122 12 19 ];
+        %tmp.24 = getv ? :session;
+        symbol [ save %tmp.25 122 20 24 ];
+        %tmp.25 = getv function %tmp.24 :save;
+        invoke %tmp.24 %tmp.25();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_29_123_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_8_123_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_120_8_123_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 125 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_8_127_8_if_stmt:
+        symbol [ transmitTimer %tmp.27 125 12 25 ];
+        %tmp.27 = getv ? :transmitTimer;
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        bf %tmp.29 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_8_127_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_8_127_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_35_127_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 126 12 ]
+        symbol [ transmitTimer %tmp.31 126 12 25 ];
+        %tmp.31 = getv ? :transmitTimer;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        symbol [ stop %tmp.33 126 26 30 ];
+        %tmp.33 = getv function %tmp.32 :stop;
+        invoke %tmp.32 %tmp.33();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_35_127_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_8_127_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_125_8_127_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_113_20_128_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 131; @symbol_functiondef = [onSensorEvent,131,13,26]; @symbol_param<0> = [sensorInfo,131,27,37]; @symbol_param<0>_type<0> = [Sensor,131,41,47]; @symbol_param<0>_type<1> = [Info,131,48,52]; ]
+    function onSensorEvent(sensorInfo as Sensor.Info) as Void {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 132 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_8_134_8_if_stmt:
+        %tmp.1 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.1 132 12 22 ];
+        symbol [ heartRate %tmp.2 132 23 32 ];
+        %tmp.2 = getv %tmp.1 :heartRate;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_8_134_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_8_134_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_42_134_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 133 12 ]
+        %tmp.5 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.5 133 24 34 ];
+        symbol [ heartRate %tmp.6 133 35 44 ];
+        %tmp.6 = getv %tmp.5 :heartRate;
+        symbol [ heartRate ? 133 12 21 ];
+        putv self :heartRate %tmp.6;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_42_134_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_8_134_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_132_8_134_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 135 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_8_137_8_if_stmt:
+        %tmp.7 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.7 135 12 22 ];
+        symbol [ speed %tmp.8 135 23 28 ];
+        %tmp.8 = getv %tmp.7 :speed;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_8_137_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_8_137_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_38_137_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 136 12 ]
+        %tmp.11 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.11 136 20 30 ];
+        symbol [ speed %tmp.12 136 31 36 ];
+        %tmp.12 = getv %tmp.11 :speed;
+        symbol [ speed ? 136 12 17 ];
+        putv self :speed %tmp.12;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_38_137_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_8_137_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_135_8_137_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 138 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_8_140_8_if_stmt:
+        %tmp.13 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.13 138 12 22 ];
+        symbol [ cadence %tmp.14 138 23 30 ];
+        %tmp.14 = getv %tmp.13 :cadence;
+        %tmp.15 = null;
+        %tmp.16 = ne %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_8_140_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_8_140_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_40_140_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 139 12 ]
+        %tmp.17 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.17 139 22 32 ];
+        symbol [ cadence %tmp.18 139 33 40 ];
+        %tmp.18 = getv %tmp.17 :cadence;
+        symbol [ cadence ? 139 12 19 ];
+        putv self :cadence %tmp.18;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_40_140_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_8_140_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_138_8_140_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 141 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_8_143_8_if_stmt:
+        %tmp.19 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.19 141 12 22 ];
+        symbol [ altitude %tmp.20 141 23 31 ];
+        %tmp.20 = getv %tmp.19 :altitude;
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_8_143_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_8_143_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_41_143_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 142 12 ]
+        %tmp.23 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.23 142 23 33 ];
+        symbol [ altitude %tmp.24 142 34 42 ];
+        %tmp.24 = getv %tmp.23 :altitude;
+        symbol [ altitude ? 142 12 20 ];
+        putv self :altitude %tmp.24;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_41_143_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_8_143_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_141_8_143_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 144 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_12_144_57_begin:
+        %tmp.25 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.25 144 12 22 ];
+        %tmp.27 = const :accel;
+        symbol [ accel %tmp.27 144 28 33 const ];
+        %tmp.28 = canhazplz %tmp.25 %tmp.27;
+        bf %tmp.28 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_37_144_57_true:
+        %tmp.29 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.29 144 37 47 ];
+        %tmp.30 = as %tmp.29 { (interface { var accel; }) };
+        symbol [ accel %tmp.31 144 48 53 ];
+        %tmp.31 = getv %tmp.30 :accel;
+        %tmp.32 = null;
+        %tmp.33 = ne %tmp.31 %tmp.32;
+        push %tmp.33;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_37_144_57_end:
+        %tmp.34 = phi [%tmp.28 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_12_144_57_begin] [%tmp.33 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_37_144_57_true] [%tmp.34 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_37_144_57_end];
+        bf %tmp.34 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_63_148_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 145 12 ]
+        %tmp.35 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.35 145 21 31 ];
+        %tmp.36 = as %tmp.35 { (interface { var accel; }) };
+        symbol [ accel %tmp.37 145 32 37 ];
+        %tmp.37 = getv %tmp.36 :accel;
+        %tmp.38 = 0;
+        %tmp.39 = agetv %tmp.37 %tmp.38;
+        symbol [ accelX ? 145 12 18 ];
+        putv self :accelX %tmp.39;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 146 12 ]
+        %tmp.40 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.40 146 21 31 ];
+        %tmp.41 = as %tmp.40 { (interface { var accel; }) };
+        symbol [ accel %tmp.42 146 32 37 ];
+        %tmp.42 = getv %tmp.41 :accel;
+        %tmp.43 = 1;
+        %tmp.44 = agetv %tmp.42 %tmp.43;
+        symbol [ accelY ? 146 12 18 ];
+        putv self :accelY %tmp.44;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 147 12 ]
+        %tmp.45 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.45 147 21 31 ];
+        %tmp.46 = as %tmp.45 { (interface { var accel; }) };
+        symbol [ accel %tmp.47 147 32 37 ];
+        %tmp.47 = getv %tmp.46 :accel;
+        %tmp.48 = 2;
+        %tmp.49 = agetv %tmp.47 %tmp.48;
+        symbol [ accelZ ? 147 12 18 ];
+        putv self :accelZ %tmp.49;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_63_148_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_144_8_148_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 151 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_stop" ]
+        %actInfo.1 = local;
+        symbol [ actInfo %actInfo.1 151 12 19 ];
+        symbol [ Activity %tmp.50 151 22 30 ];
+        %tmp.50 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.51 151 31 46 ];
+        %tmp.51 = getv function %tmp.50 :getActivityInfo;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        lputv %actInfo.1 %tmp.52;
+        symbol [ actInfo %actInfo.1 151 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 152 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_8_162_8_if_stmt:
+        %tmp.53 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.53 152 12 19 ];
+        %tmp.54 = null;
+        %tmp.55 = ne %tmp.53 %tmp.54;
+        bf %tmp.55 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_8_162_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_8_162_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_29_162_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 153 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_12_155_12_if_stmt:
+        %tmp.56 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.56 153 16 23 ];
+        %tmp.57 = as %tmp.56 { (!Null) };
+        symbol [ elapsedDistance %tmp.58 153 24 39 ];
+        %tmp.58 = getv %tmp.57 :elapsedDistance;
+        %tmp.59 = null;
+        %tmp.60 = ne %tmp.58 %tmp.59;
+        bf %tmp.60 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_12_155_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_12_155_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_49_155_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 154 16 ]
+        %tmp.61 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.61 154 27 34 ];
+        %tmp.62 = as %tmp.61 { (!Null) };
+        symbol [ elapsedDistance %tmp.63 154 35 50 ];
+        %tmp.63 = getv %tmp.62 :elapsedDistance;
+        symbol [ distance ? 154 16 24 ];
+        putv self :distance %tmp.63;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_49_155_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_12_155_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_153_12_155_12_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 156 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_12_158_12_if_stmt:
+        %tmp.64 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.64 156 16 23 ];
+        %tmp.65 = as %tmp.64 { (!Null) };
+        symbol [ calories %tmp.66 156 24 32 ];
+        %tmp.66 = getv %tmp.65 :calories;
+        %tmp.67 = null;
+        %tmp.68 = ne %tmp.66 %tmp.67;
+        bf %tmp.68 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_12_158_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_12_158_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_42_158_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 157 16 ]
+        %tmp.69 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.69 157 27 34 ];
+        %tmp.70 = as %tmp.69 { (!Null) };
+        symbol [ calories %tmp.71 157 35 43 ];
+        %tmp.71 = getv %tmp.70 :calories;
+        symbol [ calories ? 157 16 24 ];
+        putv self :calories %tmp.71;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_42_158_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_12_158_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_156_12_158_12_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 159 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_12_161_12_if_stmt:
+        %tmp.72 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.72 159 16 23 ];
+        %tmp.73 = as %tmp.72 { (!Null) };
+        symbol [ timerTime %tmp.74 159 24 33 ];
+        %tmp.74 = getv %tmp.73 :timerTime;
+        %tmp.75 = null;
+        %tmp.76 = ne %tmp.74 %tmp.75;
+        bf %tmp.76 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_12_161_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_12_161_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_43_161_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 160 16 ]
+        %tmp.77 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.77 160 30 37 ];
+        %tmp.78 = as %tmp.77 { (!Null) };
+        symbol [ timerTime %tmp.79 160 38 47 ];
+        %tmp.79 = getv %tmp.78 :timerTime;
+        symbol [ elapsedTime ? 160 16 27 ];
+        putv self :elapsedTime %tmp.79;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_43_161_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_12_161_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_159_12_161_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_29_162_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_8_162_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_152_8_162_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 165 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_stop" ]
+        %app.2 = local;
+        symbol [ app %app.2 165 12 15 ];
+        symbol [ Application %tmp.81 165 18 29 ];
+        %tmp.81 = getv ? :Application;
+        symbol [ getApp %tmp.82 165 30 36 ];
+        %tmp.82 = getv function %tmp.81 :getApp;
+        %tmp.83 = invoke %tmp.81 %tmp.82();
+        lputv %app.2 %tmp.83;
+        symbol [ app %app.2 165 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 166 8 ]
+        %tmp.84 = lgetv %app.2;
+        symbol [ app %tmp.84 166 8 11 ];
+        symbol [ fatigueEngine %tmp.85 166 12 25 ];
+        %tmp.85 = getv %tmp.84 :fatigueEngine;
+        symbol [ update %tmp.86 166 26 32 ];
+        %tmp.86 = getv function %tmp.85 :update;
+        %tmp.87 = self;
+        symbol [ self %tmp.87 166 33 37 ];
+        invoke %tmp.85 %tmp.86(%tmp.87);
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 169 8 ]
+        symbol [ WatchUi %tmp.89 169 8 15 ];
+        %tmp.89 = getv ? :WatchUi;
+        symbol [ requestUpdate %tmp.90 169 16 29 ];
+        %tmp.90 = getv function %tmp.89 :requestUpdate;
+        invoke %tmp.89 %tmp.90();
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_131_62_170_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 173; @symbol_functiondef = [onHighFreqData,173,13,27]; @symbol_param<0> = [sensorData,173,28,38]; @symbol_param<0>_type<0> = [Sensor,173,42,48]; @symbol_param<0>_type<1> = [SensorData,173,49,59]; ]
+    function onHighFreqData(sensorData as Sensor.SensorData) as Void {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_173_69_202_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 175 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_12_175_81_begin:
+        %tmp.1 = lgetv %sensorData;
+        symbol [ sensorData %tmp.1 175 12 22 ];
+        %tmp.3 = const :accelerometerData;
+        symbol [ accelerometerData %tmp.3 175 28 45 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_49_175_81_true:
+        %tmp.5 = lgetv %sensorData;
+        symbol [ sensorData %tmp.5 175 49 59 ];
+        %tmp.6 = as %tmp.5 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.7 175 60 77 ];
+        %tmp.7 = getv %tmp.6 :accelerometerData;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_49_175_81_end:
+        %tmp.10 = phi [%tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_12_175_81_begin] [%tmp.9 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_49_175_81_true] [%tmp.10 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_49_175_81_end];
+        bf %tmp.10 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_87_183_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 176 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_87_183_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_87_183_8_stop" ]
+        %accelData.1 = local;
+        symbol [ accelData %accelData.1 176 16 25 ];
+        %tmp.11 = lgetv %sensorData;
+        symbol [ sensorData %tmp.11 176 28 38 ];
+        %tmp.12 = as %tmp.11 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.13 176 39 56 ];
+        %tmp.13 = getv %tmp.12 :accelerometerData;
+        lputv %accelData.1 %tmp.13;
+        symbol [ accelData %accelData.1 176 16 25 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 178 12 ]
+        %tmp.14 = newd 3;
+        %tmp.16 = const :x;
+        symbol [ x %tmp.16 179 17 18 const ];
+        %tmp.17 = lgetv %accelData.1;
+        symbol [ accelData %tmp.17 179 22 31 ];
+        symbol [ x %tmp.18 179 32 33 ];
+        %tmp.18 = getv %tmp.17 :x;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+        %tmp.22 = const :y;
+        symbol [ y %tmp.22 180 17 18 const ];
+        %tmp.23 = lgetv %accelData.1;
+        symbol [ accelData %tmp.23 180 22 31 ];
+        symbol [ y %tmp.24 180 32 33 ];
+        %tmp.24 = getv %tmp.23 :y;
+        %tmp.25 = dup %tmp.20;
+        %tmp.26 = aputv %tmp.25 %tmp.22 %tmp.24;
+        %tmp.28 = const :z;
+        symbol [ z %tmp.28 181 17 18 const ];
+        %tmp.29 = lgetv %accelData.1;
+        symbol [ accelData %tmp.29 181 22 31 ];
+        symbol [ z %tmp.30 181 32 33 ];
+        %tmp.30 = getv %tmp.29 :z;
+        %tmp.31 = dup %tmp.26;
+        %tmp.32 = aputv %tmp.31 %tmp.28 %tmp.30;
+        symbol [ accelBuffer ? 178 12 23 ];
+        putv self :accelBuffer %tmp.32;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_87_183_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_175_8_183_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 186 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_12_186_73_begin:
+        %tmp.33 = lgetv %sensorData;
+        symbol [ sensorData %tmp.33 186 12 22 ];
+        %tmp.35 = const :heartRateData;
+        symbol [ heartRateData %tmp.35 186 28 41 const ];
+        %tmp.36 = canhazplz %tmp.33 %tmp.35;
+        bf %tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_45_186_73_true:
+        %tmp.37 = lgetv %sensorData;
+        symbol [ sensorData %tmp.37 186 45 55 ];
+        %tmp.38 = as %tmp.37 { (interface { var heartRateData; }) };
+        symbol [ heartRateData %tmp.39 186 56 69 ];
+        %tmp.39 = getv %tmp.38 :heartRateData;
+        %tmp.40 = null;
+        %tmp.41 = ne %tmp.39 %tmp.40;
+        push %tmp.41;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_45_186_73_end:
+        %tmp.42 = phi [%tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_12_186_73_begin] [%tmp.41 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_45_186_73_true] [%tmp.42 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_45_186_73_end];
+        bf %tmp.42 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_79_192_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 187 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_79_192_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_79_192_8_stop" ]
+        %hrData.2 = local;
+        symbol [ hrData %hrData.2 187 16 22 ];
+        %tmp.43 = lgetv %sensorData;
+        symbol [ sensorData %tmp.43 187 25 35 ];
+        %tmp.44 = as %tmp.43 { (interface { var heartRateData; }) };
+        symbol [ heartRateData %tmp.45 187 36 49 ];
+        %tmp.45 = getv %tmp.44 :heartRateData;
+        lputv %hrData.2 %tmp.45;
+        symbol [ hrData %hrData.2 187 16 22 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 188 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_16_188_79_begin:
+        %tmp.46 = lgetv %hrData.2;
+        symbol [ hrData %tmp.46 188 16 22 ];
+        %tmp.48 = const :heartBeatIntervals;
+        symbol [ heartBeatIntervals %tmp.48 188 28 46 const ];
+        %tmp.49 = canhazplz %tmp.46 %tmp.48;
+        bf %tmp.49 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_50_188_79_true:
+        %tmp.50 = lgetv %hrData.2;
+        symbol [ hrData %tmp.50 188 50 56 ];
+        %tmp.51 = as %tmp.50 { (interface { var heartBeatIntervals; }) };
+        symbol [ heartBeatIntervals %tmp.52 188 57 75 ];
+        %tmp.52 = getv %tmp.51 :heartBeatIntervals;
+        %tmp.53 = null;
+        %tmp.54 = ne %tmp.52 %tmp.53;
+        push %tmp.54;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_50_188_79_end:
+        %tmp.55 = phi [%tmp.49 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_16_188_79_begin] [%tmp.54 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_50_188_79_true] [%tmp.55 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_50_188_79_end];
+        bf %tmp.55 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_85_191_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 189 16 ]
+        %tmp.56 = lgetv %hrData.2;
+        symbol [ hrData %tmp.56 189 34 40 ];
+        %tmp.57 = as %tmp.56 { (interface { var heartBeatIntervals; }) };
+        symbol [ heartBeatIntervals %tmp.58 189 41 59 ];
+        %tmp.58 = getv %tmp.57 :heartBeatIntervals;
+        symbol [ lastRRIntervals ? 189 16 31 ];
+        putv self :lastRRIntervals %tmp.58;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 190 16 ]
+        symbol [ hrvCalculator %tmp.60 190 16 29 ];
+        %tmp.60 = getv ? :hrvCalculator;
+        symbol [ addIntervals %tmp.61 190 30 42 ];
+        %tmp.61 = getv function %tmp.60 :addIntervals;
+        symbol [ lastRRIntervals %tmp.63 190 43 58 ];
+        %tmp.63 = getv ? :lastRRIntervals;
+        invoke %tmp.60 %tmp.61(%tmp.63);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_85_191_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_188_12_191_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_79_192_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_186_8_192_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 195 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_12_195_73_begin:
+        %tmp.64 = lgetv %sensorData;
+        symbol [ sensorData %tmp.64 195 12 22 ];
+        %tmp.66 = const :gyroscopeData;
+        symbol [ gyroscopeData %tmp.66 195 28 41 const ];
+        %tmp.67 = canhazplz %tmp.64 %tmp.66;
+        bf %tmp.67 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_45_195_73_true:
+        %tmp.68 = lgetv %sensorData;
+        symbol [ sensorData %tmp.68 195 45 55 ];
+        %tmp.69 = as %tmp.68 { (interface { var gyroscopeData; }) };
+        symbol [ gyroscopeData %tmp.70 195 56 69 ];
+        %tmp.70 = getv %tmp.69 :gyroscopeData;
+        %tmp.71 = null;
+        %tmp.72 = ne %tmp.70 %tmp.71;
+        push %tmp.72;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_45_195_73_end:
+        %tmp.73 = phi [%tmp.67 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_12_195_73_begin] [%tmp.72 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_45_195_73_true] [%tmp.73 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_45_195_73_end];
+        bf %tmp.73 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_79_201_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 196 12 ]
+        %tmp.74 = newd 3;
+        %tmp.76 = const :x;
+        symbol [ x %tmp.76 197 17 18 const ];
+        %tmp.77 = lgetv %sensorData;
+        symbol [ sensorData %tmp.77 197 22 32 ];
+        %tmp.78 = as %tmp.77 { (interface { var gyroscopeData; }) };
+        symbol [ gyroscopeData %tmp.79 197 33 46 ];
+        %tmp.79 = getv %tmp.78 :gyroscopeData;
+        symbol [ x %tmp.80 197 47 48 ];
+        %tmp.80 = getv %tmp.79 :x;
+        %tmp.81 = dup %tmp.74;
+        %tmp.82 = aputv %tmp.81 %tmp.76 %tmp.80;
+        %tmp.84 = const :y;
+        symbol [ y %tmp.84 198 17 18 const ];
+        %tmp.85 = lgetv %sensorData;
+        symbol [ sensorData %tmp.85 198 22 32 ];
+        %tmp.86 = as %tmp.85 { (interface { var gyroscopeData; }) };
+        symbol [ gyroscopeData %tmp.87 198 33 46 ];
+        %tmp.87 = getv %tmp.86 :gyroscopeData;
+        symbol [ y %tmp.88 198 47 48 ];
+        %tmp.88 = getv %tmp.87 :y;
+        %tmp.89 = dup %tmp.82;
+        %tmp.90 = aputv %tmp.89 %tmp.84 %tmp.88;
+        %tmp.92 = const :z;
+        symbol [ z %tmp.92 199 17 18 const ];
+        %tmp.93 = lgetv %sensorData;
+        symbol [ sensorData %tmp.93 199 22 32 ];
+        %tmp.94 = as %tmp.93 { (interface { var gyroscopeData; }) };
+        symbol [ gyroscopeData %tmp.95 199 33 46 ];
+        %tmp.95 = getv %tmp.94 :gyroscopeData;
+        symbol [ z %tmp.96 199 47 48 ];
+        %tmp.96 = getv %tmp.95 :z;
+        %tmp.97 = dup %tmp.90;
+        %tmp.98 = aputv %tmp.97 %tmp.92 %tmp.96;
+        symbol [ gyroBuffer ? 196 12 22 ];
+        putv self :gyroBuffer %tmp.98;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_79_201_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_195_8_201_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_173_69_202_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 205; @symbol_functiondef = [onPosition,205,13,23]; @symbol_param<0> = [info,205,24,28]; @symbol_param<0>_type<0> = [Position,205,32,40]; @symbol_param<0>_type<1> = [Info,205,41,45]; ]
+    function onPosition(info as Position.Info) as Void {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_205_55_214_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 206 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_8_210_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 206 12 16 ];
+        symbol [ position %tmp.2 206 17 25 ];
+        %tmp.2 = getv %tmp.1 :position;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_8_210_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_8_210_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_35_210_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 207 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_35_210_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_35_210_8_stop" ]
+        %coords.1 = local;
+        symbol [ coords %coords.1 207 16 22 ];
+        %tmp.5 = lgetv %info;
+        symbol [ info %tmp.5 207 25 29 ];
+        symbol [ position %tmp.6 207 30 38 ];
+        %tmp.6 = getv %tmp.5 :position;
+        symbol [ toDegrees %tmp.7 207 39 48 ];
+        %tmp.7 = getv function %tmp.6 :toDegrees;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %coords.1 %tmp.8;
+        symbol [ coords %coords.1 207 16 22 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 208 12 ]
+        %tmp.9 = lgetv %coords.1;
+        symbol [ coords %tmp.9 208 23 29 ];
+        %tmp.10 = 0;
+        %tmp.11 = agetv %tmp.9 %tmp.10;
+        symbol [ latitude ? 208 12 20 ];
+        putv self :latitude %tmp.11;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 209 12 ]
+        %tmp.12 = lgetv %coords.1;
+        symbol [ coords %tmp.12 209 24 30 ];
+        %tmp.13 = 1;
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        symbol [ longitude ? 209 12 21 ];
+        putv self :longitude %tmp.14;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_35_210_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_8_210_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_206_8_210_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 211 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_8_213_8_if_stmt:
+        %tmp.15 = lgetv %info;
+        symbol [ info %tmp.15 211 12 16 ];
+        symbol [ speed %tmp.16 211 17 22 ];
+        %tmp.16 = getv %tmp.15 :speed;
+        %tmp.17 = null;
+        %tmp.18 = ne %tmp.16 %tmp.17;
+        bf %tmp.18 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_8_213_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_8_213_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_32_213_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 212 12 ]
+        %tmp.19 = lgetv %info;
+        symbol [ info %tmp.19 212 23 27 ];
+        symbol [ speed %tmp.20 212 28 33 ];
+        %tmp.20 = getv %tmp.19 :speed;
+        symbol [ gpsSpeed ? 212 12 20 ];
+        putv self :gpsSpeed %tmp.20;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_32_213_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_8_213_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_211_8_213_8_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_205_55_214_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 217; @symbol_functiondef = [transmitData,217,13,25]; ]
+    function transmitData() as Void {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 218 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 218 12 15 ];
+        symbol [ Application %tmp.2 218 18 29 ];
+        %tmp.2 = getv ? :Application;
+        symbol [ getApp %tmp.3 218 30 36 ];
+        %tmp.3 = getv function %tmp.2 :getApp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %app.1 %tmp.4;
+        symbol [ app %app.1 218 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 219 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_stop" ]
+        %payload.2 = local;
+        symbol [ payload %payload.2 219 12 19 ];
+        %tmp.5 = self;
+        symbol [ buildPayload %tmp.6 219 22 34 ];
+        %tmp.6 = getv function %tmp.5 :buildPayload;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %payload.2 %tmp.7;
+        symbol [ payload %payload.2 219 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 220 8 ]
+        %tmp.8 = lgetv %app.1;
+        symbol [ app %tmp.8 220 8 11 ];
+        symbol [ dataTransmitter %tmp.9 220 12 27 ];
+        %tmp.9 = getv %tmp.8 :dataTransmitter;
+        symbol [ send %tmp.10 220 28 32 ];
+        %tmp.10 = getv function %tmp.9 :send;
+        %tmp.11 = lgetv %payload.2;
+        symbol [ payload %tmp.11 220 33 40 ];
+        invoke %tmp.9 %tmp.10(%tmp.11);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_217_36_221_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 223; @symbol_functiondef = [buildPayload,223,13,25]; ]
+    function buildPayload() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_223_28_246_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 224 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_223_28_246_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_223_28_246_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 224 12 15 ];
+        symbol [ Application %tmp.2 224 18 29 ];
+        %tmp.2 = getv ? :Application;
+        symbol [ getApp %tmp.3 224 30 36 ];
+        %tmp.3 = getv function %tmp.2 :getApp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %app.1 %tmp.4;
+        symbol [ app %app.1 224 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc" 225 8 ]
+        %tmp.5 = newd 19;
+        %tmp.6 = "ts";
+        symbol [ System %tmp.7 226 20 26 ];
+        %tmp.7 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.8 226 27 35 ];
+        %tmp.8 = getv function %tmp.7 :getTimer;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = dup %tmp.5;
+        %tmp.11 = aputv %tmp.10 %tmp.6 %tmp.9;
+        %tmp.12 = "hr";
+        symbol [ heartRate %tmp.14 227 20 29 ];
+        %tmp.14 = getv ? :heartRate;
+        %tmp.15 = dup %tmp.11;
+        %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+        %tmp.17 = "spd";
+        symbol [ speed %tmp.19 228 21 26 ];
+        %tmp.19 = getv ? :speed;
+        %tmp.20 = dup %tmp.16;
+        %tmp.21 = aputv %tmp.20 %tmp.17 %tmp.19;
+        %tmp.22 = "gspd";
+        symbol [ gpsSpeed %tmp.24 229 22 30 ];
+        %tmp.24 = getv ? :gpsSpeed;
+        %tmp.25 = dup %tmp.21;
+        %tmp.26 = aputv %tmp.25 %tmp.22 %tmp.24;
+        %tmp.27 = "cad";
+        symbol [ cadence %tmp.29 230 21 28 ];
+        %tmp.29 = getv ? :cadence;
+        %tmp.30 = dup %tmp.26;
+        %tmp.31 = aputv %tmp.30 %tmp.27 %tmp.29;
+        %tmp.32 = "alt";
+        symbol [ altitude %tmp.34 231 21 29 ];
+        %tmp.34 = getv ? :altitude;
+        %tmp.35 = dup %tmp.31;
+        %tmp.36 = aputv %tmp.35 %tmp.32 %tmp.34;
+        %tmp.37 = "lat";
+        symbol [ latitude %tmp.39 232 21 29 ];
+        %tmp.39 = getv ? :latitude;
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.37 %tmp.39;
+        %tmp.42 = "lon";
+        symbol [ longitude %tmp.44 233 21 30 ];
+        %tmp.44 = getv ? :longitude;
+        %tmp.45 = dup %tmp.41;
+        %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+        %tmp.47 = "dist";
+        symbol [ distance %tmp.49 234 22 30 ];
+        %tmp.49 = getv ? :distance;
+        %tmp.50 = dup %tmp.46;
+        %tmp.51 = aputv %tmp.50 %tmp.47 %tmp.49;
+        %tmp.52 = "cal";
+        symbol [ calories %tmp.54 235 21 29 ];
+        %tmp.54 = getv ? :calories;
+        %tmp.55 = dup %tmp.51;
+        %tmp.56 = aputv %tmp.55 %tmp.52 %tmp.54;
+        %tmp.57 = "et";
+        symbol [ elapsedTime %tmp.59 236 20 31 ];
+        %tmp.59 = getv ? :elapsedTime;
+        %tmp.60 = dup %tmp.56;
+        %tmp.61 = aputv %tmp.60 %tmp.57 %tmp.59;
+        %tmp.62 = "ax";
+        symbol [ accelX %tmp.64 237 20 26 ];
+        %tmp.64 = getv ? :accelX;
+        %tmp.65 = dup %tmp.61;
+        %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+        %tmp.67 = "ay";
+        symbol [ accelY %tmp.69 238 20 26 ];
+        %tmp.69 = getv ? :accelY;
+        %tmp.70 = dup %tmp.66;
+        %tmp.71 = aputv %tmp.70 %tmp.67 %tmp.69;
+        %tmp.72 = "az";
+        symbol [ accelZ %tmp.74 239 20 26 ];
+        %tmp.74 = getv ? :accelZ;
+        %tmp.75 = dup %tmp.71;
+        %tmp.76 = aputv %tmp.75 %tmp.72 %tmp.74;
+        %tmp.77 = "hrv";
+        symbol [ hrvCalculator %tmp.79 240 21 34 ];
+        %tmp.79 = getv ? :hrvCalculator;
+        symbol [ getRMSSD %tmp.80 240 35 43 ];
+        %tmp.80 = getv function %tmp.79 :getRMSSD;
+        %tmp.81 = invoke %tmp.79 %tmp.80();
+        %tmp.82 = dup %tmp.76;
+        %tmp.83 = aputv %tmp.82 %tmp.77 %tmp.81;
+        %tmp.84 = "hri";
+        symbol [ hrvCalculator %tmp.86 241 21 34 ];
+        %tmp.86 = getv ? :hrvCalculator;
+        symbol [ getLatestHRIndex %tmp.87 241 35 51 ];
+        %tmp.87 = getv function %tmp.86 :getLatestHRIndex;
+        %tmp.88 = invoke %tmp.86 %tmp.87();
+        %tmp.89 = dup %tmp.83;
+        %tmp.90 = aputv %tmp.89 %tmp.84 %tmp.88;
+        %tmp.91 = "mhr";
+        symbol [ maxHR %tmp.93 242 21 26 ];
+        %tmp.93 = getv ? :maxHR;
+        %tmp.94 = dup %tmp.90;
+        %tmp.95 = aputv %tmp.94 %tmp.91 %tmp.93;
+        %tmp.96 = "rhr";
+        symbol [ restingHR %tmp.98 243 21 30 ];
+        %tmp.98 = getv ? :restingHR;
+        %tmp.99 = dup %tmp.95;
+        %tmp.100 = aputv %tmp.99 %tmp.96 %tmp.98;
+        %tmp.101 = "fat";
+        %tmp.102 = lgetv %app.1;
+        symbol [ app %tmp.102 244 21 24 ];
+        symbol [ fatigueEngine %tmp.103 244 25 38 ];
+        %tmp.103 = getv %tmp.102 :fatigueEngine;
+        symbol [ getFatigueScore %tmp.104 244 39 54 ];
+        %tmp.104 = getv function %tmp.103 :getFatigueScore;
+        %tmp.105 = invoke %tmp.103 %tmp.104();
+        %tmp.106 = dup %tmp.100;
+        %tmp.107 = aputv %tmp.106 %tmp.101 %tmp.105;
+        ret %tmp.107;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_SensorCollector_mc_223_28_246_4_stop:
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/SensorCollector.mc"; @line = 1; ]
+<init> {
+}

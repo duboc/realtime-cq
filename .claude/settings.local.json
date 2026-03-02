@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"\nimport base64, struct, zlib\n\n# Create a minimal 40x40 white PNG with a green circle \\(soccer ball icon placeholder\\)\nwidth, height = 40, 40\n# Create raw pixel data \\(RGBA\\)\npixels = []\nfor y in range\\(height\\):\n    row = []\n    for x in range\\(width\\):\n        # Draw a green circle\n        dx, dy = x - 20, y - 20\n        if dx*dx + dy*dy < 14*14:\n            row.extend\\([0, 170, 0, 255]\\)  # Green\n        else:\n            row.extend\\([0, 0, 0, 0]\\)  # Transparent\n    pixels.append\\(bytes\\([0] + row\\)\\)  # Filter byte + row\n\nraw = b''.join\\(pixels\\)\n\ndef chunk\\(ctype, data\\):\n    c = ctype + data\n    return struct.pack\\('>I', len\\(data\\)\\) + c + struct.pack\\('>I', zlib.crc32\\(c\\) & 0xffffffff\\)\n\npng = b'\\\\x89PNG\\\\r\\\\n\\\\x1a\\\\n'\npng += chunk\\(b'IHDR', struct.pack\\('>IIBBBBB', width, height, 8, 6, 0, 0, 0\\)\\)\npng += chunk\\(b'IDAT', zlib.compress\\(raw\\)\\)\npng += chunk\\(b'IEND', b''\\)\n\nwith open\\('/Users/duboc/local/projects/realtime-cq/SoccerMonitor/resources/drawables/launcher_icon.png', 'wb'\\) as f:\n    f.write\\(png\\)\nprint\\('Icon created'\\)\n\")"
+    ]
+  }
+}

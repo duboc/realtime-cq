@@ -1,0 +1,1689 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 13; @symbol_functiondef = [MainLayout,13,17,27]; @symbol_param<0> = [dc,13,28,30]; @symbol_param<0>_type<0> = [Graphics,13,34,42]; @symbol_param<0>_type<1> = [Dc,13,43,45]; @symbol_return<0> = [Array,13,50,55]; @symbol_return<1> = [WatchUi,13,56,63]; @symbol_return<2> = [Drawable,13,64,72]; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_bin_gen_006_B4260_00_source_Rez_mcgen_13_74_17_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 14 12 ]
+            [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_bin_gen_006_B4260_00_source_Rez_mcgen_13_74_17_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_bin_gen_006_B4260_00_source_Rez_mcgen_13_74_17_8_stop" ]
+            %rez_cmp_local_text_StatusLabel.1 = local;
+            symbol [ rez_cmp_local_text_StatusLabel %rez_cmp_local_text_StatusLabel.1 14 16 46 ];
+            symbol [ WatchUi %tmp.3 14 53 60 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 61 65 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :identifier;
+            symbol [ identifier %tmp.7 14 68 78 const ];
+            %tmp.8 = "StatusLabel";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            symbol [ color %tmp.12 14 96 101 const ];
+            symbol [ Graphics %tmp.13 14 103 111 ];
+            %tmp.13 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.14 14 112 123 ];
+            %tmp.14 = getv %tmp.13 :COLOR_WHITE;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            symbol [ locX %tmp.18 14 126 130 const ];
+            %tmp.19 = lgetv %dc;
+            symbol [ dc %tmp.19 14 133 135 ];
+            symbol [ getWidth %tmp.20 14 136 144 ];
+            %tmp.20 = getv function %tmp.19 :getWidth;
+            %tmp.21 = invoke %tmp.19 %tmp.20();
+            %tmp.22 = 0.5;
+            %tmp.23 = mul %tmp.21 %tmp.22;
+            %tmp.24 = dup %tmp.16;
+            %tmp.25 = aputv %tmp.24 %tmp.18 %tmp.23;
+            %tmp.27 = const :locY;
+            symbol [ locY %tmp.27 14 156 160 const ];
+            %tmp.28 = lgetv %dc;
+            symbol [ dc %tmp.28 14 164 166 ];
+            symbol [ getHeight %tmp.29 14 167 176 ];
+            %tmp.29 = getv function %tmp.28 :getHeight;
+            %tmp.30 = invoke %tmp.28 %tmp.29();
+            %tmp.31 = lgetv %dc;
+            symbol [ dc %tmp.31 14 181 183 ];
+            symbol [ getFontHeight %tmp.32 14 184 197 ];
+            %tmp.32 = getv function %tmp.31 :getFontHeight;
+            symbol [ Graphics %tmp.33 14 198 206 ];
+            %tmp.33 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.34 14 207 218 ];
+            %tmp.34 = getv %tmp.33 :FONT_MEDIUM;
+            %tmp.35 = invoke %tmp.31 %tmp.32(%tmp.34);
+            %tmp.36 = sub %tmp.30 %tmp.35;
+            %tmp.37 = 0.5;
+            %tmp.38 = mul %tmp.36 %tmp.37;
+            %tmp.39 = dup %tmp.25;
+            %tmp.40 = aputv %tmp.39 %tmp.27 %tmp.38;
+            %tmp.42 = const :justification;
+            symbol [ justification %tmp.42 14 230 243 const ];
+            symbol [ Graphics %tmp.43 14 245 253 ];
+            %tmp.43 = getm $.Toybox.Graphics;
+            symbol [ TEXT_JUSTIFY_CENTER %tmp.44 14 254 273 ];
+            %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_CENTER;
+            %tmp.45 = dup %tmp.40;
+            %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+            %tmp.48 = const :font;
+            symbol [ font %tmp.48 14 276 280 const ];
+            symbol [ Graphics %tmp.49 14 282 290 ];
+            %tmp.49 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.50 14 291 302 ];
+            %tmp.50 = getv %tmp.49 :FONT_MEDIUM;
+            %tmp.51 = dup %tmp.46;
+            %tmp.52 = aputv %tmp.51 %tmp.48 %tmp.50;
+            %tmp.1 = newc %tmp.4 (%tmp.52);
+            lputv %rez_cmp_local_text_StatusLabel.1 %tmp.1;
+            symbol [ rez_cmp_local_text_StatusLabel %rez_cmp_local_text_StatusLabel.1 14 16 46 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 16 12 ]
+            %tmp.53 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.53 16 55 60 ];
+            symbol [ WatchUi %tmp.53 16 61 68 ];
+            symbol [ Drawable %tmp.53 16 69 77 ];
+            %tmp.54 = lgetv %rez_cmp_local_text_StatusLabel.1;
+            symbol [ rez_cmp_local_text_StatusLabel %tmp.54 16 20 50 ];
+            %tmp.55 = dup %tmp.53;
+            %tmp.56 = aputv %tmp.55 0 %tmp.54;
+            ret %tmp.56;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_bin_gen_006_B4260_00_source_Rez_mcgen_13_74_17_8_stop:
+        }
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 20; @symbol_moduledef = [Strings,20,11,18]; ]
+    module Strings {
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 21; @position = 27; initialized = true; @symbol_vardef = [AppName,21,27,34]; @symbol_type<0> = [ResourceId,21,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 24; @symbol_moduledef = [Styles,24,11,17]; ]
+    module Styles {
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 25; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,25,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 25; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 26 18 ]
+                symbol [ Graphics %tmp.57 26 34 42 ];
+                %tmp.57 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.58 26 43 62 ];
+                %tmp.58 = getv %tmp.57 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.58;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 27 18 ]
+                symbol [ Graphics %tmp.59 27 25 33 ];
+                %tmp.59 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.60 27 34 44 ];
+                %tmp.60 = getv %tmp.59 :FONT_SMALL;
+                putv self :font %tmp.60;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 26; @position = 18; @symbol_constdef = [justification,26,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 27; @position = 18; @symbol_constdef = [font,27,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 30; @symbol_moduledef = [system_size__menu_header,30,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 30; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 31; @position = 18; @symbol_constdef = [width,31,18,23]; @symbol_type<0> = [Number,31,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 32; @position = 18; @symbol_constdef = [height,32,18,24]; @symbol_type<0> = [Number,32,28,34]; ]
+            const height as Number = 105;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 35; @symbol_moduledef = [system_loc__hint_button_left_bottom,35,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 35; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 36; @position = 18; @symbol_constdef = [exclude,36,18,25]; @symbol_type<0> = [Boolean,36,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 39; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,39,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 39; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 40 18 ]
+                symbol [ Graphics %tmp.61 40 34 42 ];
+                %tmp.61 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.62 40 43 62 ];
+                %tmp.62 = getv %tmp.61 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.63 40 63 71 ];
+                %tmp.63 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.64 40 72 92 ];
+                %tmp.64 = getv %tmp.63 :TEXT_JUSTIFY_VCENTER;
+                %tmp.65 = bitor %tmp.62 %tmp.64;
+                putv self :justification %tmp.65;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 41 18 ]
+                symbol [ Graphics %tmp.66 41 25 33 ];
+                %tmp.66 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.67 41 34 44 ];
+                %tmp.67 = getv %tmp.66 :FONT_SMALL;
+                putv self :font %tmp.67;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 40; @position = 18; @symbol_constdef = [justification,40,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [font,41,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 44; @symbol_moduledef = [prompt_loc__body_no_title,44,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 44; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 45; @position = 18; @symbol_constdef = [x,45,18,19]; @symbol_type<0> = [Number,45,23,29]; ]
+            const x as Number = 45;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 46; @position = 18; @symbol_constdef = [y,46,18,19]; @symbol_type<0> = [Number,46,23,29]; ]
+            const y as Number = 68;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 49; @symbol_moduledef = [system_icon_dark__about,49,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 49; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 50; @position = 18; @symbol_constdef = [filename,50,18,26]; @symbol_type<0> = [String,50,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__about.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [compress,51,18,26]; @symbol_type<0> = [String,51,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [dithering,52,18,27]; @symbol_type<0> = [String,52,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 53; @position = 18; @symbol_constdef = [automaticPalette,53,18,34]; @symbol_type<0> = [String,53,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 54; @position = 18; @symbol_constdef = [packingFormat,54,18,31]; @symbol_type<0> = [String,54,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 57; @symbol_moduledef = [system_icon_light__question,57,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 57; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 58; @position = 18; @symbol_constdef = [filename,58,18,26]; @symbol_type<0> = [String,58,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__question.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 59; @position = 18; @symbol_constdef = [compress,59,18,26]; @symbol_type<0> = [String,59,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [dithering,60,18,27]; @symbol_type<0> = [String,60,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [automaticPalette,61,18,34]; @symbol_type<0> = [String,61,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [packingFormat,62,18,31]; @symbol_type<0> = [String,62,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 65; @symbol_moduledef = [system_loc__hint_button_left_top,65,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 65; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [exclude,66,18,25]; @symbol_type<0> = [Boolean,66,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 69; @symbol_moduledef = [prompt_font__title,69,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 69; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 70 18 ]
+                symbol [ Graphics %tmp.68 70 34 42 ];
+                %tmp.68 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.69 70 43 62 ];
+                %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.70 70 63 71 ];
+                %tmp.70 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.71 70 72 92 ];
+                %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_VCENTER;
+                %tmp.72 = bitor %tmp.69 %tmp.71;
+                putv self :justification %tmp.72;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 71 18 ]
+                symbol [ Graphics %tmp.73 71 25 33 ];
+                %tmp.73 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.74 71 34 44 ];
+                %tmp.74 = getv %tmp.73 :FONT_XTINY;
+                putv self :font %tmp.74;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [justification,70,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [font,71,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 74; @symbol_moduledef = [system_icon_dark__discard,74,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [filename,75,18,26]; @symbol_type<0> = [String,75,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__discard.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [compress,76,18,26]; @symbol_type<0> = [String,76,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [dithering,77,18,27]; @symbol_type<0> = [String,77,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 78; @position = 18; @symbol_constdef = [automaticPalette,78,18,34]; @symbol_type<0> = [String,78,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [packingFormat,79,18,31]; @symbol_type<0> = [String,79,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 82; @symbol_moduledef = [system_size__menu_item,82,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [width,83,18,23]; @symbol_type<0> = [Number,83,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [height,84,18,24]; @symbol_type<0> = [Number,84,28,34]; ]
+            const height as Number = 116;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 87; @symbol_moduledef = [system_color_dark__text,87,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 87; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 89 18 ]
+                symbol [ Graphics %tmp.75 89 31 39 ];
+                %tmp.75 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.76 89 40 57 ];
+                %tmp.76 = getv %tmp.75 :COLOR_TRANSPARENT;
+                putv self :background %tmp.76;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [color,88,18,23]; @symbol_type<0> = [Number,88,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [background,89,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 92; @symbol_moduledef = [system_icon_destructive__discard,92,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 92; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 93; @position = 18; @symbol_constdef = [filename,93,18,26]; @symbol_type<0> = [String,93,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__discard.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 94; @position = 18; @symbol_constdef = [dithering,94,18,27]; @symbol_type<0> = [String,94,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [packingFormat,95,18,31]; @symbol_type<0> = [String,95,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 98; @symbol_moduledef = [system_icon_dark__hint_action_menu,98,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 98; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 99; @position = 18; @symbol_constdef = [filename,99,18,26]; @symbol_type<0> = [String,99,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_action_menu.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [dithering,100,18,27]; @symbol_type<0> = [String,100,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [packingFormat,101,18,31]; @symbol_type<0> = [String,101,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 104; @symbol_moduledef = [prompt_size__title,104,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 104; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [width,105,18,23]; @symbol_type<0> = [Number,105,27,33]; ]
+            const width as Number = 192;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [height,106,18,24]; @symbol_type<0> = [Number,106,28,34]; ]
+            const height as Number = 81;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 109; @symbol_moduledef = [confirmation_font__body,109,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 109; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 110 18 ]
+                symbol [ Graphics %tmp.77 110 34 42 ];
+                %tmp.77 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.78 110 43 62 ];
+                %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.79 110 63 71 ];
+                %tmp.79 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.80 110 72 92 ];
+                %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_VCENTER;
+                %tmp.81 = bitor %tmp.78 %tmp.80;
+                putv self :justification %tmp.81;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 111 18 ]
+                symbol [ Graphics %tmp.82 111 25 33 ];
+                %tmp.82 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.83 111 34 43 ];
+                %tmp.83 = getv %tmp.82 :FONT_TINY;
+                putv self :font %tmp.83;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [justification,110,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [font,111,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 114; @symbol_moduledef = [system_color_dark__background,114,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 114; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [color,115,18,23]; @symbol_type<0> = [Number,115,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [background,116,18,28]; @symbol_type<0> = [Number,116,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 119; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,119,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 119; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [exclude,120,18,25]; @symbol_type<0> = [Boolean,120,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 123; @symbol_moduledef = [system_size__launch_icon,123,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 123; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [scaleX,124,18,24]; @symbol_type<0> = [Number,124,28,34]; ]
+            const scaleX as Number = 70;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [scaleY,125,18,24]; @symbol_type<0> = [Number,125,28,34]; ]
+            const scaleY as Number = 70;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 126; @position = 18; @symbol_constdef = [scaleRelativeTo,126,18,33]; @symbol_type<0> = [String,126,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 129; @symbol_moduledef = [confirmation_input__confirm,129,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 129; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [y1,130,18,20]; @symbol_type<0> = [Number,130,24,30]; ]
+            const y1 as Number = 345;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [x1,131,18,20]; @symbol_type<0> = [Number,131,24,30]; ]
+            const x1 as Number = 84;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 132; @position = 18; @symbol_constdef = [y2,132,18,20]; @symbol_type<0> = [Number,132,24,30]; ]
+            const y2 as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 133; @position = 18; @symbol_constdef = [x2,133,18,20]; @symbol_type<0> = [Number,133,24,30]; ]
+            const x2 as Number = 370;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 136; @symbol_moduledef = [prompt_font__body_with_title,136,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 136; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 137 18 ]
+                symbol [ Graphics %tmp.84 137 34 42 ];
+                %tmp.84 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.85 137 43 62 ];
+                %tmp.85 = getv %tmp.84 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.85;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 138 18 ]
+                symbol [ Graphics %tmp.86 138 25 33 ];
+                %tmp.86 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.87 138 34 43 ];
+                %tmp.87 = getv %tmp.86 :FONT_TINY;
+                putv self :font %tmp.87;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 137; @position = 18; @symbol_constdef = [justification,137,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [font,138,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 141; @symbol_moduledef = [confirmation_loc__body,141,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [x,142,18,19]; @symbol_type<0> = [Number,142,23,29]; ]
+            const x as Number = 93;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [y,143,18,19]; @symbol_type<0> = [Number,143,23,29]; ]
+            const y as Number = 91;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 146; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,146,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 146; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 147; @position = 18; @symbol_constdef = [exclude,147,18,25]; @symbol_type<0> = [Boolean,147,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 150; @symbol_moduledef = [prompt_color_dark__background,150,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [color,151,18,23]; @symbol_type<0> = [Number,151,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [background,152,18,28]; @symbol_type<0> = [Number,152,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 155; @symbol_moduledef = [system_icon_destructive__hint_action_menu,155,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 156; @position = 18; @symbol_constdef = [filename,156,18,26]; @symbol_type<0> = [String,156,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__hint_action_menu.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [dithering,157,18,27]; @symbol_type<0> = [String,157,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [packingFormat,158,18,31]; @symbol_type<0> = [String,158,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 161; @symbol_moduledef = [system_loc__hint_action_menu,161,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [x,162,18,19]; @symbol_type<0> = [Number,162,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [horizontalJustification,163,18,41]; @symbol_type<0> = [String,163,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 164; @position = 18; @symbol_constdef = [y,164,18,19]; @symbol_type<0> = [Number,164,23,29]; ]
+            const y as Number = 370;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 167; @symbol_moduledef = [confirmation_icon__hint_confirm,167,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 167; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [filename,168,18,26]; @symbol_type<0> = [String,168,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [dithering,169,18,27]; @symbol_type<0> = [String,169,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 170; @position = 18; @symbol_constdef = [packingFormat,170,18,31]; @symbol_type<0> = [String,170,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 173; @symbol_moduledef = [system_loc__hint_button_left_middle,173,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 173; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 174; @position = 18; @symbol_constdef = [exclude,174,18,25]; @symbol_type<0> = [Boolean,174,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 177; @symbol_moduledef = [prompt_size__body_no_title,177,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 177; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [width,178,18,23]; @symbol_type<0> = [Number,178,27,33]; ]
+            const width as Number = 363;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 179; @position = 18; @symbol_constdef = [height,179,18,24]; @symbol_type<0> = [Number,179,28,34]; ]
+            const height as Number = 295;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 182; @symbol_moduledef = [system_icon_light__hint_button_left_top,182,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 182; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 183; @position = 18; @symbol_constdef = [exclude,183,18,25]; @symbol_type<0> = [Boolean,183,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 186; @symbol_moduledef = [prompt_color_light__background,186,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 186; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [color,187,18,23]; @symbol_type<0> = [Number,187,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [background,188,18,28]; @symbol_type<0> = [Number,188,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 191; @symbol_moduledef = [confirmation_input__delete,191,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 191; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 192 18 ]
+                symbol [ WatchUi %tmp.88 192 27 34 ];
+                %tmp.88 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.89 192 35 44 ];
+                %tmp.89 = getv %tmp.88 :KEY_ENTER;
+                putv self :button %tmp.89;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [button,192,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 195; @symbol_moduledef = [system_icon_dark__hint_button_left_top,195,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 195; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 196; @position = 18; @symbol_constdef = [exclude,196,18,25]; @symbol_type<0> = [Boolean,196,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 199; @symbol_moduledef = [system_input__action_menu,199,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 199; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [y1,200,18,20]; @symbol_type<0> = [Number,200,24,30]; ]
+            const y1 as Number = 370;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 201; @position = 18; @symbol_constdef = [x1,201,18,20]; @symbol_type<0> = [Number,201,24,30]; ]
+            const x1 as Number = 113;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 202; @position = 18; @symbol_constdef = [y2,202,18,20]; @symbol_type<0> = [Number,202,24,30]; ]
+            const y2 as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [x2,203,18,20]; @symbol_type<0> = [Number,203,24,30]; ]
+            const x2 as Number = 341;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 206; @symbol_moduledef = [system_icon_light__save,206,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 206; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 207; @position = 18; @symbol_constdef = [filename,207,18,26]; @symbol_type<0> = [String,207,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__save.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 208; @position = 18; @symbol_constdef = [compress,208,18,26]; @symbol_type<0> = [String,208,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [dithering,209,18,27]; @symbol_type<0> = [String,209,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [automaticPalette,210,18,34]; @symbol_type<0> = [String,210,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [packingFormat,211,18,31]; @symbol_type<0> = [String,211,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 214; @symbol_moduledef = [prompt_color_light__body,214,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 214; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 216 18 ]
+                symbol [ Graphics %tmp.90 216 31 39 ];
+                %tmp.90 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.91 216 40 57 ];
+                %tmp.91 = getv %tmp.90 :COLOR_TRANSPARENT;
+                putv self :background %tmp.91;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [color,215,18,23]; @symbol_type<0> = [Number,215,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [background,216,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 219; @symbol_moduledef = [system_loc__subwindow,219,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 219; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [exclude,220,18,25]; @symbol_type<0> = [Boolean,220,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 223; @symbol_moduledef = [system_icon_light__warning,223,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 223; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [filename,224,18,26]; @symbol_type<0> = [String,224,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__warning.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 225; @position = 18; @symbol_constdef = [compress,225,18,26]; @symbol_type<0> = [String,225,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [dithering,226,18,27]; @symbol_type<0> = [String,226,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [automaticPalette,227,18,34]; @symbol_type<0> = [String,227,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [packingFormat,228,18,31]; @symbol_type<0> = [String,228,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 231; @symbol_moduledef = [confirmation_color_light__body,231,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 231; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 233 18 ]
+                symbol [ Graphics %tmp.92 233 31 39 ];
+                %tmp.92 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.93 233 40 57 ];
+                %tmp.93 = getv %tmp.92 :COLOR_TRANSPARENT;
+                putv self :background %tmp.93;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [color,232,18,23]; @symbol_type<0> = [Number,232,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [background,233,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 236; @symbol_moduledef = [confirmation_icon_light__hint_keep,236,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 236; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 237; @position = 18; @symbol_constdef = [filename,237,18,26]; @symbol_type<0> = [String,237,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [dithering,238,18,27]; @symbol_type<0> = [String,238,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [packingFormat,239,18,31]; @symbol_type<0> = [String,239,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 242; @symbol_moduledef = [activity_color_light__background,242,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 242; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [color,243,18,23]; @symbol_type<0> = [Number,243,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 244; @position = 18; @symbol_constdef = [background,244,18,28]; @symbol_type<0> = [Number,244,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 247; @symbol_moduledef = [system_icon_positive__hint_button_right_top,247,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 247; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [filename,248,18,26]; @symbol_type<0> = [String,248,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_button_right_top.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [dithering,249,18,27]; @symbol_type<0> = [String,249,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 252; @symbol_moduledef = [system_size__screen,252,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 252; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 253; @position = 18; @symbol_constdef = [width,253,18,23]; @symbol_type<0> = [Number,253,27,33]; ]
+            const width as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [height,254,18,24]; @symbol_type<0> = [Number,254,28,34]; ]
+            const height as Number = 454;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 257; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,257,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 257; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 258; @position = 18; @symbol_constdef = [filename,258,18,26]; @symbol_type<0> = [String,258,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 259; @position = 18; @symbol_constdef = [dithering,259,18,27]; @symbol_type<0> = [String,259,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 262; @symbol_moduledef = [system_color_light__background,262,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 262; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 263; @position = 18; @symbol_constdef = [color,263,18,23]; @symbol_type<0> = [Number,263,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 264; @position = 18; @symbol_constdef = [background,264,18,28]; @symbol_type<0> = [Number,264,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 267; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,267,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 267; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [filename,268,18,26]; @symbol_type<0> = [String,268,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 269; @position = 18; @symbol_constdef = [dithering,269,18,27]; @symbol_type<0> = [String,269,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 272; @symbol_moduledef = [confirmation_loc__hint_confirm,272,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 272; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [x,273,18,19]; @symbol_type<0> = [Number,273,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 274; @position = 18; @symbol_constdef = [horizontalJustification,274,18,41]; @symbol_type<0> = [String,274,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [y,275,18,19]; @symbol_type<0> = [Number,275,23,29]; ]
+            const y as Number = 345;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 278; @symbol_moduledef = [activity_color_dark__text,278,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 278; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 280 18 ]
+                symbol [ Graphics %tmp.94 280 31 39 ];
+                %tmp.94 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.95 280 40 57 ];
+                %tmp.95 = getv %tmp.94 :COLOR_TRANSPARENT;
+                putv self :background %tmp.95;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 279; @position = 18; @symbol_constdef = [color,279,18,23]; @symbol_type<0> = [Number,279,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [background,280,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 283; @symbol_moduledef = [confirmation_input__keep,283,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 283; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 284 18 ]
+                symbol [ WatchUi %tmp.96 284 27 34 ];
+                %tmp.96 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.97 284 35 42 ];
+                %tmp.97 = getv %tmp.96 :KEY_ESC;
+                putv self :button %tmp.97;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 284; @position = 18; @symbol_constdef = [button,284,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 287; @symbol_moduledef = [prompt_loc__body_with_title,287,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 287; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [x,288,18,19]; @symbol_type<0> = [Number,288,23,29]; ]
+            const x as Number = 45;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [y,289,18,19]; @symbol_type<0> = [Number,289,23,29]; ]
+            const y as Number = 114;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 292; @symbol_moduledef = [system_icon_dark__search,292,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 292; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [filename,293,18,26]; @symbol_type<0> = [String,293,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__search.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [compress,294,18,26]; @symbol_type<0> = [String,294,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 295; @position = 18; @symbol_constdef = [dithering,295,18,27]; @symbol_type<0> = [String,295,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 296; @position = 18; @symbol_constdef = [automaticPalette,296,18,34]; @symbol_type<0> = [String,296,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 297; @position = 18; @symbol_constdef = [packingFormat,297,18,31]; @symbol_type<0> = [String,297,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 300; @symbol_moduledef = [activity_color_light__text,300,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 300; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 302 18 ]
+                symbol [ Graphics %tmp.98 302 31 39 ];
+                %tmp.98 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.99 302 40 57 ];
+                %tmp.99 = getv %tmp.98 :COLOR_TRANSPARENT;
+                putv self :background %tmp.99;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [color,301,18,23]; @symbol_type<0> = [Number,301,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 302; @position = 18; @symbol_constdef = [background,302,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 305; @symbol_moduledef = [confirmation_icon__hint_keep,305,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 305; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [filename,306,18,26]; @symbol_type<0> = [String,306,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [dithering,307,18,27]; @symbol_type<0> = [String,307,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [packingFormat,308,18,31]; @symbol_type<0> = [String,308,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 311; @symbol_moduledef = [system_icon_dark__save,311,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 311; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [filename,312,18,26]; @symbol_type<0> = [String,312,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__save.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [compress,313,18,26]; @symbol_type<0> = [String,313,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 314; @position = 18; @symbol_constdef = [dithering,314,18,27]; @symbol_type<0> = [String,314,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 315; @position = 18; @symbol_constdef = [automaticPalette,315,18,34]; @symbol_type<0> = [String,315,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 316; @position = 18; @symbol_constdef = [packingFormat,316,18,31]; @symbol_type<0> = [String,316,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 319; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,319,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 319; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 320; @position = 18; @symbol_constdef = [exclude,320,18,25]; @symbol_type<0> = [Boolean,320,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 323; @symbol_moduledef = [system_icon_light__search,323,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 323; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 324; @position = 18; @symbol_constdef = [filename,324,18,26]; @symbol_type<0> = [String,324,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__search.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [compress,325,18,26]; @symbol_type<0> = [String,325,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 326; @position = 18; @symbol_constdef = [dithering,326,18,27]; @symbol_type<0> = [String,326,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [automaticPalette,327,18,34]; @symbol_type<0> = [String,327,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 328; @position = 18; @symbol_constdef = [packingFormat,328,18,31]; @symbol_type<0> = [String,328,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 331; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,331,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 331; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [exclude,332,18,25]; @symbol_type<0> = [Boolean,332,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 335; @symbol_moduledef = [system_icon_positive__hint_button_left_top,335,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 335; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [exclude,336,18,25]; @symbol_type<0> = [Boolean,336,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 339; @symbol_moduledef = [system_loc__hint_button_right_bottom,339,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 339; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 340; @position = 18; @symbol_constdef = [x,340,18,19]; @symbol_type<0> = [Number,340,23,29]; ]
+            const x as Number = 342;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [y,341,18,19]; @symbol_type<0> = [Number,341,23,29]; ]
+            const y as Number = 256;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 344; @symbol_moduledef = [confirmation_icon_dark__hint_reject,344,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 344; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 345; @position = 18; @symbol_constdef = [filename,345,18,26]; @symbol_type<0> = [String,345,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 346; @position = 18; @symbol_constdef = [dithering,346,18,27]; @symbol_type<0> = [String,346,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [packingFormat,347,18,31]; @symbol_type<0> = [String,347,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 350; @symbol_moduledef = [confirmation_color_dark__body,350,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 350; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 352 18 ]
+                symbol [ Graphics %tmp.100 352 31 39 ];
+                %tmp.100 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.101 352 40 57 ];
+                %tmp.101 = getv %tmp.100 :COLOR_TRANSPARENT;
+                putv self :background %tmp.101;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 351; @position = 18; @symbol_constdef = [color,351,18,23]; @symbol_type<0> = [Number,351,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 352; @position = 18; @symbol_constdef = [background,352,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 355; @symbol_moduledef = [confirmation_icon_light__hint_confirm,355,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 355; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [filename,356,18,26]; @symbol_type<0> = [String,356,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 357; @position = 18; @symbol_constdef = [dithering,357,18,27]; @symbol_type<0> = [String,357,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 358; @position = 18; @symbol_constdef = [packingFormat,358,18,31]; @symbol_type<0> = [String,358,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 361; @symbol_moduledef = [prompt_color_dark__title,361,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 361; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 363 18 ]
+                symbol [ Graphics %tmp.102 363 31 39 ];
+                %tmp.102 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.103 363 40 57 ];
+                %tmp.103 = getv %tmp.102 :COLOR_TRANSPARENT;
+                putv self :background %tmp.103;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 362; @position = 18; @symbol_constdef = [color,362,18,23]; @symbol_type<0> = [Number,362,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 363; @position = 18; @symbol_constdef = [background,363,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 366; @symbol_moduledef = [system_icon_destructive__cancel,366,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 366; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 367; @position = 18; @symbol_constdef = [filename,367,18,26]; @symbol_type<0> = [String,367,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 368; @position = 18; @symbol_constdef = [dithering,368,18,27]; @symbol_type<0> = [String,368,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [packingFormat,369,18,31]; @symbol_type<0> = [String,369,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 372; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,372,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 372; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [filename,373,18,26]; @symbol_type<0> = [String,373,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_bottom.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [dithering,374,18,27]; @symbol_type<0> = [String,374,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 377; @symbol_moduledef = [prompt_loc__title,377,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [x,378,18,19]; @symbol_type<0> = [Number,378,23,29]; ]
+            const x as Number = 138;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [y,379,18,19]; @symbol_type<0> = [Number,379,23,29]; ]
+            const y as Number = 20;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 382; @symbol_moduledef = [confirmation_font_enhanced_readability__body,382,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 382; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 383 18 ]
+                symbol [ Graphics %tmp.104 383 34 42 ];
+                %tmp.104 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.105 383 43 62 ];
+                %tmp.105 = getv %tmp.104 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.106 383 63 71 ];
+                %tmp.106 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.107 383 72 92 ];
+                %tmp.107 = getv %tmp.106 :TEXT_JUSTIFY_VCENTER;
+                %tmp.108 = bitor %tmp.105 %tmp.107;
+                putv self :justification %tmp.108;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 384 18 ]
+                symbol [ Graphics %tmp.109 384 25 33 ];
+                %tmp.109 = getm $.Toybox.Graphics;
+                symbol [ FONT_SMALL %tmp.110 384 34 44 ];
+                %tmp.110 = getv %tmp.109 :FONT_SMALL;
+                putv self :font %tmp.110;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 383; @position = 18; @symbol_constdef = [justification,383,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 384; @position = 18; @symbol_constdef = [font,384,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 387; @symbol_moduledef = [prompt_color_light__title,387,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 387; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 389 18 ]
+                symbol [ Graphics %tmp.111 389 31 39 ];
+                %tmp.111 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.112 389 40 57 ];
+                %tmp.112 = getv %tmp.111 :COLOR_TRANSPARENT;
+                putv self :background %tmp.112;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 388; @position = 18; @symbol_constdef = [color,388,18,23]; @symbol_type<0> = [Number,388,27,33]; ]
+            const color as Number = 0xB3B3B3;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 389; @position = 18; @symbol_constdef = [background,389,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 392; @symbol_moduledef = [system_icon_dark__hint_button_right_top,392,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 392; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [filename,393,18,26]; @symbol_type<0> = [String,393,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_button_right_top.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [dithering,394,18,27]; @symbol_type<0> = [String,394,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 397; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,397,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 397; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [exclude,398,18,25]; @symbol_type<0> = [Boolean,398,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 401; @symbol_moduledef = [confirmation_icon_dark__hint_keep,401,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 401; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 402; @position = 18; @symbol_constdef = [filename,402,18,26]; @symbol_type<0> = [String,402,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_keep.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [dithering,403,18,27]; @symbol_type<0> = [String,403,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [packingFormat,404,18,31]; @symbol_type<0> = [String,404,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 407; @symbol_moduledef = [system_icon_light__cancel,407,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 407; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [filename,408,18,26]; @symbol_type<0> = [String,408,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__cancel.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 409; @position = 18; @symbol_constdef = [compress,409,18,26]; @symbol_type<0> = [String,409,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [dithering,410,18,27]; @symbol_type<0> = [String,410,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [automaticPalette,411,18,34]; @symbol_type<0> = [String,411,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [packingFormat,412,18,31]; @symbol_type<0> = [String,412,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 415; @symbol_moduledef = [confirmation_icon_light__hint_reject,415,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 415; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 416; @position = 18; @symbol_constdef = [filename,416,18,26]; @symbol_type<0> = [String,416,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [dithering,417,18,27]; @symbol_type<0> = [String,417,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [packingFormat,418,18,31]; @symbol_type<0> = [String,418,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 421; @symbol_moduledef = [system_icon_light__about,421,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 421; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [filename,422,18,26]; @symbol_type<0> = [String,422,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__about.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 423; @position = 18; @symbol_constdef = [compress,423,18,26]; @symbol_type<0> = [String,423,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 424; @position = 18; @symbol_constdef = [dithering,424,18,27]; @symbol_type<0> = [String,424,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [automaticPalette,425,18,34]; @symbol_type<0> = [String,425,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [packingFormat,426,18,31]; @symbol_type<0> = [String,426,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 429; @symbol_moduledef = [system_size__toast_icon,429,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 429; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [scaleX,430,18,24]; @symbol_type<0> = [Number,430,28,34]; ]
+            const scaleX as Number = 38;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [scaleY,431,18,24]; @symbol_type<0> = [Number,431,28,34]; ]
+            const scaleY as Number = 38;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [scaleRelativeTo,432,18,33]; @symbol_type<0> = [String,432,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 435; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,435,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 435; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [exclude,436,18,25]; @symbol_type<0> = [Boolean,436,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 439; @symbol_moduledef = [confirmation_icon__hint_reject,439,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [filename,440,18,26]; @symbol_type<0> = [String,440,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_reject.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 441; @position = 18; @symbol_constdef = [dithering,441,18,27]; @symbol_type<0> = [String,441,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 442; @position = 18; @symbol_constdef = [packingFormat,442,18,31]; @symbol_type<0> = [String,442,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 445; @symbol_moduledef = [system_icon_light__hint_action_menu,445,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 445; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 446; @position = 18; @symbol_constdef = [filename,446,18,26]; @symbol_type<0> = [String,446,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_action_menu.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 447; @position = 18; @symbol_constdef = [dithering,447,18,27]; @symbol_type<0> = [String,447,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [packingFormat,448,18,31]; @symbol_type<0> = [String,448,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 451; @symbol_moduledef = [system_icon_light__hint_button_right_middle,451,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 451; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 452; @position = 18; @symbol_constdef = [exclude,452,18,25]; @symbol_type<0> = [Boolean,452,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 455; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,455,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 455; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [exclude,456,18,25]; @symbol_type<0> = [Boolean,456,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 459; @symbol_moduledef = [confirmation_loc__hint_reject,459,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 459; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 460; @position = 18; @symbol_constdef = [x,460,18,19]; @symbol_type<0> = [Number,460,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [horizontalJustification,461,18,41]; @symbol_type<0> = [String,461,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [y,462,18,19]; @symbol_type<0> = [Number,462,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 465; @symbol_moduledef = [confirmation_icon_dark__hint_delete,465,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 465; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 466; @position = 18; @symbol_constdef = [filename,466,18,26]; @symbol_type<0> = [String,466,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [dithering,467,18,27]; @symbol_type<0> = [String,467,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 468; @position = 18; @symbol_constdef = [packingFormat,468,18,31]; @symbol_type<0> = [String,468,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 471; @symbol_moduledef = [activity_color_dark__background,471,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 471; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 472; @position = 18; @symbol_constdef = [color,472,18,23]; @symbol_type<0> = [Number,472,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [background,473,18,28]; @symbol_type<0> = [Number,473,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 476; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,476,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [exclude,477,18,25]; @symbol_type<0> = [Boolean,477,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 480; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,480,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 480; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [exclude,481,18,25]; @symbol_type<0> = [Boolean,481,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 484; @symbol_moduledef = [system_size__menu_icon,484,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 484; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 485; @position = 18; @symbol_constdef = [scaleX,485,18,24]; @symbol_type<0> = [Number,485,28,34]; ]
+            const scaleX as Number = 55;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [scaleY,486,18,24]; @symbol_type<0> = [Number,486,28,34]; ]
+            const scaleY as Number = 55;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 487; @position = 18; @symbol_constdef = [scaleRelativeTo,487,18,33]; @symbol_type<0> = [String,487,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 490; @symbol_moduledef = [system_icon_destructive__warning,490,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [filename,491,18,26]; @symbol_type<0> = [String,491,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_destructive__warning.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [dithering,492,18,27]; @symbol_type<0> = [String,492,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [packingFormat,493,18,31]; @symbol_type<0> = [String,493,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 496; @symbol_moduledef = [system_loc__hint_button_right_middle,496,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [exclude,497,18,25]; @symbol_type<0> = [Boolean,497,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 500; @symbol_moduledef = [system_icon_dark__cancel,500,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 500; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 501; @position = 18; @symbol_constdef = [filename,501,18,26]; @symbol_type<0> = [String,501,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__cancel.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [compress,502,18,26]; @symbol_type<0> = [String,502,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [dithering,503,18,27]; @symbol_type<0> = [String,503,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [automaticPalette,504,18,34]; @symbol_type<0> = [String,504,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [packingFormat,505,18,31]; @symbol_type<0> = [String,505,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 508; @symbol_moduledef = [prompt_size__body_with_title,508,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 508; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [width,509,18,23]; @symbol_type<0> = [Number,509,27,33]; ]
+            const width as Number = 363;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [height,510,18,24]; @symbol_type<0> = [Number,510,28,34]; ]
+            const height as Number = 250;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 513; @symbol_moduledef = [system_loc__hint_button_right_top,513,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [x,514,18,19]; @symbol_type<0> = [Number,514,23,29]; ]
+            const x as Number = 360;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [y,515,18,19]; @symbol_type<0> = [Number,515,23,29]; ]
+            const y as Number = 54;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 518; @symbol_moduledef = [system_color_light__text,518,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 518; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 520 18 ]
+                symbol [ Graphics %tmp.113 520 31 39 ];
+                %tmp.113 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.114 520 40 57 ];
+                %tmp.114 = getv %tmp.113 :COLOR_TRANSPARENT;
+                putv self :background %tmp.114;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 519; @position = 18; @symbol_constdef = [color,519,18,23]; @symbol_type<0> = [Number,519,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [background,520,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 523; @symbol_moduledef = [system_icon_light__check,523,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [filename,524,18,26]; @symbol_type<0> = [String,524,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__check.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [compress,525,18,26]; @symbol_type<0> = [String,525,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [dithering,526,18,27]; @symbol_type<0> = [String,526,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [automaticPalette,527,18,34]; @symbol_type<0> = [String,527,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [packingFormat,528,18,31]; @symbol_type<0> = [String,528,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 531; @symbol_moduledef = [confirmation_input__reject,531,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [y1,532,18,20]; @symbol_type<0> = [Number,532,24,30]; ]
+            const y1 as Number = 0;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [x1,533,18,20]; @symbol_type<0> = [Number,533,24,30]; ]
+            const x1 as Number = 113;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 534; @position = 18; @symbol_constdef = [y2,534,18,20]; @symbol_type<0> = [Number,534,24,30]; ]
+            const y2 as Number = 88;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 535; @position = 18; @symbol_constdef = [x2,535,18,20]; @symbol_type<0> = [Number,535,24,30]; ]
+            const x2 as Number = 341;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 538; @symbol_moduledef = [system_icon_light__revert,538,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 538; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [filename,539,18,26]; @symbol_type<0> = [String,539,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__revert.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [compress,540,18,26]; @symbol_type<0> = [String,540,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 541; @position = 18; @symbol_constdef = [dithering,541,18,27]; @symbol_type<0> = [String,541,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [automaticPalette,542,18,34]; @symbol_type<0> = [String,542,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [packingFormat,543,18,31]; @symbol_type<0> = [String,543,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 546; @symbol_moduledef = [system_size__subwindow,546,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 546; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 547; @position = 18; @symbol_constdef = [exclude,547,18,25]; @symbol_type<0> = [Boolean,547,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 550; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,550,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 550; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 551; @position = 18; @symbol_constdef = [exclude,551,18,25]; @symbol_type<0> = [Boolean,551,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 554; @symbol_moduledef = [system_icon_dark__check,554,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 554; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [filename,555,18,26]; @symbol_type<0> = [String,555,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__check.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [compress,556,18,26]; @symbol_type<0> = [String,556,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 557; @position = 18; @symbol_constdef = [dithering,557,18,27]; @symbol_type<0> = [String,557,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 558; @position = 18; @symbol_constdef = [automaticPalette,558,18,34]; @symbol_type<0> = [String,558,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 559; @position = 18; @symbol_constdef = [packingFormat,559,18,31]; @symbol_type<0> = [String,559,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 562; @symbol_moduledef = [confirmation_loc__hint_keep,562,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 562; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [x,563,18,19]; @symbol_type<0> = [Number,563,23,29]; ]
+            const x as Number = 342;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [y,564,18,19]; @symbol_type<0> = [Number,564,23,29]; ]
+            const y as Number = 256;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 567; @symbol_moduledef = [confirmation_loc__hint_delete,567,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [x,568,18,19]; @symbol_type<0> = [Number,568,23,29]; ]
+            const x as Number = 358;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 569; @position = 18; @symbol_constdef = [y,569,18,19]; @symbol_type<0> = [Number,569,23,29]; ]
+            const y as Number = 54;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 572; @symbol_moduledef = [system_icon_positive__hint_action_menu,572,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 572; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 573; @position = 18; @symbol_constdef = [filename,573,18,26]; @symbol_type<0> = [String,573,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_action_menu.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 574; @position = 18; @symbol_constdef = [dithering,574,18,27]; @symbol_type<0> = [String,574,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [packingFormat,575,18,31]; @symbol_type<0> = [String,575,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 578; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,578,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 578; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [exclude,579,18,25]; @symbol_type<0> = [Boolean,579,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 582; @symbol_moduledef = [system_icon_light__hint_button_left_middle,582,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 582; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [exclude,583,18,25]; @symbol_type<0> = [Boolean,583,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 586; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,586,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 586; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [filename,587,18,26]; @symbol_type<0> = [String,587,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__hint_button_right_bottom.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 588; @position = 18; @symbol_constdef = [dithering,588,18,27]; @symbol_type<0> = [String,588,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 591; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,591,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 591; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [filename,592,18,26]; @symbol_type<0> = [String,592,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__hint_button_right_bottom.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [dithering,593,18,27]; @symbol_type<0> = [String,593,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 596; @symbol_moduledef = [system_icon_dark__revert,596,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 596; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [filename,597,18,26]; @symbol_type<0> = [String,597,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__revert.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [compress,598,18,26]; @symbol_type<0> = [String,598,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [dithering,599,18,27]; @symbol_type<0> = [String,599,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [automaticPalette,600,18,34]; @symbol_type<0> = [String,600,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [packingFormat,601,18,31]; @symbol_type<0> = [String,601,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 604; @symbol_moduledef = [confirmation_icon_light__hint_delete,604,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 604; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [filename,605,18,26]; @symbol_type<0> = [String,605,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [dithering,606,18,27]; @symbol_type<0> = [String,606,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [packingFormat,607,18,31]; @symbol_type<0> = [String,607,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 610; @symbol_moduledef = [system_icon_dark__question,610,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 610; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [filename,611,18,26]; @symbol_type<0> = [String,611,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__question.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [compress,612,18,26]; @symbol_type<0> = [String,612,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [dithering,613,18,27]; @symbol_type<0> = [String,613,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [automaticPalette,614,18,34]; @symbol_type<0> = [String,614,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [packingFormat,615,18,31]; @symbol_type<0> = [String,615,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 618; @symbol_moduledef = [system_icon_light__discard,618,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 618; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [filename,619,18,26]; @symbol_type<0> = [String,619,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__discard.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [compress,620,18,26]; @symbol_type<0> = [String,620,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [dithering,621,18,27]; @symbol_type<0> = [String,621,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [automaticPalette,622,18,34]; @symbol_type<0> = [String,622,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [packingFormat,623,18,31]; @symbol_type<0> = [String,623,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 626; @symbol_moduledef = [device_info,626,15,26]; ]
+        module device_info {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 626; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 628 18 ]
+                symbol [ Toybox %tmp.116 628 32 38 ];
+                %tmp.116 = getv ? :Toybox;
+                symbol [ System %tmp.117 628 39 45 ];
+                %tmp.117 = getv %tmp.116 :System;
+                symbol [ SCREEN_SHAPE_ROUND %tmp.118 628 46 64 ];
+                %tmp.118 = getv %tmp.117 :SCREEN_SHAPE_ROUND;
+                putv self :screenShape %tmp.118;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 627; @position = 18; @symbol_constdef = [screenWidth,627,18,29]; @symbol_type<0> = [Number,627,33,39]; ]
+            const screenWidth as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [screenShape,628,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [hasNightMode,629,18,30]; @symbol_type<0> = [Boolean,629,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [hasGpu,630,18,24]; @symbol_type<0> = [Boolean,630,28,35]; ]
+            const hasGpu as Boolean = true;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [screenHeight,631,18,30]; @symbol_type<0> = [Number,631,34,40]; ]
+            const screenHeight as Number = 454;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [hasTouchScreen,632,18,32]; @symbol_type<0> = [Boolean,632,36,43]; ]
+            const hasTouchScreen as Boolean = true;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,633,18,44]; @symbol_type<0> = [Boolean,633,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = true;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 636; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,636,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 636; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [filename,637,18,26]; @symbol_type<0> = [String,637,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [dithering,638,18,27]; @symbol_type<0> = [String,638,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [packingFormat,639,18,31]; @symbol_type<0> = [String,639,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 642; @symbol_moduledef = [prompt_font__body_no_title,642,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 642; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 643 18 ]
+                symbol [ Graphics %tmp.119 643 34 42 ];
+                %tmp.119 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.120 643 43 62 ];
+                %tmp.120 = getv %tmp.119 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.121 643 63 71 ];
+                %tmp.121 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.122 643 72 92 ];
+                %tmp.122 = getv %tmp.121 :TEXT_JUSTIFY_VCENTER;
+                %tmp.123 = bitor %tmp.120 %tmp.122;
+                putv self :justification %tmp.123;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 644 18 ]
+                symbol [ Graphics %tmp.124 644 25 33 ];
+                %tmp.124 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.125 644 34 43 ];
+                %tmp.125 = getv %tmp.124 :FONT_TINY;
+                putv self :font %tmp.125;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [justification,643,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [font,644,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 647; @symbol_moduledef = [prompt_size__title_icon,647,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 647; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [scaleX,648,18,24]; @symbol_type<0> = [Float,648,28,33]; ]
+            const scaleX as Float = 0.14;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [scaleRelativeTo,649,18,33]; @symbol_type<0> = [String,649,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 652; @symbol_moduledef = [system_icon_dark__warning,652,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 652; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 653; @position = 18; @symbol_constdef = [filename,653,18,26]; @symbol_type<0> = [String,653,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_dark__warning.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [compress,654,18,26]; @symbol_type<0> = [String,654,30,36]; ]
+            const compress as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [dithering,655,18,27]; @symbol_type<0> = [String,655,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 656; @position = 18; @symbol_constdef = [automaticPalette,656,18,34]; @symbol_type<0> = [String,656,38,44]; ]
+            const automaticPalette as String = "true";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 657; @position = 18; @symbol_constdef = [packingFormat,657,18,31]; @symbol_type<0> = [String,657,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 660; @symbol_moduledef = [prompt_loc__title_icon,660,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 660; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [x,661,18,19]; @symbol_type<0> = [Number,661,23,29]; ]
+            const x as Number = 227;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [y,662,18,19]; @symbol_type<0> = [Number,662,23,29]; ]
+            const y as Number = 45;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [horizontalJustification,663,18,41]; @symbol_type<0> = [String,663,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [verticalJustification,664,18,39]; @symbol_type<0> = [String,664,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 667; @symbol_moduledef = [prompt_font_enhanced_readability__title,667,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 667; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 668 18 ]
+                symbol [ Graphics %tmp.126 668 34 42 ];
+                %tmp.126 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.127 668 43 62 ];
+                %tmp.127 = getv %tmp.126 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.128 668 63 71 ];
+                %tmp.128 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.129 668 72 92 ];
+                %tmp.129 = getv %tmp.128 :TEXT_JUSTIFY_VCENTER;
+                %tmp.130 = bitor %tmp.127 %tmp.129;
+                putv self :justification %tmp.130;
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 669 18 ]
+                symbol [ Graphics %tmp.131 669 25 33 ];
+                %tmp.131 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.132 669 34 44 ];
+                %tmp.132 = getv %tmp.131 :FONT_XTINY;
+                putv self :font %tmp.132;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 668; @position = 18; @symbol_constdef = [justification,668,18,31]; ]
+            const justification;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [font,669,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 672; @symbol_moduledef = [prompt_color_dark__body,672,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 672; ]
+            <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen" 674 18 ]
+                symbol [ Graphics %tmp.133 674 31 39 ];
+                %tmp.133 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.134 674 40 57 ];
+                %tmp.134 = getv %tmp.133 :COLOR_TRANSPARENT;
+                putv self :background %tmp.134;
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 673; @position = 18; @symbol_constdef = [color,673,18,23]; @symbol_type<0> = [Number,673,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 674; @position = 18; @symbol_constdef = [background,674,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 677; @symbol_moduledef = [confirmation_icon__hint_delete,677,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 677; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [filename,678,18,26]; @symbol_type<0> = [String,678,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/confirmation_icon__hint_delete.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 679; @position = 18; @symbol_constdef = [dithering,679,18,27]; @symbol_type<0> = [String,679,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 680; @position = 18; @symbol_constdef = [packingFormat,680,18,31]; @symbol_type<0> = [String,680,35,41]; ]
+            const packingFormat as String = "png";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 683; @symbol_moduledef = [system_icon_light__hint_button_right_top,683,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 683; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 684; @position = 18; @symbol_constdef = [filename,684,18,26]; @symbol_type<0> = [String,684,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_light__hint_button_right_top.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 685; @position = 18; @symbol_constdef = [dithering,685,18,27]; @symbol_type<0> = [String,685,31,37]; ]
+            const dithering as String = "none";
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 688; @symbol_moduledef = [confirmation_size__body,688,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 688; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 689; @position = 18; @symbol_constdef = [width,689,18,23]; @symbol_type<0> = [Number,689,27,33]; ]
+            const width as Number = 269;
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 690; @position = 18; @symbol_constdef = [height,690,18,24]; @symbol_type<0> = [Number,690,28,34]; ]
+            const height as Number = 272;
+        }
+        [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 693; @symbol_moduledef = [system_icon_positive__check,693,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 693; ]
+            <init> {
+            }
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 694; @position = 18; @symbol_constdef = [filename,694,18,26]; @symbol_type<0> = [String,694,30,36]; ]
+            const filename as String = "/Users/duboc/Library/Application Support/Garmin/ConnectIQ/Devices/venu3/system_icon_positive__check.svg";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 695; @position = 18; @symbol_constdef = [dithering,695,18,27]; @symbol_type<0> = [String,695,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 696; @position = 18; @symbol_constdef = [packingFormat,696,18,31]; @symbol_type<0> = [String,696,35,41]; ]
+            const packingFormat as String = "png";
+        }
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/bin/gen/006-B4260-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

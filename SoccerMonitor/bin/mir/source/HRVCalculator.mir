@@ -1,0 +1,604 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Math,1,13,17]; ]
+using Toybox.Math;
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 3; @symbol_classdef = [HRVCalculator,3,6,19]; ]
+class HRVCalculator {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 3; ]
+    <init> {
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 6 8 ]
+        %tmp.1 = newa 0;
+        putv self :rrWindow %tmp.1;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 3; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 6; @position = 8; @symbol_vardef = [rrWindow,6,8,16]; ]
+    var rrWindow;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 7; @position = 8; @symbol_vardef = [maxWindowSize,7,8,21]; ]
+    var maxWindowSize = 120;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 12; @symbol_functiondef = [addIntervals,12,13,25]; @symbol_param<0> = [intervals,12,26,35]; ]
+    function addIntervals(intervals) {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_12_37_20_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 13 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 13 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 13 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 13 24 25 ];
+        %tmp.3 = lgetv %intervals;
+        symbol [ intervals %tmp.3 13 28 37 ];
+        symbol [ size %tmp.4 13 38 42 ];
+        %tmp.4 = getv function %tmp.3 :size;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = lt %tmp.2 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_51_15_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 14 12 ]
+        symbol [ rrWindow %tmp.8 14 12 20 ];
+        %tmp.8 = getv ? :rrWindow;
+        symbol [ add %tmp.9 14 21 24 ];
+        %tmp.9 = getv function %tmp.8 :add;
+        %tmp.10 = lgetv %intervals;
+        symbol [ intervals %tmp.10 14 25 34 ];
+        %tmp.11 = lgetv %i.1;
+        symbol [ i %tmp.11 14 35 36 ];
+        %tmp.12 = agetv %tmp.10 %tmp.11;
+        invoke %tmp.8 %tmp.9(%tmp.12);
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_51_15_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 13 ]
+        %tmp.15 = lgetv %i.1;
+        symbol [ i %tmp.15 13 46 47 ];
+        %tmp.16 = add %tmp.15 1;
+        lputv %i.1 %tmp.16;
+        symbol [ i %i.1 13 46 47 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_13_8_15_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 17 8 ]
+        while @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_test:
+        symbol [ rrWindow %tmp.18 17 15 23 ];
+        %tmp.18 = getv ? :rrWindow;
+        symbol [ size %tmp.19 17 24 28 ];
+        %tmp.19 = getv function %tmp.18 :size;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        symbol [ maxWindowSize %tmp.22 17 33 46 ];
+        %tmp.22 = getv ? :maxWindowSize;
+        %tmp.23 = gt %tmp.20 %tmp.22;
+        bf %tmp.23 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_48_19_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 18 12 ]
+        symbol [ rrWindow %tmp.25 18 23 31 ];
+        %tmp.25 = getv ? :rrWindow;
+        symbol [ slice %tmp.26 18 32 37 ];
+        %tmp.26 = getv function %tmp.25 :slice;
+        %tmp.27 = 1;
+        %tmp.28 = null;
+        %tmp.29 = invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28);
+        symbol [ rrWindow ? 18 12 20 ];
+        putv self :rrWindow %tmp.29;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_48_19_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_17_8_19_8_while_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_12_37_20_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 25; @symbol_functiondef = [getRMSSD,25,13,21]; ]
+    function getRMSSD() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 26 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_8_28_8_if_stmt:
+        symbol [ rrWindow %tmp.2 26 12 20 ];
+        %tmp.2 = getv ? :rrWindow;
+        symbol [ size %tmp.3 26 21 25 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 4;
+        %tmp.6 = lt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_8_28_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_8_28_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_33_28_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 27 12 ]
+        %tmp.7 = 0.0;
+        ret %tmp.7;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_33_28_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_8_28_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_26_8_28_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 30 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_stop" ]
+        %sumSquaredDiff.1 = local;
+        symbol [ sumSquaredDiff %sumSquaredDiff.1 30 12 26 ];
+        %tmp.8 = 0.0;
+        lputv %sumSquaredDiff.1 %tmp.8;
+        symbol [ sumSquaredDiff %sumSquaredDiff.1 30 12 26 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 31 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_stop" ]
+        %count.2 = local;
+        symbol [ count %count.2 31 12 17 ];
+        %tmp.9 = 0;
+        lputv %count.2 %tmp.9;
+        symbol [ count %count.2 31 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 33 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 33 17 18 ];
+        %tmp.10 = 1;
+        lputv %i.3 %tmp.10;
+        symbol [ i %i.3 33 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_test:
+        %tmp.11 = lgetv %i.3;
+        symbol [ i %tmp.11 33 24 25 ];
+        symbol [ rrWindow %tmp.13 33 28 36 ];
+        %tmp.13 = getv ? :rrWindow;
+        symbol [ size %tmp.14 33 37 41 ];
+        %tmp.14 = getv function %tmp.13 :size;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = lt %tmp.11 %tmp.15;
+        bf %tmp.16 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 34 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_stop" ]
+        %diff.4 = local;
+        symbol [ diff %diff.4 34 16 20 ];
+        symbol [ rrWindow %tmp.18 34 23 31 ];
+        %tmp.18 = getv ? :rrWindow;
+        %tmp.19 = lgetv %i.3;
+        symbol [ i %tmp.19 34 32 33 ];
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        symbol [ rrWindow %tmp.22 34 37 45 ];
+        %tmp.22 = getv ? :rrWindow;
+        %tmp.23 = lgetv %i.3;
+        symbol [ i %tmp.23 34 46 47 ];
+        %tmp.24 = 1;
+        %tmp.25 = sub %tmp.23 %tmp.24;
+        %tmp.26 = agetv %tmp.22 %tmp.25;
+        %tmp.27 = sub %tmp.20 %tmp.26;
+        lputv %diff.4 %tmp.27;
+        symbol [ diff %diff.4 34 16 20 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 36 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_stop" ]
+        %prev.5 = local;
+        symbol [ prev %prev.5 36 16 20 ];
+        symbol [ rrWindow %tmp.29 36 23 31 ];
+        %tmp.29 = getv ? :rrWindow;
+        %tmp.30 = lgetv %i.3;
+        symbol [ i %tmp.30 36 32 33 ];
+        %tmp.31 = 1;
+        %tmp.32 = sub %tmp.30 %tmp.31;
+        %tmp.33 = agetv %tmp.29 %tmp.32;
+        lputv %prev.5 %tmp.33;
+        symbol [ prev %prev.5 36 16 20 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 37 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_stop" ]
+        %absDiff.6 = local;
+        symbol [ absDiff %absDiff.6 37 16 23 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_begin:
+        %tmp.34 = lgetv %diff.4;
+        symbol [ diff %tmp.34 37 26 30 ];
+        %tmp.35 = 0;
+        %tmp.36 = lt %tmp.34 %tmp.35;
+        bf %tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_else_false;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_true:
+        %tmp.37 = lgetv %diff.4;
+        symbol [ diff %tmp.37 37 38 42 ];
+        %tmp.38 = sub 0 %tmp.37;
+        push %tmp.38;
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_else_false:
+        %tmp.39 = lgetv %diff.4;
+        symbol [ diff %tmp.39 37 45 49 ];
+        push %tmp.39;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_end:
+        %tmp.40 = phi [%tmp.36 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_begin] [%tmp.38 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_true] [%tmp.39 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_else_false] [%tmp.40 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_37_26_37_45_end];
+        lputv %absDiff.6 %tmp.40;
+        symbol [ absDiff %absDiff.6 37 16 23 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 38 12 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_16_38_55_begin:
+        %tmp.41 = lgetv %prev.5;
+        symbol [ prev %tmp.41 38 16 20 ];
+        %tmp.42 = 0;
+        %tmp.43 = gt %tmp.41 %tmp.42;
+        bf %tmp.43 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_28_38_55_true:
+        %tmp.44 = lgetv %absDiff.6;
+        symbol [ absDiff %tmp.44 38 28 35 ];
+        symbol [ toFloat %tmp.45 38 36 43 ];
+        %tmp.45 = getv function %tmp.44 :toFloat;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        %tmp.47 = lgetv %prev.5;
+        symbol [ prev %tmp.47 38 48 52 ];
+        %tmp.48 = div %tmp.46 %tmp.47;
+        %tmp.49 = 0.20;
+        %tmp.50 = lt %tmp.48 %tmp.49;
+        push %tmp.50;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_28_38_55_end:
+        %tmp.51 = phi [%tmp.43 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_16_38_55_begin] [%tmp.50 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_28_38_55_true] [%tmp.51 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_28_38_55_end];
+        bf %tmp.51 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_61_41_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 39 16 ]
+        %tmp.52 = lgetv %sumSquaredDiff.1;
+        symbol [ sumSquaredDiff %tmp.52 39 16 30 ];
+        %tmp.53 = lgetv %diff.4;
+        symbol [ diff %tmp.53 39 34 38 ];
+        %tmp.54 = lgetv %diff.4;
+        symbol [ diff %tmp.54 39 41 45 ];
+        %tmp.55 = mul %tmp.53 %tmp.54;
+        %tmp.56 = add %tmp.52 %tmp.55;
+        lputv %sumSquaredDiff.1 %tmp.56;
+        symbol [ sumSquaredDiff %sumSquaredDiff.1 39 16 30 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 40 16 ]
+        %tmp.59 = lgetv %count.2;
+        symbol [ count %tmp.59 40 16 21 ];
+        %tmp.60 = add %tmp.59 1;
+        lputv %count.2 %tmp.60;
+        symbol [ count %count.2 40 16 21 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_61_41_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_38_12_41_12_if_end:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_50_42_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 33 ]
+        %tmp.63 = lgetv %i.3;
+        symbol [ i %tmp.63 33 45 46 ];
+        %tmp.64 = add %tmp.63 1;
+        lputv %i.3 %tmp.64;
+        symbol [ i %i.3 33 45 46 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_33_8_42_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 44 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_8_46_8_if_stmt:
+        %tmp.65 = lgetv %count.2;
+        symbol [ count %tmp.65 44 12 17 ];
+        %tmp.66 = 0;
+        %tmp.67 = eq %tmp.65 %tmp.66;
+        bf %tmp.67 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_8_46_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_8_46_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_24_46_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 45 12 ]
+        %tmp.68 = 0.0;
+        ret %tmp.68;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_24_46_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_8_46_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_44_8_46_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 48 8 ]
+        symbol [ Math %tmp.69 48 15 19 ];
+        %tmp.69 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.70 48 20 24 ];
+        %tmp.70 = getv function %tmp.69 :sqrt;
+        %tmp.71 = lgetv %sumSquaredDiff.1;
+        symbol [ sumSquaredDiff %tmp.71 48 25 39 ];
+        %tmp.72 = lgetv %count.2;
+        symbol [ count %tmp.72 48 42 47 ];
+        %tmp.73 = div %tmp.71 %tmp.72;
+        %tmp.74 = invoke %tmp.69 %tmp.70(%tmp.73);
+        ret %tmp.74;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_25_24_49_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 53; @symbol_functiondef = [getSDNN,53,13,20]; ]
+    function getSDNN() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 54 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_8_56_8_if_stmt:
+        symbol [ rrWindow %tmp.2 54 12 20 ];
+        %tmp.2 = getv ? :rrWindow;
+        symbol [ size %tmp.3 54 21 25 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 4;
+        %tmp.6 = lt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_8_56_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_8_56_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_33_56_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 55 12 ]
+        %tmp.7 = 0.0;
+        ret %tmp.7;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_33_56_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_8_56_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_54_8_56_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 58 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_stop" ]
+        %sum.1 = local;
+        symbol [ sum %sum.1 58 12 15 ];
+        %tmp.8 = 0.0;
+        lputv %sum.1 %tmp.8;
+        symbol [ sum %sum.1 58 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 59 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 59 17 18 ];
+        %tmp.9 = 0;
+        lputv %i.2 %tmp.9;
+        symbol [ i %i.2 59 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_test:
+        %tmp.10 = lgetv %i.2;
+        symbol [ i %tmp.10 59 24 25 ];
+        symbol [ rrWindow %tmp.12 59 28 36 ];
+        %tmp.12 = getv ? :rrWindow;
+        symbol [ size %tmp.13 59 37 41 ];
+        %tmp.13 = getv function %tmp.12 :size;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = lt %tmp.10 %tmp.14;
+        bf %tmp.15 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_50_61_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 60 12 ]
+        %tmp.16 = lgetv %sum.1;
+        symbol [ sum %tmp.16 60 12 15 ];
+        symbol [ rrWindow %tmp.18 60 19 27 ];
+        %tmp.18 = getv ? :rrWindow;
+        %tmp.19 = lgetv %i.2;
+        symbol [ i %tmp.19 60 28 29 ];
+        %tmp.20 = agetv %tmp.18 %tmp.19;
+        %tmp.21 = add %tmp.16 %tmp.20;
+        lputv %sum.1 %tmp.21;
+        symbol [ sum %sum.1 60 12 15 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_50_61_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 59 ]
+        %tmp.24 = lgetv %i.2;
+        symbol [ i %tmp.24 59 45 46 ];
+        %tmp.25 = add %tmp.24 1;
+        lputv %i.2 %tmp.25;
+        symbol [ i %i.2 59 45 46 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_59_8_61_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 62 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_stop" ]
+        %mean.3 = local;
+        symbol [ mean %mean.3 62 12 16 ];
+        %tmp.26 = lgetv %sum.1;
+        symbol [ sum %tmp.26 62 19 22 ];
+        symbol [ rrWindow %tmp.28 62 25 33 ];
+        %tmp.28 = getv ? :rrWindow;
+        symbol [ size %tmp.29 62 34 38 ];
+        %tmp.29 = getv function %tmp.28 :size;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = div %tmp.26 %tmp.30;
+        lputv %mean.3 %tmp.31;
+        symbol [ mean %mean.3 62 12 16 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 64 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_stop" ]
+        %sumSqDev.4 = local;
+        symbol [ sumSqDev %sumSqDev.4 64 12 20 ];
+        %tmp.32 = 0.0;
+        lputv %sumSqDev.4 %tmp.32;
+        symbol [ sumSqDev %sumSqDev.4 64 12 20 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 65 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 65 17 18 ];
+        %tmp.33 = 0;
+        lputv %i.5 %tmp.33;
+        symbol [ i %i.5 65 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_test:
+        %tmp.34 = lgetv %i.5;
+        symbol [ i %tmp.34 65 24 25 ];
+        symbol [ rrWindow %tmp.36 65 28 36 ];
+        %tmp.36 = getv ? :rrWindow;
+        symbol [ size %tmp.37 65 37 41 ];
+        %tmp.37 = getv function %tmp.36 :size;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.39 = lt %tmp.34 %tmp.38;
+        bf %tmp.39 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_50_68_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 66 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_50_68_8_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_50_68_8_stop" ]
+        %dev.6 = local;
+        symbol [ dev %dev.6 66 16 19 ];
+        symbol [ rrWindow %tmp.41 66 22 30 ];
+        %tmp.41 = getv ? :rrWindow;
+        %tmp.42 = lgetv %i.5;
+        symbol [ i %tmp.42 66 31 32 ];
+        %tmp.43 = agetv %tmp.41 %tmp.42;
+        %tmp.44 = lgetv %mean.3;
+        symbol [ mean %tmp.44 66 36 40 ];
+        %tmp.45 = sub %tmp.43 %tmp.44;
+        lputv %dev.6 %tmp.45;
+        symbol [ dev %dev.6 66 16 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 67 12 ]
+        %tmp.46 = lgetv %sumSqDev.4;
+        symbol [ sumSqDev %tmp.46 67 12 20 ];
+        %tmp.47 = lgetv %dev.6;
+        symbol [ dev %tmp.47 67 24 27 ];
+        %tmp.48 = lgetv %dev.6;
+        symbol [ dev %tmp.48 67 30 33 ];
+        %tmp.49 = mul %tmp.47 %tmp.48;
+        %tmp.50 = add %tmp.46 %tmp.49;
+        lputv %sumSqDev.4 %tmp.50;
+        symbol [ sumSqDev %sumSqDev.4 67 12 20 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_50_68_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 65 ]
+        %tmp.53 = lgetv %i.5;
+        symbol [ i %tmp.53 65 45 46 ];
+        %tmp.54 = add %tmp.53 1;
+        lputv %i.5 %tmp.54;
+        symbol [ i %i.5 65 45 46 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_65_8_68_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 70 8 ]
+        symbol [ Math %tmp.55 70 15 19 ];
+        %tmp.55 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.56 70 20 24 ];
+        %tmp.56 = getv function %tmp.55 :sqrt;
+        %tmp.57 = lgetv %sumSqDev.4;
+        symbol [ sumSqDev %tmp.57 70 25 33 ];
+        symbol [ rrWindow %tmp.59 70 36 44 ];
+        %tmp.59 = getv ? :rrWindow;
+        symbol [ size %tmp.60 70 45 49 ];
+        %tmp.60 = getv function %tmp.59 :size;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        %tmp.62 = div %tmp.57 %tmp.61;
+        %tmp.63 = invoke %tmp.55 %tmp.56(%tmp.62);
+        ret %tmp.63;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_53_23_71_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 74; @symbol_functiondef = [getLatestHRIndex,74,13,29]; ]
+    function getLatestHRIndex() {
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 75 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_8_77_8_if_stmt:
+        symbol [ rrWindow %tmp.2 75 12 20 ];
+        %tmp.2 = getv ? :rrWindow;
+        symbol [ size %tmp.3 75 21 25 ];
+        %tmp.3 = getv function %tmp.2 :size;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        %tmp.5 = 2;
+        %tmp.6 = lt %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_8_77_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_8_77_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_33_77_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 76 12 ]
+        %tmp.7 = 0;
+        ret %tmp.7;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_33_77_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_8_77_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_75_8_77_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 79 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_stop" ]
+        %count.1 = local;
+        symbol [ count %count.1 79 12 17 ];
+        %tmp.8 = 5;
+        lputv %count.1 %tmp.8;
+        symbol [ count %count.1 79 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 80 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_8_82_8_if_stmt:
+        symbol [ rrWindow %tmp.10 80 12 20 ];
+        %tmp.10 = getv ? :rrWindow;
+        symbol [ size %tmp.11 80 21 25 ];
+        %tmp.11 = getv function %tmp.10 :size;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = lgetv %count.1;
+        symbol [ count %tmp.13 80 30 35 ];
+        %tmp.14 = lt %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_8_82_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_8_82_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_37_82_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 81 12 ]
+        symbol [ rrWindow %tmp.16 81 20 28 ];
+        %tmp.16 = getv ? :rrWindow;
+        symbol [ size %tmp.17 81 29 33 ];
+        %tmp.17 = getv function %tmp.16 :size;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        lputv %count.1 %tmp.18;
+        symbol [ count %count.1 81 12 17 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_37_82_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_8_82_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_80_8_82_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 83 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_stop" ]
+        %sum.2 = local;
+        symbol [ sum %sum.2 83 12 15 ];
+        %tmp.19 = 0.0;
+        lputv %sum.2 %tmp.19;
+        symbol [ sum %sum.2 83 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 84 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_test @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_incr @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_begin" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_end" ]
+        %i.3 = local;
+        symbol [ i %i.3 84 17 18 ];
+        symbol [ rrWindow %tmp.21 84 21 29 ];
+        %tmp.21 = getv ? :rrWindow;
+        symbol [ size %tmp.22 84 30 34 ];
+        %tmp.22 = getv function %tmp.21 :size;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = lgetv %count.1;
+        symbol [ count %tmp.24 84 39 44 ];
+        %tmp.25 = sub %tmp.23 %tmp.24;
+        lputv %i.3 %tmp.25;
+        symbol [ i %i.3 84 17 18 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_test:
+        %tmp.26 = lgetv %i.3;
+        symbol [ i %tmp.26 84 46 47 ];
+        symbol [ rrWindow %tmp.28 84 50 58 ];
+        %tmp.28 = getv ? :rrWindow;
+        symbol [ size %tmp.29 84 59 63 ];
+        %tmp.29 = getv function %tmp.28 :size;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = lt %tmp.26 %tmp.30;
+        bf %tmp.31 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_72_86_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 85 12 ]
+        %tmp.32 = lgetv %sum.2;
+        symbol [ sum %tmp.32 85 12 15 ];
+        symbol [ rrWindow %tmp.34 85 19 27 ];
+        %tmp.34 = getv ? :rrWindow;
+        %tmp.35 = lgetv %i.3;
+        symbol [ i %tmp.35 85 28 29 ];
+        %tmp.36 = agetv %tmp.34 %tmp.35;
+        %tmp.37 = add %tmp.32 %tmp.36;
+        lputv %sum.2 %tmp.37;
+        symbol [ sum %sum.2 85 12 15 ];
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_72_86_8_stop:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 84 ]
+        %tmp.40 = lgetv %i.3;
+        symbol [ i %tmp.40 84 67 68 ];
+        %tmp.41 = add %tmp.40 1;
+        lputv %i.3 %tmp.41;
+        symbol [ i %i.3 84 67 68 ];
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_test;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_84_8_86_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 87 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_start" "_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_stop" ]
+        %avgRR.4 = local;
+        symbol [ avgRR %avgRR.4 87 12 17 ];
+        %tmp.42 = lgetv %sum.2;
+        symbol [ sum %tmp.42 87 20 23 ];
+        %tmp.43 = lgetv %count.1;
+        symbol [ count %tmp.43 87 26 31 ];
+        %tmp.44 = div %tmp.42 %tmp.43;
+        lputv %avgRR.4 %tmp.44;
+        symbol [ avgRR %avgRR.4 87 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 88 8 ]
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_8_90_8_if_stmt:
+        %tmp.45 = lgetv %avgRR.4;
+        symbol [ avgRR %tmp.45 88 12 17 ];
+        %tmp.46 = 0;
+        %tmp.47 = gt %tmp.45 %tmp.46;
+        bf %tmp.47 @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_8_90_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_8_90_8_if_true:
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_23_90_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 89 12 ]
+        %tmp.48 = 60000.0;
+        %tmp.49 = lgetv %avgRR.4;
+        symbol [ avgRR %tmp.49 89 30 35 ];
+        %tmp.50 = div %tmp.48 %tmp.49;
+        symbol [ toNumber %tmp.51 89 37 45 ];
+        %tmp.51 = getv function %tmp.50 :toNumber;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        ret %tmp.52;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_23_90_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_8_90_8_if_end;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_88_8_90_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc" 91 8 ]
+        %tmp.53 = 0;
+        ret %tmp.53;
+_Users_duboc_local_projects_realtime_cq_SoccerMonitor_source_HRVCalculator_mc_74_32_92_4_stop:
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/HRVCalculator.mc"; @line = 1; ]
+<init> {
+}

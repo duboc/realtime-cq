@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="1" lineNum="22" parent="globals/GymStateEngine" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="1" lineNum="23" parent="globals/GymStateEngine" pc="268435469" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="2" lineNum="19" parent="globals/SensorCollector" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="3" lineNum="6" parent="globals/HRVCalculator" pc="268435489" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/bin/gen/006-B4260-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435499" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="5" lineNum="65" parent="globals/CommListener" pc="268435519" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="6" lineNum="4" parent="globals/GymPulseDelegate" pc="268435531" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="7" lineNum="5" parent="globals/GymPulseView" pc="268435543" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="8" lineNum="4" parent="globals/GymPulseApp" pc="268435555" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="43" parent="globals/GymStateEngine" pc="268435567" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="45" parent="globals/GymStateEngine" pc="268435570" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="46" parent="globals/GymStateEngine" pc="268435577" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="47" parent="globals/GymStateEngine" pc="268435593" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="48" parent="globals/GymStateEngine" pc="268435610" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="50" parent="globals/GymStateEngine" pc="268435636" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="51" parent="globals/GymStateEngine" pc="268435651" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="52" parent="globals/GymStateEngine" pc="268435666" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="53" parent="globals/GymStateEngine" pc="268435684" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="54" parent="globals/GymStateEngine" pc="268435695" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="59" parent="globals/GymStateEngine" pc="268435710" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="60" parent="globals/GymStateEngine" pc="268435741" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="63" parent="globals/GymStateEngine" pc="268435750" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="64" parent="globals/GymStateEngine" pc="268435766" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="65" parent="globals/GymStateEngine" pc="268435783" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="67" parent="globals/GymStateEngine" pc="268435809" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="70" parent="globals/GymStateEngine" pc="268435824" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="71" parent="globals/GymStateEngine" pc="268435845" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="75" parent="globals/GymStateEngine" pc="268435859" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="76" parent="globals/GymStateEngine" pc="268435874" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="77" parent="globals/GymStateEngine" pc="268435890" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="78" parent="globals/GymStateEngine" pc="268435911" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="80" parent="globals/GymStateEngine" pc="268435933" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="81" parent="globals/GymStateEngine" pc="268435943" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="83" parent="globals/GymStateEngine" pc="268435965" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="84" parent="globals/GymStateEngine" pc="268435977" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="86" parent="globals/GymStateEngine" pc="268435991" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="87" parent="globals/GymStateEngine" pc="268436012" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="89" parent="globals/GymStateEngine" pc="268436034" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="90" parent="globals/GymStateEngine" pc="268436043" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="91" parent="globals/GymStateEngine" pc="268436055" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="93" parent="globals/GymStateEngine" pc="268436069" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="94" parent="globals/GymStateEngine" pc="268436090" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="96" parent="globals/GymStateEngine" pc="268436101" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="97" parent="globals/GymStateEngine" pc="268436116" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="98" parent="globals/GymStateEngine" pc="268436126" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="100" parent="globals/GymStateEngine" pc="268436148" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="101" parent="globals/GymStateEngine" pc="268436160" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="102" parent="globals/GymStateEngine" pc="268436171" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="104" parent="globals/GymStateEngine" pc="268436207" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="105" parent="globals/GymStateEngine" pc="268436219" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="107" parent="globals/GymStateEngine" pc="268436233" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="108" parent="globals/GymStateEngine" pc="268436254" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="110" parent="globals/GymStateEngine" pc="268436265" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="111" parent="globals/GymStateEngine" pc="268436275" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="113" parent="globals/GymStateEngine" pc="268436297" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="114" parent="globals/GymStateEngine" pc="268436309" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="119" parent="globals/GymStateEngine" pc="268436323" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="120" parent="globals/GymStateEngine" pc="268436354" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="9" lineNum="123" parent="globals/GymStateEngine" pc="268436372" symbol="update"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="10" lineNum="185" parent="globals/GymStateEngine" pc="268436378" symbol="getAccelMagnitude"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="10" lineNum="186" parent="globals/GymStateEngine" pc="268436380" symbol="getAccelMagnitude"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="126" parent="globals/GymStateEngine" pc="268436386" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="127" parent="globals/GymStateEngine" pc="268436388" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="128" parent="globals/GymStateEngine" pc="268436403" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="129" parent="globals/GymStateEngine" pc="268436411" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="130" parent="globals/GymStateEngine" pc="268436423" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="131" parent="globals/GymStateEngine" pc="268436435" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="11" lineNum="132" parent="globals/GymStateEngine" pc="268436447" symbol="transitionToSet"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="12" lineNum="161" parent="globals/GymStateEngine" pc="268436456" symbol="getHRPct"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="12" lineNum="162" parent="globals/GymStateEngine" pc="268436458" symbol="getHRPct"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="12" lineNum="163" parent="globals/GymStateEngine" pc="268436473" symbol="getHRPct"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="12" lineNum="165" parent="globals/GymStateEngine" pc="268436478" symbol="getHRPct"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="135" parent="globals/GymStateEngine" pc="268436495" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="138" parent="globals/GymStateEngine" pc="268436497" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="140" parent="globals/GymStateEngine" pc="268436524" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="141" parent="globals/GymStateEngine" pc="268436559" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="142" parent="globals/GymStateEngine" pc="268436574" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="143" parent="globals/GymStateEngine" pc="268436609" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="13" lineNum="144" parent="globals/GymStateEngine" pc="268436621" symbol="detectRep"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="168" parent="globals/GymStateEngine" pc="268436640" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="169" parent="globals/GymStateEngine" pc="268436643" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="170" parent="globals/GymStateEngine" pc="268436656" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="172" parent="globals/GymStateEngine" pc="268436661" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="173" parent="globals/GymStateEngine" pc="268436664" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="174" parent="globals/GymStateEngine" pc="268436680" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="176" parent="globals/GymStateEngine" pc="268436700" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="177" parent="globals/GymStateEngine" pc="268436712" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="178" parent="globals/GymStateEngine" pc="268436715" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="179" parent="globals/GymStateEngine" pc="268436731" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="180" parent="globals/GymStateEngine" pc="268436741" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="14" lineNum="182" parent="globals/GymStateEngine" pc="268436761" symbol="computeVariance"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="149" parent="globals/GymStateEngine" pc="268436772" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="150" parent="globals/GymStateEngine" pc="268436774" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="152" parent="globals/GymStateEngine" pc="268436795" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="153" parent="globals/GymStateEngine" pc="268436842" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="154" parent="globals/GymStateEngine" pc="268436854" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" id="16" lineNum="157" parent="globals/GymStateEngine" pc="268436865" symbol="manualSetBoundary"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="40" parent="globals/SensorCollector" pc="268436873" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="41" parent="globals/SensorCollector" pc="268436876" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="42" parent="globals/SensorCollector" pc="268436888" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="43" parent="globals/SensorCollector" pc="268436894" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="44" parent="globals/SensorCollector" pc="268436909" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="45" parent="globals/SensorCollector" pc="268436928" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="47" parent="globals/SensorCollector" pc="268436952" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="17" lineNum="48" parent="globals/SensorCollector" pc="268436974" symbol="loadUserProfile"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="53" parent="globals/SensorCollector" pc="268436995" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="55" parent="globals/SensorCollector" pc="268436998" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="56" parent="globals/SensorCollector" pc="268437016" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="59" parent="globals/SensorCollector" pc="268437042" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="70" parent="globals/SensorCollector" pc="268437101" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="71" parent="globals/SensorCollector" pc="268437116" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="75" parent="globals/SensorCollector" pc="268437147" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="76" parent="globals/SensorCollector" pc="268437162" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="81" parent="globals/SensorCollector" pc="268437211" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="85" parent="globals/SensorCollector" pc="268437226" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="18" lineNum="86" parent="globals/SensorCollector" pc="268437255" symbol="start"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="19" lineNum="155" parent="globals/SensorCollector" pc="268437287" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="19" lineNum="156" parent="globals/SensorCollector" pc="268437290" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="19" lineNum="157" parent="globals/SensorCollector" pc="268437302" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="19" lineNum="158" parent="globals/SensorCollector" pc="268437310" symbol="transmitData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="20" lineNum="161" parent="globals/SensorCollector" pc="268437328" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="20" lineNum="162" parent="globals/SensorCollector" pc="268437331" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="20" lineNum="163" parent="globals/SensorCollector" pc="268437338" symbol="buildPayload"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="106" parent="globals/SensorCollector" pc="268437514" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="107" parent="globals/SensorCollector" pc="268437517" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="108" parent="globals/SensorCollector" pc="268437527" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="110" parent="globals/SensorCollector" pc="268437543" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="111" parent="globals/SensorCollector" pc="268437565" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="112" parent="globals/SensorCollector" pc="268437581" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="113" parent="globals/SensorCollector" pc="268437598" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="117" parent="globals/SensorCollector" pc="268437618" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="118" parent="globals/SensorCollector" pc="268437630" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="119" parent="globals/SensorCollector" pc="268437636" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="120" parent="globals/SensorCollector" pc="268437647" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="125" parent="globals/SensorCollector" pc="268437667" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="21" lineNum="128" parent="globals/SensorCollector" pc="268437711" symbol="onSensorEvent"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="89" parent="globals/SensorCollector" pc="268437723" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="90" parent="globals/SensorCollector" pc="268437725" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="91" parent="globals/SensorCollector" pc="268437739" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="92" parent="globals/SensorCollector" pc="268437754" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="95" parent="globals/SensorCollector" pc="268437768" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="96" parent="globals/SensorCollector" pc="268437777" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="97" parent="globals/SensorCollector" pc="268437789" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="100" parent="globals/SensorCollector" pc="268437804" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="22" lineNum="101" parent="globals/SensorCollector" pc="268437813" symbol="stop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="23" lineNum="34" parent="globals/SensorCollector" pc="268437829" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="23" lineNum="35" parent="globals/SensorCollector" pc="268437831" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="23" lineNum="36" parent="globals/SensorCollector" pc="268437856" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="23" lineNum="37" parent="globals/SensorCollector" pc="268437881" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="132" parent="globals/SensorCollector" pc="268437889" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="134" parent="globals/SensorCollector" pc="268437892" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="135" parent="globals/SensorCollector" pc="268437914" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="137" parent="globals/SensorCollector" pc="268437923" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="138" parent="globals/SensorCollector" pc="268437950" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="139" parent="globals/SensorCollector" pc="268437979" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="140" parent="globals/SensorCollector" pc="268438008" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="145" parent="globals/SensorCollector" pc="268438043" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="146" parent="globals/SensorCollector" pc="268438065" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="147" parent="globals/SensorCollector" pc="268438074" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="148" parent="globals/SensorCollector" pc="268438096" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" id="24" lineNum="149" parent="globals/SensorCollector" pc="268438110" symbol="onHighFreqData"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="53" parent="globals/HRVCalculator" pc="268438136" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="54" parent="globals/HRVCalculator" pc="268438139" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="55" parent="globals/HRVCalculator" pc="268438156" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="58" parent="globals/HRVCalculator" pc="268438161" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="59" parent="globals/HRVCalculator" pc="268438164" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="60" parent="globals/HRVCalculator" pc="268438184" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="62" parent="globals/HRVCalculator" pc="268438207" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="64" parent="globals/HRVCalculator" pc="268438223" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="65" parent="globals/HRVCalculator" pc="268438226" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="66" parent="globals/HRVCalculator" pc="268438246" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="67" parent="globals/HRVCalculator" pc="268438259" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="25" lineNum="70" parent="globals/HRVCalculator" pc="268438279" symbol="getSDNN"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="74" parent="globals/HRVCalculator" pc="268438306" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="75" parent="globals/HRVCalculator" pc="268438309" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="76" parent="globals/HRVCalculator" pc="268438326" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="79" parent="globals/HRVCalculator" pc="268438331" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="80" parent="globals/HRVCalculator" pc="268438335" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="81" parent="globals/HRVCalculator" pc="268438352" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="83" parent="globals/HRVCalculator" pc="268438368" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="84" parent="globals/HRVCalculator" pc="268438371" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="85" parent="globals/HRVCalculator" pc="268438404" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="87" parent="globals/HRVCalculator" pc="268438427" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="88" parent="globals/HRVCalculator" pc="268438434" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="89" parent="globals/HRVCalculator" pc="268438441" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="26" lineNum="91" parent="globals/HRVCalculator" pc="268438459" symbol="getLatestHRIndex"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="27" lineNum="12" parent="globals/HRVCalculator" pc="268438461" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="27" lineNum="13" parent="globals/HRVCalculator" pc="268438464" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="27" lineNum="14" parent="globals/HRVCalculator" pc="268438480" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="27" lineNum="17" parent="globals/HRVCalculator" pc="268438509" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="27" lineNum="18" parent="globals/HRVCalculator" pc="268438529" symbol="addIntervals"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="25" parent="globals/HRVCalculator" pc="268438556" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="26" parent="globals/HRVCalculator" pc="268438559" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="27" parent="globals/HRVCalculator" pc="268438576" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="30" parent="globals/HRVCalculator" pc="268438581" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="31" parent="globals/HRVCalculator" pc="268438584" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="33" parent="globals/HRVCalculator" pc="268438587" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="34" parent="globals/HRVCalculator" pc="268438608" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="36" parent="globals/HRVCalculator" pc="268438630" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="37" parent="globals/HRVCalculator" pc="268438643" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="38" parent="globals/HRVCalculator" pc="268438661" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="39" parent="globals/HRVCalculator" pc="268438687" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="40" parent="globals/HRVCalculator" pc="268438697" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="44" parent="globals/HRVCalculator" pc="268438717" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="45" parent="globals/HRVCalculator" pc="268438724" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/HRVCalculator.mc" id="29" lineNum="48" parent="globals/HRVCalculator" pc="268438729" symbol="getRMSSD"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="30" lineNum="72" parent="globals/CommListener" pc="268438747" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="30" lineNum="73" parent="globals/CommListener" pc="268438749" symbol="onError"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="32" lineNum="66" parent="globals/CommListener" pc="268438768" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="32" lineNum="67" parent="globals/CommListener" pc="268438770" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="33" lineNum="21" parent="globals/GymPulseDelegate" pc="268438783" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="33" lineNum="22" parent="globals/GymPulseDelegate" pc="268438786" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="33" lineNum="23" parent="globals/GymPulseDelegate" pc="268438798" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="33" lineNum="24" parent="globals/GymPulseDelegate" pc="268438808" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="33" lineNum="26" parent="globals/GymPulseDelegate" pc="268438824" symbol="onBack"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="34" lineNum="6" parent="globals/GymPulseDelegate" pc="268438836" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="34" lineNum="7" parent="globals/GymPulseDelegate" pc="268438838" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="11" parent="globals/GymPulseDelegate" pc="268438851" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="12" parent="globals/GymPulseDelegate" pc="268438854" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="13" parent="globals/GymPulseDelegate" pc="268438866" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="14" parent="globals/GymPulseDelegate" pc="268438891" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="15" parent="globals/GymPulseDelegate" pc="268438909" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseDelegate.mc" id="35" lineNum="17" parent="globals/GymPulseDelegate" pc="268438923" symbol="onSelect"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="36" lineNum="11" parent="globals/GymPulseView" pc="268438925" symbol="onLayout"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="37" lineNum="7" parent="globals/GymPulseView" pc="268438928" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="37" lineNum="8" parent="globals/GymPulseView" pc="268438930" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="14" parent="globals/GymPulseView" pc="268438943" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="15" parent="globals/GymPulseView" pc="268438946" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="16" parent="globals/GymPulseView" pc="268438958" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="17" parent="globals/GymPulseView" pc="268438967" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="20" parent="globals/GymPulseView" pc="268438976" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="21" parent="globals/GymPulseView" pc="268438988" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="24" parent="globals/GymPulseView" pc="268438996" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="25" parent="globals/GymPulseView" pc="268439020" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="27" parent="globals/GymPulseView" pc="268439039" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="29" parent="globals/GymPulseView" pc="268439056" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="32" parent="globals/GymPulseView" pc="268439075" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="33" parent="globals/GymPulseView" pc="268439078" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="34" parent="globals/GymPulseView" pc="268439088" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="37" parent="globals/GymPulseView" pc="268439104" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="38" parent="globals/GymPulseView" pc="268439121" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="47" parent="globals/GymPulseView" pc="268439170" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="48" parent="globals/GymPulseView" pc="268439187" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="57" parent="globals/GymPulseView" pc="268439219" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="58" parent="globals/GymPulseView" pc="268439244" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="59" parent="globals/GymPulseView" pc="268439257" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="61" parent="globals/GymPulseView" pc="268439265" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="62" parent="globals/GymPulseView" pc="268439282" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="63" parent="globals/GymPulseView" pc="268439299" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="64" parent="globals/GymPulseView" pc="268439335" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="65" parent="globals/GymPulseView" pc="268439352" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="66" parent="globals/GymPulseView" pc="268439371" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="67" parent="globals/GymPulseView" pc="268439388" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="69" parent="globals/GymPulseView" pc="268439407" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseView.mc" id="38" lineNum="72" parent="globals/GymPulseView" pc="268439423" symbol="onUpdate"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="40" parent="globals/DataTransmitter" pc="268439453" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="41" parent="globals/DataTransmitter" pc="268439455" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="42" parent="globals/DataTransmitter" pc="268439464" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="43" parent="globals/DataTransmitter" pc="268439472" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="45" parent="globals/DataTransmitter" pc="268439478" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="46" parent="globals/DataTransmitter" pc="268439496" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="48" parent="globals/DataTransmitter" pc="268439514" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="49" parent="globals/DataTransmitter" pc="268439532" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="51" parent="globals/DataTransmitter" pc="268439550" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="52" parent="globals/DataTransmitter" pc="268439568" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="39" lineNum="56" parent="globals/DataTransmitter" pc="268439592" symbol="onCloudResponse"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="41" lineNum="23" parent="globals/DataTransmitter" pc="268439601" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="41" lineNum="24" parent="globals/DataTransmitter" pc="268439604" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="41" lineNum="32" parent="globals/DataTransmitter" pc="268439637" symbol="sendToCloud"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="43" lineNum="18" parent="globals/DataTransmitter" pc="268439673" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/DataTransmitter.mc" id="43" lineNum="19" parent="globals/DataTransmitter" pc="268439675" symbol="send"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="44" lineNum="13" parent="globals/GymPulseApp" pc="268439687" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="44" lineNum="14" parent="globals/GymPulseApp" pc="268439689" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="44" lineNum="15" parent="globals/GymPulseApp" pc="268439714" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="44" lineNum="16" parent="globals/GymPulseApp" pc="268439739" symbol="onStart"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="45" lineNum="28" parent="globals/GymPulseApp" pc="268439752" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="45" lineNum="29" parent="globals/GymPulseApp" pc="268439754" symbol="getInitialView"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="46" lineNum="9" parent="globals/GymPulseApp" pc="268439801" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="46" lineNum="10" parent="globals/GymPulseApp" pc="268439803" symbol="initialize"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="47" lineNum="19" parent="globals/GymPulseApp" pc="268439816" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="47" lineNum="20" parent="globals/GymPulseApp" pc="268439818" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="47" lineNum="21" parent="globals/GymPulseApp" pc="268439827" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="47" lineNum="23" parent="globals/GymPulseApp" pc="268439842" symbol="onStop"/>
+        <entry filename="/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymPulseApp.mc" id="47" lineNum="24" parent="globals/GymPulseApp" pc="268439851" symbol="onStop"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="39" method="true" symbol="transitionToSet"/>
+        <entry id="20" method="true" symbol="detectRep"/>
+        <entry field="true" id="64" symbol="cloudUrl"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="33" symbol="repPhase"/>
+        <entry field="true" id="28" symbol="lastAccelMagnitude"/>
+        <entry field="true" id="8389149" symbol="restingHeartRate"/>
+        <entry id="19" method="true" symbol="computeVariance"/>
+        <entry id="8388638" module="true" symbol="ActivityRecording"/>
+        <entry id="12" object="true" symbol="SensorCollector"/>
+        <entry field="true" id="8388890" symbol="sport"/>
+        <entry id="10" object="true" symbol="GymStateEngine"/>
+        <entry id="22" method="true" symbol="getHRPct"/>
+        <entry field="true" id="34" symbol="repThresholdHigh"/>
+        <entry field="true" id="69" symbol="dataTransmitter"/>
+        <entry field="true" id="17" symbol="cardioMinDuration"/>
+        <entry field="true" id="8389605" symbol="accel"/>
+        <entry field="true" id="59" symbol="maxWindowSize"/>
+        <entry id="8388647" module="true" symbol="UserProfile"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="13" symbol="accelVarianceHistory"/>
+        <entry id="8" object="true" symbol="GymPulseDelegate"/>
+        <entry field="true" id="72" symbol="AppName"/>
+        <entry field="true" id="18" symbol="cardioSteadyThreshold"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry field="true" id="8390653" symbol="heartRateData"/>
+        <entry id="55" method="true" symbol="addIntervals"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8390075" method="true" symbol="unregisterSensorDataListener"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="49" method="true" symbol="onHighFreqData"/>
+        <entry id="66" method="true" symbol="onCloudResponse"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="6" object="true" symbol="DataTransmitter"/>
+        <entry id="21" method="true" symbol="getAccelMagnitude"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="32" symbol="repCount"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="26" symbol="hrHistory"/>
+        <entry id="58" method="true" symbol="getSDNN"/>
+        <entry id="9" object="true" symbol="GymPulseView"/>
+        <entry field="true" id="51" symbol="restingHR"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="8390134" symbol="sampleRate"/>
+        <entry field="true" id="27" symbol="hrSum"/>
+        <entry id="8390648" symbol="accelerometer"/>
+        <entry field="true" id="8390655" symbol="heartBeatIntervals"/>
+        <entry field="true" id="14" symbol="accelVarianceRestThreshold"/>
+        <entry field="true" id="38" symbol="stateTimer"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="8388877" method="true" symbol="createSession"/>
+        <entry id="68" method="true" symbol="sendToCloud"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="16" symbol="avgHR"/>
+        <entry id="8388828" method="true" symbol="onError"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry field="true" id="61" symbol="cloudFatigue"/>
+        <entry id="8388699" method="true" symbol="stop"/>
+        <entry field="true" id="8390077" symbol="accelerometerData"/>
+        <entry field="true" id="45" symbol="hrvCalculator"/>
+        <entry field="true" id="8390438" symbol="enabled"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="43" method="true" symbol="buildPayload"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry field="true" id="42" symbol="accelZ"/>
+        <entry field="true" id="41" symbol="accelY"/>
+        <entry field="true" id="40" symbol="accelX"/>
+        <entry id="57" method="true" symbol="getRMSSD"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="65" symbol="connected"/>
+        <entry field="true" id="63" symbol="cloudRecovery"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="48" symbol="maxHR"/>
+        <entry field="true" id="24" symbol="hrDrop"/>
+        <entry field="true" id="23" symbol="hrCount"/>
+        <entry field="true" id="71" symbol="LauncherIcon"/>
+        <entry id="5" object="true" symbol="CommListener"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="30" method="true" symbol="manualSetBoundary"/>
+        <entry id="8388643" module="true" symbol="Sensor"/>
+        <entry field="true" id="36" symbol="sessionMaxHR"/>
+        <entry field="true" id="37" symbol="setNumber"/>
+        <entry field="true" id="60" symbol="rrWindow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="53" method="true" symbol="transmitData"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="7" object="true" symbol="GymPulseApp"/>
+        <entry field="true" id="44" symbol="gymStateEngine"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="54" symbol="transmitTimer"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="8388891" symbol="subSport"/>
+        <entry field="true" id="8388892" symbol="name"/>
+        <entry id="8389808" symbol="period"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="15" symbol="accelVarianceSetThreshold"/>
+        <entry field="true" id="29" symbol="lastMagFiltered"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8388732" symbol="elapsedTime"/>
+        <entry id="8390074" method="true" symbol="registerSensorDataListener"/>
+        <entry field="true" id="31" symbol="preRestHR"/>
+        <entry id="8388829" method="true" symbol="onComplete"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry field="true" id="8389487" symbol="state"/>
+        <entry id="8388698" method="true" symbol="start"/>
+        <entry field="true" id="46" symbol="lastRRIntervals"/>
+        <entry id="56" method="true" symbol="getLatestHRIndex"/>
+        <entry field="true" id="62" symbol="cloudFatigueZone"/>
+        <entry field="true" id="70" symbol="sensorCollector"/>
+        <entry id="67" method="true" symbol="send"/>
+        <entry id="11" object="true" symbol="HRVCalculator"/>
+        <entry id="8390514" method="true" symbol="update"/>
+        <entry field="true" id="52" symbol="session"/>
+        <entry field="true" id="25" symbol="hrElevatedThreshold"/>
+        <entry id="50" method="true" symbol="onSensorEvent"/>
+        <entry field="true" id="35" symbol="repThresholdLow"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="47" method="true" symbol="loadUserProfile"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268436377" name="hr" stackId="1" startPc="268435567"/>
+        <entry arg="true" endPc="268436377" name="accelX" stackId="2" startPc="268435567"/>
+        <entry arg="true" endPc="268436377" name="accelY" stackId="3" startPc="268435567"/>
+        <entry arg="true" endPc="268436377" name="accelZ" stackId="4" startPc="268435567"/>
+        <entry arg="true" endPc="268436377" name="maxHR" stackId="5" startPc="268435567"/>
+        <entry arg="true" endPc="268436377" name="restingHR" stackId="6" startPc="268435567"/>
+        <entry endPc="268436377" name="mag" stackId="7" startPc="268435570"/>
+        <entry endPc="268436377" name="variance" stackId="8" startPc="268435570"/>
+        <entry endPc="268436377" name="hrPct" stackId="9" startPc="268435570"/>
+        <entry arg="true" endPc="268436494" name="hr" stackId="1" startPc="268436456"/>
+        <entry arg="true" endPc="268436494" name="maxHR" stackId="2" startPc="268436456"/>
+        <entry arg="true" endPc="268436494" name="restingHR" stackId="3" startPc="268436456"/>
+        <entry arg="true" endPc="268436639" name="mag" stackId="1" startPc="268436495"/>
+        <entry arg="true" endPc="268436771" name="buffer" stackId="1" startPc="268436640"/>
+        <entry endPc="268436771" name="sum" stackId="2" startPc="268436643"/>
+        <entry endPc="268436699" name="i" stackId="3" startPc="268436680"/>
+        <entry endPc="268436771" name="mean" stackId="4" startPc="268436643"/>
+        <entry endPc="268436771" name="sumSqDev" stackId="5" startPc="268436643"/>
+        <entry endPc="268436760" name="i" stackId="6" startPc="268436731"/>
+        <entry endPc="268436750" name="dev" stackId="7" startPc="268436731"/>
+        <entry endPc="268436993" name="profile" stackId="1" startPc="268436876"/>
+        <entry endPc="268436990" name="hrZones" stackId="2" startPc="268436894"/>
+        <entry endPc="268437285" name="options" stackId="1" startPc="268436998"/>
+        <entry endPc="268437326" name="app" stackId="1" startPc="268437290"/>
+        <entry endPc="268437326" name="payload" stackId="2" startPc="268437290"/>
+        <entry endPc="268437513" name="gse" stackId="1" startPc="268437331"/>
+        <entry arg="true" endPc="268437722" name="sensorInfo" stackId="1" startPc="268437514"/>
+        <entry endPc="268437721" name="actInfo" stackId="2" startPc="268437517"/>
+        <entry arg="true" endPc="268438135" name="sensorData" stackId="1" startPc="268437889"/>
+        <entry endPc="268438039" name="accelData" stackId="2" startPc="268437914"/>
+        <entry endPc="268438131" name="hrData" stackId="3" startPc="268438065"/>
+        <entry endPc="268438305" name="sum" stackId="1" startPc="268438139"/>
+        <entry endPc="268438206" name="i" stackId="2" startPc="268438184"/>
+        <entry endPc="268438305" name="mean" stackId="3" startPc="268438139"/>
+        <entry endPc="268438305" name="sumSqDev" stackId="4" startPc="268438139"/>
+        <entry endPc="268438278" name="i" stackId="5" startPc="268438246"/>
+        <entry endPc="268438268" name="dev" stackId="6" startPc="268438246"/>
+        <entry endPc="268438460" name="count" stackId="1" startPc="268438309"/>
+        <entry endPc="268438460" name="sum" stackId="2" startPc="268438309"/>
+        <entry endPc="268438426" name="i" stackId="3" startPc="268438404"/>
+        <entry endPc="268438460" name="avgRR" stackId="4" startPc="268438309"/>
+        <entry arg="true" endPc="268438555" name="intervals" stackId="1" startPc="268438461"/>
+        <entry endPc="268438508" name="i" stackId="2" startPc="268438480"/>
+        <entry endPc="268438746" name="sumSquaredDiff" stackId="1" startPc="268438559"/>
+        <entry endPc="268438746" name="count" stackId="2" startPc="268438559"/>
+        <entry endPc="268438716" name="i" stackId="3" startPc="268438608"/>
+        <entry endPc="268438706" name="diff" stackId="4" startPc="268438608"/>
+        <entry endPc="268438706" name="prev" stackId="5" startPc="268438608"/>
+        <entry endPc="268438706" name="absDiff" stackId="6" startPc="268438608"/>
+        <entry endPc="268438834" name="app" stackId="1" startPc="268438786"/>
+        <entry endPc="268438924" name="app" stackId="1" startPc="268438854"/>
+        <entry arg="true" endPc="268439452" name="dc" stackId="1" startPc="268438943"/>
+        <entry endPc="268439451" name="app" stackId="2" startPc="268438946"/>
+        <entry endPc="268439451" name="w" stackId="3" startPc="268438946"/>
+        <entry endPc="268439451" name="h" stackId="4" startPc="268438946"/>
+        <entry endPc="268439451" name="hr" stackId="5" startPc="268438946"/>
+        <entry endPc="268439448" name="gse" stackId="6" startPc="268439244"/>
+        <entry endPc="268439448" name="stateText" stackId="7" startPc="268439244"/>
+        <entry arg="true" endPc="268439600" name="responseCode" stackId="1" startPc="268439453"/>
+        <entry arg="true" endPc="268439600" name="data" stackId="2" startPc="268439453"/>
+        <entry arg="true" endPc="268439672" name="payload" stackId="1" startPc="268439601"/>
+        <entry endPc="268439671" name="options" stackId="2" startPc="268439604"/>
+        <entry arg="true" endPc="268439686" name="payload" stackId="1" startPc="268439673"/>
+        <entry arg="true" endPc="268439751" name="state" stackId="1" startPc="268439687"/>
+        <entry arg="true" endPc="268439866" name="state" stackId="1" startPc="268439816"/>
+    </localVars>
+    <deviceInfo deviceVersion="5c7ae9cf907f88c116a91dc4ffd75be9b5b7d2e9" partNumber="006-B4260-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/GymStateEngine" offset="161" parentId="globals" symbolId="GymStateEngine" type="class"/>
+        <dataEntry label="globals/SensorCollector" offset="466" parentId="globals" symbolId="SensorCollector" type="class"/>
+        <dataEntry label="globals/HRVCalculator" offset="681" parentId="globals" symbolId="HRVCalculator" type="class"/>
+        <dataEntry label="globals/Rez" offset="779" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/CommListener" offset="823" parentId="globals" symbolId="CommListener" type="class"/>
+        <dataEntry label="globals/GymPulseDelegate" offset="885" parentId="globals" symbolId="GymPulseDelegate" type="class"/>
+        <dataEntry label="globals/GymPulseView" offset="947" parentId="globals" symbolId="GymPulseView" type="class"/>
+        <dataEntry label="globals/DataTransmitter" offset="1009" parentId="globals" symbolId="DataTransmitter" type="class"/>
+        <dataEntry label="globals/GymPulseApp" offset="1134" parentId="globals" symbolId="GymPulseApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1223" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1258" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="GymStateEngine" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435488" name="&lt;init&gt;" parent="SensorCollector" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435498" name="&lt;init&gt;" parent="HRVCalculator" startPc="268435489">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435518" name="&lt;init&gt;" parent="Rez" startPc="268435499">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435530" name="&lt;init&gt;" parent="CommListener" startPc="268435519">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435542" name="&lt;init&gt;" parent="GymPulseDelegate" startPc="268435531">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435554" name="&lt;init&gt;" parent="GymPulseView" startPc="268435543">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435566" name="&lt;init&gt;" parent="GymPulseApp" startPc="268435555">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436377" name="update" parent="GymStateEngine" startPc="268435567">
+            <param id="hr"/>
+            <param id="accelX"/>
+            <param id="accelY"/>
+            <param id="accelZ"/>
+            <param id="maxHR"/>
+            <param id="restingHR"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436385" name="getAccelMagnitude" parent="GymStateEngine" startPc="268436378">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436455" name="transitionToSet" parent="GymStateEngine" startPc="268436386">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436494" name="getHRPct" parent="GymStateEngine" startPc="268436456">
+            <param id="hr"/>
+            <param id="maxHR"/>
+            <param id="restingHR"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436639" name="detectRep" parent="GymStateEngine" startPc="268436495">
+            <param id="mag"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436771" name="computeVariance" parent="GymStateEngine" startPc="268436640">
+            <param id="buffer"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="GymStateEngine">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436872" name="manualSetBoundary" parent="GymStateEngine" startPc="268436772">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436994" name="loadUserProfile" parent="SensorCollector" startPc="268436873">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437286" name="start" parent="SensorCollector" startPc="268436995">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437327" name="transmitData" parent="SensorCollector" startPc="268437287">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437513" name="buildPayload" parent="SensorCollector" startPc="268437328">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437722" name="onSensorEvent" parent="SensorCollector" startPc="268437514">
+            <param id="sensorInfo"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437828" name="stop" parent="SensorCollector" startPc="268437723">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437888" name="initialize" parent="SensorCollector" startPc="268437829">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438135" name="onHighFreqData" parent="SensorCollector" startPc="268437889">
+            <param id="sensorData"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438305" name="getSDNN" parent="HRVCalculator" startPc="268438136">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438460" name="getLatestHRIndex" parent="HRVCalculator" startPc="268438306">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438555" name="addIntervals" parent="HRVCalculator" startPc="268438461">
+            <param id="intervals"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="HRVCalculator">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438746" name="getRMSSD" parent="HRVCalculator" startPc="268438556">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438767" name="onError" parent="CommListener" startPc="268438747">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onComplete" parent="CommListener">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438782" name="initialize" parent="CommListener" startPc="268438768">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438835" name="onBack" parent="GymPulseDelegate" startPc="268438783">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438850" name="initialize" parent="GymPulseDelegate" startPc="268438836">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438924" name="onSelect" parent="GymPulseDelegate" startPc="268438851">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438927" name="onLayout" parent="GymPulseView" startPc="268438925">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438942" name="initialize" parent="GymPulseView" startPc="268438928">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439452" name="onUpdate" parent="GymPulseView" startPc="268438943">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439600" name="onCloudResponse" parent="DataTransmitter" startPc="268439453">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="stop" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439672" name="sendToCloud" parent="DataTransmitter" startPc="268439601">
+            <param id="payload"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="DataTransmitter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439686" name="send" parent="DataTransmitter" startPc="268439673">
+            <param id="payload"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439751" name="onStart" parent="GymPulseApp" startPc="268439687">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439800" name="getInitialView" parent="GymPulseApp" startPc="268439752">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439815" name="initialize" parent="GymPulseApp" startPc="268439801">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439866" name="onStop" parent="GymPulseApp" startPc="268439816">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

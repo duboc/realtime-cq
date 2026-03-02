@@ -1,0 +1,1015 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Math,1,13,17]; ]
+using Toybox.Math;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 6; @symbol_classdef = [GymStateEngine,6,6,20]; ]
+class GymStateEngine {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 6; ]
+    <init> {
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 22 8 ]
+        %tmp.1 = newa 0;
+        putv self :accelVarianceHistory %tmp.1;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 23 8 ]
+        %tmp.2 = newa 0;
+        putv self :hrHistory %tmp.2;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 9; @position = 8; @symbol_vardef = [state,9,8,13]; ]
+    var state = "IDLE";
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 12; @position = 8; @symbol_vardef = [setNumber,12,8,17]; ]
+    var setNumber = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 13; @position = 8; @symbol_vardef = [repCount,13,8,16]; ]
+    var repCount = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 14; @position = 8; @symbol_vardef = [preRestHR,14,8,17]; ]
+    var preRestHR = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 15; @position = 8; @symbol_vardef = [hrDrop,15,8,14]; ]
+    var hrDrop = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 16; @position = 8; @symbol_vardef = [sessionMaxHR,16,8,20]; ]
+    var sessionMaxHR = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 17; @position = 8; @symbol_vardef = [avgHR,17,8,13]; ]
+    var avgHR = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 20; @position = 8; @symbol_vardef = [hrSum,20,8,13]; ]
+    var hrSum = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 21; @position = 8; @symbol_vardef = [hrCount,21,8,15]; ]
+    var hrCount = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 22; @position = 8; @symbol_vardef = [accelVarianceHistory,22,8,28]; ]
+    var accelVarianceHistory;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 23; @position = 8; @symbol_vardef = [hrHistory,23,8,17]; ]
+    var hrHistory;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 24; @position = 8; @symbol_vardef = [stateTimer,24,8,18]; ]
+    var stateTimer = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 25; @position = 8; @symbol_vardef = [lastAccelMagnitude,25,8,26]; ]
+    var lastAccelMagnitude = 0.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 28; @position = 8; @symbol_vardef = [repPhase,28,8,16]; ]
+    var repPhase = "down";
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 29; @position = 8; @symbol_vardef = [lastMagFiltered,29,8,23]; ]
+    var lastMagFiltered = 980.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 30; @position = 8; @symbol_vardef = [repThresholdHigh,30,8,24]; ]
+    var repThresholdHigh = 1100.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 31; @position = 8; @symbol_vardef = [repThresholdLow,31,8,23]; ]
+    var repThresholdLow = 900.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 34; @position = 8; @symbol_vardef = [accelVarianceSetThreshold,34,8,33]; ]
+    var accelVarianceSetThreshold = 50000.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 35; @position = 8; @symbol_vardef = [accelVarianceRestThreshold,35,8,34]; ]
+    var accelVarianceRestThreshold = 5000.0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 36; @position = 8; @symbol_vardef = [hrElevatedThreshold,36,8,27]; ]
+    var hrElevatedThreshold = 0.55;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 37; @position = 8; @symbol_vardef = [cardioSteadyThreshold,37,8,29]; ]
+    var cardioSteadyThreshold = 0.60;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 38; @position = 8; @symbol_vardef = [cardioMinDuration,38,8,25]; ]
+    var cardioMinDuration = 60;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 40; @symbol_functiondef = [initialize,40,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 43; @symbol_functiondef = [update,43,13,19]; @symbol_param<0> = [hr,43,20,22]; @symbol_param<1> = [accelX,43,24,30]; @symbol_param<2> = [accelY,43,32,38]; @symbol_param<3> = [accelZ,43,40,46]; @symbol_param<4> = [maxHR,43,48,53]; @symbol_param<5> = [restingHR,43,55,64]; ]
+    function update(hr, accelX, accelY, accelZ, maxHR, restingHR) {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 45 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_8_56_8_if_stmt:
+        %tmp.1 = lgetv %hr;
+        symbol [ hr %tmp.1 45 12 14 ];
+        %tmp.2 = 0;
+        %tmp.3 = gt %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_8_56_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_8_56_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_20_56_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 46 12 ]
+        symbol [ hrHistory %tmp.5 46 12 21 ];
+        %tmp.5 = getv ? :hrHistory;
+        symbol [ add %tmp.6 46 22 25 ];
+        %tmp.6 = getv function %tmp.5 :add;
+        %tmp.7 = lgetv %hr;
+        symbol [ hr %tmp.7 46 26 28 ];
+        invoke %tmp.5 %tmp.6(%tmp.7);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 47 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_12_49_12_if_stmt:
+        symbol [ hrHistory %tmp.9 47 16 25 ];
+        %tmp.9 = getv ? :hrHistory;
+        symbol [ size %tmp.10 47 26 30 ];
+        %tmp.10 = getv function %tmp.9 :size;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = 30;
+        %tmp.13 = gt %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_12_49_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_12_49_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_39_49_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 48 16 ]
+        symbol [ hrHistory %tmp.15 48 28 37 ];
+        %tmp.15 = getv ? :hrHistory;
+        symbol [ slice %tmp.16 48 38 43 ];
+        %tmp.16 = getv function %tmp.15 :slice;
+        %tmp.17 = 1;
+        %tmp.18 = null;
+        %tmp.19 = invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18);
+        symbol [ hrHistory ? 48 16 25 ];
+        putv self :hrHistory %tmp.19;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_39_49_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_12_49_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_47_12_49_12_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 50 12 ]
+        symbol [ hrSum %tmp.20 50 12 17 ];
+        %tmp.20 = getv self :hrSum;
+        %tmp.21 = lgetv %hr;
+        symbol [ hr %tmp.21 50 21 23 ];
+        %tmp.22 = add %tmp.20 %tmp.21;
+        symbol [ hrSum ? 50 12 17 ];
+        putv self :hrSum dup %tmp.22;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 51 12 ]
+        symbol [ hrCount %tmp.25 51 12 19 ];
+        %tmp.25 = getv ? :hrCount;
+        %tmp.26 = add %tmp.25 1;
+        symbol [ hrCount ? 51 12 19 ];
+        putv self :hrCount dup %tmp.26;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 52 12 ]
+        symbol [ hrSum %tmp.28 52 20 25 ];
+        %tmp.28 = getv ? :hrSum;
+        symbol [ hrCount %tmp.30 52 28 35 ];
+        %tmp.30 = getv ? :hrCount;
+        %tmp.31 = div %tmp.28 %tmp.30;
+        symbol [ avgHR ? 52 12 17 ];
+        putv self :avgHR %tmp.31;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 53 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_12_55_12_if_stmt:
+        %tmp.32 = lgetv %hr;
+        symbol [ hr %tmp.32 53 16 18 ];
+        symbol [ sessionMaxHR %tmp.34 53 21 33 ];
+        %tmp.34 = getv ? :sessionMaxHR;
+        %tmp.35 = gt %tmp.32 %tmp.34;
+        bf %tmp.35 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_12_55_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_12_55_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_35_55_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 54 16 ]
+        %tmp.36 = lgetv %hr;
+        symbol [ hr %tmp.36 54 31 33 ];
+        symbol [ sessionMaxHR ? 54 16 28 ];
+        putv self :sessionMaxHR %tmp.36;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_35_55_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_12_55_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_53_12_55_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_20_56_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_8_56_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_45_8_56_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 59 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_stop" ]
+        %mag.1 = local;
+        symbol [ mag %mag.1 59 12 15 ];
+        symbol [ Math %tmp.37 59 18 22 ];
+        %tmp.37 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.38 59 23 27 ];
+        %tmp.38 = getv function %tmp.37 :sqrt;
+        %tmp.39 = lgetv %accelX;
+        symbol [ accelX %tmp.39 59 28 34 ];
+        %tmp.40 = lgetv %accelX;
+        symbol [ accelX %tmp.40 59 37 43 ];
+        %tmp.41 = mul %tmp.39 %tmp.40;
+        %tmp.42 = lgetv %accelY;
+        symbol [ accelY %tmp.42 59 46 52 ];
+        %tmp.43 = lgetv %accelY;
+        symbol [ accelY %tmp.43 59 55 61 ];
+        %tmp.44 = mul %tmp.42 %tmp.43;
+        %tmp.45 = add %tmp.41 %tmp.44;
+        %tmp.46 = lgetv %accelZ;
+        symbol [ accelZ %tmp.46 59 64 70 ];
+        %tmp.47 = lgetv %accelZ;
+        symbol [ accelZ %tmp.47 59 73 79 ];
+        %tmp.48 = mul %tmp.46 %tmp.47;
+        %tmp.49 = add %tmp.45 %tmp.48;
+        %tmp.50 = invoke %tmp.37 %tmp.38(%tmp.49);
+        lputv %mag.1 %tmp.50;
+        symbol [ mag %mag.1 59 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 60 8 ]
+        %tmp.51 = lgetv %mag.1;
+        symbol [ mag %tmp.51 60 29 32 ];
+        symbol [ lastAccelMagnitude ? 60 8 26 ];
+        putv self :lastAccelMagnitude %tmp.51;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 63 8 ]
+        symbol [ accelVarianceHistory %tmp.53 63 8 28 ];
+        %tmp.53 = getv ? :accelVarianceHistory;
+        symbol [ add %tmp.54 63 29 32 ];
+        %tmp.54 = getv function %tmp.53 :add;
+        %tmp.55 = lgetv %mag.1;
+        symbol [ mag %tmp.55 63 33 36 ];
+        invoke %tmp.53 %tmp.54(%tmp.55);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 64 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_8_66_8_if_stmt:
+        symbol [ accelVarianceHistory %tmp.57 64 12 32 ];
+        %tmp.57 = getv ? :accelVarianceHistory;
+        symbol [ size %tmp.58 64 33 37 ];
+        %tmp.58 = getv function %tmp.57 :size;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        %tmp.60 = 10;
+        %tmp.61 = gt %tmp.59 %tmp.60;
+        bf %tmp.61 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_8_66_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_8_66_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_46_66_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 65 12 ]
+        symbol [ accelVarianceHistory %tmp.63 65 35 55 ];
+        %tmp.63 = getv ? :accelVarianceHistory;
+        symbol [ slice %tmp.64 65 56 61 ];
+        %tmp.64 = getv function %tmp.63 :slice;
+        %tmp.65 = 1;
+        %tmp.66 = null;
+        %tmp.67 = invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66);
+        symbol [ accelVarianceHistory ? 65 12 32 ];
+        putv self :accelVarianceHistory %tmp.67;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_46_66_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_8_66_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_64_8_66_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 67 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_stop" ]
+        %variance.2 = local;
+        symbol [ variance %variance.2 67 12 20 ];
+        %tmp.68 = self;
+        symbol [ computeVariance %tmp.69 67 23 38 ];
+        %tmp.69 = getv function %tmp.68 :computeVariance;
+        symbol [ accelVarianceHistory %tmp.71 67 39 59 ];
+        %tmp.71 = getv ? :accelVarianceHistory;
+        %tmp.72 = invoke %tmp.68 %tmp.69(%tmp.71);
+        lputv %variance.2 %tmp.72;
+        symbol [ variance %variance.2 67 12 20 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 70 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_8_72_8_if_stmt:
+        symbol [ state %tmp.74 70 12 17 ];
+        %tmp.74 = getv ? :state;
+        symbol [ equals %tmp.75 70 18 24 ];
+        %tmp.75 = getv function %tmp.74 :equals;
+        %tmp.76 = "ACTIVE_SET";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        bf %tmp.77 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_8_72_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_8_72_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_40_72_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 71 12 ]
+        %tmp.78 = self;
+        symbol [ detectRep %tmp.79 71 12 21 ];
+        %tmp.79 = getv function %tmp.78 :detectRep;
+        %tmp.80 = lgetv %mag.1;
+        symbol [ mag %tmp.80 71 22 25 ];
+        invoke %tmp.78 %tmp.79(%tmp.80);
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_40_72_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_8_72_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_70_8_72_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 75 8 ]
+        symbol [ stateTimer %tmp.81 75 8 18 ];
+        %tmp.81 = getv self :stateTimer;
+        %tmp.82 = 3;
+        %tmp.83 = add %tmp.81 %tmp.82;
+        symbol [ stateTimer ? 75 8 18 ];
+        putv self :stateTimer dup %tmp.83;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 76 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_stop" ]
+        %hrPct.3 = local;
+        symbol [ hrPct %hrPct.3 76 12 17 ];
+        %tmp.84 = self;
+        symbol [ getHRPct %tmp.85 76 20 28 ];
+        %tmp.85 = getv function %tmp.84 :getHRPct;
+        %tmp.86 = lgetv %hr;
+        symbol [ hr %tmp.86 76 29 31 ];
+        %tmp.87 = lgetv %maxHR;
+        symbol [ maxHR %tmp.87 76 33 38 ];
+        %tmp.88 = lgetv %restingHR;
+        symbol [ restingHR %tmp.88 76 40 49 ];
+        %tmp.89 = invoke %tmp.84 %tmp.85(%tmp.86, %tmp.87, %tmp.88);
+        lputv %hrPct.3 %tmp.89;
+        symbol [ hrPct %hrPct.3 76 12 17 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 77 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_stmt:
+        symbol [ state %tmp.91 77 12 17 ];
+        %tmp.91 = getv ? :state;
+        symbol [ equals %tmp.92 77 18 24 ];
+        %tmp.92 = getv function %tmp.91 :equals;
+        %tmp.93 = "IDLE";
+        %tmp.94 = invoke %tmp.91 %tmp.92(%tmp.93);
+        bf %tmp.94 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_34_86_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 78 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_16_78_64_begin:
+        %tmp.95 = lgetv %variance.2;
+        symbol [ variance %tmp.95 78 16 24 ];
+        symbol [ accelVarianceSetThreshold %tmp.97 78 27 52 ];
+        %tmp.97 = getv ? :accelVarianceSetThreshold;
+        %tmp.98 = gt %tmp.95 %tmp.97;
+        bf %tmp.98 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_56_78_64_true:
+        %tmp.99 = lgetv %hrPct.3;
+        symbol [ hrPct %tmp.99 78 56 61 ];
+        %tmp.100 = 0.3;
+        %tmp.101 = gt %tmp.99 %tmp.100;
+        push %tmp.101;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_56_78_64_end:
+        %tmp.102 = phi [%tmp.98 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_16_78_64_begin] [%tmp.101 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_56_78_64_true] [%tmp.102 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_56_78_64_end];
+        bf %tmp.102 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_69_81_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 80 16 ]
+        %tmp.103 = self;
+        symbol [ transitionToSet %tmp.104 80 16 31 ];
+        %tmp.104 = getv function %tmp.103 :transitionToSet;
+        invoke %tmp.103 %tmp.104();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_69_81_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 81 19 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_23_81_69_begin:
+        %tmp.105 = lgetv %hrPct.3;
+        symbol [ hrPct %tmp.105 81 23 28 ];
+        symbol [ cardioSteadyThreshold %tmp.107 81 31 52 ];
+        %tmp.107 = getv ? :cardioSteadyThreshold;
+        %tmp.108 = gt %tmp.105 %tmp.107;
+        bf %tmp.108 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_56_81_69_true:
+        symbol [ stateTimer %tmp.110 81 56 66 ];
+        %tmp.110 = getv ? :stateTimer;
+        %tmp.111 = 30;
+        %tmp.112 = gt %tmp.110 %tmp.111;
+        push %tmp.112;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_56_81_69_end:
+        %tmp.113 = phi [%tmp.108 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_23_81_69_begin] [%tmp.112 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_56_81_69_true] [%tmp.113 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_56_81_69_end];
+        bf %tmp.113 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_73_85_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 83 16 ]
+        %tmp.114 = "CARDIO";
+        symbol [ state ? 83 16 21 ];
+        putv self :state %tmp.114;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 84 16 ]
+        %tmp.115 = 0;
+        symbol [ stateTimer ? 84 16 26 ];
+        putv self :stateTimer %tmp.115;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_73_85_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_81_19_85_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_78_12_85_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_34_86_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 86 15 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_stmt:
+        symbol [ state %tmp.117 86 19 24 ];
+        %tmp.117 = getv ? :state;
+        symbol [ equals %tmp.118 86 25 31 ];
+        %tmp.118 = getv function %tmp.117 :equals;
+        %tmp.119 = "ACTIVE_SET";
+        %tmp.120 = invoke %tmp.117 %tmp.118(%tmp.119);
+        bf %tmp.120 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_47_93_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 87 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_16_87_70_begin:
+        %tmp.121 = lgetv %variance.2;
+        symbol [ variance %tmp.121 87 16 24 ];
+        symbol [ accelVarianceRestThreshold %tmp.123 87 27 53 ];
+        %tmp.123 = getv ? :accelVarianceRestThreshold;
+        %tmp.124 = lt %tmp.121 %tmp.123;
+        bf %tmp.124 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_57_87_70_true:
+        symbol [ stateTimer %tmp.126 87 57 67 ];
+        %tmp.126 = getv ? :stateTimer;
+        %tmp.127 = 6;
+        %tmp.128 = gt %tmp.126 %tmp.127;
+        push %tmp.128;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_57_87_70_end:
+        %tmp.129 = phi [%tmp.124 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_16_87_70_begin] [%tmp.128 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_57_87_70_true] [%tmp.129 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_57_87_70_end];
+        bf %tmp.129 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_73_92_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 89 16 ]
+        %tmp.130 = lgetv %hr;
+        symbol [ hr %tmp.130 89 28 30 ];
+        symbol [ preRestHR ? 89 16 25 ];
+        putv self :preRestHR %tmp.130;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 90 16 ]
+        %tmp.131 = "RESTING";
+        symbol [ state ? 90 16 21 ];
+        putv self :state %tmp.131;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 91 16 ]
+        %tmp.132 = 0;
+        symbol [ stateTimer ? 91 16 26 ];
+        putv self :stateTimer %tmp.132;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_73_92_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_87_12_92_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_47_93_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 93 15 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_stmt:
+        symbol [ state %tmp.134 93 19 24 ];
+        %tmp.134 = getv ? :state;
+        symbol [ equals %tmp.135 93 25 31 ];
+        %tmp.135 = getv function %tmp.134 :equals;
+        %tmp.136 = "RESTING";
+        %tmp.137 = invoke %tmp.134 %tmp.135(%tmp.136);
+        bf %tmp.137 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_44_107_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 94 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_stmt:
+        %tmp.138 = lgetv %variance.2;
+        symbol [ variance %tmp.138 94 16 24 ];
+        symbol [ accelVarianceSetThreshold %tmp.140 94 27 52 ];
+        %tmp.140 = getv ? :accelVarianceSetThreshold;
+        %tmp.141 = gt %tmp.138 %tmp.140;
+        bf %tmp.141 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_54_98_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 96 16 ]
+        symbol [ preRestHR %tmp.143 96 25 34 ];
+        %tmp.143 = getv ? :preRestHR;
+        %tmp.144 = lgetv %hr;
+        symbol [ hr %tmp.144 96 37 39 ];
+        %tmp.145 = sub %tmp.143 %tmp.144;
+        symbol [ hrDrop ? 96 16 22 ];
+        putv self :hrDrop %tmp.145;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 97 16 ]
+        %tmp.146 = self;
+        symbol [ transitionToSet %tmp.147 97 16 31 ];
+        %tmp.147 = getv function %tmp.146 :transitionToSet;
+        invoke %tmp.146 %tmp.147();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_54_98_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 98 19 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_23_98_52_begin:
+        %tmp.148 = lgetv %hrPct.3;
+        symbol [ hrPct %tmp.148 98 23 28 ];
+        %tmp.149 = 0.35;
+        %tmp.150 = lt %tmp.148 %tmp.149;
+        bf %tmp.150 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_39_98_52_true:
+        symbol [ stateTimer %tmp.152 98 39 49 ];
+        %tmp.152 = getv ? :stateTimer;
+        %tmp.153 = 120;
+        %tmp.154 = gt %tmp.152 %tmp.153;
+        push %tmp.154;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_39_98_52_end:
+        %tmp.155 = phi [%tmp.150 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_23_98_52_begin] [%tmp.154 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_39_98_52_true] [%tmp.155 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_39_98_52_end];
+        bf %tmp.155 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_57_102_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 100 16 ]
+        %tmp.156 = "IDLE";
+        symbol [ state ? 100 16 21 ];
+        putv self :state %tmp.156;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 101 16 ]
+        %tmp.157 = 0;
+        symbol [ stateTimer ? 101 16 26 ];
+        putv self :stateTimer %tmp.157;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_57_102_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 102 19 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_23_102_114_begin:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_23_102_96_begin:
+        %tmp.158 = lgetv %hrPct.3;
+        symbol [ hrPct %tmp.158 102 23 28 ];
+        symbol [ cardioSteadyThreshold %tmp.160 102 31 52 ];
+        %tmp.160 = getv ? :cardioSteadyThreshold;
+        %tmp.161 = gt %tmp.158 %tmp.160;
+        bf %tmp.161 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_56_102_96_true:
+        %tmp.162 = lgetv %variance.2;
+        symbol [ variance %tmp.162 102 56 64 ];
+        symbol [ accelVarianceRestThreshold %tmp.164 102 67 93 ];
+        %tmp.164 = getv ? :accelVarianceRestThreshold;
+        %tmp.165 = 2;
+        %tmp.166 = mul %tmp.164 %tmp.165;
+        %tmp.167 = gt %tmp.162 %tmp.166;
+        push %tmp.167;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_56_102_96_end:
+        %tmp.168 = phi [%tmp.161 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_23_102_96_begin] [%tmp.167 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_56_102_96_true] [%tmp.168 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_56_102_96_end];
+        bf %tmp.168 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_101_102_114_true:
+        symbol [ stateTimer %tmp.170 102 101 111 ];
+        %tmp.170 = getv ? :stateTimer;
+        %tmp.171 = 30;
+        %tmp.172 = gt %tmp.170 %tmp.171;
+        push %tmp.172;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_101_102_114_end:
+        %tmp.173 = phi [%tmp.168 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_23_102_114_begin] [%tmp.172 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_101_102_114_true] [%tmp.173 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_101_102_114_end];
+        bf %tmp.173 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_118_106_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 104 16 ]
+        %tmp.174 = "CARDIO";
+        symbol [ state ? 104 16 21 ];
+        putv self :state %tmp.174;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 105 16 ]
+        %tmp.175 = 0;
+        symbol [ stateTimer ? 105 16 26 ];
+        putv self :stateTimer %tmp.175;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_118_106_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_102_19_106_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_98_19_106_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_94_12_106_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_44_107_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 107 15 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_15_116_8_if_stmt:
+        symbol [ state %tmp.177 107 19 24 ];
+        %tmp.177 = getv ? :state;
+        symbol [ equals %tmp.178 107 25 31 ];
+        %tmp.178 = getv function %tmp.177 :equals;
+        %tmp.179 = "CARDIO";
+        %tmp.180 = invoke %tmp.177 %tmp.178(%tmp.179);
+        bf %tmp.180 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_15_116_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_15_116_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_43_116_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 108 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_stmt:
+        %tmp.181 = lgetv %variance.2;
+        symbol [ variance %tmp.181 108 16 24 ];
+        symbol [ accelVarianceSetThreshold %tmp.183 108 27 52 ];
+        %tmp.183 = getv ? :accelVarianceSetThreshold;
+        %tmp.184 = gt %tmp.181 %tmp.183;
+        bf %tmp.184 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_54_111_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 110 16 ]
+        %tmp.185 = self;
+        symbol [ transitionToSet %tmp.186 110 16 31 ];
+        %tmp.186 = getv function %tmp.185 :transitionToSet;
+        invoke %tmp.185 %tmp.186();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_54_111_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 111 19 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_23_111_51_begin:
+        %tmp.187 = lgetv %hrPct.3;
+        symbol [ hrPct %tmp.187 111 23 28 ];
+        %tmp.188 = 0.4;
+        %tmp.189 = lt %tmp.187 %tmp.188;
+        bf %tmp.189 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_38_111_51_true:
+        symbol [ stateTimer %tmp.191 111 38 48 ];
+        %tmp.191 = getv ? :stateTimer;
+        %tmp.192 = 30;
+        %tmp.193 = gt %tmp.191 %tmp.192;
+        push %tmp.193;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_38_111_51_end:
+        %tmp.194 = phi [%tmp.189 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_23_111_51_begin] [%tmp.193 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_38_111_51_true] [%tmp.194 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_38_111_51_end];
+        bf %tmp.194 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_55_115_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 113 16 ]
+        %tmp.195 = "RESTING";
+        symbol [ state ? 113 16 21 ];
+        putv self :state %tmp.195;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 114 16 ]
+        %tmp.196 = 0;
+        symbol [ stateTimer ? 114 16 26 ];
+        putv self :stateTimer %tmp.196;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_55_115_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_111_19_115_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_108_12_115_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_43_116_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_15_116_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_107_15_116_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_93_15_116_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_86_15_116_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_77_8_116_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 119 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_12_119_51_begin:
+        symbol [ state %tmp.198 119 12 17 ];
+        %tmp.198 = getv ? :state;
+        symbol [ equals %tmp.199 119 18 24 ];
+        %tmp.199 = getv function %tmp.198 :equals;
+        %tmp.200 = "RESTING";
+        %tmp.201 = invoke %tmp.198 %tmp.199(%tmp.200);
+        bf %tmp.201 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_39_119_51_true:
+        symbol [ preRestHR %tmp.203 119 39 48 ];
+        %tmp.203 = getv ? :preRestHR;
+        %tmp.204 = 0;
+        %tmp.205 = gt %tmp.203 %tmp.204;
+        push %tmp.205;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_39_119_51_end:
+        %tmp.206 = phi [%tmp.201 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_12_119_51_begin] [%tmp.205 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_39_119_51_true] [%tmp.206 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_39_119_51_end];
+        bf %tmp.206 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_54_121_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 120 12 ]
+        symbol [ preRestHR %tmp.208 120 21 30 ];
+        %tmp.208 = getv ? :preRestHR;
+        %tmp.209 = lgetv %hr;
+        symbol [ hr %tmp.209 120 33 35 ];
+        %tmp.210 = sub %tmp.208 %tmp.209;
+        symbol [ hrDrop ? 120 12 18 ];
+        putv self :hrDrop %tmp.210;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_54_121_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_119_8_121_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 123 8 ]
+        symbol [ state %tmp.212 123 15 20 ];
+        %tmp.212 = getv ? :state;
+        ret %tmp.212;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_43_66_124_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 126; @symbol_functiondef = [transitionToSet,126,13,28]; ]
+    function transitionToSet() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_126_31_133_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 127 8 ]
+        symbol [ setNumber %tmp.3 127 8 17 ];
+        %tmp.3 = getv ? :setNumber;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ setNumber ? 127 8 17 ];
+        putv self :setNumber dup %tmp.4;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 128 8 ]
+        %tmp.5 = 0;
+        symbol [ repCount ? 128 8 16 ];
+        putv self :repCount %tmp.5;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 129 8 ]
+        %tmp.6 = "down";
+        symbol [ repPhase ? 129 8 16 ];
+        putv self :repPhase %tmp.6;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 130 8 ]
+        %tmp.7 = 980.0;
+        symbol [ lastMagFiltered ? 130 8 23 ];
+        putv self :lastMagFiltered %tmp.7;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 131 8 ]
+        %tmp.8 = "ACTIVE_SET";
+        symbol [ state ? 131 8 13 ];
+        putv self :state %tmp.8;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 132 8 ]
+        %tmp.9 = 0;
+        symbol [ stateTimer ? 132 8 18 ];
+        putv self :stateTimer %tmp.9;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_126_31_133_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 135; @symbol_functiondef = [detectRep,135,13,22]; @symbol_param<0> = [mag,135,23,26]; ]
+    function detectRep(mag) {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_135_28_146_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 138 8 ]
+        symbol [ lastMagFiltered %tmp.2 138 26 41 ];
+        %tmp.2 = getv ? :lastMagFiltered;
+        %tmp.3 = 0.7;
+        %tmp.4 = mul %tmp.2 %tmp.3;
+        %tmp.5 = lgetv %mag;
+        symbol [ mag %tmp.5 138 50 53 ];
+        %tmp.6 = 0.3;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        %tmp.8 = add %tmp.4 %tmp.7;
+        symbol [ lastMagFiltered ? 138 8 23 ];
+        putv self :lastMagFiltered %tmp.8;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 140 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_12_140_57_begin:
+        symbol [ repPhase %tmp.10 140 12 20 ];
+        %tmp.10 = getv ? :repPhase;
+        symbol [ equals %tmp.11 140 21 27 ];
+        %tmp.11 = getv function %tmp.10 :equals;
+        %tmp.12 = "down";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        bf %tmp.13 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_39_140_57_true:
+        symbol [ lastMagFiltered %tmp.15 140 39 54 ];
+        %tmp.15 = getv ? :lastMagFiltered;
+        symbol [ repThresholdHigh %tmp.17 140 57 73 ];
+        %tmp.17 = getv ? :repThresholdHigh;
+        %tmp.18 = gt %tmp.15 %tmp.17;
+        push %tmp.18;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_39_140_57_end:
+        %tmp.19 = phi [%tmp.13 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_12_140_57_begin] [%tmp.18 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_39_140_57_true] [%tmp.19 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_39_140_57_end];
+        bf %tmp.19 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_75_142_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 141 12 ]
+        %tmp.20 = "up";
+        symbol [ repPhase ? 141 12 20 ];
+        putv self :repPhase %tmp.20;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_75_142_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_false:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 142 15 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_19_142_62_begin:
+        symbol [ repPhase %tmp.22 142 19 27 ];
+        %tmp.22 = getv ? :repPhase;
+        symbol [ equals %tmp.23 142 28 34 ];
+        %tmp.23 = getv function %tmp.22 :equals;
+        %tmp.24 = "up";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        bf %tmp.25 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_44_142_62_true:
+        symbol [ lastMagFiltered %tmp.27 142 44 59 ];
+        %tmp.27 = getv ? :lastMagFiltered;
+        symbol [ repThresholdLow %tmp.29 142 62 77 ];
+        %tmp.29 = getv ? :repThresholdLow;
+        %tmp.30 = lt %tmp.27 %tmp.29;
+        push %tmp.30;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_44_142_62_end:
+        %tmp.31 = phi [%tmp.25 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_19_142_62_begin] [%tmp.30 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_44_142_62_true] [%tmp.31 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_44_142_62_end];
+        bf %tmp.31 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_79_145_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 143 12 ]
+        %tmp.32 = "down";
+        symbol [ repPhase ? 143 12 20 ];
+        putv self :repPhase %tmp.32;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 144 12 ]
+        symbol [ repCount %tmp.35 144 12 20 ];
+        %tmp.35 = getv ? :repCount;
+        %tmp.36 = add %tmp.35 1;
+        symbol [ repCount ? 144 12 20 ];
+        putv self :repCount dup %tmp.36;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_79_145_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_142_15_145_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_140_8_145_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_135_28_146_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 149; @symbol_functiondef = [manualSetBoundary,149,13,30]; ]
+    function manualSetBoundary() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_149_33_159_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 150 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_stmt:
+        symbol [ state %tmp.2 150 12 17 ];
+        %tmp.2 = getv ? :state;
+        symbol [ equals %tmp.3 150 18 24 ];
+        %tmp.3 = getv function %tmp.2 :equals;
+        %tmp.4 = "ACTIVE_SET";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        bf %tmp.5 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_else_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_40_155_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 152 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_begin:
+        symbol [ hrHistory %tmp.7 152 24 33 ];
+        %tmp.7 = getv ? :hrHistory;
+        symbol [ size %tmp.8 152 34 38 ];
+        %tmp.8 = getv function %tmp.7 :size;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = 0;
+        %tmp.11 = gt %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_else_false;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_true:
+        symbol [ hrHistory %tmp.13 152 47 56 ];
+        %tmp.13 = getv ? :hrHistory;
+        symbol [ hrHistory %tmp.15 152 57 66 ];
+        %tmp.15 = getv ? :hrHistory;
+        symbol [ size %tmp.16 152 67 71 ];
+        %tmp.16 = getv function %tmp.15 :size;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        %tmp.18 = 1;
+        %tmp.19 = sub %tmp.17 %tmp.18;
+        %tmp.20 = agetv %tmp.13 %tmp.19;
+        push %tmp.20;
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_else_false:
+        %tmp.21 = 0;
+        push %tmp.21;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_end:
+        %tmp.22 = phi [%tmp.11 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_begin] [%tmp.20 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_true] [%tmp.21 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_else_false] [%tmp.22 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_152_24_152_81_end];
+        symbol [ preRestHR ? 152 12 21 ];
+        putv self :preRestHR %tmp.22;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 153 12 ]
+        %tmp.23 = "RESTING";
+        symbol [ state ? 153 12 17 ];
+        putv self :state %tmp.23;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 154 12 ]
+        %tmp.24 = 0;
+        symbol [ stateTimer ? 154 12 22 ];
+        putv self :stateTimer %tmp.24;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_40_155_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_else_false:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_155_15_158_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 157 12 ]
+        %tmp.25 = self;
+        symbol [ transitionToSet %tmp.26 157 12 27 ];
+        %tmp.26 = getv function %tmp.25 :transitionToSet;
+        invoke %tmp.25 %tmp.26();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_155_15_158_8_stop:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_150_8_158_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_149_33_159_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 161; @symbol_functiondef = [getHRPct,161,13,21]; @symbol_param<0> = [hr,161,22,24]; @symbol_param<1> = [maxHR,161,26,31]; @symbol_param<2> = [restingHR,161,33,42]; ]
+    function getHRPct(hr, maxHR, restingHR) {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_161_44_166_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 162 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_12_162_40_begin:
+        %tmp.1 = lgetv %maxHR;
+        symbol [ maxHR %tmp.1 162 12 17 ];
+        %tmp.2 = lgetv %restingHR;
+        symbol [ restingHR %tmp.2 162 21 30 ];
+        %tmp.3 = lte %tmp.1 %tmp.2;
+        bt %tmp.3 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_true;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_34_162_40_false:
+        %tmp.4 = lgetv %hr;
+        symbol [ hr %tmp.4 162 34 36 ];
+        %tmp.5 = 0;
+        %tmp.6 = lte %tmp.4 %tmp.5;
+        push %tmp.6;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_34_162_40_end:
+        %tmp.7 = phi [%tmp.3 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_12_162_40_begin] [%tmp.6 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_34_162_40_false] [%tmp.7 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_34_162_40_end];
+        bf %tmp.7 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_43_164_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 163 12 ]
+        %tmp.8 = 0.0;
+        ret %tmp.8;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_43_164_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_162_8_164_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 165 8 ]
+        %tmp.9 = lgetv %hr;
+        symbol [ hr %tmp.9 165 16 18 ];
+        symbol [ toFloat %tmp.10 165 19 26 ];
+        %tmp.10 = getv function %tmp.9 :toFloat;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = lgetv %restingHR;
+        symbol [ restingHR %tmp.12 165 31 40 ];
+        %tmp.13 = sub %tmp.11 %tmp.12;
+        %tmp.14 = lgetv %maxHR;
+        symbol [ maxHR %tmp.14 165 45 50 ];
+        %tmp.15 = lgetv %restingHR;
+        symbol [ restingHR %tmp.15 165 53 62 ];
+        %tmp.16 = sub %tmp.14 %tmp.15;
+        %tmp.17 = div %tmp.13 %tmp.16;
+        ret %tmp.17;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_161_44_166_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 168; @symbol_functiondef = [computeVariance,168,13,28]; @symbol_param<0> = [buffer,168,29,35]; ]
+    function computeVariance(buffer) {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 169 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_8_171_8_if_stmt:
+        %tmp.1 = lgetv %buffer;
+        symbol [ buffer %tmp.1 169 12 18 ];
+        symbol [ size %tmp.2 169 19 23 ];
+        %tmp.2 = getv function %tmp.1 :size;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = lt %tmp.3 %tmp.4;
+        bf %tmp.5 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_8_171_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_8_171_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_31_171_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 170 12 ]
+        %tmp.6 = 0.0;
+        ret %tmp.6;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_31_171_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_8_171_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_169_8_171_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 172 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_stop" ]
+        %sum.1 = local;
+        symbol [ sum %sum.1 172 12 15 ];
+        %tmp.7 = 0.0;
+        lputv %sum.1 %tmp.7;
+        symbol [ sum %sum.1 172 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 173 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_test @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_incr @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_begin" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 173 17 18 ];
+        %tmp.8 = 0;
+        lputv %i.2 %tmp.8;
+        symbol [ i %i.2 173 17 18 ];
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_test:
+        %tmp.9 = lgetv %i.2;
+        symbol [ i %tmp.9 173 24 25 ];
+        %tmp.10 = lgetv %buffer;
+        symbol [ buffer %tmp.10 173 28 34 ];
+        symbol [ size %tmp.11 173 35 39 ];
+        %tmp.11 = getv function %tmp.10 :size;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = lt %tmp.9 %tmp.12;
+        bf %tmp.13 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_48_175_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 174 12 ]
+        %tmp.14 = lgetv %sum.1;
+        symbol [ sum %tmp.14 174 12 15 ];
+        %tmp.15 = lgetv %buffer;
+        symbol [ buffer %tmp.15 174 19 25 ];
+        %tmp.16 = lgetv %i.2;
+        symbol [ i %tmp.16 174 26 27 ];
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = add %tmp.14 %tmp.17;
+        lputv %sum.1 %tmp.18;
+        symbol [ sum %sum.1 174 12 15 ];
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_48_175_8_stop:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 173 ]
+        %tmp.21 = lgetv %i.2;
+        symbol [ i %tmp.21 173 43 44 ];
+        %tmp.22 = add %tmp.21 1;
+        lputv %i.2 %tmp.22;
+        symbol [ i %i.2 173 43 44 ];
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_test;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_173_8_175_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 176 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_stop" ]
+        %mean.3 = local;
+        symbol [ mean %mean.3 176 12 16 ];
+        %tmp.23 = lgetv %sum.1;
+        symbol [ sum %tmp.23 176 19 22 ];
+        %tmp.24 = lgetv %buffer;
+        symbol [ buffer %tmp.24 176 25 31 ];
+        symbol [ size %tmp.25 176 32 36 ];
+        %tmp.25 = getv function %tmp.24 :size;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        %tmp.27 = div %tmp.23 %tmp.26;
+        lputv %mean.3 %tmp.27;
+        symbol [ mean %mean.3 176 12 16 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 177 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_stop" ]
+        %sumSqDev.4 = local;
+        symbol [ sumSqDev %sumSqDev.4 177 12 20 ];
+        %tmp.28 = 0.0;
+        lputv %sumSqDev.4 %tmp.28;
+        symbol [ sumSqDev %sumSqDev.4 177 12 20 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 178 8 ]
+        for @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_test @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_incr @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_init:
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_begin" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_end" ]
+        %i.5 = local;
+        symbol [ i %i.5 178 17 18 ];
+        %tmp.29 = 0;
+        lputv %i.5 %tmp.29;
+        symbol [ i %i.5 178 17 18 ];
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_test:
+        %tmp.30 = lgetv %i.5;
+        symbol [ i %tmp.30 178 24 25 ];
+        %tmp.31 = lgetv %buffer;
+        symbol [ buffer %tmp.31 178 28 34 ];
+        symbol [ size %tmp.32 178 35 39 ];
+        %tmp.32 = getv function %tmp.31 :size;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        %tmp.34 = lt %tmp.30 %tmp.33;
+        bf %tmp.34 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_begin:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_48_181_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 179 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_48_181_8_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_48_181_8_stop" ]
+        %dev.6 = local;
+        symbol [ dev %dev.6 179 16 19 ];
+        %tmp.35 = lgetv %buffer;
+        symbol [ buffer %tmp.35 179 22 28 ];
+        %tmp.36 = lgetv %i.5;
+        symbol [ i %tmp.36 179 29 30 ];
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        %tmp.38 = lgetv %mean.3;
+        symbol [ mean %tmp.38 179 34 38 ];
+        %tmp.39 = sub %tmp.37 %tmp.38;
+        lputv %dev.6 %tmp.39;
+        symbol [ dev %dev.6 179 16 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 180 12 ]
+        %tmp.40 = lgetv %sumSqDev.4;
+        symbol [ sumSqDev %tmp.40 180 12 20 ];
+        %tmp.41 = lgetv %dev.6;
+        symbol [ dev %tmp.41 180 24 27 ];
+        %tmp.42 = lgetv %dev.6;
+        symbol [ dev %tmp.42 180 30 33 ];
+        %tmp.43 = mul %tmp.41 %tmp.42;
+        %tmp.44 = add %tmp.40 %tmp.43;
+        lputv %sumSqDev.4 %tmp.44;
+        symbol [ sumSqDev %sumSqDev.4 180 12 20 ];
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_48_181_8_stop:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_incr:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 178 ]
+        %tmp.47 = lgetv %i.5;
+        symbol [ i %tmp.47 178 43 44 ];
+        %tmp.48 = add %tmp.47 1;
+        lputv %i.5 %tmp.48;
+        symbol [ i %i.5 178 43 44 ];
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_test;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_178_8_181_8_for_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 182 8 ]
+        %tmp.49 = lgetv %sumSqDev.4;
+        symbol [ sumSqDev %tmp.49 182 15 23 ];
+        %tmp.50 = lgetv %buffer;
+        symbol [ buffer %tmp.50 182 26 32 ];
+        symbol [ size %tmp.51 182 33 37 ];
+        %tmp.51 = getv function %tmp.50 :size;
+        %tmp.52 = invoke %tmp.50 %tmp.51();
+        %tmp.53 = div %tmp.49 %tmp.52;
+        ret %tmp.53;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_168_37_183_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 185; @symbol_functiondef = [getAccelMagnitude,185,13,30]; ]
+    function getAccelMagnitude() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_185_33_187_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc" 186 8 ]
+        symbol [ lastAccelMagnitude %tmp.2 186 15 33 ];
+        %tmp.2 = getv ? :lastAccelMagnitude;
+        ret %tmp.2;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_GymStateEngine_mc_185_33_187_4_stop:
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/GymStateEngine.mc"; @line = 1; ]
+<init> {
+}

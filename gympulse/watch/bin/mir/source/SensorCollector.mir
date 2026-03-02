@@ -1,0 +1,924 @@
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Sensor,1,13,19]; ]
+using Toybox.Sensor;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Timer,2,13,18]; ]
+using Toybox.Timer;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Activity,3,13,21]; ]
+using Toybox.Activity;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [ActivityRecording,4,13,30]; ]
+using Toybox.ActivityRecording;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [System,5,13,19]; ]
+using Toybox.System;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [UserProfile,6,13,24]; ]
+using Toybox.UserProfile;
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 8; @symbol_classdef = [SensorCollector,8,6,21]; ]
+class SensorCollector {
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 8; ]
+    <init> {
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 19 8 ]
+        %tmp.1 = newa 0;
+        putv self :lastRRIntervals %tmp.1;
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 11; @position = 8; @symbol_vardef = [heartRate,11,8,17]; ]
+    var heartRate = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 12; @position = 8; @symbol_vardef = [accelX,12,8,14]; ]
+    var accelX = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 13; @position = 8; @symbol_vardef = [accelY,13,8,14]; ]
+    var accelY = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 14; @position = 8; @symbol_vardef = [accelZ,14,8,14]; ]
+    var accelZ = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 15; @position = 8; @symbol_vardef = [elapsedTime,15,8,19]; ]
+    var elapsedTime = 0;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 18; @position = 8; @symbol_vardef = [hrvCalculator,18,8,21]; ]
+    var hrvCalculator;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 19; @position = 8; @symbol_vardef = [lastRRIntervals,19,8,23]; ]
+    var lastRRIntervals;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 22; @position = 8; @symbol_vardef = [gymStateEngine,22,8,22]; ]
+    var gymStateEngine;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 25; @position = 8; @symbol_vardef = [maxHR,25,8,13]; ]
+    var maxHR = 190;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 26; @position = 8; @symbol_vardef = [restingHR,26,8,17]; ]
+    var restingHR = 60;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 29; @position = 8; @symbol_vardef = [session,29,8,15]; ]
+    var session = null;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 32; @position = 8; @symbol_vardef = [transmitTimer,32,8,21]; ]
+    var transmitTimer;
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 34; @symbol_functiondef = [initialize,34,13,23]; ]
+    function initialize() as Void {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_34_26_38_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 35 8 ]
+        symbol [ HRVCalculator %tmp.4 35 28 41 ];
+        %tmp.4 = getv ? :HRVCalculator;
+        %tmp.1 = newc %tmp.4 ();
+        symbol [ hrvCalculator ? 35 8 21 ];
+        putv self :hrvCalculator %tmp.1;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 36 8 ]
+        symbol [ GymStateEngine %tmp.8 36 29 43 ];
+        %tmp.8 = getv ? :GymStateEngine;
+        %tmp.5 = newc %tmp.8 ();
+        symbol [ gymStateEngine ? 36 8 22 ];
+        putv self :gymStateEngine %tmp.5;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 37 8 ]
+        %tmp.9 = self;
+        symbol [ loadUserProfile %tmp.10 37 8 23 ];
+        %tmp.10 = getv function %tmp.9 :loadUserProfile;
+        invoke %tmp.9 %tmp.10();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_34_26_38_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 40; @symbol_functiondef = [loadUserProfile,40,13,28]; ]
+    function loadUserProfile() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_40_31_51_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 41 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_40_31_51_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_40_31_51_4_stop" ]
+        %profile.1 = local;
+        symbol [ profile %profile.1 41 12 19 ];
+        symbol [ UserProfile %tmp.1 41 22 33 ];
+        %tmp.1 = getm $.Toybox.UserProfile;
+        symbol [ getProfile %tmp.2 41 34 44 ];
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %profile.1 %tmp.3;
+        symbol [ profile %profile.1 41 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 42 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_8_50_8_if_stmt:
+        %tmp.4 = lgetv %profile.1;
+        symbol [ profile %tmp.4 42 12 19 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_8_50_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_8_50_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_29_50_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 43 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_29_50_8_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_29_50_8_stop" ]
+        %hrZones.2 = local;
+        symbol [ hrZones %hrZones.2 43 16 23 ];
+        symbol [ UserProfile %tmp.7 43 26 37 ];
+        %tmp.7 = getm $.Toybox.UserProfile;
+        symbol [ getHeartRateZones %tmp.8 43 38 55 ];
+        %tmp.8 = getv function %tmp.7 :getHeartRateZones;
+        symbol [ UserProfile %tmp.9 43 56 67 ];
+        %tmp.9 = getm $.Toybox.UserProfile;
+        symbol [ HR_ZONE_SPORT_GENERIC %tmp.10 43 68 89 ];
+        %tmp.10 = getv %tmp.9 :HR_ZONE_SPORT_GENERIC;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        lputv %hrZones.2 %tmp.11;
+        symbol [ hrZones %hrZones.2 43 16 23 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 44 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_16_44_52_begin:
+        %tmp.12 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.12 44 16 23 ];
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_35_44_52_true:
+        %tmp.15 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.15 44 35 42 ];
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ size %tmp.17 44 43 47 ];
+        %tmp.17 = getv function %tmp.16 :size;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = 0;
+        %tmp.20 = gt %tmp.18 %tmp.19;
+        push %tmp.20;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_35_44_52_end:
+        %tmp.21 = phi [%tmp.14 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_16_44_52_begin] [%tmp.20 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_35_44_52_true] [%tmp.21 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_35_44_52_end];
+        bf %tmp.21 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_55_46_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 45 16 ]
+        %tmp.22 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.22 45 24 31 ];
+        %tmp.23 = as %tmp.22 { (!Null) };
+        %tmp.24 = lgetv %hrZones.2;
+        symbol [ hrZones %tmp.24 45 32 39 ];
+        %tmp.25 = as %tmp.24 { (!Null) };
+        symbol [ size %tmp.26 45 40 44 ];
+        %tmp.26 = getv function %tmp.25 :size;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = 1;
+        %tmp.29 = sub %tmp.27 %tmp.28;
+        %tmp.30 = agetv %tmp.23 %tmp.29;
+        symbol [ maxHR ? 45 16 21 ];
+        putv self :maxHR %tmp.30;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_55_46_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_44_12_46_12_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 47 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_16_47_77_begin:
+        %tmp.31 = lgetv %profile.1;
+        symbol [ profile %tmp.31 47 16 23 ];
+        %tmp.32 = as %tmp.31 { (!Null) };
+        %tmp.34 = const :restingHeartRate;
+        symbol [ restingHeartRate %tmp.34 47 29 45 const ];
+        %tmp.35 = canhazplz %tmp.32 %tmp.34;
+        bf %tmp.35 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_49_47_77_true:
+        %tmp.36 = lgetv %profile.1;
+        symbol [ profile %tmp.36 47 49 56 ];
+        %tmp.37 = as %tmp.36 { (interface { var restingHeartRate; }) && (!Null) };
+        symbol [ restingHeartRate %tmp.38 47 57 73 ];
+        %tmp.38 = getv %tmp.37 :restingHeartRate;
+        %tmp.39 = null;
+        %tmp.40 = ne %tmp.38 %tmp.39;
+        push %tmp.40;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_49_47_77_end:
+        %tmp.41 = phi [%tmp.35 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_16_47_77_begin] [%tmp.40 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_49_47_77_true] [%tmp.41 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_49_47_77_end];
+        bf %tmp.41 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_83_49_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 48 16 ]
+        %tmp.42 = lgetv %profile.1;
+        symbol [ profile %tmp.42 48 28 35 ];
+        %tmp.43 = as %tmp.42 { (interface { var restingHeartRate; }) && (!Null) };
+        symbol [ restingHeartRate %tmp.44 48 36 52 ];
+        %tmp.44 = getv %tmp.43 :restingHeartRate;
+        symbol [ restingHR ? 48 16 25 ];
+        putv self :restingHR %tmp.44;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_83_49_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_47_12_49_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_29_50_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_8_50_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_42_8_50_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_40_31_51_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 53; @symbol_functiondef = [start,53,13,18]; ]
+    function start() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_53_21_87_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 55 8 ]
+        symbol [ Sensor %tmp.1 55 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ setEnabledSensors %tmp.2 55 15 32 ];
+        %tmp.2 = getv function %tmp.1 :setEnabledSensors;
+        %tmp.3 = newa 1;
+        symbol [ Sensor %tmp.4 55 34 40 ];
+        %tmp.4 = getm $.Toybox.Sensor;
+        symbol [ SENSOR_HEARTRATE %tmp.5 55 41 57 ];
+        %tmp.5 = getv %tmp.4 :SENSOR_HEARTRATE;
+        %tmp.6 = dup %tmp.3;
+        %tmp.7 = aputv %tmp.6 0 %tmp.5;
+        invoke %tmp.1 %tmp.2(%tmp.7);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 56 8 ]
+        symbol [ Sensor %tmp.8 56 8 14 ];
+        %tmp.8 = getm $.Toybox.Sensor;
+        symbol [ enableSensorEvents %tmp.9 56 15 33 ];
+        %tmp.9 = getv function %tmp.8 :enableSensorEvents;
+        %tmp.10 = self;
+        symbol [ method %tmp.11 56 34 40 ];
+        %tmp.11 = getv function %tmp.10 :method;
+        %tmp.13 = const :onSensorEvent;
+        symbol [ onSensorEvent %tmp.13 56 42 55 const ];
+        %tmp.14 = invoke %tmp.10 %tmp.11(%tmp.13);
+        invoke %tmp.8 %tmp.9(%tmp.14);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 59 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_53_21_87_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_53_21_87_4_stop" ]
+        %options.1 = local;
+        symbol [ options %options.1 59 12 19 ];
+        %tmp.15 = newd 3;
+        %tmp.17 = const :period;
+        symbol [ period %tmp.17 60 13 19 const ];
+        %tmp.18 = 1;
+        %tmp.19 = dup %tmp.15;
+        %tmp.20 = aputv %tmp.19 %tmp.17 %tmp.18;
+        %tmp.22 = const :accelerometer;
+        symbol [ accelerometer %tmp.22 61 13 26 const ];
+        %tmp.23 = newd 2;
+        %tmp.25 = const :enabled;
+        symbol [ enabled %tmp.25 62 17 24 const ];
+        %tmp.26 = true;
+        %tmp.27 = dup %tmp.23;
+        %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+        %tmp.30 = const :sampleRate;
+        symbol [ sampleRate %tmp.30 63 17 27 const ];
+        %tmp.31 = 25;
+        %tmp.32 = dup %tmp.28;
+        %tmp.33 = aputv %tmp.32 %tmp.30 %tmp.31;
+        %tmp.34 = dup %tmp.20;
+        %tmp.35 = aputv %tmp.34 %tmp.22 %tmp.33;
+        %tmp.37 = const :heartBeatIntervals;
+        symbol [ heartBeatIntervals %tmp.37 65 13 31 const ];
+        %tmp.38 = newd 1;
+        %tmp.40 = const :enabled;
+        symbol [ enabled %tmp.40 66 17 24 const ];
+        %tmp.41 = true;
+        %tmp.42 = dup %tmp.38;
+        %tmp.43 = aputv %tmp.42 %tmp.40 %tmp.41;
+        %tmp.44 = dup %tmp.35;
+        %tmp.45 = aputv %tmp.44 %tmp.37 %tmp.43;
+        lputv %options.1 %tmp.45;
+        symbol [ options %options.1 59 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 70 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_8_72_8_if_stmt:
+        symbol [ Sensor %tmp.46 70 12 18 ];
+        %tmp.46 = getm $.Toybox.Sensor;
+        %tmp.48 = const :registerSensorDataListener;
+        symbol [ registerSensorDataListener %tmp.48 70 24 50 const ];
+        %tmp.49 = canhazplz %tmp.46 %tmp.48;
+        bf %tmp.49 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_8_72_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_8_72_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_52_72_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 71 12 ]
+        symbol [ Sensor %tmp.50 71 12 18 ];
+        %tmp.50 = getm $.Toybox.Sensor;
+        symbol [ registerSensorDataListener %tmp.51 71 19 45 ];
+        %tmp.51 = getv function %tmp.50 :registerSensorDataListener;
+        %tmp.52 = self;
+        symbol [ method %tmp.53 71 46 52 ];
+        %tmp.53 = getv function %tmp.52 :method;
+        %tmp.55 = const :onHighFreqData;
+        symbol [ onHighFreqData %tmp.55 71 54 68 const ];
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.55);
+        %tmp.57 = lgetv %options.1;
+        symbol [ options %tmp.57 71 71 78 ];
+        invoke %tmp.50 %tmp.51(%tmp.56, %tmp.57);
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_52_72_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_8_72_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_70_8_72_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 75 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_8_82_8_if_stmt:
+        symbol [ ActivityRecording %tmp.58 75 12 29 ];
+        %tmp.58 = getm $.Toybox.ActivityRecording;
+        %tmp.60 = const :createSession;
+        symbol [ createSession %tmp.60 75 35 48 const ];
+        %tmp.61 = canhazplz %tmp.58 %tmp.60;
+        bf %tmp.61 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_8_82_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_8_82_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_50_82_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 76 12 ]
+        symbol [ ActivityRecording %tmp.62 76 22 39 ];
+        %tmp.62 = getm $.Toybox.ActivityRecording;
+        symbol [ createSession %tmp.63 76 40 53 ];
+        %tmp.63 = getv function %tmp.62 :createSession;
+        %tmp.64 = newd 3;
+        %tmp.66 = const :name;
+        symbol [ name %tmp.66 77 17 21 const ];
+        %tmp.67 = "Gym Workout";
+        %tmp.68 = dup %tmp.64;
+        %tmp.69 = aputv %tmp.68 %tmp.66 %tmp.67;
+        %tmp.71 = const :sport;
+        symbol [ sport %tmp.71 78 17 22 const ];
+        symbol [ Activity %tmp.72 78 26 34 ];
+        %tmp.72 = getm $.Toybox.Activity;
+        symbol [ SPORT_GENERIC %tmp.73 78 35 48 ];
+        %tmp.73 = getv %tmp.72 :SPORT_GENERIC;
+        %tmp.74 = dup %tmp.69;
+        %tmp.75 = aputv %tmp.74 %tmp.71 %tmp.73;
+        %tmp.77 = const :subSport;
+        symbol [ subSport %tmp.77 79 17 25 const ];
+        symbol [ Activity %tmp.78 79 29 37 ];
+        %tmp.78 = getm $.Toybox.Activity;
+        symbol [ SUB_SPORT_GENERIC %tmp.79 79 38 55 ];
+        %tmp.79 = getv %tmp.78 :SUB_SPORT_GENERIC;
+        %tmp.80 = dup %tmp.75;
+        %tmp.81 = aputv %tmp.80 %tmp.77 %tmp.79;
+        %tmp.82 = invoke %tmp.62 %tmp.63(%tmp.81);
+        symbol [ session ? 76 12 19 ];
+        putv self :session %tmp.82;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 81 12 ]
+        symbol [ session %tmp.84 81 12 19 ];
+        %tmp.84 = getv ? :session;
+        symbol [ start %tmp.85 81 20 25 ];
+        %tmp.85 = getv function %tmp.84 :start;
+        invoke %tmp.84 %tmp.85();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_50_82_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_8_82_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_75_8_82_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 85 8 ]
+        symbol [ Timer %tmp.88 85 28 33 ];
+        %tmp.88 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.89 85 34 39 ];
+        %tmp.89 = getv function ? %tmp.88 :Timer;
+        %tmp.86 = newc %tmp.89 ();
+        symbol [ transmitTimer ? 85 8 21 ];
+        putv self :transmitTimer %tmp.86;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 86 8 ]
+        symbol [ transmitTimer %tmp.91 86 8 21 ];
+        %tmp.91 = getv ? :transmitTimer;
+        symbol [ start %tmp.92 86 22 27 ];
+        %tmp.92 = getv function %tmp.91 :start;
+        %tmp.93 = self;
+        symbol [ method %tmp.94 86 28 34 ];
+        %tmp.94 = getv function %tmp.93 :method;
+        %tmp.96 = const :transmitData;
+        symbol [ transmitData %tmp.96 86 36 48 const ];
+        %tmp.97 = invoke %tmp.93 %tmp.94(%tmp.96);
+        %tmp.98 = 3000;
+        %tmp.99 = true;
+        invoke %tmp.91 %tmp.92(%tmp.97, %tmp.98, %tmp.99);
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_53_21_87_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 89; @symbol_functiondef = [stop,89,13,17]; ]
+    function stop() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_89_20_103_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 90 8 ]
+        symbol [ Sensor %tmp.1 90 8 14 ];
+        %tmp.1 = getm $.Toybox.Sensor;
+        symbol [ enableSensorEvents %tmp.2 90 15 33 ];
+        %tmp.2 = getv function %tmp.1 :enableSensorEvents;
+        %tmp.3 = null;
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 91 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_8_93_8_if_stmt:
+        symbol [ Sensor %tmp.4 91 12 18 ];
+        %tmp.4 = getm $.Toybox.Sensor;
+        %tmp.6 = const :unregisterSensorDataListener;
+        symbol [ unregisterSensorDataListener %tmp.6 91 24 52 const ];
+        %tmp.7 = canhazplz %tmp.4 %tmp.6;
+        bf %tmp.7 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_8_93_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_8_93_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_54_93_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 92 12 ]
+        symbol [ Sensor %tmp.8 92 12 18 ];
+        %tmp.8 = getm $.Toybox.Sensor;
+        symbol [ unregisterSensorDataListener %tmp.9 92 19 47 ];
+        %tmp.9 = getv function %tmp.8 :unregisterSensorDataListener;
+        invoke %tmp.8 %tmp.9();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_54_93_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_8_93_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_91_8_93_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 95 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_8_98_8_if_stmt:
+        symbol [ session %tmp.11 95 12 19 ];
+        %tmp.11 = getv ? :session;
+        %tmp.12 = null;
+        %tmp.13 = ne %tmp.11 %tmp.12;
+        bf %tmp.13 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_8_98_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_8_98_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_29_98_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 96 12 ]
+        symbol [ session %tmp.15 96 12 19 ];
+        %tmp.15 = getv ? :session;
+        %tmp.16 = as %tmp.15 { (!Null) };
+        symbol [ stop %tmp.17 96 20 24 ];
+        %tmp.17 = getv function %tmp.16 :stop;
+        invoke %tmp.16 %tmp.17();
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 97 12 ]
+        symbol [ session %tmp.19 97 12 19 ];
+        %tmp.19 = getv ? :session;
+        symbol [ save %tmp.20 97 20 24 ];
+        %tmp.20 = getv function %tmp.19 :save;
+        invoke %tmp.19 %tmp.20();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_29_98_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_8_98_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_95_8_98_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 100 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_8_102_8_if_stmt:
+        symbol [ transmitTimer %tmp.22 100 12 25 ];
+        %tmp.22 = getv ? :transmitTimer;
+        %tmp.23 = null;
+        %tmp.24 = ne %tmp.22 %tmp.23;
+        bf %tmp.24 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_8_102_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_8_102_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_35_102_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 101 12 ]
+        symbol [ transmitTimer %tmp.26 101 12 25 ];
+        %tmp.26 = getv ? :transmitTimer;
+        %tmp.27 = as %tmp.26 { (!Null) };
+        symbol [ stop %tmp.28 101 26 30 ];
+        %tmp.28 = getv function %tmp.27 :stop;
+        invoke %tmp.27 %tmp.28();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_35_102_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_8_102_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_100_8_102_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_89_20_103_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 106; @symbol_functiondef = [onSensorEvent,106,13,26]; @symbol_param<0> = [sensorInfo,106,27,37]; @symbol_param<0>_type<0> = [Sensor,106,41,47]; @symbol_param<0>_type<1> = [Info,106,48,52]; ]
+    function onSensorEvent(sensorInfo as Sensor.Info) as Void {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_106_62_129_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 107 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_8_109_8_if_stmt:
+        %tmp.1 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.1 107 12 22 ];
+        symbol [ heartRate %tmp.2 107 23 32 ];
+        %tmp.2 = getv %tmp.1 :heartRate;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_8_109_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_8_109_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_42_109_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 108 12 ]
+        %tmp.5 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.5 108 24 34 ];
+        symbol [ heartRate %tmp.6 108 35 44 ];
+        %tmp.6 = getv %tmp.5 :heartRate;
+        symbol [ heartRate ? 108 12 21 ];
+        putv self :heartRate %tmp.6;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_42_109_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_8_109_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_107_8_109_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 110 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_12_110_57_begin:
+        %tmp.7 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.7 110 12 22 ];
+        %tmp.9 = const :accel;
+        symbol [ accel %tmp.9 110 28 33 const ];
+        %tmp.10 = canhazplz %tmp.7 %tmp.9;
+        bf %tmp.10 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_37_110_57_true:
+        %tmp.11 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.11 110 37 47 ];
+        %tmp.12 = as %tmp.11 { (interface { var accel; }) };
+        symbol [ accel %tmp.13 110 48 53 ];
+        %tmp.13 = getv %tmp.12 :accel;
+        %tmp.14 = null;
+        %tmp.15 = ne %tmp.13 %tmp.14;
+        push %tmp.15;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_37_110_57_end:
+        %tmp.16 = phi [%tmp.10 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_12_110_57_begin] [%tmp.15 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_37_110_57_true] [%tmp.16 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_37_110_57_end];
+        bf %tmp.16 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_63_114_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 111 12 ]
+        %tmp.17 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.17 111 21 31 ];
+        %tmp.18 = as %tmp.17 { (interface { var accel; }) };
+        symbol [ accel %tmp.19 111 32 37 ];
+        %tmp.19 = getv %tmp.18 :accel;
+        %tmp.20 = 0;
+        %tmp.21 = agetv %tmp.19 %tmp.20;
+        symbol [ accelX ? 111 12 18 ];
+        putv self :accelX %tmp.21;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 112 12 ]
+        %tmp.22 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.22 112 21 31 ];
+        %tmp.23 = as %tmp.22 { (interface { var accel; }) };
+        symbol [ accel %tmp.24 112 32 37 ];
+        %tmp.24 = getv %tmp.23 :accel;
+        %tmp.25 = 1;
+        %tmp.26 = agetv %tmp.24 %tmp.25;
+        symbol [ accelY ? 112 12 18 ];
+        putv self :accelY %tmp.26;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 113 12 ]
+        %tmp.27 = lgetv %sensorInfo;
+        symbol [ sensorInfo %tmp.27 113 21 31 ];
+        %tmp.28 = as %tmp.27 { (interface { var accel; }) };
+        symbol [ accel %tmp.29 113 32 37 ];
+        %tmp.29 = getv %tmp.28 :accel;
+        %tmp.30 = 2;
+        %tmp.31 = agetv %tmp.29 %tmp.30;
+        symbol [ accelZ ? 113 12 18 ];
+        putv self :accelZ %tmp.31;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_63_114_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_110_8_114_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 117 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_106_62_129_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_106_62_129_4_stop" ]
+        %actInfo.1 = local;
+        symbol [ actInfo %actInfo.1 117 12 19 ];
+        symbol [ Activity %tmp.32 117 22 30 ];
+        %tmp.32 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.33 117 31 46 ];
+        %tmp.33 = getv function %tmp.32 :getActivityInfo;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        lputv %actInfo.1 %tmp.34;
+        symbol [ actInfo %actInfo.1 117 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 118 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_8_122_8_if_stmt:
+        %tmp.35 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.35 118 12 19 ];
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        bf %tmp.37 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_8_122_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_8_122_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_29_122_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 119 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_12_121_12_if_stmt:
+        %tmp.38 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.38 119 16 23 ];
+        %tmp.39 = as %tmp.38 { (!Null) };
+        symbol [ timerTime %tmp.40 119 24 33 ];
+        %tmp.40 = getv %tmp.39 :timerTime;
+        %tmp.41 = null;
+        %tmp.42 = ne %tmp.40 %tmp.41;
+        bf %tmp.42 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_12_121_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_12_121_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_43_121_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 120 16 ]
+        %tmp.43 = lgetv %actInfo.1;
+        symbol [ actInfo %tmp.43 120 30 37 ];
+        %tmp.44 = as %tmp.43 { (!Null) };
+        symbol [ timerTime %tmp.45 120 38 47 ];
+        %tmp.45 = getv %tmp.44 :timerTime;
+        symbol [ elapsedTime ? 120 16 27 ];
+        putv self :elapsedTime %tmp.45;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_43_121_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_12_121_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_119_12_121_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_29_122_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_8_122_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_118_8_122_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 125 8 ]
+        symbol [ gymStateEngine %tmp.47 125 8 22 ];
+        %tmp.47 = getv ? :gymStateEngine;
+        symbol [ update %tmp.48 125 23 29 ];
+        %tmp.48 = getv function %tmp.47 :update;
+        symbol [ heartRate %tmp.50 125 30 39 ];
+        %tmp.50 = getv ? :heartRate;
+        symbol [ accelX %tmp.52 125 41 47 ];
+        %tmp.52 = getv ? :accelX;
+        symbol [ accelY %tmp.54 125 49 55 ];
+        %tmp.54 = getv ? :accelY;
+        symbol [ accelZ %tmp.56 125 57 63 ];
+        %tmp.56 = getv ? :accelZ;
+        symbol [ maxHR %tmp.58 125 65 70 ];
+        %tmp.58 = getv ? :maxHR;
+        symbol [ restingHR %tmp.60 125 72 81 ];
+        %tmp.60 = getv ? :restingHR;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52, %tmp.54, %tmp.56, %tmp.58, %tmp.60);
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 128 8 ]
+        symbol [ WatchUi %tmp.62 128 8 15 ];
+        %tmp.62 = getv ? :WatchUi;
+        symbol [ requestUpdate %tmp.63 128 16 29 ];
+        %tmp.63 = getv function %tmp.62 :requestUpdate;
+        invoke %tmp.62 %tmp.63();
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_106_62_129_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 132; @symbol_functiondef = [onHighFreqData,132,13,27]; @symbol_param<0> = [sensorData,132,28,38]; @symbol_param<0>_type<0> = [Sensor,132,42,48]; @symbol_param<0>_type<1> = [SensorData,132,49,59]; ]
+    function onHighFreqData(sensorData as Sensor.SensorData) as Void {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_132_69_152_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 134 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_12_134_81_begin:
+        %tmp.1 = lgetv %sensorData;
+        symbol [ sensorData %tmp.1 134 12 22 ];
+        %tmp.3 = const :accelerometerData;
+        symbol [ accelerometerData %tmp.3 134 28 45 const ];
+        %tmp.4 = canhazplz %tmp.1 %tmp.3;
+        bf %tmp.4 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_49_134_81_true:
+        %tmp.5 = lgetv %sensorData;
+        symbol [ sensorData %tmp.5 134 49 59 ];
+        %tmp.6 = as %tmp.5 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.7 134 60 77 ];
+        %tmp.7 = getv %tmp.6 :accelerometerData;
+        %tmp.8 = null;
+        %tmp.9 = ne %tmp.7 %tmp.8;
+        push %tmp.9;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_49_134_81_end:
+        %tmp.10 = phi [%tmp.4 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_12_134_81_begin] [%tmp.9 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_49_134_81_true] [%tmp.10 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_49_134_81_end];
+        bf %tmp.10 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_87_142_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 135 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_87_142_8_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_87_142_8_stop" ]
+        %accelData.1 = local;
+        symbol [ accelData %accelData.1 135 16 25 ];
+        %tmp.11 = lgetv %sensorData;
+        symbol [ sensorData %tmp.11 135 28 38 ];
+        %tmp.12 = as %tmp.11 { (interface { var accelerometerData; }) };
+        symbol [ accelerometerData %tmp.13 135 39 56 ];
+        %tmp.13 = getv %tmp.12 :accelerometerData;
+        lputv %accelData.1 %tmp.13;
+        symbol [ accelData %accelData.1 135 16 25 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 137 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_16_137_60_begin:
+        %tmp.14 = lgetv %accelData.1;
+        symbol [ accelData %tmp.14 137 16 25 ];
+        symbol [ x %tmp.15 137 26 27 ];
+        %tmp.15 = getv %tmp.14 :x;
+        %tmp.16 = null;
+        %tmp.17 = ne %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_39_137_60_true:
+        %tmp.18 = lgetv %accelData.1;
+        symbol [ accelData %tmp.18 137 39 48 ];
+        symbol [ x %tmp.19 137 49 50 ];
+        %tmp.19 = getv %tmp.18 :x;
+        symbol [ size %tmp.20 137 51 55 ];
+        %tmp.20 = getv function %tmp.19 :size;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        %tmp.22 = 0;
+        %tmp.23 = gt %tmp.21 %tmp.22;
+        push %tmp.23;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_39_137_60_end:
+        %tmp.24 = phi [%tmp.17 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_16_137_60_begin] [%tmp.23 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_39_137_60_true] [%tmp.24 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_39_137_60_end];
+        bf %tmp.24 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_63_141_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 138 16 ]
+        %tmp.25 = lgetv %accelData.1;
+        symbol [ accelData %tmp.25 138 25 34 ];
+        symbol [ x %tmp.26 138 35 36 ];
+        %tmp.26 = getv %tmp.25 :x;
+        %tmp.27 = lgetv %accelData.1;
+        symbol [ accelData %tmp.27 138 37 46 ];
+        symbol [ x %tmp.28 138 47 48 ];
+        %tmp.28 = getv %tmp.27 :x;
+        symbol [ size %tmp.29 138 49 53 ];
+        %tmp.29 = getv function %tmp.28 :size;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = 1;
+        %tmp.32 = sub %tmp.30 %tmp.31;
+        %tmp.33 = agetv %tmp.26 %tmp.32;
+        symbol [ accelX ? 138 16 22 ];
+        putv self :accelX %tmp.33;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 139 16 ]
+        %tmp.34 = lgetv %accelData.1;
+        symbol [ accelData %tmp.34 139 25 34 ];
+        symbol [ y %tmp.35 139 35 36 ];
+        %tmp.35 = getv %tmp.34 :y;
+        %tmp.36 = lgetv %accelData.1;
+        symbol [ accelData %tmp.36 139 37 46 ];
+        symbol [ y %tmp.37 139 47 48 ];
+        %tmp.37 = getv %tmp.36 :y;
+        symbol [ size %tmp.38 139 49 53 ];
+        %tmp.38 = getv function %tmp.37 :size;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = 1;
+        %tmp.41 = sub %tmp.39 %tmp.40;
+        %tmp.42 = agetv %tmp.35 %tmp.41;
+        symbol [ accelY ? 139 16 22 ];
+        putv self :accelY %tmp.42;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 140 16 ]
+        %tmp.43 = lgetv %accelData.1;
+        symbol [ accelData %tmp.43 140 25 34 ];
+        symbol [ z %tmp.44 140 35 36 ];
+        %tmp.44 = getv %tmp.43 :z;
+        %tmp.45 = lgetv %accelData.1;
+        symbol [ accelData %tmp.45 140 37 46 ];
+        symbol [ z %tmp.46 140 47 48 ];
+        %tmp.46 = getv %tmp.45 :z;
+        symbol [ size %tmp.47 140 49 53 ];
+        %tmp.47 = getv function %tmp.46 :size;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        %tmp.49 = 1;
+        %tmp.50 = sub %tmp.48 %tmp.49;
+        %tmp.51 = agetv %tmp.44 %tmp.50;
+        symbol [ accelZ ? 140 16 22 ];
+        putv self :accelZ %tmp.51;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_63_141_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_137_12_141_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_87_142_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_134_8_142_8_if_end:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 145 8 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_12_145_73_begin:
+        %tmp.52 = lgetv %sensorData;
+        symbol [ sensorData %tmp.52 145 12 22 ];
+        %tmp.54 = const :heartRateData;
+        symbol [ heartRateData %tmp.54 145 28 41 const ];
+        %tmp.55 = canhazplz %tmp.52 %tmp.54;
+        bf %tmp.55 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_45_145_73_true:
+        %tmp.56 = lgetv %sensorData;
+        symbol [ sensorData %tmp.56 145 45 55 ];
+        %tmp.57 = as %tmp.56 { (interface { var heartRateData; }) };
+        symbol [ heartRateData %tmp.58 145 56 69 ];
+        %tmp.58 = getv %tmp.57 :heartRateData;
+        %tmp.59 = null;
+        %tmp.60 = ne %tmp.58 %tmp.59;
+        push %tmp.60;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_45_145_73_end:
+        %tmp.61 = phi [%tmp.55 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_12_145_73_begin] [%tmp.60 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_45_145_73_true] [%tmp.61 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_45_145_73_end];
+        bf %tmp.61 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_79_151_8_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 146 12 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_79_151_8_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_79_151_8_stop" ]
+        %hrData.2 = local;
+        symbol [ hrData %hrData.2 146 16 22 ];
+        %tmp.62 = lgetv %sensorData;
+        symbol [ sensorData %tmp.62 146 25 35 ];
+        %tmp.63 = as %tmp.62 { (interface { var heartRateData; }) };
+        symbol [ heartRateData %tmp.64 146 36 49 ];
+        %tmp.64 = getv %tmp.63 :heartRateData;
+        lputv %hrData.2 %tmp.64;
+        symbol [ hrData %hrData.2 146 16 22 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 147 12 ]
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_stmt:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_16_147_79_begin:
+        %tmp.65 = lgetv %hrData.2;
+        symbol [ hrData %tmp.65 147 16 22 ];
+        %tmp.67 = const :heartBeatIntervals;
+        symbol [ heartBeatIntervals %tmp.67 147 28 46 const ];
+        %tmp.68 = canhazplz %tmp.65 %tmp.67;
+        bf %tmp.68 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_50_147_79_true:
+        %tmp.69 = lgetv %hrData.2;
+        symbol [ hrData %tmp.69 147 50 56 ];
+        %tmp.70 = as %tmp.69 { (interface { var heartBeatIntervals; }) };
+        symbol [ heartBeatIntervals %tmp.71 147 57 75 ];
+        %tmp.71 = getv %tmp.70 :heartBeatIntervals;
+        %tmp.72 = null;
+        %tmp.73 = ne %tmp.71 %tmp.72;
+        push %tmp.73;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_50_147_79_end:
+        %tmp.74 = phi [%tmp.68 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_16_147_79_begin] [%tmp.73 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_50_147_79_true] [%tmp.74 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_50_147_79_end];
+        bf %tmp.74 @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_true:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_85_150_12_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 148 16 ]
+        %tmp.75 = lgetv %hrData.2;
+        symbol [ hrData %tmp.75 148 34 40 ];
+        %tmp.76 = as %tmp.75 { (interface { var heartBeatIntervals; }) };
+        symbol [ heartBeatIntervals %tmp.77 148 41 59 ];
+        %tmp.77 = getv %tmp.76 :heartBeatIntervals;
+        symbol [ lastRRIntervals ? 148 16 31 ];
+        putv self :lastRRIntervals %tmp.77;
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 149 16 ]
+        symbol [ hrvCalculator %tmp.79 149 16 29 ];
+        %tmp.79 = getv ? :hrvCalculator;
+        symbol [ addIntervals %tmp.80 149 30 42 ];
+        %tmp.80 = getv function %tmp.79 :addIntervals;
+        symbol [ lastRRIntervals %tmp.82 149 43 58 ];
+        %tmp.82 = getv ? :lastRRIntervals;
+        invoke %tmp.79 %tmp.80(%tmp.82);
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_85_150_12_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_147_12_150_12_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_79_151_8_stop:
+        goto @_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_end;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_145_8_151_8_if_end:
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_132_69_152_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 155; @symbol_functiondef = [transmitData,155,13,25]; ]
+    function transmitData() as Void {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 156 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_stop" ]
+        %app.1 = local;
+        symbol [ app %app.1 156 12 15 ];
+        symbol [ Application %tmp.2 156 18 29 ];
+        %tmp.2 = getv ? :Application;
+        symbol [ getApp %tmp.3 156 30 36 ];
+        %tmp.3 = getv function %tmp.2 :getApp;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %app.1 %tmp.4;
+        symbol [ app %app.1 156 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 157 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_stop" ]
+        %payload.2 = local;
+        symbol [ payload %payload.2 157 12 19 ];
+        %tmp.5 = self;
+        symbol [ buildPayload %tmp.6 157 22 34 ];
+        %tmp.6 = getv function %tmp.5 :buildPayload;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %payload.2 %tmp.7;
+        symbol [ payload %payload.2 157 12 19 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 158 8 ]
+        %tmp.8 = lgetv %app.1;
+        symbol [ app %tmp.8 158 8 11 ];
+        symbol [ dataTransmitter %tmp.9 158 12 27 ];
+        %tmp.9 = getv %tmp.8 :dataTransmitter;
+        symbol [ send %tmp.10 158 28 32 ];
+        %tmp.10 = getv function %tmp.9 :send;
+        %tmp.11 = lgetv %payload.2;
+        symbol [ payload %tmp.11 158 33 40 ];
+        invoke %tmp.9 %tmp.10(%tmp.11);
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_155_36_159_4_stop:
+    }
+    [ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 161; @symbol_functiondef = [buildPayload,161,13,25]; ]
+    function buildPayload() {
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_161_28_179_4_start:
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 162 8 ]
+        [ "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_161_28_179_4_start" "_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_161_28_179_4_stop" ]
+        %gse.1 = local;
+        symbol [ gse %gse.1 162 12 15 ];
+        symbol [ gymStateEngine %tmp.2 162 18 32 ];
+        %tmp.2 = getv ? :gymStateEngine;
+        lputv %gse.1 %tmp.2;
+        symbol [ gse %gse.1 162 12 15 ];
+[ "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc" 163 8 ]
+        %tmp.3 = newd 14;
+        %tmp.4 = "ts";
+        symbol [ System %tmp.5 164 20 26 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ getTimer %tmp.6 164 27 35 ];
+        %tmp.6 = getv function %tmp.5 :getTimer;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = dup %tmp.3;
+        %tmp.9 = aputv %tmp.8 %tmp.4 %tmp.7;
+        %tmp.10 = "hr";
+        symbol [ heartRate %tmp.12 165 20 29 ];
+        %tmp.12 = getv ? :heartRate;
+        %tmp.13 = dup %tmp.9;
+        %tmp.14 = aputv %tmp.13 %tmp.10 %tmp.12;
+        %tmp.15 = "hrv";
+        symbol [ hrvCalculator %tmp.17 166 21 34 ];
+        %tmp.17 = getv ? :hrvCalculator;
+        symbol [ getRMSSD %tmp.18 166 35 43 ];
+        %tmp.18 = getv function %tmp.17 :getRMSSD;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 %tmp.15 %tmp.19;
+        %tmp.22 = "ax";
+        symbol [ accelX %tmp.24 167 20 26 ];
+        %tmp.24 = getv ? :accelX;
+        %tmp.25 = dup %tmp.21;
+        %tmp.26 = aputv %tmp.25 %tmp.22 %tmp.24;
+        %tmp.27 = "ay";
+        symbol [ accelY %tmp.29 168 20 26 ];
+        %tmp.29 = getv ? :accelY;
+        %tmp.30 = dup %tmp.26;
+        %tmp.31 = aputv %tmp.30 %tmp.27 %tmp.29;
+        %tmp.32 = "az";
+        symbol [ accelZ %tmp.34 169 20 26 ];
+        %tmp.34 = getv ? :accelZ;
+        %tmp.35 = dup %tmp.31;
+        %tmp.36 = aputv %tmp.35 %tmp.32 %tmp.34;
+        %tmp.37 = "et";
+        symbol [ elapsedTime %tmp.39 170 20 31 ];
+        %tmp.39 = getv ? :elapsedTime;
+        %tmp.40 = dup %tmp.36;
+        %tmp.41 = aputv %tmp.40 %tmp.37 %tmp.39;
+        %tmp.42 = "mhr";
+        symbol [ maxHR %tmp.44 171 21 26 ];
+        %tmp.44 = getv ? :maxHR;
+        %tmp.45 = dup %tmp.41;
+        %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+        %tmp.47 = "rhr";
+        symbol [ restingHR %tmp.49 172 21 30 ];
+        %tmp.49 = getv ? :restingHR;
+        %tmp.50 = dup %tmp.46;
+        %tmp.51 = aputv %tmp.50 %tmp.47 %tmp.49;
+        %tmp.52 = "state";
+        %tmp.53 = lgetv %gse.1;
+        symbol [ gse %tmp.53 173 23 26 ];
+        symbol [ state %tmp.54 173 27 32 ];
+        %tmp.54 = getv %tmp.53 :state;
+        %tmp.55 = dup %tmp.51;
+        %tmp.56 = aputv %tmp.55 %tmp.52 %tmp.54;
+        %tmp.57 = "setNumber";
+        %tmp.58 = lgetv %gse.1;
+        symbol [ gse %tmp.58 174 27 30 ];
+        symbol [ setNumber %tmp.59 174 31 40 ];
+        %tmp.59 = getv %tmp.58 :setNumber;
+        %tmp.60 = dup %tmp.56;
+        %tmp.61 = aputv %tmp.60 %tmp.57 %tmp.59;
+        %tmp.62 = "repCount";
+        %tmp.63 = lgetv %gse.1;
+        symbol [ gse %tmp.63 175 26 29 ];
+        symbol [ repCount %tmp.64 175 30 38 ];
+        %tmp.64 = getv %tmp.63 :repCount;
+        %tmp.65 = dup %tmp.61;
+        %tmp.66 = aputv %tmp.65 %tmp.62 %tmp.64;
+        %tmp.67 = "preRestHR";
+        %tmp.68 = lgetv %gse.1;
+        symbol [ gse %tmp.68 176 27 30 ];
+        symbol [ preRestHR %tmp.69 176 31 40 ];
+        %tmp.69 = getv %tmp.68 :preRestHR;
+        %tmp.70 = dup %tmp.66;
+        %tmp.71 = aputv %tmp.70 %tmp.67 %tmp.69;
+        %tmp.72 = "hrDrop";
+        %tmp.73 = lgetv %gse.1;
+        symbol [ gse %tmp.73 177 24 27 ];
+        symbol [ hrDrop %tmp.74 177 28 34 ];
+        %tmp.74 = getv %tmp.73 :hrDrop;
+        %tmp.75 = dup %tmp.71;
+        %tmp.76 = aputv %tmp.75 %tmp.72 %tmp.74;
+        ret %tmp.76;
+_Users_duboc_local_projects_realtime_cq_gympulse_watch_source_SensorCollector_mc_161_28_179_4_stop:
+    }
+}
+[ @file = "/Users/duboc/local/projects/realtime-cq/gympulse/watch/source/SensorCollector.mc"; @line = 1; ]
+<init> {
+}

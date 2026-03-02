@@ -12,7 +12,7 @@ class DataTransmitter {
     <init> {
     }
     [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc"; @line = 7; @position = 8; @symbol_vardef = [cloudUrl,7,8,16]; ]
-    var cloudUrl = "https://realtime-cq-984391209153.us-central1.run.app/api/data";
+    var cloudUrl = "CLOUD_URL_PLACEHOLDER";
     [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc"; @line = 10; @position = 8; @symbol_vardef = [connected,10,8,17]; ]
     var connected = false;
     [ @file = "/Users/duboc/local/projects/realtime-cq/SoccerMonitor/source/DataTransmitter.mc"; @line = 13; @symbol_functiondef = [send,13,13,17]; @symbol_param<0> = [payload,13,18,25]; ]

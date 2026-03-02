@@ -1,0 +1,492 @@
+/* === GymPulse Dark Theme === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #0a0a0f;
+  color: #e0e0e0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === Header === */
+.session-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(180deg, #111116, #0d0d12);
+  border-bottom: 1px solid #1e2430;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.session-header h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #e040fb;
+  letter-spacing: 0.5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status.connected {
+  background: rgba(102, 187, 106, 0.15);
+  color: #66bb6a;
+}
+
+.status.connected .status-dot {
+  background: #66bb6a;
+  box-shadow: 0 0 6px #66bb6a;
+}
+
+.status.disconnected {
+  background: rgba(239, 83, 80, 0.15);
+  color: #ef5350;
+}
+
+.status.disconnected .status-dot {
+  background: #ef5350;
+  box-shadow: 0 0 6px #ef5350;
+}
+
+.elapsed {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8892a4;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.set-count {
+  font-size: 0.75rem;
+  color: #e040fb;
+  font-weight: 600;
+}
+
+/* === Grid Layout === */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "hr      recovery  fatigue"
+    "timeline timeline  setlog";
+  gap: 8px;
+  padding: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+.grid-area {
+  background: linear-gradient(135deg, #141419, #121217);
+  border: 1px solid #1e2430;
+  border-radius: 10px;
+  padding: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  transition: border-color 0.4s ease;
+}
+
+.area-hr { grid-area: hr; }
+.area-recovery { grid-area: recovery; }
+.area-fatigue { grid-area: fatigue; }
+.area-setlog { grid-area: setlog; }
+.area-timeline { grid-area: timeline; }
+
+/* Card glow */
+.grid-area.glow { border-color: rgba(224, 64, 251, 0.4); }
+
+/* === Card Headers === */
+.card-title {
+  font-size: 0.7rem;
+  color: #5a6478;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* === Hero Values === */
+.hero-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s ease;
+}
+
+.hero-unit {
+  font-size: 0.9rem;
+  color: #5a6478;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+/* === HR Zone Colors === */
+.zone-1 { color: #2196f3; }
+.zone-2 { color: #4caf50; }
+.zone-3 { color: #ff9800; }
+.zone-4 { color: #f44336; }
+.zone-5 { color: #9c27b0; }
+
+/* === Zone Bar === */
+.zone-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #1a1f2a;
+  margin-top: 8px;
+  gap: 2px;
+}
+
+.zone-bar .segment {
+  flex: 1;
+  border-radius: 2px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.zone-bar .segment.active {
+  opacity: 1;
+}
+
+.zone-bar .seg-1 { background: #2196f3; }
+.zone-bar .seg-2 { background: #4caf50; }
+.zone-bar .seg-3 { background: #ff9800; }
+.zone-bar .seg-4 { background: #f44336; }
+.zone-bar .seg-5 { background: #9c27b0; }
+
+/* === HR Stats Row === */
+.hr-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.hr-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 6px;
+  background: #1a1f2a;
+  border-radius: 6px;
+}
+
+.hr-stat-label {
+  font-size: 0.6rem;
+  color: #5a6478;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hr-stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* === Recovery Meter === */
+.recovery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.recovery-svg {
+  width: 180px;
+  height: 180px;
+}
+
+.recovery-value {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.recovery-status {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.recovery-status.go { color: #66bb6a; }
+.recovery-status.almost { color: #ffa726; }
+.recovery-status.not-ready { color: #ef5350; }
+
+/* === Fatigue Gauge === */
+.fatigue-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.fatigue-svg {
+  width: 220px;
+  height: 130px;
+}
+
+.fatigue-value {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -4px;
+  transition: color 0.3s ease;
+}
+
+.fatigue-zone {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.fatigue-recommendation {
+  font-size: 0.65rem;
+  color: #5a6478;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* === Set Log === */
+.setlog-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.setlog-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.setlog-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.setlog-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.setlog-list::-webkit-scrollbar-thumb {
+  background: #2a2a35;
+  border-radius: 2px;
+}
+
+.set-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #1a1f2a;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.set-number {
+  font-weight: 700;
+  color: #e040fb;
+  width: 24px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.set-reps {
+  color: #fff;
+  font-weight: 600;
+  width: 50px;
+}
+
+.set-hr {
+  color: #ef5350;
+  font-family: 'JetBrains Mono', monospace;
+  width: 60px;
+}
+
+.recovery-mini-bar {
+  flex: 1;
+  height: 6px;
+  background: #252530;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.recovery-mini-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.recovery-mini-pct {
+  font-family: 'JetBrains Mono', monospace;
+  color: #8892a4;
+  width: 36px;
+  text-align: right;
+}
+
+/* === HR Timeline === */
+.timeline-container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-chart {
+  flex: 1;
+  min-height: 0;
+}
+
+/* === Overtraining Alert === */
+.overtraining-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(239, 83, 80, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: alertPulse 2s infinite;
+}
+
+.overtraining-content {
+  text-align: center;
+  background: rgba(20, 10, 10, 0.95);
+  border: 2px solid #ef5350;
+  border-radius: 16px;
+  padding: 40px 60px;
+}
+
+.overtraining-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ef5350;
+  margin-bottom: 8px;
+}
+
+.overtraining-score {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: #fff;
+}
+
+.overtraining-msg {
+  font-size: 1rem;
+  color: #ef9a9a;
+  margin-top: 12px;
+}
+
+@keyframes alertPulse {
+  0%, 100% { background: rgba(239, 83, 80, 0.1); }
+  50% { background: rgba(239, 83, 80, 0.2); }
+}
+
+/* === Session Picker === */
+.session-picker {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  z-index: 100;
+}
+
+.session-picker select {
+  background: #1a1f2a;
+  color: #e0e0e0;
+  border: 1px solid #2a2a35;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  cursor: pointer;
+}
+
+/* === Value Flash Animation === */
+.value-flash {
+  animation: valueFlash 0.4s ease-out;
+}
+
+@keyframes valueFlash {
+  0% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* === Responsive === */
+@media (max-width: 1200px) {
+  html, body, #root { overflow: auto; }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hr       recovery"
+      "fatigue  setlog"
+      "timeline timeline";
+    height: auto;
+  }
+  .grid-area { min-height: 220px; }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hr"
+      "recovery"
+      "fatigue"
+      "setlog"
+      "timeline";
+  }
+  .grid-area { min-height: 200px; }
+}

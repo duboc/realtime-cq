@@ -1,0 +1,7 @@
+flask
+flask-cors
+flask-sock
+gunicorn
+gevent
+gevent-websocket
+google-cloud-firestore

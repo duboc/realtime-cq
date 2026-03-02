@@ -8,12 +8,22 @@ __pycache__/
 .venv/
 
 # Connect IQ build artifacts
-
 SoccerMonitor/*.prg.debug.xml
 SoccerMonitor/gen/
 SoccerMonitor/mir/
 SoccerMonitor/internal-mir/
 SoccerMonitor/sim/
+
+# GymPulse build artifacts
+gympulse/watch/*.prg.debug.xml
+gympulse/watch/gen/
+gympulse/watch/mir/
+gympulse/watch/internal-mir/
+gympulse/watch/sim/
+gympulse/dashboard/node_modules/
+gympulse/dashboard/dist/
+gympulse/backend/static/
+gympulse/backend/.venv/
 
 # IDE
 .vscode/

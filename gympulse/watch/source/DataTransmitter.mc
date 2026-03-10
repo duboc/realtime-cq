@@ -4,7 +4,7 @@ using Toybox.System;
 class DataTransmitter {
 
     // Cloud endpoint URL — replaced at build time
-    var cloudUrl = "CLOUD_URL_PLACEHOLDER";
+    var cloudUrl = "https://gympulse-a4er43fhfq-rj.a.run.app/api/ingest";
 
     // Connection status
     var connected = false;
@@ -13,6 +13,7 @@ class DataTransmitter {
     var cloudFatigue = 0;
     var cloudRecovery = 0;
     var cloudFatigueZone = "";
+    var cloudRecoveryETA = 0;
 
     // Send data to cloud via HTTP
     function send(payload) {
@@ -50,6 +51,9 @@ class DataTransmitter {
                 }
                 if (data.hasKey("fz")) {
                     cloudFatigueZone = data["fz"];
+                }
+                if (data.hasKey("recoveryETA")) {
+                    cloudRecoveryETA = data["recoveryETA"];
                 }
             }
         } else {

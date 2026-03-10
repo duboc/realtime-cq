@@ -27,6 +27,9 @@ gcloud run deploy gympulse \
     --region southamerica-east1 \
     --allow-unauthenticated \
     --session-affinity \
+    --max-instances 1 \
+    --min-instances 1 \
+    --set-env-vars USE_MEMORY=1 \
     --timeout 3600
 
 echo "Deploy complete!"

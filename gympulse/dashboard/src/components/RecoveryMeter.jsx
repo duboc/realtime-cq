@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { getRecoveryColor } from '../utils/formatters';
 import { playRecoveryReady } from '../utils/audio';
 
-export default function RecoveryMeter({ pct, status }) {
+export default function RecoveryMeter({ pct, status, restTimer, state }) {
   const prevPct = useRef(0);
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export default function RecoveryMeter({ pct, status }) {
   const offset = circumference * (1 - progress);
 
   const statusClass = status === 'GO' ? 'go' : status === 'ALMOST' ? 'almost' : 'not-ready';
+  const isResting = state === 'RESTING' && restTimer > 0;
 
   return (
     <>
@@ -45,20 +46,41 @@ export default function RecoveryMeter({ pct, status }) {
             style={{ transition: 'stroke-dashoffset 0.6s ease, stroke 0.3s ease' }}
           />
           {/* Center text */}
-          <text
-            x="90" y="85" textAnchor="middle"
-            fill={color}
-            style={{ fontSize: '2rem', fontWeight: 700, fontFamily: 'JetBrains Mono, monospace' }}
-          >
-            {Math.round(pct)}%
-          </text>
-          <text
-            x="90" y="110" textAnchor="middle"
-            fill="#5a6478"
-            style={{ fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}
-          >
-            readiness
-          </text>
+          {isResting ? (
+            <>
+              <text
+                x="90" y="78" textAnchor="middle"
+                fill={color}
+                style={{ fontSize: '2rem', fontWeight: 700, fontFamily: 'JetBrains Mono, monospace' }}
+              >
+                {Math.round(pct)}%
+              </text>
+              <text
+                x="90" y="108" textAnchor="middle"
+                fill="#8892a4"
+                style={{ fontSize: '1.1rem', fontWeight: 600, fontFamily: 'JetBrains Mono, monospace' }}
+              >
+                {Math.round(restTimer)}s
+              </text>
+            </>
+          ) : (
+            <>
+              <text
+                x="90" y="85" textAnchor="middle"
+                fill={color}
+                style={{ fontSize: '2rem', fontWeight: 700, fontFamily: 'JetBrains Mono, monospace' }}
+              >
+                {Math.round(pct)}%
+              </text>
+              <text
+                x="90" y="110" textAnchor="middle"
+                fill="#5a6478"
+                style={{ fontSize: '0.7rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px' }}
+              >
+                readiness
+              </text>
+            </>
+          )}
         </svg>
         <div className={`recovery-status ${statusClass}`}>
           {status === 'GO' ? 'GO' : status === 'ALMOST' ? 'Almost Ready' : 'Not Ready'}

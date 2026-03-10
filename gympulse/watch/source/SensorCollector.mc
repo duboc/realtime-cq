@@ -71,12 +71,12 @@ class SensorCollector {
             Sensor.registerSensorDataListener(method(:onHighFreqData), options);
         }
 
-        // Start activity recording
+        // Start activity recording — Strength Training
         if (ActivityRecording has :createSession) {
             session = ActivityRecording.createSession({
-                :name => "Gym Workout",
-                :sport => Activity.SPORT_GENERIC,
-                :subSport => Activity.SUB_SPORT_GENERIC
+                :name => "Strength Training",
+                :sport => Activity.SPORT_TRAINING,
+                :subSport => Activity.SUB_SPORT_STRENGTH_TRAINING
             });
             session.start();
         }
@@ -122,7 +122,24 @@ class SensorCollector {
         }
 
         // Update gym state engine
+        var prevState = gymStateEngine.state;
         gymStateEngine.update(heartRate, accelX, accelY, accelZ, maxHR, restingHR);
+        var curState = gymStateEngine.state;
+
+        // Mark lap on set completion (ACTIVE_SET -> anything else)
+        if (prevState.equals("ACTIVE_SET") && !curState.equals("ACTIVE_SET")) {
+            if (session != null) {
+                session.addLap();
+            }
+            // Trigger weight picker on auto-detected set completion
+            if (curState.equals("RESTING")) {
+                WatchUi.pushView(
+                    new WeightPicker(gymStateEngine.lastWeight),
+                    new WeightPickerDelegate(-1),
+                    WatchUi.SLIDE_UP
+                );
+            }
+        }
 
         // Request UI update
         WatchUi.requestUpdate();
@@ -130,10 +147,8 @@ class SensorCollector {
 
     // High-frequency sensor callback
     function onHighFreqData(sensorData as Sensor.SensorData) as Void {
-        // Accelerometer data
         if (sensorData has :accelerometerData && sensorData.accelerometerData != null) {
             var accelData = sensorData.accelerometerData;
-            // Update latest values from high-freq samples
             if (accelData.x != null && accelData.x.size() > 0) {
                 accelX = accelData.x[accelData.x.size() - 1];
                 accelY = accelData.y[accelData.y.size() - 1];
@@ -141,7 +156,6 @@ class SensorCollector {
             }
         }
 
-        // RR intervals for HRV
         if (sensorData has :heartRateData && sensorData.heartRateData != null) {
             var hrData = sensorData.heartRateData;
             if (hrData has :heartBeatIntervals && hrData.heartBeatIntervals != null) {
@@ -160,6 +174,17 @@ class SensorCollector {
 
     function buildPayload() {
         var gse = gymStateEngine;
+        var log = gse.getSetLog();
+
+        // Get weight and confirmed reps from latest set log entry
+        var weight = 0;
+        var confirmedReps = 0;
+        if (log.size() > 0) {
+            var lastEntry = log[log.size() - 1];
+            weight = lastEntry["weight"];
+            confirmedReps = lastEntry["reps"];
+        }
+
         return {
             "ts" => System.getTimer(),
             "hr" => heartRate,
@@ -174,7 +199,14 @@ class SensorCollector {
             "setNumber" => gse.setNumber,
             "repCount" => gse.repCount,
             "preRestHR" => gse.preRestHR,
-            "hrDrop" => gse.hrDrop
+            "hrDrop" => gse.hrDrop,
+            "setDuration" => gse.setDuration,
+            "restDuration" => gse.restDuration,
+            "avgRepDuration" => gse.avgRepDuration,
+            "accelVariance" => gse.lastVariance,
+            "peakHR" => gse.setPeakHR,
+            "weight" => weight,
+            "confirmedReps" => confirmedReps
         };
     }
 }

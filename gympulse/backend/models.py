@@ -18,6 +18,13 @@ class IngestPayload:
     repCount: int = 0
     preRestHR: float = 0.0   # HR at end of last set
     hrDrop: float = 0.0      # HR recovery since last set
+    setDuration: float = 0.0       # current/last set duration in ms
+    restDuration: float = 0.0      # current rest duration in ms
+    avgRepDuration: float = 0.0    # average ms per rep in current set
+    accelVariance: float = 0.0     # latest accel variance
+    peakHR: float = 0.0            # peak HR in current set
+    weight: float = 0.0            # user-confirmed weight (kg)
+    confirmedReps: int = 0         # user-confirmed rep count
 
 
 @dataclass
@@ -29,6 +36,7 @@ class SetRecord:
     avg_hr: float = 0.0
     rep_count: int = 0
     recovery_after: float = 0.0  # % recovered before next set
+    weight: float = 0.0          # user-confirmed weight (kg)
 
 
 @dataclass
@@ -87,6 +95,11 @@ class SessionState:
     # Recovery
     recovery_pct: float = 100.0
     recovery_status: str = "GO"
+
+    # Workout phase & form
+    workout_phase: str = "WARMUP"
+    set_accel_variances: list = field(default_factory=list)     # all sets' avg variances
+    current_set_variances: list = field(default_factory=list)   # variances within current set
 
     # Latest broadcast data
     latest: dict = field(default_factory=dict)

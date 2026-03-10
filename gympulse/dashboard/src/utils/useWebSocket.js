@@ -1,65 +1,20 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const INITIAL_RETRY_MS = 1000;
-const MAX_RETRY_MS = 30000;
-const POLL_INTERVAL_MS = 3000;
+const POLL_INTERVAL_MS = 2000;
 
 export function useWebSocket(sessionId, onMessage) {
   const [connected, setConnected] = useState(false);
-  const wsRef = useRef(null);
-  const retryMs = useRef(INITIAL_RETRY_MS);
   const pollRef = useRef(null);
 
-  const connect = useCallback(() => {
+  const startPolling = useCallback(() => {
     if (!sessionId) return;
 
-    const proto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const url = `${proto}//${window.location.host}/ws/session/${sessionId}`;
-
-    try {
-      const ws = new WebSocket(url);
-      wsRef.current = ws;
-
-      ws.onopen = () => {
-        setConnected(true);
-        retryMs.current = INITIAL_RETRY_MS;
-        // Stop polling fallback if active
-        if (pollRef.current) {
-          clearInterval(pollRef.current);
-          pollRef.current = null;
-        }
-      };
-
-      ws.onmessage = (event) => {
-        try {
-          const data = JSON.parse(event.data);
-          onMessage(data);
-        } catch { /* ignore parse errors */ }
-      };
-
-      ws.onclose = () => {
-        setConnected(false);
-        // Reconnect with exponential backoff
-        const delay = retryMs.current;
-        retryMs.current = Math.min(retryMs.current * 2, MAX_RETRY_MS);
-        setTimeout(connect, delay);
-        // Start polling fallback
-        startPolling();
-      };
-
-      ws.onerror = () => {
-        ws.close();
-      };
-    } catch {
-      // WebSocket not available, use polling
-      startPolling();
+    // Clear any existing interval
+    if (pollRef.current) {
+      clearInterval(pollRef.current);
     }
-  }, [sessionId, onMessage]);
 
-  const startPolling = useCallback(() => {
-    if (pollRef.current || !sessionId) return;
-
-    pollRef.current = setInterval(async () => {
+    const poll = async () => {
       try {
         const res = await fetch(`/api/session/${sessionId}/live`);
         if (res.ok) {
@@ -68,27 +23,29 @@ export function useWebSocket(sessionId, onMessage) {
             setConnected(true);
             onMessage(data);
           }
+        } else {
+          setConnected(false);
         }
       } catch {
         setConnected(false);
       }
-    }, POLL_INTERVAL_MS);
+    };
+
+    // Immediate first poll
+    poll();
+    pollRef.current = setInterval(poll, POLL_INTERVAL_MS);
   }, [sessionId, onMessage]);
 
   useEffect(() => {
-    connect();
+    startPolling();
 
     return () => {
-      if (wsRef.current) {
-        wsRef.current.close();
-        wsRef.current = null;
-      }
       if (pollRef.current) {
         clearInterval(pollRef.current);
         pollRef.current = null;
       }
     };
-  }, [connect]);
+  }, [startPolling]);
 
   return { connected };
 }

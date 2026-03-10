@@ -23,10 +23,13 @@ export default function SetLog({ sets }) {
           {sets.map((s, i) => {
             const recPct = s.recovery_after ?? 0;
             const recColor = getRecoveryColor(recPct);
+            const duration = s.duration_sec ?? 0;
             return (
               <div key={i} className="set-row">
                 <span className="set-number">#{s.set_number}</span>
+                <span className="set-weight">{s.weight > 0 ? `${s.weight}kg` : '--'}</span>
                 <span className="set-reps">{s.rep_count} reps</span>
+                <span className="set-duration">{duration > 0 ? `${Math.round(duration)}s` : '--'}</span>
                 <span className="set-hr">{Math.round(s.peak_hr)} bpm</span>
                 <div className="recovery-mini-bar">
                   <div

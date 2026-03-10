@@ -98,14 +98,64 @@ html, body, #root {
   font-weight: 600;
 }
 
+.phase-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+/* === Workout Summary Strip === */
+.workout-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 6px 20px;
+  background: linear-gradient(180deg, #0d0d12, #111116);
+  border-bottom: 1px solid #1e2430;
+  flex-shrink: 0;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.summary-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-label {
+  font-size: 0.55rem;
+  color: #5a6478;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 24px;
+  background: #1e2430;
+}
+
 /* === Grid Layout === */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    "hr      recovery  fatigue"
-    "timeline timeline  setlog";
+    "hr       recovery  fatigue"
+    "rest     timeline  setlog";
   gap: 8px;
   padding: 8px;
   flex: 1;
@@ -127,6 +177,7 @@ html, body, #root {
 .area-hr { grid-area: hr; }
 .area-recovery { grid-area: recovery; }
 .area-fatigue { grid-area: fatigue; }
+.area-rest { grid-area: rest; }
 .area-setlog { grid-area: setlog; }
 .area-timeline { grid-area: timeline; }
 
@@ -343,10 +394,25 @@ html, body, #root {
   font-family: 'JetBrains Mono', monospace;
 }
 
+.set-weight {
+  color: #ffa726;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  width: 48px;
+  font-size: 0.7rem;
+}
+
 .set-reps {
   color: #fff;
   font-weight: 600;
   width: 50px;
+}
+
+.set-duration {
+  color: #8892a4;
+  font-family: 'JetBrains Mono', monospace;
+  width: 36px;
+  font-size: 0.7rem;
 }
 
 .set-hr {
@@ -374,6 +440,40 @@ html, body, #root {
   color: #8892a4;
   width: 36px;
   text-align: right;
+}
+
+/* === Rest Timer === */
+.rest-timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.rest-timer-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.rest-timer-eta {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.rest-timer-active {
+  font-size: 0.9rem;
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.rest-timer-idle {
+  font-size: 0.85rem;
+  color: #5a6478;
 }
 
 /* === HR Timeline === */
@@ -471,7 +571,8 @@ html, body, #root {
     grid-template-rows: auto;
     grid-template-areas:
       "hr       recovery"
-      "fatigue  setlog"
+      "fatigue  rest"
+      "setlog   setlog"
       "timeline timeline";
     height: auto;
   }
@@ -484,9 +585,11 @@ html, body, #root {
     grid-template-areas:
       "hr"
       "recovery"
+      "rest"
       "fatigue"
       "setlog"
       "timeline";
   }
   .grid-area { min-height: 200px; }
+  .workout-summary { flex-wrap: wrap; gap: 10px; }
 }

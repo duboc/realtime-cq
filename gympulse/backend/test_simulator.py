@@ -24,6 +24,11 @@ set_start_t = 0
 rest_start_t = 0
 current_exercise_sets = 0
 exercise_count = 0
+set_duration = 0
+rest_duration = 0
+avg_rep_duration = 0.0
+accel_variance = 0.0
+peak_hr = 0.0
 
 print("GymPulse Simulator — full gym workout")
 print("=" * 50)
@@ -58,6 +63,9 @@ while True:
         base_hr = 70 + elapsed_min * 4 + random.uniform(-2, 2)
         rep_count = 0
         set_number = 0
+        accel_variance = random.uniform(1000, 5000)
+        set_duration = 0
+        rest_duration = 0
 
     elif phase == "sets":
         # Each set: ~30s active + ~60s rest
@@ -71,6 +79,10 @@ while True:
                 current_exercise_sets += 1
                 set_start_t = t
                 rep_count = 0
+                peak_hr = 0
+                set_duration = 0
+                rest_duration = 0
+                avg_rep_duration = 0.0
                 print(f"  Set {set_number} START (exercise {exercise_count + 1})")
 
             elif cycle_t > 60 + random.randint(-10, 15):
@@ -80,6 +92,10 @@ while True:
                 current_exercise_sets += 1
                 set_start_t = t
                 rep_count = 0
+                peak_hr = 0
+                set_duration = 0
+                rest_duration = 0
+                avg_rep_duration = 0.0
 
                 if current_exercise_sets > 5:
                     exercise_count += 1
@@ -90,26 +106,43 @@ while True:
 
             # During rest: HR drops
             rest_sec = cycle_t
+            rest_duration = rest_sec * 1000  # ms
+            set_duration = 0  # Not in a set
+            accel_variance = random.uniform(500, 3000)  # Low during rest
             hr_decay = min(40, rest_sec * 0.5)
             base_hr = pre_rest_hr - hr_decay + random.uniform(-2, 2)
             hr_drop = pre_rest_hr - base_hr
 
         if state == "ACTIVE_SET":
             set_sec = t - set_start_t
+            set_duration = set_sec * 1000  # ms
 
             # HR ramps up during set
             fatigue_boost = set_number * 1.5  # accumulating fatigue
             base_hr = 130 + set_sec * 1.5 + fatigue_boost + random.uniform(-3, 3)
             base_hr = min(base_hr, 185 + fatigue_boost * 0.3)
 
+            # Track peak HR in set
+            if base_hr > peak_hr:
+                peak_hr = base_hr
+
             # Rep counting (one rep every ~3-4s)
             rep_count = min(12, set_sec // 3)
+            if rep_count > 0:
+                avg_rep_duration = set_duration / rep_count
+
+            # Accel variance during set (high, with some variation for form)
+            accel_variance = 80000 + random.uniform(-20000, 20000)
+            # Degrade form consistency as fatigue builds
+            if set_number > 10:
+                accel_variance += random.uniform(0, 30000)
 
             # End set after 25-40s
             if set_sec > random.randint(25, 40):
                 pre_rest_hr = base_hr
                 state = "RESTING"
                 rest_start_t = t
+                rest_duration = 0
                 hr_drop = 0
                 print(f"  Set {set_number} END — {rep_count} reps, peak HR {base_hr:.0f}")
 
@@ -117,11 +150,17 @@ while True:
         # Steady-state cardio
         base_hr = 140 + math.sin(t * 0.05) * 8 + random.uniform(-3, 3)
         rep_count = 0
+        accel_variance = random.uniform(8000, 15000)
+        set_duration = 0
+        rest_duration = 0
 
     elif phase == "cooldown":
         cooldown_t = elapsed_min - (5 + 15 * 1.5 + 10)
         base_hr = 120 - cooldown_t * 10 + random.uniform(-2, 2)
         base_hr = max(65, base_hr)
+        accel_variance = random.uniform(500, 2000)
+        set_duration = 0
+        rest_duration = 0
 
     hr = max(55, min(200, base_hr))
     if hr > session_max_hr:
@@ -155,6 +194,11 @@ while True:
         "repCount": int(rep_count),
         "preRestHR": round(pre_rest_hr, 1),
         "hrDrop": round(hr_drop, 1),
+        "setDuration": round(set_duration, 1),
+        "restDuration": round(rest_duration, 1),
+        "avgRepDuration": round(avg_rep_duration, 1),
+        "accelVariance": round(accel_variance, 1),
+        "peakHR": round(peak_hr, 1),
     }
 
     data = json.dumps(payload).encode()
@@ -166,7 +210,9 @@ while True:
         fat = result.get("fat", 0)
         fz = result.get("fz", "?")
         rec = result.get("rec", 0)
-        print(f"  t={t:>5}s  HR={hr:>5.0f}  state={state:<11}  fat={fat:>4.0f}% ({fz:<10})  rec={rec:>4.0f}%  sets={set_number}")
+        eta = result.get("recoveryETA", 0)
+        eta_str = f"ETA:{eta:>3.0f}s" if eta > 0 else "     "
+        print(f"  t={t:>5}s  HR={hr:>5.0f}  state={state:<11}  fat={fat:>4.0f}% ({fz:<10})  rec={rec:>4.0f}%  {eta_str}  sets={set_number}")
     except Exception as e:
         print(f"  Error: {e}")
 

@@ -6,6 +6,8 @@ import RecoveryMeter from './components/RecoveryMeter';
 import FatigueGauge from './components/FatigueGauge';
 import SetLog from './components/SetLog';
 import HRTimeline from './components/HRTimeline';
+import RestTimer from './components/RestTimer';
+import WorkoutSummary from './components/WorkoutSummary';
 import OvertrainingAlert from './components/OvertrainingAlert';
 import SessionPicker from './components/SessionPicker';
 
@@ -58,6 +60,15 @@ export default function App() {
         connected={connected}
         elapsedMs={latest?.et ?? 0}
         setCount={latest?.sets ?? 0}
+        workoutPhase={latest?.workoutPhase ?? ''}
+      />
+
+      <WorkoutSummary
+        totalReps={latest?.totalReps ?? 0}
+        setCount={latest?.sets ?? 0}
+        avgSetDuration={latest?.avgSetDuration ?? 0}
+        avgRestDuration={latest?.avgRestDuration ?? 0}
+        formConsistency={latest?.formConsistency ?? 0}
       />
 
       <main className="grid">
@@ -75,6 +86,8 @@ export default function App() {
           <RecoveryMeter
             pct={latest?.rec ?? 0}
             status={latest?.rs ?? 'GO'}
+            restTimer={latest?.restTimer ?? 0}
+            state={latest?.state ?? 'IDLE'}
           />
         </div>
 
@@ -83,6 +96,15 @@ export default function App() {
             score={fat}
             zone={latest?.fz ?? 'FRESH'}
             recommendation={latest?.recommendation ?? ''}
+          />
+        </div>
+
+        <div className="grid-area area-rest">
+          <RestTimer
+            state={latest?.state ?? 'IDLE'}
+            restTimer={latest?.restTimer ?? 0}
+            recoveryETA={latest?.recoveryETA ?? 0}
+            rec={latest?.rec ?? 0}
           />
         </div>
 

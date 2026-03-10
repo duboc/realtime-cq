@@ -27,7 +27,11 @@ def session_sets(session_id):
     state = sessions.get(session_id)
     if not state:
         return jsonify({"error": "Session not found"}), 404
-    return jsonify({"sets": state.sets, "total": len(state.sets)})
+    return jsonify({
+        "sets": state.sets,
+        "total": len(state.sets),
+        "rest_periods": state.rest_periods,
+    })
 
 
 @session_bp.route("/api/session/<session_id>/history")
